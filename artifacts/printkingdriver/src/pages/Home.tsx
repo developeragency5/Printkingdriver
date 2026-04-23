@@ -334,22 +334,40 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-14">
             {[
-              { title: "Printer Offline", desc: "Device not detected by the operating system.", icon: <AlertCircle className="w-5 h-5" />, color: "text-orange-600", ring: "bg-orange-50 ring-orange-100" },
-              { title: "Driver Conflict", desc: "Two drivers clashing and causing errors.", icon: <XOctagon className="w-5 h-5" />, color: "text-red-600", ring: "bg-red-50 ring-red-100" },
-              { title: "Missing Driver", desc: "Required driver not found or corrupted.", icon: <FileQuestion className="w-5 h-5" />, color: "text-blue-600", ring: "bg-blue-50 ring-blue-100" },
-              { title: "Print Queue Stuck", desc: "Jobs stuck and not clearing from queue.", icon: <RefreshCw className="w-5 h-5" />, color: "text-purple-600", ring: "bg-purple-50 ring-purple-100" },
-              { title: "Audio Errors", desc: "Sound driver failure or no audio output.", icon: <VolumeX className="w-5 h-5" />, color: "text-pink-600", ring: "bg-pink-50 ring-pink-100" },
-              { title: "Network Drops", desc: "Wi-Fi or LAN driver instability issues.", icon: <WifiOff className="w-5 h-5" />, color: "text-teal-600", ring: "bg-teal-50 ring-teal-100" },
+              { title: "Printer Offline", desc: "Device not detected by the operating system.", icon: <AlertCircle className="w-5 h-5" />, color: "text-orange-600", dot: "bg-orange-600", ring: "bg-orange-50 ring-orange-100", severity: "Common", code: "ERR-01" },
+              { title: "Driver Conflict", desc: "Two drivers clashing and causing errors.", icon: <XOctagon className="w-5 h-5" />, color: "text-red-600", dot: "bg-red-600", ring: "bg-red-50 ring-red-100", severity: "Critical", code: "ERR-02" },
+              { title: "Missing Driver", desc: "Required driver not found or corrupted.", icon: <FileQuestion className="w-5 h-5" />, color: "text-blue-600", dot: "bg-blue-600", ring: "bg-blue-50 ring-blue-100", severity: "High", code: "ERR-03" },
+              { title: "Print Queue Stuck", desc: "Jobs stuck and not clearing from queue.", icon: <RefreshCw className="w-5 h-5" />, color: "text-purple-600", dot: "bg-purple-600", ring: "bg-purple-50 ring-purple-100", severity: "Common", code: "ERR-04" },
+              { title: "Audio Errors", desc: "Sound driver failure or no audio output.", icon: <VolumeX className="w-5 h-5" />, color: "text-pink-600", dot: "bg-pink-600", ring: "bg-pink-50 ring-pink-100", severity: "Moderate", code: "ERR-05" },
+              { title: "Network Drops", desc: "Wi-Fi or LAN driver instability issues.", icon: <WifiOff className="w-5 h-5" />, color: "text-teal-600", dot: "bg-teal-600", ring: "bg-teal-50 ring-teal-100", severity: "High", code: "ERR-06" },
             ].map((issue, i) => (
               <div
                 key={i}
-                className="group relative bg-white border border-border/70 rounded-2xl p-6 shadow-[0_1px_2px_rgba(0,0,0,0.03)] hover:shadow-[0_18px_40px_-22px_rgba(11,18,32,0.25)] hover:-translate-y-0.5 hover:border-[#0b1220]/15 transition-all duration-300"
+                className="group relative bg-white border border-border/70 rounded-2xl p-6 shadow-[0_1px_2px_rgba(0,0,0,0.03)] hover:shadow-[0_22px_45px_-22px_rgba(74,107,117,0.32)] hover:-translate-y-0.5 hover:border-primary/25 transition-all duration-300 overflow-hidden"
               >
-                <div className={`w-11 h-11 rounded-xl ${issue.ring} ring-1 flex items-center justify-center mb-5 ${issue.color}`}>
-                  {issue.icon}
+                {/* Top meta row */}
+                <div className="flex items-center justify-between mb-5">
+                  <div className={`w-11 h-11 rounded-xl ${issue.ring} ring-1 flex items-center justify-center ${issue.color}`}>
+                    {issue.icon}
+                  </div>
+                  <span className="text-[10px] font-mono font-semibold tracking-[0.12em] text-muted-foreground/70 uppercase px-2 py-1 rounded-md bg-secondary/60 border border-border/60">
+                    {issue.code}
+                  </span>
                 </div>
-                <h4 className="font-heading font-bold text-[1.05rem] text-[#2a2a26] mb-2 tracking-tight">{issue.title}</h4>
-                <p className="text-[13.5px] text-muted-foreground leading-relaxed">{issue.desc}</p>
+
+                <h4 className="font-heading font-bold text-[1.1rem] text-[#2a2a26] mb-2 tracking-[-0.015em]">{issue.title}</h4>
+                <p className="text-[13.5px] text-muted-foreground leading-relaxed mb-5">{issue.desc}</p>
+
+                {/* Footer divider with severity */}
+                <div className="pt-4 border-t border-border/60 flex items-center justify-between">
+                  <div className="flex items-center gap-2">
+                    <span className={`w-1.5 h-1.5 rounded-full ${issue.dot}`} />
+                    <span className="text-[10.5px] font-bold uppercase tracking-[0.16em] text-muted-foreground">{issue.severity}</span>
+                  </div>
+                  <span className="text-[10.5px] font-bold uppercase tracking-[0.16em] text-muted-foreground/70 group-hover:text-primary transition-colors">
+                    Diagnose →
+                  </span>
+                </div>
               </div>
             ))}
           </div>
