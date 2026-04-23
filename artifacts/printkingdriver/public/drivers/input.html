@@ -220,6 +220,47 @@
         <p>Input drivers shape the feel of typing and navigation. Even small bugs here cause missed keystrokes, ghost cursor movement, or unresponsive gestures.</p>
       </section>
 
+
+      <section class="detail-card">
+        <h2>Common Issues &amp; Symptoms</h2>
+        <p style="margin-bottom:16px;">Recognising the symptom is the first step in narrowing down whether the problem really is the driver, the hardware or another part of the system.</p>
+        <div class="tbl-wrap"><div class="tbl-scroll"><table class="tbl">
+          <thead><tr><th>Symptom</th><th>Likely Cause</th><th class="hide-md">What It Affects</th></tr></thead>
+          <tbody><tr><td class="strong">Touchpad gestures stop working after sleep</td><td>Precision Touchpad driver needs reinit.</td><td class="hide-md small">Usability</td></tr><tr><td class="strong">Keyboard keys repeat or lag</td><td>HID polling rate or filter driver conflict.</td><td class="hide-md small">Typing accuracy</td></tr><tr><td class="strong">Mouse cursor jumps or freezes</td><td>Polling-rate or DPI mismatch in driver.</td><td class="hide-md small">Pointer control</td></tr><tr><td class="strong">Function keys don’t toggle backlight / volume</td><td>OEM hotkey driver missing.</td><td class="hide-md small">Productivity</td></tr><tr><td class="strong">Game controller not detected</td><td>XInput vs DirectInput driver path issue.</td><td class="hide-md small">Gaming</td></tr></tbody>
+        </table></div></div>
+      </section>
+
+      <section class="detail-card">
+        <h2>Best Practices</h2>
+        <p style="margin-bottom:16px;">A short checklist to keep this driver healthy and reduce the chance of running into the issues above.</p>
+        <ul class="detail-list">
+          <li><span class="detail-list__bullet"><i data-lucide="check" class="icon-12"></i></span><span>Use the OEM Precision Touchpad driver on laptops — it enables modern gestures Windows expects.</span></li><li><span class="detail-list__bullet"><i data-lucide="check" class="icon-12"></i></span><span>Install the brand-specific software (Logitech G HUB, Razer Synapse, etc.) for tunable mice and keyboards.</span></li><li><span class="detail-list__bullet"><i data-lucide="check" class="icon-12"></i></span><span>Keep firmware on wireless peripherals up to date; the driver alone cannot fix on-device bugs.</span></li><li><span class="detail-list__bullet"><i data-lucide="check" class="icon-12"></i></span><span>For gaming, prefer XInput-compatible controllers on Windows for plug-and-play behaviour.</span></li><li><span class="detail-list__bullet"><i data-lucide="check" class="icon-12"></i></span><span>Recheck hotkey drivers after major Windows feature updates — they are often replaced.</span></li>
+        </ul>
+      </section>
+
+      <section class="detail-card">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq__inner" style="margin:8px 0 0;">
+          
+          <div class="faq__item">
+            <button type="button" class="faq__q">What is a Precision Touchpad?<i data-lucide="chevron-down" class="icon-16"></i></button>
+            <div class="faq__a"><p style="padding-top:0;">It is a Microsoft standard that defines touchpad gestures, palm rejection and reporting at the OS level, so the experience is consistent across vendors. The driver simply exposes the hardware to that standard.</p></div>
+          </div>
+          <div class="faq__item">
+            <button type="button" class="faq__q">Does my keyboard need a driver?<i data-lucide="chevron-down" class="icon-16"></i></button>
+            <div class="faq__a"><p style="padding-top:0;">Most keyboards work via the generic HID driver. A vendor driver is only required for macros, RGB lighting, custom keymaps and high polling-rate features.</p></div>
+          </div>
+          <div class="faq__item">
+            <button type="button" class="faq__q">Why is my brand-new gaming mouse less accurate than my old one?<i data-lucide="chevron-down" class="icon-16"></i></button>
+            <div class="faq__a"><p style="padding-top:0;">Often the manufacturer software / driver has not been installed, so the mouse runs at the default 125 Hz / 800 DPI fallback. Installing it unlocks the full sensor range.</p></div>
+          </div>
+          <div class="faq__item">
+            <button type="button" class="faq__q">What is the difference between XInput and DirectInput?<i data-lucide="chevron-down" class="icon-16"></i></button>
+            <div class="faq__a"><p style="padding-top:0;">XInput is Microsoft’s modern controller API designed for Xbox-style gamepads. DirectInput is the older API still used by some racing wheels and flight sticks. Windows includes both, but the controller’s driver decides which it presents.</p></div>
+          </div>
+        </div>
+      </section>
+
       <section class="related-section">
         <div class="related-section__head">
           <div>

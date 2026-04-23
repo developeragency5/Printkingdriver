@@ -220,6 +220,47 @@
         <p>Without a working chipset driver, every other driver underperforms because the basic communication layer between CPU and hardware is misconfigured. It is the foundation the rest of the OS sits on.</p>
       </section>
 
+
+      <section class="detail-card">
+        <h2>Common Issues &amp; Symptoms</h2>
+        <p style="margin-bottom:16px;">Recognising the symptom is the first step in narrowing down whether the problem really is the driver, the hardware or another part of the system.</p>
+        <div class="tbl-wrap"><div class="tbl-scroll"><table class="tbl">
+          <thead><tr><th>Symptom</th><th>Likely Cause</th><th class="hide-md">What It Affects</th></tr></thead>
+          <tbody><tr><td class="strong">Slow USB or unstable peripherals</td><td>Outdated chipset drivers misroute bus traffic.</td><td class="hide-md small">I/O stability</td></tr><tr><td class="strong">CPU running at low clock speed</td><td>Power management profiles not registered correctly.</td><td class="hide-md small">Performance</td></tr><tr><td class="strong">Random freezes after sleep/wake</td><td>ACPI handlers fail to re-initialise.</td><td class="hide-md small">Reliability</td></tr><tr><td class="strong">New RAM not detected fully</td><td>Memory controller table missing in old driver build.</td><td class="hide-md small">Hardware support</td></tr><tr><td class="strong">Yellow exclamation marks in Device Manager</td><td>Generic Windows driver loaded instead of vendor build.</td><td class="hide-md small">System health</td></tr></tbody>
+        </table></div></div>
+      </section>
+
+      <section class="detail-card">
+        <h2>Best Practices</h2>
+        <p style="margin-bottom:16px;">A short checklist to keep this driver healthy and reduce the chance of running into the issues above.</p>
+        <ul class="detail-list">
+          <li><span class="detail-list__bullet"><i data-lucide="check" class="icon-12"></i></span><span>Install the chipset package before any other driver — it sets the foundation everything else depends on.</span></li><li><span class="detail-list__bullet"><i data-lucide="check" class="icon-12"></i></span><span>Always source chipset drivers directly from the motherboard or laptop manufacturer.</span></li><li><span class="detail-list__bullet"><i data-lucide="check" class="icon-12"></i></span><span>Reboot after installation; many low-level changes only apply after a clean boot.</span></li><li><span class="detail-list__bullet"><i data-lucide="check" class="icon-12"></i></span><span>Keep the BIOS firmware roughly aligned with the chipset driver version.</span></li><li><span class="detail-list__bullet"><i data-lucide="check" class="icon-12"></i></span><span>Re-run the chipset installer after major Windows feature updates.</span></li>
+        </ul>
+      </section>
+
+      <section class="detail-card">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq__inner" style="margin:8px 0 0;">
+          
+          <div class="faq__item">
+            <button type="button" class="faq__q">Should I install the chipset driver first?<i data-lucide="chevron-down" class="icon-16"></i></button>
+            <div class="faq__a"><p style="padding-top:0;">Yes. The chipset driver tells Windows how to talk to the CPU, memory controller and on-board buses. Installing GPU, audio or network drivers before it can leave them running on incomplete plumbing.</p></div>
+          </div>
+          <div class="faq__item">
+            <button type="button" class="faq__q">Where is the best place to download chipset drivers?<i data-lucide="chevron-down" class="icon-16"></i></button>
+            <div class="faq__a"><p style="padding-top:0;">From the motherboard or laptop maker (e.g. ASUS, Dell, HP, Lenovo). They package versions tested for that exact board, including BIOS / power-profile dependencies.</p></div>
+          </div>
+          <div class="faq__item">
+            <button type="button" class="faq__q">Do I need to reinstall after a Windows feature update?<i data-lucide="chevron-down" class="icon-16"></i></button>
+            <div class="faq__a"><p style="padding-top:0;">It is good practice. Major Windows updates can roll back vendor drivers to generic ones, especially around USB, SATA and power management.</p></div>
+          </div>
+          <div class="faq__item">
+            <button type="button" class="faq__q">Can a bad chipset driver damage hardware?<i data-lucide="chevron-down" class="icon-16"></i></button>
+            <div class="faq__a"><p style="padding-top:0;">Direct damage is rare, but incorrect power profiles can cause overheating or unstable voltages over time. Stick to vendor-signed releases.</p></div>
+          </div>
+        </div>
+      </section>
+
       <section class="related-section">
         <div class="related-section__head">
           <div>

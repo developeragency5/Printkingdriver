@@ -220,6 +220,47 @@
         <p>Smooth visuals, accurate colours, and stable frame rates all depend on the graphics driver. A poor or outdated driver causes flickering, artefacts, and crashes even when the GPU itself is healthy.</p>
       </section>
 
+
+      <section class="detail-card">
+        <h2>Common Issues &amp; Symptoms</h2>
+        <p style="margin-bottom:16px;">Recognising the symptom is the first step in narrowing down whether the problem really is the driver, the hardware or another part of the system.</p>
+        <div class="tbl-wrap"><div class="tbl-scroll"><table class="tbl">
+          <thead><tr><th>Symptom</th><th>Likely Cause</th><th class="hide-md">What It Affects</th></tr></thead>
+          <tbody><tr><td class="strong">Black screen or flicker after a Windows update</td><td>A stale GPU driver was rolled back to a generic one.</td><td class="hide-md small">Display output</td></tr><tr><td class="strong">Games stutter or drop frame rate</td><td>Old shader cache or wrong power profile in driver.</td><td class="hide-md small">Gaming performance</td></tr><tr><td class="strong">Wrong resolution or single-monitor only</td><td>EDID not negotiated; driver fallback in use.</td><td class="hide-md small">Multi-display</td></tr><tr><td class="strong">Apps crash with “display driver stopped responding”</td><td>GPU timeout (TDR) caused by a bug in the driver.</td><td class="hide-md small">Stability</td></tr><tr><td class="strong">Video playback tearing</td><td>Vertical sync or hardware acceleration disabled.</td><td class="hide-md small">Video quality</td></tr></tbody>
+        </table></div></div>
+      </section>
+
+      <section class="detail-card">
+        <h2>Best Practices</h2>
+        <p style="margin-bottom:16px;">A short checklist to keep this driver healthy and reduce the chance of running into the issues above.</p>
+        <ul class="detail-list">
+          <li><span class="detail-list__bullet"><i data-lucide="check" class="icon-12"></i></span><span>Use the driver version recommended for your specific GPU model — newer is not always better.</span></li><li><span class="detail-list__bullet"><i data-lucide="check" class="icon-12"></i></span><span>Perform a clean install when changing GPU vendor (e.g. NVIDIA → AMD).</span></li><li><span class="detail-list__bullet"><i data-lucide="check" class="icon-12"></i></span><span>Keep both the GPU driver and the OS graphics stack (DirectX, Vulkan runtime) current.</span></li><li><span class="detail-list__bullet"><i data-lucide="check" class="icon-12"></i></span><span>Roll back driver versions if a new release breaks a critical app or game.</span></li><li><span class="detail-list__bullet"><i data-lucide="check" class="icon-12"></i></span><span>On laptops, install the OEM-branded driver where available — it includes hybrid-graphics handling.</span></li>
+        </ul>
+      </section>
+
+      <section class="detail-card">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq__inner" style="margin:8px 0 0;">
+          
+          <div class="faq__item">
+            <button type="button" class="faq__q">Should I use Windows Update or the GPU vendor’s installer?<i data-lucide="chevron-down" class="icon-16"></i></button>
+            <div class="faq__a"><p style="padding-top:0;">For best performance and the latest features (Game Ready, Studio, Adrenalin), use the vendor installer. Windows Update is fine for general office use, but is usually several versions behind.</p></div>
+          </div>
+          <div class="faq__item">
+            <button type="button" class="faq__q">What does “clean install” do?<i data-lucide="chevron-down" class="icon-16"></i></button>
+            <div class="faq__a"><p style="padding-top:0;">It removes all previous driver files, registry entries and profiles before installing the new version. This is the recommended path when troubleshooting flicker, crashes or after switching GPU brands.</p></div>
+          </div>
+          <div class="faq__item">
+            <button type="button" class="faq__q">Why does my game run slower after updating?<i data-lucide="chevron-down" class="icon-16"></i></button>
+            <div class="faq__a"><p style="padding-top:0;">A small percentage of releases contain regressions for specific titles. Rolling back to the previous version usually fixes it; vendors often patch within a week.</p></div>
+          </div>
+          <div class="faq__item">
+            <button type="button" class="faq__q">Do I need a driver if I use only the integrated GPU?<i data-lucide="chevron-down" class="icon-16"></i></button>
+            <div class="faq__a"><p style="padding-top:0;">Yes. Even the iGPU built into the CPU needs a driver to enable hardware acceleration, multi-monitor scaling and modern colour management.</p></div>
+          </div>
+        </div>
+      </section>
+
       <section class="related-section">
         <div class="related-section__head">
           <div>

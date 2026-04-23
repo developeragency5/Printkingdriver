@@ -220,6 +220,47 @@
         <p>A clean Bluetooth driver gives stable audio, low input latency, and reliable reconnection. Issues here usually surface as dropouts, missing devices, or stuttering sound.</p>
       </section>
 
+
+      <section class="detail-card">
+        <h2>Common Issues &amp; Symptoms</h2>
+        <p style="margin-bottom:16px;">Recognising the symptom is the first step in narrowing down whether the problem really is the driver, the hardware or another part of the system.</p>
+        <div class="tbl-wrap"><div class="tbl-scroll"><table class="tbl">
+          <thead><tr><th>Symptom</th><th>Likely Cause</th><th class="hide-md">What It Affects</th></tr></thead>
+          <tbody><tr><td class="strong">Devices pair but won’t connect</td><td>Stack reset needed; driver service stuck.</td><td class="hide-md small">Connectivity</td></tr><tr><td class="strong">Audio quality drops during calls</td><td>HFP profile renegotiating with low-bitrate codec.</td><td class="hide-md small">Voice quality</td></tr><tr><td class="strong">Bluetooth missing from settings panel</td><td>Adapter disabled in driver or by power policy.</td><td class="hide-md small">Visibility</td></tr><tr><td class="strong">Random disconnects from mouse / keyboard</td><td>Co-existence with 2.4 GHz Wi-Fi badly tuned.</td><td class="hide-md small">Reliability</td></tr><tr><td class="strong">Latency too high for gaming headsets</td><td>Driver only exposes legacy A2DP, not LE Audio / aptX LL.</td><td class="hide-md small">Performance</td></tr></tbody>
+        </table></div></div>
+      </section>
+
+      <section class="detail-card">
+        <h2>Best Practices</h2>
+        <p style="margin-bottom:16px;">A short checklist to keep this driver healthy and reduce the chance of running into the issues above.</p>
+        <ul class="detail-list">
+          <li><span class="detail-list__bullet"><i data-lucide="check" class="icon-12"></i></span><span>Use the vendor driver (Intel, Qualcomm, Realtek) over the generic Microsoft one for full codec support.</span></li><li><span class="detail-list__bullet"><i data-lucide="check" class="icon-12"></i></span><span>Keep Bluetooth and Wi-Fi drivers updated together — they share the radio on most laptops.</span></li><li><span class="detail-list__bullet"><i data-lucide="check" class="icon-12"></i></span><span>Remove and re-pair devices after a major driver update to refresh the link key.</span></li><li><span class="detail-list__bullet"><i data-lucide="check" class="icon-12"></i></span><span>For audio devices, prefer codecs like aptX or LDAC where supported by both ends.</span></li><li><span class="detail-list__bullet"><i data-lucide="check" class="icon-12"></i></span><span>Disable Bluetooth in BIOS only if you have no intention of using it; Windows handles power well.</span></li>
+        </ul>
+      </section>
+
+      <section class="detail-card">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq__inner" style="margin:8px 0 0;">
+          
+          <div class="faq__item">
+            <button type="button" class="faq__q">Why does the audio sound worse on Bluetooth calls?<i data-lucide="chevron-down" class="icon-16"></i></button>
+            <div class="faq__a"><p style="padding-top:0;">Calls switch to the HFP / HSP profile so the headset microphone can work. These profiles are mono and limited to 8 / 16 kHz, which sacrifices quality for two-way voice.</p></div>
+          </div>
+          <div class="faq__item">
+            <button type="button" class="faq__q">Can I use multiple Bluetooth headphones at once?<i data-lucide="chevron-down" class="icon-16"></i></button>
+            <div class="faq__a"><p style="padding-top:0;">Only if the driver and adapter support multipoint or LE Audio Auracast. Older Bluetooth Classic stacks are strictly one-to-one for audio.</p></div>
+          </div>
+          <div class="faq__item">
+            <button type="button" class="faq__q">Why do my mouse and Wi-Fi struggle at the same time?<i data-lucide="chevron-down" class="icon-16"></i></button>
+            <div class="faq__a"><p style="padding-top:0;">Bluetooth and 2.4 GHz Wi-Fi share the same frequency band. Vendor drivers include co-existence tuning to time-slice the radio; generic drivers often do not.</p></div>
+          </div>
+          <div class="faq__item">
+            <button type="button" class="faq__q">Does updating the driver improve battery life on accessories?<i data-lucide="chevron-down" class="icon-16"></i></button>
+            <div class="faq__a"><p style="padding-top:0;">Sometimes — newer drivers expose lower-power connection intervals (LE) and better idle handling, which can extend a peripheral’s runtime.</p></div>
+          </div>
+        </div>
+      </section>
+
       <section class="related-section">
         <div class="related-section__head">
           <div>

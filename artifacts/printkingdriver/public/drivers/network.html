@@ -220,6 +220,47 @@
         <p>Every online activity, from web browsing to cloud sync, depends on a reliable network driver. Failures here often look like full system outages even though only one component is misbehaving.</p>
       </section>
 
+
+      <section class="detail-card">
+        <h2>Common Issues &amp; Symptoms</h2>
+        <p style="margin-bottom:16px;">Recognising the symptom is the first step in narrowing down whether the problem really is the driver, the hardware or another part of the system.</p>
+        <div class="tbl-wrap"><div class="tbl-scroll"><table class="tbl">
+          <thead><tr><th>Symptom</th><th>Likely Cause</th><th class="hide-md">What It Affects</th></tr></thead>
+          <tbody><tr><td class="strong">Wi-Fi disconnects every few minutes</td><td>Power-saving feature in driver aggressively shutting radio.</td><td class="hide-md small">Connectivity</td></tr><tr><td class="strong">Slow throughput on a fast connection</td><td>Driver negotiated lower link speed than the cable supports.</td><td class="hide-md small">Performance</td></tr><tr><td class="strong">No Wi-Fi adapter shown in settings</td><td>Radio service blocked or driver failed to load at boot.</td><td class="hide-md small">Hardware visibility</td></tr><tr><td class="strong">VPN drops or DNS leaks</td><td>Network filter driver loaded out of order.</td><td class="hide-md small">Security & privacy</td></tr><tr><td class="strong">5 GHz band missing from network list</td><td>Region / regulatory profile not applied by the driver.</td><td class="hide-md small">Wi-Fi range</td></tr></tbody>
+        </table></div></div>
+      </section>
+
+      <section class="detail-card">
+        <h2>Best Practices</h2>
+        <p style="margin-bottom:16px;">A short checklist to keep this driver healthy and reduce the chance of running into the issues above.</p>
+        <ul class="detail-list">
+          <li><span class="detail-list__bullet"><i data-lucide="check" class="icon-12"></i></span><span>For laptops, use the OEM-supplied wireless driver — generic Intel / Realtek packages often miss antenna tuning.</span></li><li><span class="detail-list__bullet"><i data-lucide="check" class="icon-12"></i></span><span>Disable “Allow the computer to turn off this device” for the network adapter on desktops.</span></li><li><span class="detail-list__bullet"><i data-lucide="check" class="icon-12"></i></span><span>Restart the adapter after changing power plans or sleep settings.</span></li><li><span class="detail-list__bullet"><i data-lucide="check" class="icon-12"></i></span><span>Match the driver build to the firmware version of the adapter when possible.</span></li><li><span class="detail-list__bullet"><i data-lucide="check" class="icon-12"></i></span><span>On Ethernet, verify the link is negotiated at the expected speed (1 Gbps / 2.5 Gbps) after install.</span></li>
+        </ul>
+      </section>
+
+      <section class="detail-card">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq__inner" style="margin:8px 0 0;">
+          
+          <div class="faq__item">
+            <button type="button" class="faq__q">Why does my Wi-Fi work, but very slowly?<i data-lucide="chevron-down" class="icon-16"></i></button>
+            <div class="faq__a"><p style="padding-top:0;">Common causes are a driver in power-saving mode, an outdated build that does not negotiate Wi-Fi 6, or interference on the 2.4 GHz band. Updating the driver often restores full speed.</p></div>
+          </div>
+          <div class="faq__item">
+            <button type="button" class="faq__q">Should I update the network driver before or after Windows?<i data-lucide="chevron-down" class="icon-16"></i></button>
+            <div class="faq__a"><p style="padding-top:0;">After. Install Windows updates first, then the network driver, so the driver is loaded against the final OS network stack.</p></div>
+          </div>
+          <div class="faq__item">
+            <button type="button" class="faq__q">What is a “network filter” driver?<i data-lucide="chevron-down" class="icon-16"></i></button>
+            <div class="faq__a"><p style="padding-top:0;">It sits between the OS and the adapter to inspect or modify traffic — used by VPNs, firewalls and parental controls. Load order between filters can cause connectivity issues.</p></div>
+          </div>
+          <div class="faq__item">
+            <button type="button" class="faq__q">Do Ethernet adapters need drivers?<i data-lucide="chevron-down" class="icon-16"></i></button>
+            <div class="faq__a"><p style="padding-top:0;">Yes, though most are auto-installed by Windows. Vendor drivers add features like wake-on-LAN, jumbo frames, VLAN tagging and offload tuning.</p></div>
+          </div>
+        </div>
+      </section>
+
       <section class="related-section">
         <div class="related-section__head">
           <div>

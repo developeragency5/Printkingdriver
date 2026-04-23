@@ -220,6 +220,47 @@
         <p>A reliable scanner driver decides how accurate, fast, and consistent your scans look. Without it, documents arrive blurred, skewed, or never reach the application at all.</p>
       </section>
 
+
+      <section class="detail-card">
+        <h2>Common Issues &amp; Symptoms</h2>
+        <p style="margin-bottom:16px;">Recognising the symptom is the first step in narrowing down whether the problem really is the driver, the hardware or another part of the system.</p>
+        <div class="tbl-wrap"><div class="tbl-scroll"><table class="tbl">
+          <thead><tr><th>Symptom</th><th>Likely Cause</th><th class="hide-md">What It Affects</th></tr></thead>
+          <tbody><tr><td class="strong">Scanner not visible to apps</td><td>TWAIN or WIA driver not installed.</td><td class="hide-md small">Capture</td></tr><tr><td class="strong">Scans are skewed or cut off</td><td>Driver misreporting paper size.</td><td class="hide-md small">Document quality</td></tr><tr><td class="strong">OCR text comes out as gibberish</td><td>Wrong language pack or low-resolution scan.</td><td class="hide-md small">Searchable PDFs</td></tr><tr><td class="strong">Colour scans look washed out</td><td>Colour calibration profile missing.</td><td class="hide-md small">Image fidelity</td></tr><tr><td class="strong">Multi-page feeder skips or jams</td><td>Driver firmware out of date.</td><td class="hide-md small">Productivity</td></tr></tbody>
+        </table></div></div>
+      </section>
+
+      <section class="detail-card">
+        <h2>Best Practices</h2>
+        <p style="margin-bottom:16px;">A short checklist to keep this driver healthy and reduce the chance of running into the issues above.</p>
+        <ul class="detail-list">
+          <li><span class="detail-list__bullet"><i data-lucide="check" class="icon-12"></i></span><span>Install both TWAIN and WIA drivers if available — different applications use different APIs.</span></li><li><span class="detail-list__bullet"><i data-lucide="check" class="icon-12"></i></span><span>For text documents, scan at 300 DPI; for archival or photos, 600 DPI gives a good balance.</span></li><li><span class="detail-list__bullet"><i data-lucide="check" class="icon-12"></i></span><span>Match OCR language settings to the document for accurate text recognition.</span></li><li><span class="detail-list__bullet"><i data-lucide="check" class="icon-12"></i></span><span>Clean the glass or feed rollers before assuming the driver is at fault.</span></li><li><span class="detail-list__bullet"><i data-lucide="check" class="icon-12"></i></span><span>Keep scanner firmware in step with the driver to retain feeder and duplex features.</span></li>
+        </ul>
+      </section>
+
+      <section class="detail-card">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq__inner" style="margin:8px 0 0;">
+          
+          <div class="faq__item">
+            <button type="button" class="faq__q">What are TWAIN and WIA?<i data-lucide="chevron-down" class="icon-16"></i></button>
+            <div class="faq__a"><p style="padding-top:0;">They are the two scanning standards on Windows. TWAIN is older and offers fine control, used by professional imaging apps. WIA is built into Windows for general use. Most drivers expose both.</p></div>
+          </div>
+          <div class="faq__item">
+            <button type="button" class="faq__q">Why is OCR so inaccurate on my scans?<i data-lucide="chevron-down" class="icon-16"></i></button>
+            <div class="faq__a"><p style="padding-top:0;">OCR depends heavily on resolution and contrast. Below 200 DPI text becomes unreliable. Setting the right language pack also improves accuracy dramatically.</p></div>
+          </div>
+          <div class="faq__item">
+            <button type="button" class="faq__q">Can I scan without installing a driver?<i data-lucide="chevron-down" class="icon-16"></i></button>
+            <div class="faq__a"><p style="padding-top:0;">On modern systems, yes — both Windows and macOS include generic drivers. You will lose features like duplex, batch scanning and OCR until you install the vendor driver.</p></div>
+          </div>
+          <div class="faq__item">
+            <button type="button" class="faq__q">Why does my scanner only work in one app?<i data-lucide="chevron-down" class="icon-16"></i></button>
+            <div class="faq__a"><p style="padding-top:0;">Likely only one of TWAIN or WIA was installed. Reinstall the full driver package and the scanner should appear in all apps.</p></div>
+          </div>
+        </div>
+      </section>
+
       <section class="related-section">
         <div class="related-section__head">
           <div>

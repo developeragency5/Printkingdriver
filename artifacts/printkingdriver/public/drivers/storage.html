@@ -220,6 +220,47 @@
         <p>Boot times, file access speed, and data integrity are all shaped by the storage driver. A poor driver can cause corruption, slowdowns, or invisible drives.</p>
       </section>
 
+
+      <section class="detail-card">
+        <h2>Common Issues &amp; Symptoms</h2>
+        <p style="margin-bottom:16px;">Recognising the symptom is the first step in narrowing down whether the problem really is the driver, the hardware or another part of the system.</p>
+        <div class="tbl-wrap"><div class="tbl-scroll"><table class="tbl">
+          <thead><tr><th>Symptom</th><th>Likely Cause</th><th class="hide-md">What It Affects</th></tr></thead>
+          <tbody><tr><td class="strong">SSD reporting wrong size or unallocated</td><td>Storage controller mode (AHCI / RAID / NVMe) mismatched.</td><td class="hide-md small">Disk visibility</td></tr><tr><td class="strong">Slow read/write on a known-fast NVMe drive</td><td>Generic Microsoft NVMe driver instead of vendor-tuned one.</td><td class="hide-md small">Performance</td></tr><tr><td class="strong">Frequent “disk timeout” errors in event log</td><td>Old controller driver mishandles queued commands.</td><td class="hide-md small">Reliability</td></tr><tr><td class="strong">Bluescreen referencing storahci.sys or stornvme.sys</td><td>Driver bug or corrupt cached firmware table.</td><td class="hide-md small">System stability</td></tr><tr><td class="strong">Drives disappear after sleep</td><td>Power state transitions not handled.</td><td class="hide-md small">Availability</td></tr></tbody>
+        </table></div></div>
+      </section>
+
+      <section class="detail-card">
+        <h2>Best Practices</h2>
+        <p style="margin-bottom:16px;">A short checklist to keep this driver healthy and reduce the chance of running into the issues above.</p>
+        <ul class="detail-list">
+          <li><span class="detail-list__bullet"><i data-lucide="check" class="icon-12"></i></span><span>Never switch BIOS storage mode (AHCI ↔ RAID) without preparing Windows — it will fail to boot.</span></li><li><span class="detail-list__bullet"><i data-lucide="check" class="icon-12"></i></span><span>Install the chipset driver first; it provides the controller infrastructure storage drivers depend on.</span></li><li><span class="detail-list__bullet"><i data-lucide="check" class="icon-12"></i></span><span>For NVMe SSDs, install the manufacturer driver (Samsung, WD, Crucial) for best performance.</span></li><li><span class="detail-list__bullet"><i data-lucide="check" class="icon-12"></i></span><span>Keep firmware on the SSD itself updated alongside the controller driver.</span></li><li><span class="detail-list__bullet"><i data-lucide="check" class="icon-12"></i></span><span>After a major Windows update, recheck the active driver in Device Manager.</span></li>
+        </ul>
+      </section>
+
+      <section class="detail-card">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq__inner" style="margin:8px 0 0;">
+          
+          <div class="faq__item">
+            <button type="button" class="faq__q">Do I need a driver for SATA hard drives?<i data-lucide="chevron-down" class="icon-16"></i></button>
+            <div class="faq__a"><p style="padding-top:0;">Windows ships with generic AHCI drivers that work for any SATA disk. A vendor driver from Intel, AMD or your motherboard maker can improve queueing and power management.</p></div>
+          </div>
+          <div class="faq__item">
+            <button type="button" class="faq__q">Will the wrong storage driver lose my data?<i data-lucide="chevron-down" class="icon-16"></i></button>
+            <div class="faq__a"><p style="padding-top:0;">It will not erase data, but a mismatched controller mode can prevent the drive from being recognised, making partitions appear missing until the correct driver loads.</p></div>
+          </div>
+          <div class="faq__item">
+            <button type="button" class="faq__q">What is the difference between AHCI and NVMe?<i data-lucide="chevron-down" class="icon-16"></i></button>
+            <div class="faq__a"><p style="padding-top:0;">AHCI is the protocol for SATA disks. NVMe is a faster protocol designed for SSDs that connect directly to PCIe. Each requires its own driver class.</p></div>
+          </div>
+          <div class="faq__item">
+            <button type="button" class="faq__q">How do I check which storage driver is in use?<i data-lucide="chevron-down" class="icon-16"></i></button>
+            <div class="faq__a"><p style="padding-top:0;">Open Device Manager → Storage controllers → Properties → Driver tab. The provider field tells you whether it is Microsoft generic or a vendor build.</p></div>
+          </div>
+        </div>
+      </section>
+
       <section class="related-section">
         <div class="related-section__head">
           <div>

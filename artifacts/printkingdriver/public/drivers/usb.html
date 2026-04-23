@@ -220,6 +220,47 @@
         <p>Almost every external accessory uses USB. A broken USB driver leaves keyboards, drives, printers, and chargers unusable even when they are physically connected.</p>
       </section>
 
+
+      <section class="detail-card">
+        <h2>Common Issues &amp; Symptoms</h2>
+        <p style="margin-bottom:16px;">Recognising the symptom is the first step in narrowing down whether the problem really is the driver, the hardware or another part of the system.</p>
+        <div class="tbl-wrap"><div class="tbl-scroll"><table class="tbl">
+          <thead><tr><th>Symptom</th><th>Likely Cause</th><th class="hide-md">What It Affects</th></tr></thead>
+          <tbody><tr><td class="strong">Devices not recognised in some ports</td><td>xHCI host controller driver missing or downgraded.</td><td class="hide-md small">Connectivity</td></tr><tr><td class="strong">USB 3.0 device runs at USB 2.0 speed</td><td>Wrong driver loaded; device fell back to legacy mode.</td><td class="hide-md small">Performance</td></tr><tr><td class="strong">Power surge / device disabled error</td><td>Driver-enforced current limit triggered.</td><td class="hide-md small">Power delivery</td></tr><tr><td class="strong">Devices disconnect when laptop is on battery</td><td>Selective suspend setting in driver too aggressive.</td><td class="hide-md small">Mobility</td></tr><tr><td class="strong">Audio interfaces produce clicks over USB</td><td>Bus latency / isochronous bandwidth shared.</td><td class="hide-md small">Audio quality</td></tr></tbody>
+        </table></div></div>
+      </section>
+
+      <section class="detail-card">
+        <h2>Best Practices</h2>
+        <p style="margin-bottom:16px;">A short checklist to keep this driver healthy and reduce the chance of running into the issues above.</p>
+        <ul class="detail-list">
+          <li><span class="detail-list__bullet"><i data-lucide="check" class="icon-12"></i></span><span>Install both chipset and USB controller drivers from the OEM after a fresh Windows install.</span></li><li><span class="detail-list__bullet"><i data-lucide="check" class="icon-12"></i></span><span>Disable USB selective suspend on desktops, or for sensitive devices like audio interfaces.</span></li><li><span class="detail-list__bullet"><i data-lucide="check" class="icon-12"></i></span><span>Use the rear-panel ports on a desktop for high-bandwidth devices — they connect directly to the controller.</span></li><li><span class="detail-list__bullet"><i data-lucide="check" class="icon-12"></i></span><span>Avoid daisy-chaining hubs three deep; bandwidth and power both degrade.</span></li><li><span class="detail-list__bullet"><i data-lucide="check" class="icon-12"></i></span><span>Update the USB driver if you switch to USB 3.2 / USB4 / Thunderbolt hardware.</span></li>
+        </ul>
+      </section>
+
+      <section class="detail-card">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq__inner" style="margin:8px 0 0;">
+          
+          <div class="faq__item">
+            <button type="button" class="faq__q">What is xHCI?<i data-lucide="chevron-down" class="icon-16"></i></button>
+            <div class="faq__a"><p style="padding-top:0;">xHCI is the host controller standard introduced for USB 3.x. It replaces the older EHCI / OHCI controllers and handles all USB speeds (1.1, 2.0, 3.0+) through a single driver.</p></div>
+          </div>
+          <div class="faq__item">
+            <button type="button" class="faq__q">Why does Windows say my fast SSD is on a slower port?<i data-lucide="chevron-down" class="icon-16"></i></button>
+            <div class="faq__a"><p style="padding-top:0;">The OS reports the negotiated link speed. If the driver loaded an older controller mode, you will see USB 2.0 speeds even on a 3.0 port. Reinstalling the chipset / USB driver typically fixes this.</p></div>
+          </div>
+          <div class="faq__item">
+            <button type="button" class="faq__q">Do USB-C and Thunderbolt share drivers?<i data-lucide="chevron-down" class="icon-16"></i></button>
+            <div class="faq__a"><p style="padding-top:0;">They share the USB layer but Thunderbolt adds its own controller and security driver. Both are needed for full-speed Thunderbolt devices.</p></div>
+          </div>
+          <div class="faq__item">
+            <button type="button" class="faq__q">How do I stop devices disconnecting in sleep mode?<i data-lucide="chevron-down" class="icon-16"></i></button>
+            <div class="faq__a"><p style="padding-top:0;">Open Device Manager, right-click the USB Root Hub, choose Properties → Power Management, and uncheck “Allow the computer to turn off this device”.</p></div>
+          </div>
+        </div>
+      </section>
+
       <section class="related-section">
         <div class="related-section__head">
           <div>

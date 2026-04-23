@@ -220,6 +220,47 @@
         <p>Without functioning firmware, the computer never reaches the operating system. UEFI quality affects boot speed, hardware compatibility, and platform security.</p>
       </section>
 
+
+      <section class="detail-card">
+        <h2>Common Issues &amp; Symptoms</h2>
+        <p style="margin-bottom:16px;">Recognising the symptom is the first step in narrowing down whether the problem really is the driver, the hardware or another part of the system.</p>
+        <div class="tbl-wrap"><div class="tbl-scroll"><table class="tbl">
+          <thead><tr><th>Symptom</th><th>Likely Cause</th><th class="hide-md">What It Affects</th></tr></thead>
+          <tbody><tr><td class="strong">New CPU not recognised after install</td><td>BIOS / UEFI microcode predates the chip.</td><td class="hide-md small">Compatibility</td></tr><tr><td class="strong">System won’t boot after firmware change</td><td>Settings reset; boot order or secure boot incorrect.</td><td class="hide-md small">Boot reliability</td></tr><tr><td class="strong">TPM not detected by Windows</td><td>Firmware TPM (fTPM) disabled in setup.</td><td class="hide-md small">Security & Windows 11</td></tr><tr><td class="strong">Fans run at full speed</td><td>Fan curve table missing in current firmware.</td><td class="hide-md small">Thermals & noise</td></tr><tr><td class="strong">Slow boot times after firmware update</td><td>Fast Boot / CSM settings reset to defaults.</td><td class="hide-md small">Performance</td></tr></tbody>
+        </table></div></div>
+      </section>
+
+      <section class="detail-card">
+        <h2>Best Practices</h2>
+        <p style="margin-bottom:16px;">A short checklist to keep this driver healthy and reduce the chance of running into the issues above.</p>
+        <ul class="detail-list">
+          <li><span class="detail-list__bullet"><i data-lucide="check" class="icon-12"></i></span><span>Plug the system into mains power before flashing — power loss mid-update can brick the board.</span></li><li><span class="detail-list__bullet"><i data-lucide="check" class="icon-12"></i></span><span>Read the change-log; flash only when a fix or feature is genuinely needed.</span></li><li><span class="detail-list__bullet"><i data-lucide="check" class="icon-12"></i></span><span>Note your current BIOS settings (XMP, fan curves, boot order) before updating.</span></li><li><span class="detail-list__bullet"><i data-lucide="check" class="icon-12"></i></span><span>Use the manufacturer’s official tool, not third-party flashers.</span></li><li><span class="detail-list__bullet"><i data-lucide="check" class="icon-12"></i></span><span>After flashing, re-enable virtualisation, TPM and secure boot if you rely on them.</span></li>
+        </ul>
+      </section>
+
+      <section class="detail-card">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq__inner" style="margin:8px 0 0;">
+          
+          <div class="faq__item">
+            <button type="button" class="faq__q">What is the difference between BIOS and UEFI?<i data-lucide="chevron-down" class="icon-16"></i></button>
+            <div class="faq__a"><p style="padding-top:0;">BIOS is the legacy 16-bit firmware standard. UEFI is its modern replacement with a richer interface, faster boot, secure boot, GPT partition support and drive sizes beyond 2 TB. Most systems since 2012 use UEFI.</p></div>
+          </div>
+          <div class="faq__item">
+            <button type="button" class="faq__q">Is updating the BIOS risky?<i data-lucide="chevron-down" class="icon-16"></i></button>
+            <div class="faq__a"><p style="padding-top:0;">Modern flashing tools are robust, but there is always a small risk if power is lost mid-update. Only flash when you have a clear reason — a fix, new CPU support, or a security advisory.</p></div>
+          </div>
+          <div class="faq__item">
+            <button type="button" class="faq__q">Why does Windows ask for TPM after a BIOS update?<i data-lucide="chevron-down" class="icon-16"></i></button>
+            <div class="faq__a"><p style="padding-top:0;">Updates sometimes reset the firmware TPM. Re-enabling “fTPM” or “PTT” in setup, then booting back into Windows, restores it.</p></div>
+          </div>
+          <div class="faq__item">
+            <button type="button" class="faq__q">Can I downgrade the BIOS?<i data-lucide="chevron-down" class="icon-16"></i></button>
+            <div class="faq__a"><p style="padding-top:0;">Sometimes — many vendors lock newer microcode releases. Check the manufacturer page; if downgrade is supported, the change-log will mention it explicitly.</p></div>
+          </div>
+        </div>
+      </section>
+
       <section class="related-section">
         <div class="related-section__head">
           <div>

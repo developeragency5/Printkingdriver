@@ -220,6 +220,47 @@
         <p>Sharp, well-lit video calls and recordings rely on the webcam driver. A weak driver causes laggy, washed-out, or completely missing video.</p>
       </section>
 
+
+      <section class="detail-card">
+        <h2>Common Issues &amp; Symptoms</h2>
+        <p style="margin-bottom:16px;">Recognising the symptom is the first step in narrowing down whether the problem really is the driver, the hardware or another part of the system.</p>
+        <div class="tbl-wrap"><div class="tbl-scroll"><table class="tbl">
+          <thead><tr><th>Symptom</th><th>Likely Cause</th><th class="hide-md">What It Affects</th></tr></thead>
+          <tbody><tr><td class="strong">Camera not found by apps</td><td>Privacy permissions or driver enumeration issue.</td><td class="hide-md small">Visibility</td></tr><tr><td class="strong">Image is dark or grainy</td><td>Auto-exposure / white-balance driver settings off.</td><td class="hide-md small">Image quality</td></tr><tr><td class="strong">Camera works in one app but not another</td><td>UVC vs vendor driver routing conflict.</td><td class="hide-md small">Compatibility</td></tr><tr><td class="strong">Flickering or banding under indoor lighting</td><td>Anti-flicker (50 / 60 Hz) profile wrong.</td><td class="hide-md small">Image quality</td></tr><tr><td class="strong">Microphone array picks up too much noise</td><td>Beamforming driver disabled.</td><td class="hide-md small">Audio</td></tr></tbody>
+        </table></div></div>
+      </section>
+
+      <section class="detail-card">
+        <h2>Best Practices</h2>
+        <p style="margin-bottom:16px;">A short checklist to keep this driver healthy and reduce the chance of running into the issues above.</p>
+        <ul class="detail-list">
+          <li><span class="detail-list__bullet"><i data-lucide="check" class="icon-12"></i></span><span>Use the UVC class driver for plug-and-play webcams; install the vendor driver only for advanced features.</span></li><li><span class="detail-list__bullet"><i data-lucide="check" class="icon-12"></i></span><span>Check Windows privacy settings before debugging — apps need camera permission to enumerate the device.</span></li><li><span class="detail-list__bullet"><i data-lucide="check" class="icon-12"></i></span><span>Match the anti-flicker frequency to your country’s power grid (50 Hz EU / 60 Hz US).</span></li><li><span class="detail-list__bullet"><i data-lucide="check" class="icon-12"></i></span><span>Update the driver after firmware updates from the manufacturer.</span></li><li><span class="detail-list__bullet"><i data-lucide="check" class="icon-12"></i></span><span>For meetings, prefer 720p over 1080p when bandwidth is limited — frame rate matters more than resolution.</span></li>
+        </ul>
+      </section>
+
+      <section class="detail-card">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq__inner" style="margin:8px 0 0;">
+          
+          <div class="faq__item">
+            <button type="button" class="faq__q">What is UVC?<i data-lucide="chevron-down" class="icon-16"></i></button>
+            <div class="faq__a"><p style="padding-top:0;">UVC stands for USB Video Class — a standard that lets webcams work without a vendor driver. Almost every modern webcam is UVC-compliant, which is why they generally work the moment they are plugged in.</p></div>
+          </div>
+          <div class="faq__item">
+            <button type="button" class="faq__q">Why can only one app use the camera at a time?<i data-lucide="chevron-down" class="icon-16"></i></button>
+            <div class="faq__a"><p style="padding-top:0;">On Windows, the driver typically gives exclusive access to the first app that requests the camera. Some vendor drivers add a virtual camera that lets multiple apps share the feed.</p></div>
+          </div>
+          <div class="faq__item">
+            <button type="button" class="faq__q">How do I improve image quality on calls?<i data-lucide="chevron-down" class="icon-16"></i></button>
+            <div class="faq__a"><p style="padding-top:0;">Adjust exposure, white balance and anti-flicker in the vendor utility. Stable lighting in front of the camera improves quality more than any driver setting.</p></div>
+          </div>
+          <div class="faq__item">
+            <button type="button" class="faq__q">Is the integrated mic part of the camera driver?<i data-lucide="chevron-down" class="icon-16"></i></button>
+            <div class="faq__a"><p style="padding-top:0;">Usually yes — laptop and webcam mic arrays are exposed as part of the same USB composite device. Updating the camera driver also updates the mic firmware on many models.</p></div>
+          </div>
+        </div>
+      </section>
+
       <section class="related-section">
         <div class="related-section__head">
           <div>
