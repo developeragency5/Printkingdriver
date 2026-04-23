@@ -13,7 +13,7 @@ export default function Footer() {
               </div>
               <div className="font-heading font-bold text-white text-lg">PrintKingDriver</div>
             </Link>
-            <p className="text-sm leading-relaxed">Your trusted source for printer & system driver information.</p>
+            <p className="text-sm leading-relaxed">A free, informational guide to understanding printer drivers and how they work.</p>
           </div>
           
           <div>
