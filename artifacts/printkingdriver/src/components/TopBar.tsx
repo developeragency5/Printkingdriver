@@ -5,10 +5,8 @@ export default function TopBar() {
         <div className="flex items-center gap-3">
           <div className="flex items-center gap-1.5">
             <div className="w-2 h-2 rounded-full bg-green-500"></div>
-            <span>Database Version: 4.2.0-STABLE</span>
+            <span>Printer Driver Information & Support Guide</span>
           </div>
-          <span className="text-[#404038]">|</span>
-          <span className="hidden sm:inline">⚡ 50,000+ Hardware Protocols Mapped</span>
         </div>
         <div className="flex items-center gap-4">
           <a href="#" className="hover:text-white transition-colors">Documentation Library</a>

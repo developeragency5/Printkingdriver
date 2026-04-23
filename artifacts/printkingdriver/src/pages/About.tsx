@@ -17,7 +17,7 @@ export default function About() {
         <div className="container mx-auto max-w-3xl text-center">
           <h2 className="font-heading font-bold text-3xl mb-6">Our Mission</h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            PrintKingDriver was built to simplify the confusing world of printer drivers. Whether you're a home user setting up a new printer or an IT professional managing multiple devices, our directory gives you accurate, up-to-date driver information for over 200 brands. We update our database daily with the latest official releases from all major manufacturers.
+            PrintKingDriver was built to simplify the confusing world of printer drivers. Whether you're a home user setting up a new printer or an IT professional managing multiple devices, our guide gives you clear, straightforward information to help you identify, troubleshoot, and install the right driver for your printer.
           </p>
         </div>
       </section>
@@ -29,7 +29,7 @@ export default function About() {
               <CheckSquare className="w-6 h-6" />
             </div>
             <h3 className="font-heading font-bold text-xl mb-3">Accuracy</h3>
-            <p className="text-muted-foreground text-sm">Only official, verified driver information. No guesswork.</p>
+            <p className="text-muted-foreground text-sm">Clear, straightforward driver information to help you make the right choice.</p>
           </div>
           
           <div className="bg-background p-8 rounded-2xl border border-border text-center hover:border-primary/30 transition-colors">
@@ -50,28 +50,6 @@ export default function About() {
         </div>
       </section>
 
-      <section className="bg-[#1c1c1a] text-white py-16">
-        <div className="container mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-x-0 md:divide-x divide-[#2a2a28]">
-            <div className="px-4">
-              <div className="text-4xl font-heading font-bold text-primary mb-2">50,000+</div>
-              <div className="text-sm text-[#a3a39a] uppercase tracking-wider font-semibold">Drivers</div>
-            </div>
-            <div className="px-4">
-              <div className="text-4xl font-heading font-bold text-primary mb-2">200+</div>
-              <div className="text-sm text-[#a3a39a] uppercase tracking-wider font-semibold">Brands</div>
-            </div>
-            <div className="px-4">
-              <div className="text-4xl font-heading font-bold text-primary mb-2">10M+</div>
-              <div className="text-sm text-[#a3a39a] uppercase tracking-wider font-semibold">Visitors</div>
-            </div>
-            <div className="px-4">
-              <div className="text-4xl font-heading font-bold text-primary mb-2">Daily</div>
-              <div className="text-sm text-[#a3a39a] uppercase tracking-wider font-semibold">Updated</div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       <section className="py-20 px-4 container mx-auto max-w-4xl text-center">
         <h2 className="font-heading font-bold text-3xl mb-12">Meet the Team</h2>

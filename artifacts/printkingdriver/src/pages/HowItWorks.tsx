@@ -21,7 +21,7 @@ export default function HowItWorks() {
             <div className="font-heading font-[800] text-[3rem] text-muted leading-none mb-4">01</div>
             <h3 className="font-heading font-[700] text-xl mb-4">Search Your Printer Model</h3>
             <p className="text-muted-foreground leading-relaxed text-sm">
-              Enter your printer brand and model in our search bar. Our directory of 50,000+ drivers will help you identify the exact driver you need.
+              Enter your printer brand and model in our search bar. Our driver information guide will help you identify the correct driver you need.
             </p>
           </div>
 
@@ -58,7 +58,7 @@ export default function HowItWorks() {
             <AccordionItem value="item-2" data-testid="faq-item-2" className="border-border">
               <AccordionTrigger className="text-left font-semibold hover:text-primary">Are the drivers listed safe and official?</AccordionTrigger>
               <AccordionContent className="text-muted-foreground leading-relaxed">
-                All driver information on our site is sourced from original equipment manufacturers (OEMs). We only list verified, official driver versions.
+                Our guides reference driver types and sources commonly associated with major printer manufacturers. We recommend always obtaining driver files directly from your printer manufacturer's official website.
               </AccordionContent>
             </AccordionItem>
             

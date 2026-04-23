@@ -11,7 +11,7 @@ export default function Home() {
         <div className="absolute inset-0 -z-10"></div>
         <div className="container mx-auto text-center max-w-4xl relative z-10">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 text-blue-800 text-sm font-medium mb-6">
-            <span>⚡ Trusted Driver Support Platform</span>
+            <span>Printer Driver Information Guide</span>
           </div>
           
           <h1 className="font-heading font-[800] text-[2.4rem] md:text-[2.8rem] text-[#111110] leading-[1.1] tracking-tight mb-6 animate-fade-in-up">
@@ -31,15 +31,6 @@ export default function Home() {
             </Link>
           </div>
           
-          <div className="flex flex-wrap justify-center items-center gap-x-8 gap-y-4 text-sm font-medium text-muted-foreground border-t border-border pt-8">
-            <div>50,000+ Drivers</div>
-            <div className="hidden sm:block w-px h-4 bg-border"></div>
-            <div>200+ Brands</div>
-            <div className="hidden sm:block w-px h-4 bg-border"></div>
-            <div>24/7 Support</div>
-            <div className="hidden sm:block w-px h-4 bg-border"></div>
-            <div>10M+ Downloads</div>
-          </div>
         </div>
       </section>
 
