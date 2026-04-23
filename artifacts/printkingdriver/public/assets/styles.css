@@ -1102,3 +1102,113 @@ main { flex: 1; }
   .detail-head h1 { font-size: 1.625rem; }
   .detail-head p { font-size: 1rem; }
 }
+
+/* ============== Driver category themes — 4 distinct visual identities ============== */
+
+/* Each category re-tints the page tone, header accent line, icon tile glow,
+   and the eyebrow pill so that visiting Chipset (essential) feels visually
+   different from visiting Printer (peripheral), etc. */
+
+/* --- ESSENTIAL (Chipset / Graphics / Audio / Network) — deep teal, foundational --- */
+.detail-bg.cat-essential {
+  --cat: #4a6b75;
+  --cat-soft: rgba(74,107,117,0.10);
+  --cat-glow: rgba(74,107,117,0.30);
+  --cat-bg-tint: rgba(74,107,117,0.025);
+}
+
+/* --- HARDWARE-SPECIFIC (Storage / USB / Bluetooth / Input) — warm copper, tactile --- */
+.detail-bg.cat-hardware {
+  --cat: #b87333;
+  --cat-soft: rgba(184,115,51,0.10);
+  --cat-glow: rgba(184,115,51,0.30);
+  --cat-bg-tint: rgba(184,115,51,0.03);
+}
+
+/* --- PERIPHERAL (Printer / Scanner / Webcam) — rosewood, external devices --- */
+.detail-bg.cat-peripheral {
+  --cat: #9c4a5b;
+  --cat-soft: rgba(156,74,91,0.10);
+  --cat-glow: rgba(156,74,91,0.30);
+  --cat-bg-tint: rgba(156,74,91,0.03);
+}
+
+/* --- ADVANCED SYSTEMS (BIOS / Security / Monitor) — slate indigo, systems-level --- */
+.detail-bg.cat-advanced {
+  --cat: #4a5d8a;
+  --cat-soft: rgba(74,93,138,0.10);
+  --cat-glow: rgba(74,93,138,0.30);
+  --cat-bg-tint: rgba(74,93,138,0.03);
+}
+
+/* Apply the per-category vars to header + decorative elements */
+.detail-bg[class*="cat-"] {
+  background:
+    radial-gradient(80% 50% at 50% 0%, var(--cat-bg-tint, transparent) 0%, transparent 60%);
+}
+.detail-bg[class*="cat-"] .detail-head::before {
+  background: linear-gradient(90deg, var(--cat) 0%, transparent 70%);
+  opacity: 0.85;
+}
+.detail-bg[class*="cat-"] .detail-head__icon.cat-icon {
+  color: var(--cat);
+}
+.detail-bg[class*="cat-"] .detail-head__icon.cat-icon::after {
+  background: radial-gradient(closest-side, var(--cat-glow), transparent 70%);
+}
+.detail-bg[class*="cat-"] .detail-head .eyebrow {
+  color: var(--cat);
+  background: var(--cat-soft);
+}
+
+/* Add a small category badge in the corner of the header card */
+.detail-bg[class*="cat-"] .detail-head {
+  position: relative;
+}
+.detail-bg[class*="cat-"] .detail-head::after {
+  content: attr(data-cat-badge);
+  position: absolute;
+  top: 18px;
+  right: 22px;
+  font-family: var(--font-heading);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--cat);
+  opacity: 0.55;
+}
+.detail-bg.cat-essential  .detail-head { --cat-badge: "01 / Essential"; }
+.detail-bg.cat-hardware   .detail-head { --cat-badge: "02 / Hardware"; }
+.detail-bg.cat-peripheral .detail-head { --cat-badge: "03 / Peripheral"; }
+.detail-bg.cat-advanced   .detail-head { --cat-badge: "04 / Advanced"; }
+.detail-bg.cat-essential  .detail-head::after { content: "01 / Essential"; }
+.detail-bg.cat-hardware   .detail-head::after { content: "02 / Hardware"; }
+.detail-bg.cat-peripheral .detail-head::after { content: "03 / Peripheral"; }
+.detail-bg.cat-advanced   .detail-head::after { content: "04 / Advanced"; }
+
+/* Tint a few content accents inside cards for cohesion */
+.detail-bg[class*="cat-"] .detail-card h2 {
+  position: relative;
+  padding-left: 14px;
+}
+.detail-bg[class*="cat-"] .detail-card h2::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 8px; bottom: 8px;
+  width: 3px;
+  background: var(--cat);
+  border-radius: 2px;
+  opacity: 0.6;
+}
+
+/* Tint the FAQ chevron and bullet markers on detail cards by category */
+.detail-bg[class*="cat-"] .detail-list__bullet { color: var(--cat); }
+.detail-bg[class*="cat-"] .faq__q[aria-expanded="true"],
+.detail-bg[class*="cat-"] .faq__q:hover { color: var(--cat); }
+
+/* Hide category badge on small screens to keep the header clean */
+@media (max-width: 640px) {
+  .detail-bg[class*="cat-"] .detail-head::after { display: none; }
+  .detail-bg[class*="cat-"] .detail-card h2 { padding-left: 12px; }
+}
