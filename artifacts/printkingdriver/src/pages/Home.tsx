@@ -67,27 +67,56 @@ function ExploreSlider({ categories }: { categories: ExploreCategory[] }) {
         ref={scrollRef}
         className="flex gap-5 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-4 -mx-4 px-4 [&::-webkit-scrollbar]:hidden [scrollbar-width:none]"
       >
-        {categories.map((c) => (
+        {categories.map((c, idx) => (
           <article
             key={c.title}
-            className="snap-start flex-shrink-0 w-[85%] sm:w-[48%] lg:w-[31%] xl:w-[23.5%] rounded-2xl border border-border bg-white p-5 shadow-[0_1px_2px_rgba(0,0,0,0.03)] hover:shadow-[0_4px_14px_rgba(0,0,0,0.05)] transition-shadow flex flex-col"
+            className="group relative snap-start flex-shrink-0 w-[85%] sm:w-[48%] lg:w-[31%] xl:w-[23.5%] rounded-2xl border border-border/70 bg-white p-6 shadow-[0_1px_2px_rgba(0,0,0,0.03)] hover:shadow-[0_22px_45px_-22px_rgba(74,107,117,0.32)] hover:-translate-y-0.5 hover:border-primary/25 transition-all duration-300 flex flex-col overflow-hidden"
           >
-            <div className="text-[11px] uppercase tracking-wider text-muted-foreground font-semibold mb-3">{c.tag}</div>
-            <div className={`w-10 h-10 ${c.bg} rounded-lg flex items-center justify-center mb-3`}>
-              {c.icon}
-            </div>
-            <h3 className="font-heading font-bold text-lg text-[#111110] mb-2">{c.title}</h3>
-            <p className="text-[13px] text-muted-foreground leading-relaxed mb-4">{c.desc}</p>
+            {/* subtle hover glow */}
+            <div
+              aria-hidden
+              className="pointer-events-none absolute -top-24 -right-24 w-56 h-56 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+              style={{ background: "radial-gradient(closest-side, rgba(190,215,220,0.45), transparent 70%)" }}
+            />
 
-            <ul className="border-t border-border pt-3 space-y-3 mt-auto">
+            {/* Header: numbered chip + eyebrow */}
+            <div className="relative z-10 flex items-center justify-between mb-5">
+              <div className="flex items-center gap-2.5">
+                <span className="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-primary/10 border border-primary/15 font-heading font-bold text-primary text-[11px] tracking-tight">
+                  {String(idx + 1).padStart(2, "0")}
+                </span>
+                <span className="text-[10px] uppercase tracking-[0.2em] font-semibold text-muted-foreground/80">
+                  {c.tag}
+                </span>
+              </div>
+              <div className={`w-10 h-10 ${c.bg} rounded-xl flex items-center justify-center ring-1 ring-black/5`}>
+                {c.icon}
+              </div>
+            </div>
+
+            <h3 className="relative z-10 font-heading font-bold text-[1.15rem] text-foreground tracking-[-0.015em] leading-snug mb-2">
+              {c.title}
+            </h3>
+            <p className="relative z-10 text-[13px] text-muted-foreground leading-relaxed mb-5">
+              {c.desc}
+            </p>
+
+            {/* Item count label */}
+            <div className="relative z-10 flex items-center gap-2 mb-3 text-[10px] font-bold uppercase tracking-[0.18em] text-muted-foreground/70">
+              <span>Includes</span>
+              <span className="flex-1 h-px bg-border" />
+              <span>{c.items.length} drivers</span>
+            </div>
+
+            <ul className="relative z-10 space-y-3 mt-auto">
               {c.items.map((it) => (
-                <li key={it.name} className="flex gap-2.5">
-                  <div className={`w-6 h-6 ${c.bg} rounded-md flex items-center justify-center flex-shrink-0 mt-0.5`}>
+                <li key={it.name} className="flex gap-3 items-start">
+                  <div className={`w-7 h-7 ${c.bg} rounded-md flex items-center justify-center flex-shrink-0 mt-0.5 ring-1 ring-black/5`}>
                     {it.icon}
                   </div>
-                  <div className="min-w-0">
-                    <div className="text-[12px] font-semibold text-[#111110]">{it.name}</div>
-                    <div className="text-[11px] text-muted-foreground leading-snug">{it.note}</div>
+                  <div className="min-w-0 flex-1">
+                    <div className="text-[12.5px] font-semibold text-foreground tracking-[-0.005em]">{it.name}</div>
+                    <div className="text-[11px] text-muted-foreground leading-snug mt-0.5">{it.note}</div>
                   </div>
                 </li>
               ))}
