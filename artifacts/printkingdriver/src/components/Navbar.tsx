@@ -152,7 +152,7 @@ export default function Navbar() {
               onFocus={() => setSearchOpen(true)}
               onKeyDown={onSearchKey}
               placeholder="Search drivers, pages, hardware..."
-              className="w-full h-10 pl-9 pr-9 rounded-full bg-secondary border border-transparent focus:border-primary/30 focus:ring-2 focus:ring-primary/20 text-sm outline-none"
+              className="w-full h-10 pl-9 pr-9 rounded-full bg-transparent border border-border focus:border-primary/40 focus:ring-2 focus:ring-primary/15 text-sm outline-none"
               data-testid="input-search"
             />
             {query && (
