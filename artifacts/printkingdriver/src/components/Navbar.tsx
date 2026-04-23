@@ -237,27 +237,35 @@ export default function Navbar() {
                 <div
                   onMouseEnter={openMega}
                   onMouseLeave={scheduleCloseMega}
-                  className="fixed left-1/2 top-16 -translate-x-1/2 w-[min(1100px,calc(100vw-2rem))] z-50"
+                  className="fixed left-1/2 top-16 -translate-x-1/2 w-[min(1400px,calc(100vw-2rem))] z-50"
                 >
-                  <div className="mt-2 bg-white border border-border rounded-2xl shadow-[0_20px_50px_rgba(15,23,42,0.12)] p-6 animate-in fade-in slide-in-from-top-2 duration-150">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                      {driverColumns.map((col) => (
-                        <div key={col.heading}>
-                          <div className="text-[11px] uppercase tracking-wider font-semibold text-blue-700 mb-3">
-                            {col.heading}
+                  <div className="mt-2 bg-white border border-border/70 rounded-2xl shadow-[0_24px_60px_-12px_rgba(15,23,42,0.18)] px-8 lg:px-10 py-8 animate-in fade-in slide-in-from-top-2 duration-150">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-10 lg:gap-x-12 gap-y-8">
+                      {driverColumns.map((col, ci) => (
+                        <div
+                          key={col.heading}
+                          className={`relative ${ci > 0 ? "lg:pl-10 lg:before:content-[''] lg:before:absolute lg:before:left-0 lg:before:top-1 lg:before:bottom-1 lg:before:w-px lg:before:bg-border/60" : ""}`}
+                        >
+                          <div className="flex items-center gap-2.5 mb-5">
+                            <span className="inline-flex items-center justify-center w-6 h-6 rounded-md bg-primary/10 border border-primary/15 font-heading font-bold text-primary text-[10px] tracking-tight">
+                              {String(ci + 1).padStart(2, "0")}
+                            </span>
+                            <div className="text-[10.5px] uppercase tracking-[0.2em] font-bold text-primary">
+                              {col.heading}
+                            </div>
                           </div>
-                          <ul className="space-y-1">
+                          <ul className="space-y-0.5">
                             {col.items.map((it) => (
                               <li key={it.slug}>
                                 <Link
                                   href={`/drivers/${it.slug}`}
                                   onClick={() => setMegaOpen(false)}
-                                  className="block rounded-lg px-3 py-2 -mx-3 hover:bg-[#f4f6fb] transition-colors group"
+                                  className="block rounded-lg px-3 py-2.5 -mx-3 transition-all duration-200 hover:bg-secondary/60 hover:translate-x-0.5 hover:shadow-[inset_2px_0_0_0_#4a6b75] group"
                                 >
-                                  <div className="text-[13px] font-semibold text-[#111110] group-hover:text-primary transition-colors">
+                                  <div className="text-[13.5px] font-semibold text-foreground tracking-[-0.01em] group-hover:text-primary transition-colors">
                                     {it.label}
                                   </div>
-                                  <div className="text-[11px] text-muted-foreground leading-snug">
+                                  <div className="text-[11.5px] text-muted-foreground leading-snug mt-0.5">
                                     {it.desc}
                                   </div>
                                 </Link>
@@ -268,16 +276,16 @@ export default function Navbar() {
                       ))}
                     </div>
 
-                    <div className="mt-5 pt-4 border-t border-border flex items-center justify-between">
-                      <p className="text-xs text-muted-foreground">
+                    <div className="mt-8 pt-5 border-t border-border/70 flex items-center justify-between">
+                      <p className="text-[11px] uppercase tracking-[0.18em] font-semibold text-muted-foreground/80">
                         Browse the full reference for each driver type.
                       </p>
                       <Link
                         href="/drivers"
                         onClick={() => setMegaOpen(false)}
-                        className="text-xs font-semibold text-primary hover:underline"
+                        className="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-[0.16em] text-primary hover:gap-2.5 transition-all"
                       >
-                        View all drivers →
+                        View all drivers <span aria-hidden>→</span>
                       </Link>
                     </div>
                   </div>
