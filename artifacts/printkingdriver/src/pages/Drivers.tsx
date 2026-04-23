@@ -21,62 +21,53 @@ const brands: Brand[] = ['All', 'HP', 'Canon', 'Epson', 'Brother', 'Lexmark', 'S
 
 export default function Drivers() {
   const [filter, setFilter] = useState<Brand>('All');
-  
   const filtered = filter === 'All' ? drivers : drivers.filter(d => d.brand === filter);
 
   return (
     <Layout>
-      <div className="bg-white py-16 px-4 border-b border-border">
-        <div className="container mx-auto max-w-4xl text-center">
-          <h1 className="font-heading font-[800] text-3xl md:text-5xl mb-4">Explore 50,000+ Printer & System Drivers</h1>
-          <p className="text-lg text-muted-foreground mb-6">Browse our complete informational directory of printer drivers by brand and category.</p>
-          <div className="inline-flex items-center gap-2 bg-blue-50 text-blue-800 px-4 py-2 rounded-lg text-sm font-medium">
-            <span>ℹ️</span> This is an informational directory. Contact us for personalised driver assistance.
-          </div>
-        </div>
-      </div>
+      <div className="container mx-auto px-4 pt-12 pb-4 max-w-6xl">
+        <h1 className="font-heading font-[800] text-3xl md:text-4xl mb-2">Explore Drivers</h1>
+        <p className="text-muted-foreground mb-8">Browse our informational directory of printer drivers by brand.</p>
 
-      <div className="container mx-auto px-4 py-12">
-        <div className="flex flex-wrap justify-center gap-2 mb-12">
+        <div className="flex flex-wrap gap-2 mb-10">
           {brands.map(b => (
             <button
               key={b}
               data-testid={`filter-${b.toLowerCase()}`}
               onClick={() => setFilter(b)}
-              className={`px-5 py-2 rounded-full text-sm font-semibold transition-colors border ${filter === b ? 'bg-primary border-primary text-white shadow-md' : 'bg-white border-border text-muted-foreground hover:border-primary/40 hover:text-foreground'}`}
+              className={`px-5 py-2 rounded-full text-sm font-semibold transition-colors border ${filter === b ? 'bg-primary border-primary text-white shadow-sm' : 'bg-white border-border text-muted-foreground hover:border-primary/40 hover:text-foreground'}`}
             >
               {b}
             </button>
           ))}
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           {filtered.map((d, i) => (
-            <div key={d.id} data-testid={`card-driver-${i}`} className="bg-white border border-border rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col">
-              <div className="flex items-start justify-between mb-4">
+            <div key={d.id} data-testid={`card-driver-${i}`} className="bg-white border border-border rounded-xl p-6 hover:shadow-md transition-shadow flex flex-col">
+              <div className="flex items-start justify-between mb-3">
                 <span className={`px-2.5 py-1 rounded text-[10px] font-bold text-white tracking-wider uppercase ${d.color}`}>
                   {d.brand}
                 </span>
-                <span className="text-xs text-muted-foreground font-mono">Version: {d.version}</span>
+                <span className="text-xs text-muted-foreground font-mono">{d.version}</span>
               </div>
-              
-              <h3 className="font-heading font-bold text-lg mb-4">{d.model}</h3>
-              
-              <div className="flex flex-wrap gap-2 mb-6">
+
+              <h3 className="font-heading font-bold text-base mb-3">{d.model}</h3>
+
+              <div className="flex flex-wrap gap-1.5 mb-5">
                 {d.os.map(os => (
-                  <span key={os} className="bg-secondary text-secondary-foreground px-2 py-1 rounded text-xs font-medium border border-border">
+                  <span key={os} className="bg-secondary text-secondary-foreground px-2 py-0.5 rounded text-xs font-medium border border-border">
                     {os}
                   </span>
                 ))}
               </div>
-              
-              <div className="mt-auto">
-                <div className="flex items-center gap-2 text-sm text-green-600 font-medium mb-4 bg-green-50 px-3 py-2 rounded-lg">
-                  <CheckCircle2 className="w-4 h-4" />
+
+              <div className="mt-auto space-y-3">
+                <div className="flex items-center gap-1.5 text-xs text-green-700 font-medium">
+                  <CheckCircle2 className="w-3.5 h-3.5" />
                   Official Driver · Verified
                 </div>
-                
-                <Link href="/contact" className="block w-full text-center px-4 py-2.5 border-2 border-border text-foreground font-semibold rounded-lg hover:border-primary hover:text-primary transition-colors">
+                <Link href="/contact" className="block w-full text-center px-4 py-2 border border-border text-sm text-foreground font-semibold rounded-lg hover:border-primary hover:text-primary transition-colors">
                   View Details
                 </Link>
               </div>
