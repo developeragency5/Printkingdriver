@@ -1455,3 +1455,10 @@ main { flex: 1; }
   color: var(--muted);
   line-height: 1.5;
 }
+
+/* Reverse layout — rail on the right (used for the audio spotlight to alternate rhythm) */
+@media (min-width: 880px) {
+  .spotlight--reverse .spotlight__grid { grid-template-columns: 1fr 220px; }
+  .spotlight--reverse .spotlight__rail { border-left: none; border-right: 2px solid var(--sp-accent); padding-left: 0; padding-right: 16px; text-align: right; }
+  .spotlight--reverse .spotlight__rail .spotlight__link { float: right; }
+}
