@@ -443,79 +443,35 @@ export default function Home() {
       </section>
 
       {/* ── Types of Drivers and Their Roles ── */}
-      <section className="py-24 md:py-28 px-4 bg-[#E5DDC5]">
+      <section className="py-20 px-4 bg-[#E5DDC5]">
         <div className="container mx-auto max-w-5xl">
-          <div className="text-center max-w-2xl mx-auto mb-14">
-            <div className="text-[11px] uppercase tracking-[0.22em] text-[#4a6b75] font-semibold mb-3">Reference</div>
-            <h2 className="font-heading font-bold text-[2rem] md:text-[2.4rem] text-[#2a2a26] tracking-[-0.025em] mb-4">
-              Types of Drivers and Their Roles
-            </h2>
-            <p className="text-muted-foreground leading-relaxed">
+          <div className="mb-10">
+            <div className="text-xs uppercase tracking-wider text-[#4a6b75] font-semibold mb-2">Reference</div>
+            <h2 className="font-heading font-bold text-3xl text-[#2a2a26] mb-3">Types of Drivers and Their Roles</h2>
+            <p className="text-sm text-muted-foreground max-w-2xl leading-relaxed">
               A summary of common driver types, the function each one performs, and a typical use case in everyday computing.
             </p>
           </div>
 
-          {/* Desktop / tablet: structured table */}
-          <div className="hidden md:block bg-white border border-border/70 rounded-2xl overflow-hidden shadow-[0_1px_2px_rgba(0,0,0,0.03)]">
-            {/* Header row */}
-            <div className="grid grid-cols-[minmax(220px,1.1fr)_minmax(0,2fr)_minmax(0,1.6fr)] items-center gap-6 px-7 py-4 border-b border-border bg-secondary/40">
-              <div className="text-[10.5px] font-bold uppercase tracking-[0.18em] text-muted-foreground">Driver Type</div>
-              <div className="text-[10.5px] font-bold uppercase tracking-[0.18em] text-muted-foreground">Function</div>
-              <div className="text-[10.5px] font-bold uppercase tracking-[0.18em] text-muted-foreground/80">Example Use Case</div>
-            </div>
-
-            {/* Rows */}
-            <ul className="divide-y divide-border/70">
-              {driverRoleRows.map((r, i) => (
-                <li
-                  key={r.type}
-                  className="group grid grid-cols-[minmax(220px,1.1fr)_minmax(0,2fr)_minmax(0,1.6fr)] items-start gap-6 px-7 py-6 transition-all duration-200 hover:bg-[#fafaf5] hover:shadow-[inset_3px_0_0_0_#4a6b75]"
-                >
-                  <div className="flex items-start gap-3.5 min-w-0">
-                    <span className="mt-0.5 inline-flex items-center justify-center w-7 h-7 rounded-md bg-primary/10 border border-primary/15 text-[10px] font-mono font-bold text-primary tracking-tight flex-shrink-0">
-                      {String(i + 1).padStart(2, "0")}
-                    </span>
-                    <div className="min-w-0">
-                      <div className="font-heading font-bold text-[15px] text-foreground tracking-[-0.01em] leading-snug">
-                        {r.type}
-                      </div>
-                    </div>
-                  </div>
-                  <p className="text-[14px] text-foreground/80 leading-relaxed">{r.fn}</p>
-                  <p className="text-[13px] text-muted-foreground leading-relaxed">{r.use}</p>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Mobile: stacked cards */}
-          <div className="md:hidden space-y-4">
-            {driverRoleRows.map((r, i) => (
-              <article
-                key={r.type}
-                className="bg-white border border-border/70 rounded-2xl p-5 shadow-[0_1px_2px_rgba(0,0,0,0.03)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_18px_40px_-22px_rgba(74,107,117,0.32)] hover:border-primary/25"
-              >
-                <div className="flex items-start gap-3 mb-4">
-                  <span className="mt-0.5 inline-flex items-center justify-center w-7 h-7 rounded-md bg-primary/10 border border-primary/15 text-[10px] font-mono font-bold text-primary flex-shrink-0">
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
-                  <h3 className="font-heading font-bold text-[16px] text-foreground tracking-[-0.01em] leading-snug">
-                    {r.type}
-                  </h3>
-                </div>
-
-                <div className="space-y-3.5">
-                  <div>
-                    <div className="text-[10px] font-bold uppercase tracking-[0.18em] text-muted-foreground mb-1.5">Function</div>
-                    <p className="text-[14px] text-foreground/85 leading-relaxed">{r.fn}</p>
-                  </div>
-                  <div className="pt-3 border-t border-border/60">
-                    <div className="text-[10px] font-bold uppercase tracking-[0.18em] text-muted-foreground/80 mb-1.5">Example Use Case</div>
-                    <p className="text-[13px] text-muted-foreground leading-relaxed">{r.use}</p>
-                  </div>
-                </div>
-              </article>
-            ))}
+          <div className="border border-border rounded-2xl overflow-hidden bg-white shadow-[0_1px_2px_rgba(0,0,0,0.03)]">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="bg-[#f4f4f0] border-b border-border">
+                  <th className="text-left px-5 py-4 font-heading font-bold text-xs text-[#111110] uppercase tracking-wider">Driver Type</th>
+                  <th className="text-left px-5 py-4 font-heading font-bold text-xs text-[#111110] uppercase tracking-wider">Function</th>
+                  <th className="text-left px-5 py-4 font-heading font-bold text-xs text-[#111110] uppercase tracking-wider hidden md:table-cell">Example Use Case</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-border">
+                {driverRoleRows.map((r) => (
+                  <tr key={r.type} className="hover:bg-[#f9f9f7] transition-colors">
+                    <td className="px-5 py-4 font-semibold text-[#111110] align-top w-44">{r.type}</td>
+                    <td className="px-5 py-4 text-muted-foreground align-top">{r.fn}</td>
+                    <td className="px-5 py-4 text-muted-foreground align-top hidden md:table-cell">{r.use}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
         </div>
       </section>
