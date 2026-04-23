@@ -17,7 +17,8 @@ export default function DriverCard({ icon, title, description, active = false, s
     <Link
       href={href}
       className={`
-        group relative flex flex-col rounded-xl border bg-white overflow-hidden
+        group relative flex flex-col border bg-white overflow-hidden
+        rounded-tl-[36px] rounded-br-[36px] rounded-tr-md rounded-bl-md
         transition-all duration-300 cursor-pointer
         hover:border-primary/30 hover:shadow-[0_18px_40px_-24px_rgba(74,107,117,0.32)]
         ${active ? 'border-primary/40' : 'border-border'}
