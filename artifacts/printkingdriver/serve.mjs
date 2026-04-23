@@ -92,9 +92,19 @@ const server = http.createServer(async (req, res) => {
     }
     const ext = path.extname(file).toLowerCase();
     const data = await fs.readFile(file);
+    const isAsset = /\.(webp|png|jpe?g|gif|svg|ico|css|js|woff2?|ttf)$/i.test(file);
+    const isHtml = ext === ".html";
+    let cacheControl;
+    if (process.env.NODE_ENV === "production") {
+      if (isAsset) cacheControl = "public, max-age=31536000, immutable";
+      else if (isHtml) cacheControl = "public, max-age=300, must-revalidate";
+      else cacheControl = "public, max-age=3600";
+    } else {
+      cacheControl = "no-store";
+    }
     res.writeHead(200, {
       "Content-Type": MIME[ext] ?? "application/octet-stream",
-      "Cache-Control": process.env.NODE_ENV === "production" ? "public, max-age=3600" : "no-store",
+      "Cache-Control": cacheControl,
     });
     res.end(data);
   } catch (err) {
