@@ -241,7 +241,7 @@ export default function Home() {
             how they work, the categories that exist, and how to recognise common issues.
           </p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-3.5 mb-14">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3.5">
             <Link
               href="/drivers"
               className="w-full sm:w-auto px-8 py-3.5 bg-[#0b1220] text-white rounded-full font-semibold hover:bg-[#1d2a44] transition-colors shadow-[0_10px_30px_-10px_rgba(11,18,32,0.55)]"
@@ -254,21 +254,6 @@ export default function Home() {
             >
               How It Works
             </Link>
-          </div>
-
-          {/* Trust strip */}
-          <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-[12px] text-muted-foreground">
-            {[
-              "14 driver categories",
-              "Plain-language explanations",
-              "Vendor-neutral reference",
-              "Updated guidance",
-            ].map((t) => (
-              <div key={t} className="inline-flex items-center gap-2">
-                <span className="w-1 h-1 rounded-full bg-[#0b1220]/40" />
-                <span className="font-medium tracking-wide uppercase text-[11px]">{t}</span>
-              </div>
-            ))}
           </div>
         </div>
       </section>
