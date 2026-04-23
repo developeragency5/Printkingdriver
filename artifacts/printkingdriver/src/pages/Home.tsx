@@ -96,20 +96,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Brands Strip */}
-      <section className="bg-[#f2f2ee] py-8 border-y border-border px-4">
-        <div className="container mx-auto text-center">
-          <div className="text-[10px] uppercase tracking-widest text-muted-foreground font-bold mb-6">SUPPORTED BRANDS</div>
-          <div className="flex flex-wrap justify-center gap-4">
-            {['HP', 'Canon', 'Epson', 'Brother', 'Lexmark', 'Samsung', 'Xerox', 'Ricoh'].map(brand => (
-              <div key={brand} className="bg-white border border-border px-6 py-2.5 rounded-full text-sm font-medium text-foreground shadow-sm hover:border-primary/30 transition-colors">
-                {brand}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Common Issues */}
       <section className="py-20 px-4 bg-background">
         <div className="container mx-auto max-w-5xl">
