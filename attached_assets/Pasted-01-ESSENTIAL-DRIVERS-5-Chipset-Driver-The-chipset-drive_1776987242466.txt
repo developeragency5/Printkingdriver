@@ -1,0 +1,60 @@
+01. ESSENTIAL DRIVERS
+
+
+
+
+
+
+5
+Chipset Driver
+The chipset driver acts as the communication bridge between your motherboard, CPU, and other hardware components. It ensures that data flows correctly between the processor, RAM, storage, and peripherals. Without it, your system may not recognize hardware properly or may run inefficiently.
+Graphics Driver
+Graphics drivers control how your GPU renders images, videos, and animations. They are essential for smooth visuals, gaming performance, and video playback. Updated graphics drivers also unlock new features and improve compatibility with modern applications.
+Audio Driver
+Audio drivers manage sound input and output, allowing your system to communicate with speakers, headphones, and microphones. They ensure clear sound quality, enable advanced audio features, and fix issues like no sound or distorted output.
+Network Driver
+Network drivers enable your computer to connect to wired (Ethernet) and wireless (Wi-Fi) networks. They ensure stable internet connectivity, proper data transmission, and compatibility with routers and network devices.
+💻 02. HARDWARE-SPECIFIC DRIVERS
+
+
+
+
+
+
+6
+Storage Controller Driver
+This driver manages communication between your operating system and storage devices like SSDs and HDDs. It affects data transfer speed, system boot time, and overall storage performance.
+USB Support Driver
+USB drivers ensure that your system correctly detects and interacts with USB devices such as flash drives, keyboards, and external hard drives. They handle plug-and-play functionality and power management.
+Bluetooth Driver
+Bluetooth drivers allow your system to connect wirelessly with devices like headphones, keyboards, mice, and smartphones. They ensure stable pairing, fast data transfer, and minimal connection drops.
+Input Drivers
+Input drivers manage devices like touchpads, keyboards, and external input peripherals. They enable gestures, typing accuracy, and advanced features like multi-touch and shortcut controls.
+🖨️ 03. PERIPHERAL DRIVERS
+
+
+
+
+
+
+6
+Printer Driver
+Printer drivers convert digital documents into a format that your printer understands. They control print quality, layout, paper size, and color management, ensuring accurate output.
+Scanner Support Driver
+Scanner drivers allow your system to capture images or documents from a scanner. They also enable OCR (Optical Character Recognition), converting scanned text into editable digital content.
+Webcam Driver
+Webcam drivers manage video capture from your camera, ensuring compatibility with apps like video conferencing tools. They control resolution, frame rate, and image clarity.
+⚙️ 04. ADVANCED SYSTEM DRIVERS
+
+
+
+
+
+
+6
+BIOS / UEFI
+BIOS or UEFI firmware initializes hardware during system startup before the operating system loads. It ensures that all components are ready and functioning properly, and allows configuration of system-level settings.
+Security Drivers
+Security drivers handle encryption, secure boot processes, and protection of sensitive data. They help safeguard your system against malware, unauthorized access, and firmware-level threats.
+Monitor Driver
+Monitor drivers manage display settings such as resolution, refresh rate, and color accuracy. They ensure your screen performs optimally and displays visuals correctly based on hardware capabilities.
