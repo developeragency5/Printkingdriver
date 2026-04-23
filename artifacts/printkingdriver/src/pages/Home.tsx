@@ -16,6 +16,7 @@ type ExploreCategory = {
 function ExploreSlider({ categories }: { categories: ExploreCategory[] }) {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [activeIdx, setActiveIdx] = useState(0);
+  const [canScroll, setCanScroll] = useState(false);
 
   const scrollToIdx = (idx: number) => {
     const el = scrollRef.current;
@@ -41,7 +42,20 @@ function ExploreSlider({ categories }: { categories: ExploreCategory[] }) {
     const el = scrollRef.current;
     if (!el) return;
     el.addEventListener("scroll", handleScroll, { passive: true });
-    return () => el.removeEventListener("scroll", handleScroll);
+
+    const checkOverflow = () => {
+      setCanScroll(el.scrollWidth - el.clientWidth > 4);
+    };
+    checkOverflow();
+    const ro = new ResizeObserver(checkOverflow);
+    ro.observe(el);
+    window.addEventListener("resize", checkOverflow);
+
+    return () => {
+      el.removeEventListener("scroll", handleScroll);
+      ro.disconnect();
+      window.removeEventListener("resize", checkOverflow);
+    };
   }, []);
 
   const prev = () => scrollToIdx(Math.max(0, activeIdx - 1));
@@ -82,36 +96,38 @@ function ExploreSlider({ categories }: { categories: ExploreCategory[] }) {
         ))}
       </div>
 
-      <div className="flex items-center justify-between mt-6">
-        <div className="flex gap-1.5">
-          {categories.map((_, i) => (
+      {canScroll && (
+        <div className="flex items-center justify-between mt-6">
+          <div className="flex gap-1.5">
+            {categories.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => scrollToIdx(i)}
+                aria-label={`Go to slide ${i + 1}`}
+                className={`h-1.5 rounded-full transition-all ${i === activeIdx ? "w-6 bg-primary" : "w-1.5 bg-border"}`}
+              />
+            ))}
+          </div>
+          <div className="flex gap-2">
             <button
-              key={i}
-              onClick={() => scrollToIdx(i)}
-              aria-label={`Go to slide ${i + 1}`}
-              className={`h-1.5 rounded-full transition-all ${i === activeIdx ? "w-6 bg-primary" : "w-1.5 bg-border"}`}
-            />
-          ))}
+              onClick={prev}
+              disabled={activeIdx === 0}
+              aria-label="Previous"
+              className="w-10 h-10 rounded-full border border-border bg-white flex items-center justify-center hover:bg-muted disabled:opacity-40 disabled:cursor-not-allowed transition"
+            >
+              <ChevronLeft className="w-4 h-4" />
+            </button>
+            <button
+              onClick={next}
+              disabled={activeIdx === categories.length - 1}
+              aria-label="Next"
+              className="w-10 h-10 rounded-full border border-border bg-white flex items-center justify-center hover:bg-muted disabled:opacity-40 disabled:cursor-not-allowed transition"
+            >
+              <ChevronRight className="w-4 h-4" />
+            </button>
+          </div>
         </div>
-        <div className="flex gap-2">
-          <button
-            onClick={prev}
-            disabled={activeIdx === 0}
-            aria-label="Previous"
-            className="w-10 h-10 rounded-full border border-border bg-white flex items-center justify-center hover:bg-muted disabled:opacity-40 disabled:cursor-not-allowed transition"
-          >
-            <ChevronLeft className="w-4 h-4" />
-          </button>
-          <button
-            onClick={next}
-            disabled={activeIdx === categories.length - 1}
-            aria-label="Next"
-            className="w-10 h-10 rounded-full border border-border bg-white flex items-center justify-center hover:bg-muted disabled:opacity-40 disabled:cursor-not-allowed transition"
-          >
-            <ChevronRight className="w-4 h-4" />
-          </button>
-        </div>
-      </div>
+      )}
     </div>
   );
 }
