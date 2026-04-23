@@ -748,3 +748,18 @@ main { flex: 1; }
   .feature-img-section { padding: 56px 16px; }
   .feature-img-card { padding: 14px; border-radius: 16px; }
 }
+.feature-img-card--xl {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 28px;
+}
+.feature-img-card--xl img {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+@media (max-width: 640px) {
+  .feature-img-card--xl { padding: 12px; }
+}
+.feature-img-section--hero-infographic {
+  background: linear-gradient(180deg, #ffffff 0%, var(--bg-cream) 100%);
+}
