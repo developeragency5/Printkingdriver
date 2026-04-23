@@ -1,0 +1,384 @@
+Build a complete multi-page INFORMATIONAL website for a printer driver 
+support company called "PrintKingDriver.com" using pure HTML, CSS, and 
+JavaScript only. No backend, no database, no frameworks needed.
+The contact form is frontend-only (show a success message on submit, 
+no actual email sending).
+
+## PAGES TO CREATE:
+1. index.html        → Home Page
+2. drivers.html      → Explore Drivers Page
+3. how-it-works.html → How It Works Page
+4. about.html        → About Us Page
+5. contact.html      → Contact Page
+6. style.css         → Single shared stylesheet
+
+---
+
+## SHARED ELEMENTS (identical on every page):
+
+### Top Bar:
+- Left: green dot + "Database Version: 4.2.0-STABLE" | "⚡ 50,000+ Hardware Protocols Mapped"
+- Right: "Documentation Library" | "Technical Support" (anchor links, no real pages)
+- Background: #111110, text: #a3a39a, height: 36px, font-size: 12px
+
+### Navigation Bar:
+- Logo: blue rounded square with printer SVG icon + "PrintKingDriver" (Syne bold) 
+  + "SYSTEM GUIDE PORTAL" subtitle below in small caps
+- Center: search input (decorative only, no functionality) 
+  placeholder: "Search hardware, drivers or firmware..."
+- Nav links: Home | Explore Drivers | How It Works | About Guide
+- Right button: "⚡ Get In Touch" → links to contact.html
+- Sticky, white background with backdrop blur, 1px bottom border #e2e2da
+- Active nav link highlighted blue (#1d4ed8) based on current page
+
+### Footer:
+- Dark background #1c1c1a
+- Logo + tagline: "Your trusted source for printer & system driver information."
+- 3 link columns: Quick Links | Support | Legal
+  Quick Links: Home, Explore Drivers, How It Works, About
+  Support: Contact Us, FAQ, Technical Support
+  Legal: Privacy Policy (# link), Terms of Service (# link)
+- Bottom bar: "© 2025 PrintKingDriver.com. All rights reserved."
+
+### Floating Widget (fixed bottom-left, all pages):
+- White pill: pulsing green dot + "TECHNICIANS ONLINE"
+- CSS pulse keyframe animation on the dot
+- Appears after 1.5s delay on page load
+
+---
+
+## DESIGN SYSTEM:
+
+Google Fonts:
+- Syne (600, 700, 800) — headings, logo
+- Manrope (300, 400, 500, 600) — body text
+
+CSS Variables:
+--bg: #f9f9f7
+--white: #ffffff
+--black: #111110
+--dark: #1c1c1a
+--mid: #6b6b63
+--lighter: #f2f2ee
+--accent: #1d4ed8
+--accent-hover: #1e40af
+--accent-light: #eff6ff
+--accent-mid: #bfdbfe
+--border: #e2e2da
+--radius: 10px
+--shadow: 0 1px 3px rgba(0,0,0,0.06), 0 4px 16px rgba(0,0,0,0.04)
+
+Typography:
+- H1: Syne, 800, 2.8rem
+- H2: Syne, 700, 2rem
+- H3: Syne, 700, 1.2rem
+- Body: Manrope, 400, 15px, line-height 1.65
+- Muted text: color #6b6b63
+
+Animations:
+- Page load: body fades in (opacity 0→1, translateY 12px→0, 0.5s)
+- Cards: hover lifts translateY(-3px), shadow deepens, border turns #bfdbfe
+- All transitions: 0.2s ease
+
+---
+
+## DRIVER CATEGORY CARDS:
+
+### Section Header:
+- 4px solid blue left border (#1d4ed8), padding-left: 16px
+- Title: Syne 700, 1.4rem, #111110
+- Subtitle: Manrope, 0.875rem, #6b6b63
+- Margin-bottom: 40px, sections spaced 80px apart
+
+### Default Card:
+- White bg, border 1px solid #e2e2da, border-radius 10px, padding 28px 24px
+- Flex column layout, min-height 200px
+- Icon box: 48x48px, bg #f2f2ee, border-radius 10px, SVG icon color #6b8fd4
+- Title: Syne 700, 1rem, #111110, margin-top 16px
+- Description: Manrope, 0.875rem, #6b6b63, margin-top 8px
+- Bottom: "TECHNICAL SPECS ›" — 11px, uppercase, letter-spacing 0.1em, 
+  font-weight 600, color #9a9a8e, margin-top auto
+
+### Active Card (class="card-active") — used on "Printer Drivers" card:
+- Icon box: solid blue bg (#1d4ed8), icon white
+- Title: color #1d4ed8
+- "TECHNICAL SPECS ›": color #1d4ed8
+- Border: 1.5px solid #bfdbfe
+- Shadow: 0 4px 20px rgba(29,78,216,0.12)
+
+### Card Hover:
+- translateY(-3px)
+- Border: #bfdbfe
+- Icon box → blue, icon → white
+- Title → #1d4ed8
+- "TECHNICAL SPECS ›" → #1d4ed8
+
+### Grids:
+- Essential Drivers: 4-column
+- Hardware-Specific: 4-column
+- Peripheral Drivers: 3-column
+- Advanced Systems: 3-column
+- Gap: 20px, responsive (2-col tablet, 1-col mobile)
+
+---
+
+## ALL DRIVER CATEGORIES:
+
+### 1. Essential Drivers
+Subtitle: "Core System Foundation for stable operation."
+- Chipset Driver | CPU & Motherboard Logic Sync
+- Graphics Driver | Visual Rendering & GPU Protocols
+- Audio Driver | Sound Input/Output Processing
+- Network Driver | Wi-Fi 6 & High-Speed LAN Link
+
+### 2. Hardware-Specific
+Subtitle: "Internal Component Control for optimization and speed."
+- Storage Controller | Efficient data transfer for SSDs and HDDs.
+- USB Support | Port recognition and external device connectivity.
+- Bluetooth Drivers | Seamless wireless pairing for peripherals.
+- Touchpad/Keyboard | Precision input control and gesture translation.
+
+### 3. Peripheral Drivers
+Subtitle: "External Device Integration for connectivity and capture."
+- Printer Drivers [card-active] | Digital to physical document translation.
+- Scanner Support | Image digitizing and OCR protocol management.
+- Webcam Drivers | HD video capture and streaming optimization.
+
+### 4. Advanced Systems
+Subtitle: "Low-level Firmware & Security for system integrity."
+- BIOS/UEFI | Low-level pre-boot hardware initialization.
+- Security Drivers | System encryption and secure boot protection.
+- Monitor Calibration | Color accuracy and refresh rate optimization.
+
+Use simple inline SVG icons for each card (line style, no emoji).
+
+---
+
+## PAGE CONTENT:
+
+---
+
+### 1. index.html — HOME
+
+Hero:
+- Badge: "⚡ Trusted Driver Support Platform"
+- H1: "Find, Fix & Install Printer Drivers — Instantly"
+- Subtext: "PrintKingDriver helps you locate the right driver for any 
+  printer brand, troubleshoot errors, and get your device working in minutes."
+- Buttons: "Explore Drivers →" (links to drivers.html) | "How It Works" (links to how-it-works.html)
+- Stats row: "50,000+ Drivers" | "200+ Brands" | "24/7 Support" | "10M+ Downloads"
+
+Driver Categories:
+- Section H2: "Browse by Driver Type"
+- Show all 4 driver category sections (with all cards as described above)
+- NOTE: All "TECHNICAL SPECS ›" links go to drivers.html (informational, no individual pages)
+
+Supported Brands Strip:
+- Label: "SUPPORTED BRANDS"
+- Styled text badges: HP | Canon | Epson | Brother | Lexmark | Samsung | Xerox | Ricoh
+- Light gray strip, horizontally centered
+
+Common Issues Section:
+- H2: "Common Driver Issues We Resolve"
+- Subtitle: "From missing drivers to conflict errors — we have the information."
+- 6 info cards (3-column grid), each with icon, title, one-line description:
+  🖨 Printer Offline — Device not detected by the operating system.
+  ⚡ Driver Conflict — Two drivers clashing and causing errors.
+  ❓ Missing Driver — Required driver not found or corrupted.
+  📋 Print Queue Stuck — Jobs stuck and not clearing from queue.
+  🔊 Audio Errors — Sound driver failure or no audio output.
+  📶 Network Drops — Wi-Fi or LAN driver instability issues.
+- Button below: "Get Support →" links to contact.html
+
+---
+
+### 2. drivers.html — EXPLORE DRIVERS
+
+Hero:
+- H1: "Explore 50,000+ Printer & System Drivers"
+- Subtitle: "Browse our complete informational directory of printer drivers 
+  by brand and category."
+- Small note: "ℹ️ This is an informational directory. Contact us for 
+  personalised driver assistance."
+
+Brand Filter Bar (visual only, JS filters the cards):
+- Buttons: All | HP | Canon | Epson | Brother | Lexmark | Samsung
+- Active button: blue bg, white text
+- JS: filter cards by data-brand attribute on click
+
+Driver Info Cards Grid (3 columns, 9 cards):
+Each card:
+- Brand badge (color coded)
+- Printer model name (Syne bold)
+- Driver version label
+- OS compatibility tags: Win10 | Win11 | macOS (small rounded badges)
+- Info row: "Official Driver · Verified"
+- Bottom: "View Details" button (outline style, links to contact.html)
+
+
+---
+
+### 3. how-it-works.html — HOW IT WORKS
+
+Hero:
+- H1: "Get Your Printer Working in 3 Simple Steps"
+- Subtitle: "No technical knowledge required."
+
+3 Step Cards (large, numbered, vertical on mobile):
+Step 01 — Search Your Printer Model
+"Enter your printer brand and model in our search bar. Our directory 
+of 50,000+ drivers will help you identify the exact driver you need."
+
+Step 02 — Identify the Right Driver
+"Use our brand filters and OS compatibility tags to find the correct 
+driver version for your Windows 10, Windows 11, or macOS system."
+
+Step 03 — Contact Our Team
+"Still need help? Reach out to our support team via the contact page 
+and a technician will guide you through the installation process."
+
+FAQ Accordion:
+- H2: "Frequently Asked Questions"
+- JS: click to toggle open/close, smooth max-height transition, 
+  + icon rotates to ×
+
+5 FAQ items:
+Q: Is PrintKingDriver free to use?
+A: Yes, our driver information directory is completely free to browse. 
+   Contact us if you need personalised assistance.
+
+Q: Are the drivers listed safe and official?
+A: All driver information on our site is sourced from original equipment 
+   manufacturers (OEMs). We only list verified, official driver versions.
+
+Q: What operating systems are supported?
+A: Our directory covers drivers for Windows 10, Windows 11, and macOS. 
+   Linux support information is coming soon.
+
+Q: What if I cannot find my printer model?
+A: Use the contact form and our technical team will manually identify 
+   the correct driver for your specific printer model.
+
+Q: How do I know which version to use?
+A: Check the OS compatibility badges on each driver listing. We indicate 
+   the latest stable version supported for each operating system.
+
+---
+
+### 4. about.html — ABOUT
+
+Hero:
+- H1: "About PrintKingDriver"
+- Subtitle: "Helping users worldwide find the right printer driver 
+  information — quickly, safely, and for free."
+
+Mission:
+- H2: "Our Mission"
+- Text: "PrintKingDriver was built to simplify the confusing world of 
+  printer drivers. Whether you're a home user setting up a new printer 
+  or an IT professional managing multiple devices, our directory gives 
+  you accurate, up-to-date driver information for over 200 brands. 
+  We update our database daily with the latest official releases 
+  from all major manufacturers."
+
+3 Value Cards:
+- Accuracy — Only official, verified driver information. No guesswork.
+- Safety — We never host files. All information links to official sources.
+- Simplicity — Find the driver information you need in under 2 minutes.
+
+Stats Row:
+50,000+ Drivers | 200+ Brands | 10M+ Visitors | Updated Daily
+
+Team Section:
+- H2: "Meet the Team"
+- 3 cards with colored avatar circle (initials), name, role:
+  AM — Alex Morgan | Founder & Lead Engineer
+  SC — Sarah Chen | Driver Database Manager
+  RP — Raj Patel | Technical Support Lead
+
+---
+
+### 5. contact.html — CONTACT
+
+Hero:
+- H1: "Get In Touch"
+- Subtitle: "Have a driver question or need personalised support? 
+  We're here to help."
+
+Two-column layout (left: form, right: info):
+
+Left — Contact Form (frontend only, no backend):
+Labels above each field:
+- Full Name * (text input, required)
+- Email Address * (email input, required)
+- Phone Number (tel input, optional — label says "Optional")
+- Printer Brand & Model * (text input, required, 
+  placeholder: e.g. HP LaserJet Pro M404n)
+- Operating System * (select dropdown: Windows 10 / Windows 11 / macOS / Other)
+- Issue Description * (textarea, 5 rows, 
+  placeholder: Describe your driver issue in detail...)
+- Submit button: "Send Message →" (blue, full width)
+
+Form JS behaviour:
+- Validate all required fields on submit
+- If invalid: show red border on empty fields + error message 
+  "Please fill in all required fields."
+- If valid: hide form, show success card:
+  ✅ "Message Sent Successfully!"
+  "Thank you! Our team will get back to you within 24 hours."
+  "Return Home" button (links to index.html)
+
+Right — Info Cards (4 cards, each with icon + label + value):
+📧 Email — support@printkingdriver.com
+📞 Phone — +1 (800) 123-4567
+🕐 Hours — Monday–Friday, 9AM–6PM EST
+💬 Live Chat — Available Now (green "ONLINE" badge)
+
+Note card below info (light blue bg):
+"ℹ️ Response Time: We typically respond to all enquiries within 
+24 business hours. For urgent issues, please call us directly."
+
+---
+
+## JAVASCRIPT (in a <script> tag at bottom of each relevant page):
+
+1. Hamburger menu toggle (all pages)
+2. Active nav link detection via window.location.pathname (all pages)
+3. FAQ accordion with smooth open/close (how-it-works.html)
+4. Brand filter for driver cards (drivers.html)
+5. Contact form validation + success state (contact.html)
+6. Floating widget fade-in after 1.5s (all pages)
+7. Pulse animation on green dot via CSS keyframes (all pages)
+
+---
+
+## IMPORTANT RULES:
+- NO download buttons — this is informational only
+- NO payment or pricing sections
+- NO real links to driver files
+- All "TECHNICAL SPECS ›" and "View Details" links go to contact.html
+- Contact form shows success message but does NOT send any email
+- Keep all content factual and informational in tone
+- Mobile responsive at 768px (tablet) and 480px (mobile) breakpoints
+
+---
+
+## FILE OUTPUT — create exactly these 6 files:
+index.html
+drivers.html
+how-it-works.html
+about.html
+contact.html
+style.css
+
+Every HTML file must have in <head>:
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+Page titles:
+index.html        → PrintKingDriver — Expert Printer Driver Information
+drivers.html      → PrintKingDriver — Explore Drivers
+how-it-works.html → PrintKingDriver — How It Works
+about.html        → PrintKingDriver — About Us
+contact.html      → PrintKingDriver — Get In Touch
