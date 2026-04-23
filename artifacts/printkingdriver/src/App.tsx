@@ -6,6 +6,7 @@ import NotFound from "@/pages/not-found";
 
 import Home from "@/pages/Home";
 import Drivers from "@/pages/Drivers";
+import DriverDetail from "@/pages/DriverDetail";
 import HowItWorks from "@/pages/HowItWorks";
 import About from "@/pages/About";
 import Contact from "@/pages/Contact";
@@ -17,6 +18,7 @@ function Router() {
     <Switch>
       <Route path="/" component={Home} />
       <Route path="/drivers" component={Drivers} />
+      <Route path="/drivers/:slug" component={DriverDetail} />
       <Route path="/how-it-works" component={HowItWorks} />
       <Route path="/about" component={About} />
       <Route path="/contact" component={Contact} />

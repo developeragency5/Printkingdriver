@@ -1,0 +1,85 @@
+Enhance my existing website by adding a multi-page informational system for drivers without removing or modifying any current sections or design.
+
+GOAL:
+Convert the “Technical Specs” text in each driver card into navigation links that open a dedicated informational page for that specific driver.
+
+1. LINK BEHAVIOR
+
+* Replace all “Technical Specs” text with clickable links.
+* Each link should navigate to a separate HTML page inside a new folder called /drivers/.
+* Example:
+  Chipset Driver → /drivers/chipset.html
+  Graphics Driver → /drivers/graphics.html
+  Audio Driver → /drivers/audio.html
+  Network Driver → /drivers/network.html
+  Storage Controller → /drivers/storage.html
+  USB Support → /drivers/usb.html
+  Bluetooth Driver → /drivers/bluetooth.html
+  Input Drivers → /drivers/input.html
+
+2. CREATE DRIVER PAGES
+
+* Create a reusable layout for all driver pages.
+* Each page must be informational only (no download buttons, no product promotions).
+
+Each driver page should include:
+
+SECTION 1 — Title Area
+
+* Driver name (H1)
+* One-line description
+
+SECTION 2 — What is this Driver?
+
+* A clear paragraph explaining the purpose
+
+SECTION 3 — How It Works
+
+* Explanation of interaction between hardware and OS
+* Add a simple visual diagram using HTML/CSS:
+  Hardware → Driver → Operating System → Application
+
+SECTION 4 — Key Functions
+
+* Bullet list of what the driver does
+
+SECTION 5 — Technical Overview Table
+Table columns:
+
+* Component
+* Role
+* Example
+
+SECTION 6 — Why It Matters
+
+* Short paragraph explaining importance
+
+3. DESIGN REQUIREMENTS
+
+* Keep same fonts, colors, and theme as homepage
+* Use a clean, documentation-style layout
+* Add spacing, soft shadows, and card-style sections
+* No flashy UI, no marketing elements
+
+4. ADD BACK NAVIGATION
+
+* Add a “← Back to Home” link at top of each driver page
+
+5. FILE STRUCTURE
+
+* Create a folder named /drivers/
+* Place all driver pages inside it
+* Keep CSS reusable from main stylesheet
+
+6. OPTIONAL (IF POSSIBLE)
+
+* Add hover effect on “Technical Specs” links
+* Add smooth page transition
+
+IMPORTANT:
+
+* Do NOT remove any existing homepage content
+* Only enhance functionality by adding navigation and pages
+* Keep everything informational and educational
+
+The final result should behave like a structured driver knowledge base, not a download or commercial website.

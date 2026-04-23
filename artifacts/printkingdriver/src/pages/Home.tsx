@@ -222,10 +222,10 @@ export default function Home() {
             subtitle="Core System Foundation for stable operation."
             columns={4}
             cards={[
-              { title: "Chipset Driver", description: "CPU & Motherboard Logic Sync", icon: <Cpu strokeWidth={1.5} /> },
-              { title: "Graphics Driver", description: "Visual Rendering & GPU Protocols", icon: <Monitor strokeWidth={1.5} /> },
-              { title: "Audio Driver", description: "Sound Input/Output Processing", icon: <Volume2 strokeWidth={1.5} /> },
-              { title: "Network Driver", description: "Wi-Fi 6 & High-Speed LAN Link", icon: <Wifi strokeWidth={1.5} /> },
+              { title: "Chipset Driver", description: "CPU & Motherboard Logic Sync", icon: <Cpu strokeWidth={1.5} />, slug: "chipset" },
+              { title: "Graphics Driver", description: "Visual Rendering & GPU Protocols", icon: <Monitor strokeWidth={1.5} />, slug: "graphics" },
+              { title: "Audio Driver", description: "Sound Input/Output Processing", icon: <Volume2 strokeWidth={1.5} />, slug: "audio" },
+              { title: "Network Driver", description: "Wi-Fi 6 & High-Speed LAN Link", icon: <Wifi strokeWidth={1.5} />, slug: "network" },
             ]}
           />
           
@@ -234,10 +234,10 @@ export default function Home() {
             subtitle="Internal Component Control for optimization and speed."
             columns={4}
             cards={[
-              { title: "Storage Controller", description: "Efficient data transfer for SSDs and HDDs.", icon: <HardDrive strokeWidth={1.5} /> },
-              { title: "USB Support", description: "Port recognition and external device connectivity.", icon: <Usb strokeWidth={1.5} /> },
-              { title: "Bluetooth Drivers", description: "Seamless wireless pairing for peripherals.", icon: <Bluetooth strokeWidth={1.5} /> },
-              { title: "Touchpad/Keyboard", description: "Precision input control and gesture translation.", icon: <MousePointer2 strokeWidth={1.5} /> },
+              { title: "Storage Controller", description: "Efficient data transfer for SSDs and HDDs.", icon: <HardDrive strokeWidth={1.5} />, slug: "storage" },
+              { title: "USB Support", description: "Port recognition and external device connectivity.", icon: <Usb strokeWidth={1.5} />, slug: "usb" },
+              { title: "Bluetooth Drivers", description: "Seamless wireless pairing for peripherals.", icon: <Bluetooth strokeWidth={1.5} />, slug: "bluetooth" },
+              { title: "Touchpad/Keyboard", description: "Precision input control and gesture translation.", icon: <MousePointer2 strokeWidth={1.5} />, slug: "input" },
             ]}
           />
 
@@ -246,9 +246,9 @@ export default function Home() {
             subtitle="External Device Integration for connectivity and capture."
             columns={3}
             cards={[
-              { title: "Printer Drivers", description: "Digital to physical document translation.", icon: <Printer strokeWidth={1.5} />, active: true },
-              { title: "Scanner Support", description: "Image digitizing and OCR protocol management.", icon: <Scan strokeWidth={1.5} /> },
-              { title: "Webcam Drivers", description: "HD video capture and streaming optimization.", icon: <Webcam strokeWidth={1.5} /> },
+              { title: "Printer Drivers", description: "Digital to physical document translation.", icon: <Printer strokeWidth={1.5} />, active: true, slug: "printer" },
+              { title: "Scanner Support", description: "Image digitizing and OCR protocol management.", icon: <Scan strokeWidth={1.5} />, slug: "scanner" },
+              { title: "Webcam Drivers", description: "HD video capture and streaming optimization.", icon: <Webcam strokeWidth={1.5} />, slug: "webcam" },
             ]}
           />
 
@@ -257,9 +257,9 @@ export default function Home() {
             subtitle="Low-level Firmware & Security for system integrity."
             columns={3}
             cards={[
-              { title: "BIOS/UEFI", description: "Low-level pre-boot hardware initialization.", icon: <Microchip strokeWidth={1.5} /> },
-              { title: "Security Drivers", description: "System encryption and secure boot protection.", icon: <Shield strokeWidth={1.5} /> },
-              { title: "Monitor Calibration", description: "Color accuracy and refresh rate optimization.", icon: <MonitorSpeaker strokeWidth={1.5} /> },
+              { title: "BIOS/UEFI", description: "Low-level pre-boot hardware initialization.", icon: <Microchip strokeWidth={1.5} />, slug: "bios" },
+              { title: "Security Drivers", description: "System encryption and secure boot protection.", icon: <Shield strokeWidth={1.5} />, slug: "security" },
+              { title: "Monitor Calibration", description: "Color accuracy and refresh rate optimization.", icon: <MonitorSpeaker strokeWidth={1.5} />, slug: "monitor" },
             ]}
           />
         </div>
