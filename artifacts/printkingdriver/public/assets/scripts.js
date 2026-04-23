@@ -70,24 +70,25 @@
 
   // === Search ===
   const SEARCH_INDEX = [
-    { label: "Chipset Driver",        href: "/drivers/chipset",   type: "Driver" },
-    { label: "Graphics Driver",       href: "/drivers/graphics",  type: "Driver" },
-    { label: "Audio Driver",          href: "/drivers/audio",     type: "Driver" },
-    { label: "Network Driver",        href: "/drivers/network",   type: "Driver" },
-    { label: "Storage Controller",    href: "/drivers/storage",   type: "Driver" },
-    { label: "USB Support",           href: "/drivers/usb",       type: "Driver" },
-    { label: "Bluetooth Driver",      href: "/drivers/bluetooth", type: "Driver" },
-    { label: "Input Drivers",         href: "/drivers/input",     type: "Driver" },
-    { label: "Printer Driver",        href: "/drivers/printer",   type: "Driver" },
-    { label: "Scanner Support",       href: "/drivers/scanner",   type: "Driver" },
-    { label: "Webcam Driver",         href: "/drivers/webcam",    type: "Driver" },
-    { label: "BIOS / UEFI",           href: "/drivers/bios",      type: "Driver" },
-    { label: "Security Drivers",      href: "/drivers/security",  type: "Driver" },
-    { label: "Monitor Driver",        href: "/drivers/monitor",   type: "Driver" },
-    { label: "Home",                  href: "/",                  type: "Page" },
-    { label: "Explore Drivers",       href: "/drivers",           type: "Page" },
-    { label: "How It Works",          href: "/how-it-works",      type: "Page" },
-    { label: "About Guide",           href: "/about",             type: "Page" },
+    { label: "Chipset Driver",        href: "/drivers/chipset",   type: "Driver", keywords: "motherboard mainboard intel amd platform pch southbridge northbridge" },
+    { label: "Graphics Driver",       href: "/drivers/graphics",  type: "Driver", keywords: "gpu video card display nvidia amd radeon intel arc geforce rtx gtx vga screen resolution" },
+    { label: "Audio Driver",          href: "/drivers/audio",     type: "Driver", keywords: "sound speaker speakers headphone headphones microphone mic realtek hda no sound mute volume music" },
+    { label: "Network Driver",        href: "/drivers/network",   type: "Driver", keywords: "wifi wi-fi wireless ethernet lan internet adapter nic connection no internet wireless card" },
+    { label: "Storage Controller",    href: "/drivers/storage",   type: "Driver", keywords: "ssd hdd hard drive nvme sata raid disk ahci" },
+    { label: "USB Support",           href: "/drivers/usb",       type: "Driver", keywords: "usb port flash drive thumb drive type-c type c usb-c usb3 usb2 not recognized" },
+    { label: "Bluetooth Driver",      href: "/drivers/bluetooth", type: "Driver", keywords: "bt wireless airpods earbuds pair pairing bluetooth headset speaker connection" },
+    { label: "Input Drivers",         href: "/drivers/input",     type: "Driver", keywords: "keyboard mouse trackpad touchpad gamepad controller hid pointer typing" },
+    { label: "Printer Driver",        href: "/drivers/printer",   type: "Driver", keywords: "printing print hp canon epson brother laserjet inkjet deskjet pixma not printing offline queue spooler" },
+    { label: "Scanner Support",       href: "/drivers/scanner",   type: "Driver", keywords: "scan scanning twain wia document scanner flatbed hp epson canon all-in-one mfp" },
+    { label: "Webcam Driver",         href: "/drivers/webcam",    type: "Driver", keywords: "camera video call zoom teams logitech facetime webcam not working" },
+    { label: "BIOS / UEFI",           href: "/drivers/bios",      type: "Driver", keywords: "firmware bios uefi boot post motherboard update flash secure boot" },
+    { label: "Security Drivers",      href: "/drivers/security",  type: "Driver", keywords: "tpm trusted platform module fingerprint biometric face windows hello smart card" },
+    { label: "Monitor Driver",        href: "/drivers/monitor",   type: "Driver", keywords: "display screen resolution refresh rate hz hdr color profile inf monitor edid" },
+    { label: "Home",                  href: "/",                  type: "Page",   keywords: "main start landing front page" },
+    { label: "Explore Drivers",       href: "/drivers",           type: "Page",   keywords: "all drivers list browse catalogue catalog directory" },
+    { label: "How It Works",          href: "/how-it-works",      type: "Page",   keywords: "guide tutorial install installing update updating download how to fix troubleshoot" },
+    { label: "About Guide",           href: "/about",             type: "Page",   keywords: "about us info information mission company" },
+    { label: "Contact / Get In Touch", href: "/contact",          type: "Page",   keywords: "support help email phone live chat contact get in touch" },
   ];
 
   const searchInputs = document.querySelectorAll(".nav__search input");
@@ -102,7 +103,19 @@
       const q = input.value.trim().toLowerCase();
       clear?.classList.toggle("is-visible", !!q);
       if (!q) { results.classList.remove("is-open"); results.innerHTML = ""; return; }
-      matches = SEARCH_INDEX.filter((it) => it.label.toLowerCase().includes(q)).slice(0, 6);
+      const scored = [];
+      for (const it of SEARCH_INDEX) {
+        const label = it.label.toLowerCase();
+        const kw = (it.keywords || "").toLowerCase();
+        let score = 0;
+        if (label.startsWith(q)) score = 100;
+        else if (label.includes(q)) score = 80;
+        else if ((" " + kw + " ").includes(" " + q)) score = 60;
+        else if (kw.includes(q)) score = 40;
+        if (score > 0) scored.push({ it, score });
+      }
+      scored.sort((a, b) => b.score - a.score);
+      matches = scored.slice(0, 6).map((s) => s.it);
       activeIdx = 0;
       if (matches.length === 0) {
         results.innerHTML = `<div class="nav__search-empty"><div class="empty-msg">No direct matches.</div><button onclick="location.href='/drivers'">Browse all drivers →</button></div>`;
