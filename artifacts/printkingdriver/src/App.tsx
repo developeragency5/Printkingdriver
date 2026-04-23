@@ -23,6 +23,23 @@ function ScrollToTop() {
   return null;
 }
 
+function DoubleClickRefresh() {
+  useEffect(() => {
+    const onDblClick = (e: MouseEvent) => {
+      const target = e.target as HTMLElement | null;
+      const anchor = target?.closest("a") as HTMLAnchorElement | null;
+      if (!anchor) return;
+      const href = anchor.getAttribute("href") ?? "";
+      if (!href || href.startsWith("http") || href.startsWith("mailto:") || href.startsWith("tel:") || href.startsWith("#")) return;
+      e.preventDefault();
+      window.location.reload();
+    };
+    document.addEventListener("dblclick", onDblClick);
+    return () => document.removeEventListener("dblclick", onDblClick);
+  }, []);
+  return null;
+}
+
 function Router() {
   return (
     <Switch>
@@ -45,6 +62,7 @@ function App() {
       <TooltipProvider>
         <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, "")}>
           <ScrollToTop />
+          <DoubleClickRefresh />
           <Router />
         </WouterRouter>
         <Toaster />
