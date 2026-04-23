@@ -65,12 +65,12 @@ function ExploreSlider({ categories }: { categories: ExploreCategory[] }) {
     <div className="relative">
       <div
         ref={scrollRef}
-        className="flex gap-5 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-4 -mx-4 px-4 [&::-webkit-scrollbar]:hidden [scrollbar-width:none]"
+        className="flex lg:grid lg:grid-cols-4 gap-5 overflow-x-auto lg:overflow-visible snap-x snap-mandatory lg:snap-none scroll-smooth pb-4 lg:pb-0 -mx-4 px-4 lg:mx-0 lg:px-0 [&::-webkit-scrollbar]:hidden [scrollbar-width:none]"
       >
         {categories.map((c, idx) => (
           <article
             key={c.title}
-            className="group relative snap-start flex-shrink-0 w-[85%] sm:w-[48%] lg:w-[31%] xl:w-[24%] 2xl:w-[24%] rounded-2xl border border-border/70 bg-white p-6 shadow-[0_1px_2px_rgba(0,0,0,0.03)] hover:shadow-[0_22px_45px_-22px_rgba(74,107,117,0.32)] hover:-translate-y-0.5 hover:border-primary/25 transition-all duration-300 flex flex-col overflow-hidden"
+            className="group relative snap-start flex-shrink-0 w-[85%] sm:w-[48%] lg:w-auto rounded-2xl border border-border/70 bg-white p-6 shadow-[0_1px_2px_rgba(0,0,0,0.03)] hover:shadow-[0_22px_45px_-22px_rgba(74,107,117,0.32)] hover:-translate-y-0.5 hover:border-primary/25 transition-all duration-300 flex flex-col overflow-hidden"
           >
             {/* subtle hover glow */}
             <div
