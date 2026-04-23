@@ -1,0 +1,872 @@
+<!doctype html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>PrintKingDriver — Understand Printer & System Drivers</title>
+    <meta name="description" content="An informational portal explaining what printer drivers are, how they work, the categories that exist, and how to recognise common issues." />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta property="og:title" content="PrintKingDriver — Understand Printer & System Drivers" />
+    <meta property="og:description" content="An informational portal explaining what printer drivers are, how they work, the categories that exist, and how to recognise common issues." />
+    <meta property="og:image" content="/opengraph.jpg" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="canonical" href="https://printkingdriver.com/" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/assets/styles.css" />
+  </head>
+  <body>
+  
+  <nav class="nav">
+    <div class="container nav__inner">
+      <a href="/" class="nav__brand">
+        <div class="nav__logo"><i data-lucide="printer" class="icon-20"></i></div>
+        <div>
+          <div class="nav__title">PrintKingDriver</div>
+          <div class="nav__sub">System Guide Portal</div>
+        </div>
+      </a>
+
+      <div class="nav__search">
+        <span class="nav__search-icon"><i data-lucide="search" class="icon-16"></i></span>
+        <input type="text" placeholder="Search drivers, pages, hardware..." aria-label="Search" />
+        <button class="nav__search-clear" type="button" aria-label="Clear search"><i data-lucide="x" class="icon-14"></i></button>
+        <div class="nav__search-results"></div>
+      </div>
+
+      <div class="nav__links">
+        <a href="/" class="nav__link" data-nav-link="/">Home</a>
+        <div class="mega-wrap" style="position:relative;">
+          <button type="button" class="mega-trigger ">Explore Drivers <i data-lucide="chevron-down" class="icon-14"></i></button>
+        </div>
+        <a href="/how-it-works" class="nav__link" data-nav-link="/how-it-works">How It Works</a>
+        <a href="/about" class="nav__link" data-nav-link="/about">About Guide</a>
+        <a href="/contact" class="nav__cta">⚡ Get In Touch</a>
+      </div>
+
+      <button class="nav__menu-trigger" aria-label="Open menu"><i data-lucide="menu" class="icon-20"></i></button>
+    </div>
+
+    <div class="mega"><div class="mega__panel">
+      <div class="mega__grid">
+      <div class="mega__col">
+        <div class="mega__heading">
+          <span class="mega__chip">01</span>
+          <div class="mega__head-text">Essential Drivers</div>
+        </div>
+        <ul class="mega__list">
+          <li><a href="/drivers/chipset">
+            <div class="mega__item-name">Chipset Driver</div>
+            <div class="mega__item-desc">Motherboard logic & CPU sync</div>
+          </a></li>
+          <li><a href="/drivers/graphics">
+            <div class="mega__item-name">Graphics Driver</div>
+            <div class="mega__item-desc">Visual rendering & GPU</div>
+          </a></li>
+          <li><a href="/drivers/audio">
+            <div class="mega__item-name">Audio Driver</div>
+            <div class="mega__item-desc">Sound input/output</div>
+          </a></li>
+          <li><a href="/drivers/network">
+            <div class="mega__item-name">Network Driver</div>
+            <div class="mega__item-desc">Wired & wireless networking</div>
+          </a></li>
+        </ul>
+      </div>
+      <div class="mega__col">
+        <div class="mega__heading">
+          <span class="mega__chip">02</span>
+          <div class="mega__head-text">Hardware-Specific</div>
+        </div>
+        <ul class="mega__list">
+          <li><a href="/drivers/storage">
+            <div class="mega__item-name">Storage Controller</div>
+            <div class="mega__item-desc">SSDs & hard drives</div>
+          </a></li>
+          <li><a href="/drivers/usb">
+            <div class="mega__item-name">USB Support</div>
+            <div class="mega__item-desc">Port & device recognition</div>
+          </a></li>
+          <li><a href="/drivers/bluetooth">
+            <div class="mega__item-name">Bluetooth Driver</div>
+            <div class="mega__item-desc">Wireless peripheral pairing</div>
+          </a></li>
+          <li><a href="/drivers/input">
+            <div class="mega__item-name">Input Drivers</div>
+            <div class="mega__item-desc">Touchpad & keyboard</div>
+          </a></li>
+        </ul>
+      </div>
+      <div class="mega__col">
+        <div class="mega__heading">
+          <span class="mega__chip">03</span>
+          <div class="mega__head-text">Peripheral Drivers</div>
+        </div>
+        <ul class="mega__list">
+          <li><a href="/drivers/printer">
+            <div class="mega__item-name">Printer Driver</div>
+            <div class="mega__item-desc">Document to print commands</div>
+          </a></li>
+          <li><a href="/drivers/scanner">
+            <div class="mega__item-name">Scanner Support</div>
+            <div class="mega__item-desc">Image capture & OCR</div>
+          </a></li>
+          <li><a href="/drivers/webcam">
+            <div class="mega__item-name">Webcam Driver</div>
+            <div class="mega__item-desc">Video stream capture</div>
+          </a></li>
+        </ul>
+      </div>
+      <div class="mega__col">
+        <div class="mega__heading">
+          <span class="mega__chip">04</span>
+          <div class="mega__head-text">Advanced Systems</div>
+        </div>
+        <ul class="mega__list">
+          <li><a href="/drivers/bios">
+            <div class="mega__item-name">BIOS / UEFI</div>
+            <div class="mega__item-desc">Pre-boot initialisation</div>
+          </a></li>
+          <li><a href="/drivers/security">
+            <div class="mega__item-name">Security Drivers</div>
+            <div class="mega__item-desc">Encryption & secure boot</div>
+          </a></li>
+          <li><a href="/drivers/monitor">
+            <div class="mega__item-name">Monitor Driver</div>
+            <div class="mega__item-desc">Colour & refresh control</div>
+          </a></li>
+        </ul>
+      </div></div>
+      <div class="mega__footer">
+        <div class="mega__footer-text">Browse the full reference for each driver type.</div>
+        <a href="/drivers">View all drivers <span aria-hidden="true">→</span></a>
+      </div>
+    </div></div>
+  </nav>
+
+  <div class="drawer-backdrop"></div>
+  <aside class="drawer" aria-hidden="true">
+    <button class="drawer__close" aria-label="Close menu"><i data-lucide="x" class="icon-20"></i></button>
+    <div class="drawer__list">
+      <a href="/" data-nav-link="/">Home</a>
+      <button type="button" data-mobile-explore>Explore Drivers <i data-lucide="chevron-down" class="icon-16"></i></button>
+      <div class="drawer__sub">
+      <h5>Essential Drivers</h5>
+      <ul><li><a href="/drivers/chipset">Chipset Driver</a></li><li><a href="/drivers/graphics">Graphics Driver</a></li><li><a href="/drivers/audio">Audio Driver</a></li><li><a href="/drivers/network">Network Driver</a></li></ul>
+      <h5>Hardware-Specific</h5>
+      <ul><li><a href="/drivers/storage">Storage Controller</a></li><li><a href="/drivers/usb">USB Support</a></li><li><a href="/drivers/bluetooth">Bluetooth Driver</a></li><li><a href="/drivers/input">Input Drivers</a></li></ul>
+      <h5>Peripheral Drivers</h5>
+      <ul><li><a href="/drivers/printer">Printer Driver</a></li><li><a href="/drivers/scanner">Scanner Support</a></li><li><a href="/drivers/webcam">Webcam Driver</a></li></ul>
+      <h5>Advanced Systems</h5>
+      <ul><li><a href="/drivers/bios">BIOS / UEFI</a></li><li><a href="/drivers/security">Security Drivers</a></li><li><a href="/drivers/monitor">Monitor Driver</a></li></ul><a href="/drivers" style="display:inline-block;color:var(--primary);font-weight:600;font-size:13px;padding-top:8px;">View all drivers →</a></div>
+      <a href="/how-it-works" data-nav-link="/how-it-works">How It Works</a>
+      <a href="/about" data-nav-link="/about">About Guide</a>
+      <a href="/contact" class="drawer__cta">⚡ Get In Touch</a>
+    </div>
+  </aside>
+  <main>
+  
+  <section class="hero">
+    <div class="hero__grid"></div>
+    <div class="hero__glow"></div>
+    <div class="hero__inner">
+      <div class="hero__pill"><span class="hero__pill-dot"></span><span style="letter-spacing:.02em;">Printer Driver Information Guide</span></div>
+      <h1>Understand Printer Drivers.<br><span class="hl"> A clear, practical </span><span class="em">guide.</span></h1>
+      <p>PrintKingDriver is an informational portal explaining what printer drivers are, how they work, the categories that exist, and how to recognise common issues.</p>
+      <div class="hero__actions">
+        <a href="/drivers" class="btn btn-primary">Explore Drivers →</a>
+        <a href="/how-it-works" class="btn btn-secondary">How It Works</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--bg-white">
+    <div class="container">
+      <div class="section__header">
+        <div class="eyebrow">Reference</div>
+        <h2>Browse by Driver Type</h2>
+        <p>Each section groups drivers by purpose — from essential foundations to advanced firmware — so you can find what you need in seconds.</p>
+      </div>
+      
+  <div class="driver-grid-wrap">
+    <div class="sec-head">
+      <div class="sec-head__left">
+        <div class="sec-head__chip">01</div>
+        <div>
+          <div class="sec-head__eyebrow">Driver Set</div>
+          <h3 class="sec-head__title">Section 1 — Essential Drivers</h3>
+          <p class="sec-head__sub">Core System Foundation for stable operation.</p>
+        </div>
+      </div>
+      <div class="sec-head__right"><span></span><span>4 drivers</span></div>
+    </div>
+    <div class="driver-grid driver-grid--4">
+      
+  <a href="/drivers/chipset" class="driver-card">
+    <div class="driver-card__body">
+      <div class="driver-card__icon"><i data-lucide="cpu" class="icon-20"></i></div>
+      <div style="min-width:0;flex:1;">
+        <div class="driver-card__head">
+          <h3 class="driver-card__title">Chipset Driver</h3>
+          <span class="driver-card__code">CHI</span>
+        </div>
+        <p class="driver-card__desc">CPU & Motherboard Logic Sync</p>
+      </div>
+    </div>
+    <div class="driver-card__foot">
+      <span class="driver-card__foot-label">Reference Entry</span>
+      <span class="driver-card__read">Read <span class="arr">→</span></span>
+    </div>
+  </a>
+  <a href="/drivers/graphics" class="driver-card">
+    <div class="driver-card__body">
+      <div class="driver-card__icon"><i data-lucide="monitor" class="icon-20"></i></div>
+      <div style="min-width:0;flex:1;">
+        <div class="driver-card__head">
+          <h3 class="driver-card__title">Graphics Driver</h3>
+          <span class="driver-card__code">GRA</span>
+        </div>
+        <p class="driver-card__desc">Visual Rendering & GPU Protocols</p>
+      </div>
+    </div>
+    <div class="driver-card__foot">
+      <span class="driver-card__foot-label">Reference Entry</span>
+      <span class="driver-card__read">Read <span class="arr">→</span></span>
+    </div>
+  </a>
+  <a href="/drivers/audio" class="driver-card">
+    <div class="driver-card__body">
+      <div class="driver-card__icon"><i data-lucide="volume-2" class="icon-20"></i></div>
+      <div style="min-width:0;flex:1;">
+        <div class="driver-card__head">
+          <h3 class="driver-card__title">Audio Driver</h3>
+          <span class="driver-card__code">AUD</span>
+        </div>
+        <p class="driver-card__desc">Sound Input/Output Processing</p>
+      </div>
+    </div>
+    <div class="driver-card__foot">
+      <span class="driver-card__foot-label">Reference Entry</span>
+      <span class="driver-card__read">Read <span class="arr">→</span></span>
+    </div>
+  </a>
+  <a href="/drivers/network" class="driver-card">
+    <div class="driver-card__body">
+      <div class="driver-card__icon"><i data-lucide="wifi" class="icon-20"></i></div>
+      <div style="min-width:0;flex:1;">
+        <div class="driver-card__head">
+          <h3 class="driver-card__title">Network Driver</h3>
+          <span class="driver-card__code">NET</span>
+        </div>
+        <p class="driver-card__desc">Wi-Fi 6 & High-Speed LAN Link</p>
+      </div>
+    </div>
+    <div class="driver-card__foot">
+      <span class="driver-card__foot-label">Reference Entry</span>
+      <span class="driver-card__read">Read <span class="arr">→</span></span>
+    </div>
+  </a>
+    </div>
+  </div>
+  <div class="driver-grid-wrap">
+    <div class="sec-head">
+      <div class="sec-head__left">
+        <div class="sec-head__chip">02</div>
+        <div>
+          <div class="sec-head__eyebrow">Driver Set</div>
+          <h3 class="sec-head__title">Section 2 — Hardware-Specific</h3>
+          <p class="sec-head__sub">Internal Component Control for optimization and speed.</p>
+        </div>
+      </div>
+      <div class="sec-head__right"><span></span><span>4 drivers</span></div>
+    </div>
+    <div class="driver-grid driver-grid--4">
+      
+  <a href="/drivers/storage" class="driver-card">
+    <div class="driver-card__body">
+      <div class="driver-card__icon"><i data-lucide="hard-drive" class="icon-20"></i></div>
+      <div style="min-width:0;flex:1;">
+        <div class="driver-card__head">
+          <h3 class="driver-card__title">Storage Controller</h3>
+          <span class="driver-card__code">STO</span>
+        </div>
+        <p class="driver-card__desc">Efficient data transfer for SSDs and HDDs.</p>
+      </div>
+    </div>
+    <div class="driver-card__foot">
+      <span class="driver-card__foot-label">Reference Entry</span>
+      <span class="driver-card__read">Read <span class="arr">→</span></span>
+    </div>
+  </a>
+  <a href="/drivers/usb" class="driver-card">
+    <div class="driver-card__body">
+      <div class="driver-card__icon"><i data-lucide="usb" class="icon-20"></i></div>
+      <div style="min-width:0;flex:1;">
+        <div class="driver-card__head">
+          <h3 class="driver-card__title">USB Support</h3>
+          <span class="driver-card__code">USB</span>
+        </div>
+        <p class="driver-card__desc">Port recognition and external device connectivity.</p>
+      </div>
+    </div>
+    <div class="driver-card__foot">
+      <span class="driver-card__foot-label">Reference Entry</span>
+      <span class="driver-card__read">Read <span class="arr">→</span></span>
+    </div>
+  </a>
+  <a href="/drivers/bluetooth" class="driver-card">
+    <div class="driver-card__body">
+      <div class="driver-card__icon"><i data-lucide="bluetooth" class="icon-20"></i></div>
+      <div style="min-width:0;flex:1;">
+        <div class="driver-card__head">
+          <h3 class="driver-card__title">Bluetooth Drivers</h3>
+          <span class="driver-card__code">BLU</span>
+        </div>
+        <p class="driver-card__desc">Seamless wireless pairing for peripherals.</p>
+      </div>
+    </div>
+    <div class="driver-card__foot">
+      <span class="driver-card__foot-label">Reference Entry</span>
+      <span class="driver-card__read">Read <span class="arr">→</span></span>
+    </div>
+  </a>
+  <a href="/drivers/input" class="driver-card">
+    <div class="driver-card__body">
+      <div class="driver-card__icon"><i data-lucide="mouse-pointer-2" class="icon-20"></i></div>
+      <div style="min-width:0;flex:1;">
+        <div class="driver-card__head">
+          <h3 class="driver-card__title">Touchpad/Keyboard</h3>
+          <span class="driver-card__code">INP</span>
+        </div>
+        <p class="driver-card__desc">Precision input control and gesture translation.</p>
+      </div>
+    </div>
+    <div class="driver-card__foot">
+      <span class="driver-card__foot-label">Reference Entry</span>
+      <span class="driver-card__read">Read <span class="arr">→</span></span>
+    </div>
+  </a>
+    </div>
+  </div>
+  <div class="driver-grid-wrap">
+    <div class="sec-head">
+      <div class="sec-head__left">
+        <div class="sec-head__chip">03</div>
+        <div>
+          <div class="sec-head__eyebrow">Driver Set</div>
+          <h3 class="sec-head__title">Section 3 — Peripheral Drivers</h3>
+          <p class="sec-head__sub">External Device Integration for connectivity and capture.</p>
+        </div>
+      </div>
+      <div class="sec-head__right"><span></span><span>3 drivers</span></div>
+    </div>
+    <div class="driver-grid driver-grid--3">
+      
+  <a href="/drivers/printer" class="driver-card is-active">
+    <div class="driver-card__body">
+      <div class="driver-card__icon"><i data-lucide="printer" class="icon-20"></i></div>
+      <div style="min-width:0;flex:1;">
+        <div class="driver-card__head">
+          <h3 class="driver-card__title">Printer Drivers</h3>
+          <span class="driver-card__code">PRI</span>
+        </div>
+        <p class="driver-card__desc">Digital to physical document translation.</p>
+      </div>
+    </div>
+    <div class="driver-card__foot">
+      <span class="driver-card__foot-label">Reference Entry</span>
+      <span class="driver-card__read">Read <span class="arr">→</span></span>
+    </div>
+  </a>
+  <a href="/drivers/scanner" class="driver-card">
+    <div class="driver-card__body">
+      <div class="driver-card__icon"><i data-lucide="scan" class="icon-20"></i></div>
+      <div style="min-width:0;flex:1;">
+        <div class="driver-card__head">
+          <h3 class="driver-card__title">Scanner Support</h3>
+          <span class="driver-card__code">SCA</span>
+        </div>
+        <p class="driver-card__desc">Image digitizing and OCR protocol management.</p>
+      </div>
+    </div>
+    <div class="driver-card__foot">
+      <span class="driver-card__foot-label">Reference Entry</span>
+      <span class="driver-card__read">Read <span class="arr">→</span></span>
+    </div>
+  </a>
+  <a href="/drivers/webcam" class="driver-card">
+    <div class="driver-card__body">
+      <div class="driver-card__icon"><i data-lucide="webcam" class="icon-20"></i></div>
+      <div style="min-width:0;flex:1;">
+        <div class="driver-card__head">
+          <h3 class="driver-card__title">Webcam Drivers</h3>
+          <span class="driver-card__code">WEB</span>
+        </div>
+        <p class="driver-card__desc">HD video capture and streaming optimization.</p>
+      </div>
+    </div>
+    <div class="driver-card__foot">
+      <span class="driver-card__foot-label">Reference Entry</span>
+      <span class="driver-card__read">Read <span class="arr">→</span></span>
+    </div>
+  </a>
+    </div>
+  </div>
+  <div class="driver-grid-wrap">
+    <div class="sec-head">
+      <div class="sec-head__left">
+        <div class="sec-head__chip">04</div>
+        <div>
+          <div class="sec-head__eyebrow">Driver Set</div>
+          <h3 class="sec-head__title">Section 4 — Advanced Systems</h3>
+          <p class="sec-head__sub">Low-level Firmware & Security for system integrity.</p>
+        </div>
+      </div>
+      <div class="sec-head__right"><span></span><span>3 drivers</span></div>
+    </div>
+    <div class="driver-grid driver-grid--3">
+      
+  <a href="/drivers/bios" class="driver-card">
+    <div class="driver-card__body">
+      <div class="driver-card__icon"><i data-lucide="microchip" class="icon-20"></i></div>
+      <div style="min-width:0;flex:1;">
+        <div class="driver-card__head">
+          <h3 class="driver-card__title">BIOS/UEFI</h3>
+          <span class="driver-card__code">BIO</span>
+        </div>
+        <p class="driver-card__desc">Low-level pre-boot hardware initialization.</p>
+      </div>
+    </div>
+    <div class="driver-card__foot">
+      <span class="driver-card__foot-label">Reference Entry</span>
+      <span class="driver-card__read">Read <span class="arr">→</span></span>
+    </div>
+  </a>
+  <a href="/drivers/security" class="driver-card">
+    <div class="driver-card__body">
+      <div class="driver-card__icon"><i data-lucide="shield" class="icon-20"></i></div>
+      <div style="min-width:0;flex:1;">
+        <div class="driver-card__head">
+          <h3 class="driver-card__title">Security Drivers</h3>
+          <span class="driver-card__code">SEC</span>
+        </div>
+        <p class="driver-card__desc">System encryption and secure boot protection.</p>
+      </div>
+    </div>
+    <div class="driver-card__foot">
+      <span class="driver-card__foot-label">Reference Entry</span>
+      <span class="driver-card__read">Read <span class="arr">→</span></span>
+    </div>
+  </a>
+  <a href="/drivers/monitor" class="driver-card">
+    <div class="driver-card__body">
+      <div class="driver-card__icon"><i data-lucide="monitor-speaker" class="icon-20"></i></div>
+      <div style="min-width:0;flex:1;">
+        <div class="driver-card__head">
+          <h3 class="driver-card__title">Monitor Calibration</h3>
+          <span class="driver-card__code">MON</span>
+        </div>
+        <p class="driver-card__desc">Color accuracy and refresh rate optimization.</p>
+      </div>
+    </div>
+    <div class="driver-card__foot">
+      <span class="driver-card__foot-label">Reference Entry</span>
+      <span class="driver-card__read">Read <span class="arr">→</span></span>
+    </div>
+  </a>
+    </div>
+  </div>
+    </div>
+  </section>
+
+  <section class="section section--bg-cream">
+    <div class="container">
+      <div class="section__header">
+        <div class="eyebrow">Diagnostics</div>
+        <h2>Common Driver Issues, Explained</h2>
+        <p>From missing drivers to conflict errors — recognise the symptoms and learn what they really mean before reaching for support.</p>
+      </div>
+      <div class="issues">
+        
+        <div class="issue">
+          <div class="issue__top">
+            <div class="issue__icon c-orange"><i data-lucide="alert-circle" class="icon-20"></i></div>
+            <span class="issue__code">ERR-01</span>
+          </div>
+          <h4>Printer Offline</h4>
+          <p>Device not detected by the operating system.</p>
+          <div class="issue__foot">
+            <div class="issue__sev"><span class="dot c-orange"></span>Common</div>
+            <div class="issue__diag">Diagnose →</div>
+          </div>
+        </div>
+        <div class="issue">
+          <div class="issue__top">
+            <div class="issue__icon c-red"><i data-lucide="x-octagon" class="icon-20"></i></div>
+            <span class="issue__code">ERR-02</span>
+          </div>
+          <h4>Driver Conflict</h4>
+          <p>Two drivers clashing and causing errors.</p>
+          <div class="issue__foot">
+            <div class="issue__sev"><span class="dot c-red"></span>Critical</div>
+            <div class="issue__diag">Diagnose →</div>
+          </div>
+        </div>
+        <div class="issue">
+          <div class="issue__top">
+            <div class="issue__icon c-blue"><i data-lucide="file-question" class="icon-20"></i></div>
+            <span class="issue__code">ERR-03</span>
+          </div>
+          <h4>Missing Driver</h4>
+          <p>Required driver not found or corrupted.</p>
+          <div class="issue__foot">
+            <div class="issue__sev"><span class="dot c-blue"></span>High</div>
+            <div class="issue__diag">Diagnose →</div>
+          </div>
+        </div>
+        <div class="issue">
+          <div class="issue__top">
+            <div class="issue__icon c-purple"><i data-lucide="refresh-cw" class="icon-20"></i></div>
+            <span class="issue__code">ERR-04</span>
+          </div>
+          <h4>Print Queue Stuck</h4>
+          <p>Jobs stuck and not clearing from queue.</p>
+          <div class="issue__foot">
+            <div class="issue__sev"><span class="dot c-purple"></span>Common</div>
+            <div class="issue__diag">Diagnose →</div>
+          </div>
+        </div>
+        <div class="issue">
+          <div class="issue__top">
+            <div class="issue__icon c-pink"><i data-lucide="volume-x" class="icon-20"></i></div>
+            <span class="issue__code">ERR-05</span>
+          </div>
+          <h4>Audio Errors</h4>
+          <p>Sound driver failure or no audio output.</p>
+          <div class="issue__foot">
+            <div class="issue__sev"><span class="dot c-pink"></span>Moderate</div>
+            <div class="issue__diag">Diagnose →</div>
+          </div>
+        </div>
+        <div class="issue">
+          <div class="issue__top">
+            <div class="issue__icon c-teal"><i data-lucide="wifi-off" class="icon-20"></i></div>
+            <span class="issue__code">ERR-06</span>
+          </div>
+          <h4>Network Drops</h4>
+          <p>Wi-Fi or LAN driver instability issues.</p>
+          <div class="issue__foot">
+            <div class="issue__sev"><span class="dot c-teal"></span>High</div>
+            <div class="issue__diag">Diagnose →</div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center"><a href="/contact" class="btn btn-primary">Get Support →</a></div>
+    </div>
+  </section>
+
+  <section class="explore-section">
+    <div class="explore__head">
+      <div class="eyebrow">Explore</div>
+      <h2>Explore Drivers</h2>
+      <p>Find and learn about all essential system drivers, organised into clear categories for easy reference.</p>
+    </div>
+    <div class="slider">
+      <div class="slider__track">
+        
+        <article class="slide-card">
+          <div class="slide-card__glow"></div>
+          <div class="slide-card__head">
+            <div class="slide-card__head-left">
+              <span class="slide-card__num">01</span>
+              <span class="slide-card__tag">Category 01</span>
+            </div>
+            <div class="slide-card__icon-tile c-blue"><i data-lucide="cpu" class="icon-20"></i></div>
+          </div>
+          <h3>Essential Drivers</h3>
+          <p class="slide-card__desc">Core system drivers required for basic operation. They allow the OS to recognise and use the most fundamental components of a computer.</p>
+          <div class="slide-card__count"><span>Includes</span><span class="line"></span><span>4 drivers</span></div>
+          <ul class="slide-card__items">
+            
+            <li class="slide-item">
+              <div class="slide-item__icon c-blue"><i data-lucide="cpu" class="icon-14"></i></div>
+              <div style="min-width:0;flex:1;">
+                <div class="slide-item__name">Chipset Driver</div>
+                <div class="slide-item__note">Coordinates motherboard logic and CPU communication.</div>
+              </div>
+            </li>
+            <li class="slide-item">
+              <div class="slide-item__icon c-blue"><i data-lucide="monitor" class="icon-14"></i></div>
+              <div style="min-width:0;flex:1;">
+                <div class="slide-item__name">Graphics Driver</div>
+                <div class="slide-item__note">Handles visual rendering and GPU instructions.</div>
+              </div>
+            </li>
+            <li class="slide-item">
+              <div class="slide-item__icon c-blue"><i data-lucide="volume-2" class="icon-14"></i></div>
+              <div style="min-width:0;flex:1;">
+                <div class="slide-item__name">Audio Driver</div>
+                <div class="slide-item__note">Manages sound input and output processing.</div>
+              </div>
+            </li>
+            <li class="slide-item">
+              <div class="slide-item__icon c-blue"><i data-lucide="wifi" class="icon-14"></i></div>
+              <div style="min-width:0;flex:1;">
+                <div class="slide-item__name">Network Driver</div>
+                <div class="slide-item__note">Enables wired and wireless network connectivity.</div>
+              </div>
+            </li>
+          </ul>
+        </article>
+        <article class="slide-card">
+          <div class="slide-card__glow"></div>
+          <div class="slide-card__head">
+            <div class="slide-card__head-left">
+              <span class="slide-card__num">02</span>
+              <span class="slide-card__tag">Category 02</span>
+            </div>
+            <div class="slide-card__icon-tile c-orange"><i data-lucide="hard-drive" class="icon-20"></i></div>
+          </div>
+          <h3>Hardware-Specific Drivers</h3>
+          <p class="slide-card__desc">Drivers that control specialised internal hardware. They enable the OS to fully use each component's features and performance.</p>
+          <div class="slide-card__count"><span>Includes</span><span class="line"></span><span>4 drivers</span></div>
+          <ul class="slide-card__items">
+            
+            <li class="slide-item">
+              <div class="slide-item__icon c-orange"><i data-lucide="hard-drive" class="icon-14"></i></div>
+              <div style="min-width:0;flex:1;">
+                <div class="slide-item__name">Storage Controller</div>
+                <div class="slide-item__note">Manages data transfer with SSDs and hard drives.</div>
+              </div>
+            </li>
+            <li class="slide-item">
+              <div class="slide-item__icon c-orange"><i data-lucide="usb" class="icon-14"></i></div>
+              <div style="min-width:0;flex:1;">
+                <div class="slide-item__name">USB Driver</div>
+                <div class="slide-item__note">Detects ports and connected USB devices.</div>
+              </div>
+            </li>
+            <li class="slide-item">
+              <div class="slide-item__icon c-orange"><i data-lucide="bluetooth" class="icon-14"></i></div>
+              <div style="min-width:0;flex:1;">
+                <div class="slide-item__name">Bluetooth Driver</div>
+                <div class="slide-item__note">Pairs and manages nearby wireless devices.</div>
+              </div>
+            </li>
+            <li class="slide-item">
+              <div class="slide-item__icon c-orange"><i data-lucide="mouse-pointer-2" class="icon-14"></i></div>
+              <div style="min-width:0;flex:1;">
+                <div class="slide-item__name">Touchpad / Keyboard</div>
+                <div class="slide-item__note">Translates input gestures and keystrokes.</div>
+              </div>
+            </li>
+          </ul>
+        </article>
+        <article class="slide-card">
+          <div class="slide-card__glow"></div>
+          <div class="slide-card__head">
+            <div class="slide-card__head-left">
+              <span class="slide-card__num">03</span>
+              <span class="slide-card__tag">Category 03</span>
+            </div>
+            <div class="slide-card__icon-tile c-teal"><i data-lucide="printer" class="icon-20"></i></div>
+          </div>
+          <h3>Peripheral Drivers</h3>
+          <p class="slide-card__desc">Drivers for external devices that connect to a computer. They define how peripherals exchange data with the host system.</p>
+          <div class="slide-card__count"><span>Includes</span><span class="line"></span><span>4 drivers</span></div>
+          <ul class="slide-card__items">
+            
+            <li class="slide-item">
+              <div class="slide-item__icon c-teal"><i data-lucide="printer" class="icon-14"></i></div>
+              <div style="min-width:0;flex:1;">
+                <div class="slide-item__name">Printer Driver</div>
+                <div class="slide-item__note">Translates documents into printer commands.</div>
+              </div>
+            </li>
+            <li class="slide-item">
+              <div class="slide-item__icon c-teal"><i data-lucide="scan" class="icon-14"></i></div>
+              <div style="min-width:0;flex:1;">
+                <div class="slide-item__name">Scanner Driver</div>
+                <div class="slide-item__note">Captures images and handles OCR exchange.</div>
+              </div>
+            </li>
+            <li class="slide-item">
+              <div class="slide-item__icon c-teal"><i data-lucide="webcam" class="icon-14"></i></div>
+              <div style="min-width:0;flex:1;">
+                <div class="slide-item__name">Webcam Driver</div>
+                <div class="slide-item__note">Processes video stream capture and resolution.</div>
+              </div>
+            </li>
+            <li class="slide-item">
+              <div class="slide-item__icon c-teal"><i data-lucide="monitor-speaker" class="icon-14"></i></div>
+              <div style="min-width:0;flex:1;">
+                <div class="slide-item__name">Display Driver</div>
+                <div class="slide-item__note">Controls external monitor signal output.</div>
+              </div>
+            </li>
+          </ul>
+        </article>
+        <article class="slide-card">
+          <div class="slide-card__glow"></div>
+          <div class="slide-card__head">
+            <div class="slide-card__head-left">
+              <span class="slide-card__num">04</span>
+              <span class="slide-card__tag">Category 04</span>
+            </div>
+            <div class="slide-card__icon-tile c-purple"><i data-lucide="microchip" class="icon-20"></i></div>
+          </div>
+          <h3>Advanced Systems</h3>
+          <p class="slide-card__desc">Low-level firmware and security drivers that operate close to the hardware and influence overall platform integrity.</p>
+          <div class="slide-card__count"><span>Includes</span><span class="line"></span><span>4 drivers</span></div>
+          <ul class="slide-card__items">
+            
+            <li class="slide-item">
+              <div class="slide-item__icon c-purple"><i data-lucide="microchip" class="icon-14"></i></div>
+              <div style="min-width:0;flex:1;">
+                <div class="slide-item__name">BIOS / UEFI</div>
+                <div class="slide-item__note">Initialises hardware before the OS loads.</div>
+              </div>
+            </li>
+            <li class="slide-item">
+              <div class="slide-item__icon c-purple"><i data-lucide="shield" class="icon-14"></i></div>
+              <div style="min-width:0;flex:1;">
+                <div class="slide-item__name">Security Driver</div>
+                <div class="slide-item__note">Supports encryption and secure boot.</div>
+              </div>
+            </li>
+            <li class="slide-item">
+              <div class="slide-item__icon c-purple"><i data-lucide="monitor-speaker" class="icon-14"></i></div>
+              <div style="min-width:0;flex:1;">
+                <div class="slide-item__name">Monitor Calibration</div>
+                <div class="slide-item__note">Manages colour accuracy and profiles.</div>
+              </div>
+            </li>
+            <li class="slide-item">
+              <div class="slide-item__icon c-purple"><i data-lucide="refresh-cw" class="icon-14"></i></div>
+              <div style="min-width:0;flex:1;">
+                <div class="slide-item__name">Power Management</div>
+                <div class="slide-item__note">Coordinates CPU and battery efficiency.</div>
+              </div>
+            </li>
+          </ul>
+        </article>
+      </div>
+      <div class="slider__controls">
+        <div class="slider__dots">
+          <button class="slider__dot is-active" aria-label="Slide 1"></button><button class="slider__dot " aria-label="Slide 2"></button><button class="slider__dot " aria-label="Slide 3"></button><button class="slider__dot " aria-label="Slide 4"></button>
+        </div>
+        <div class="slider__btns">
+          <button class="slider__btn" data-slider-prev aria-label="Previous"><i data-lucide="chevron-left" class="icon-16"></i></button>
+          <button class="slider__btn" data-slider-next aria-label="Next"><i data-lucide="chevron-right" class="icon-16"></i></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--bg-white">
+    <div class="container" style="max-width:1080px;">
+      <div style="margin-bottom:40px;">
+        <div class="eyebrow">Concept</div>
+        <h2 class="font-heading" style="font-size:2rem;font-weight:700;letter-spacing:-.025em;margin:8px 0 12px;">How Drivers Work</h2>
+        <p style="color:var(--muted);font-size:14px;line-height:1.65;max-width:36rem;">A driver is the bridge between physical hardware and the software running on the operating system. The diagram below shows the typical flow of communication.</p>
+      </div>
+      <div class="flow-box">
+        <div class="flow">
+          
+          <div class="flow__step">
+            <div class="flow__card c-blue">
+              <div class="flow__icon c-blue"><i data-lucide="cpu" class="icon-24"></i></div>
+              <div class="flow__label">Hardware</div>
+              <div class="flow__sub">Physical device or component</div>
+            </div>
+            <div class="flow__arrow h"><i data-lucide="arrow-right" class="icon-20"></i></div><div class="flow__arrow v"><i data-lucide="arrow-down" class="icon-20"></i></div>
+          </div>
+          <div class="flow__step">
+            <div class="flow__card c-blue is-highlight">
+              <div class="flow__icon c-blue"><i data-lucide="layers" class="icon-24"></i></div>
+              <div class="flow__label is-highlight">Driver</div>
+              <div class="flow__sub">Software translator layer</div>
+            </div>
+            <div class="flow__arrow h"><i data-lucide="arrow-right" class="icon-20"></i></div><div class="flow__arrow v"><i data-lucide="arrow-down" class="icon-20"></i></div>
+          </div>
+          <div class="flow__step">
+            <div class="flow__card c-purple">
+              <div class="flow__icon c-purple"><i data-lucide="server" class="icon-24"></i></div>
+              <div class="flow__label">Operating System</div>
+              <div class="flow__sub">Manages resources & I/O</div>
+            </div>
+            <div class="flow__arrow h"><i data-lucide="arrow-right" class="icon-20"></i></div><div class="flow__arrow v"><i data-lucide="arrow-down" class="icon-20"></i></div>
+          </div>
+          <div class="flow__step">
+            <div class="flow__card c-teal">
+              <div class="flow__icon c-teal"><i data-lucide="monitor" class="icon-24"></i></div>
+              <div class="flow__label">Application</div>
+              <div class="flow__sub">User-facing program</div>
+            </div>
+            
+          </div>
+        </div>
+        <div class="flow__legend">
+          <span class="flow__legend-dot"></span>
+          When an application makes a request, the operating system routes it to the correct <span style="color:#1d4ed8;font-weight:600;margin:0 4px;">Driver</span>, which translates it into instructions the hardware can execute. The result then travels back up the chain to the user.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--bg-sand">
+    <div class="container" style="max-width:1080px;">
+      <div style="margin-bottom:40px;">
+        <div class="eyebrow">Reference</div>
+        <h2 class="font-heading" style="font-size:2rem;font-weight:700;letter-spacing:-.025em;margin:8px 0 12px;">Types of Drivers and Their Roles</h2>
+        <p style="color:var(--muted);font-size:14px;line-height:1.65;max-width:36rem;">A summary of common driver types, the function each one performs, and a typical use case in everyday computing.</p>
+      </div>
+      <div class="tbl-wrap">
+        <div class="tbl-scroll"><table class="tbl">
+          <thead><tr><th>Driver Type</th><th>Function</th><th class="hide-md">Example Use Case</th></tr></thead>
+          <tbody><tr><td class="strong">Graphics Driver</td><td>Translates rendering commands into GPU instructions.</td><td class="hide-md">Display visuals, video playback, gaming.</td></tr><tr><td class="strong">Audio Driver</td><td>Manages sound signal processing between OS and audio chip.</td><td class="hide-md">Music playback, voice calls, system sound.</td></tr><tr><td class="strong">Network Driver</td><td>Handles data packet exchange over wired or wireless links.</td><td class="hide-md">Internet access, file sharing, streaming.</td></tr><tr><td class="strong">Storage Controller</td><td>Coordinates read and write operations to internal storage.</td><td class="hide-md">Booting the OS, saving files, data caching.</td></tr><tr><td class="strong">USB Driver</td><td>Detects and routes data for connected USB devices.</td><td class="hide-md">Flash drives, keyboards, mice, peripherals.</td></tr><tr><td class="strong">Printer Driver</td><td>Converts digital documents into printer-readable commands.</td><td class="hide-md">Office printing, design output, scanning.</td></tr><tr><td class="strong">BIOS / UEFI</td><td>Initialises hardware components before the OS loads.</td><td class="hide-md">System boot sequence and firmware updates.</td></tr></tbody>
+        </table></div>
+      </div>
+    </div>
+  </section>
+  </main>
+  
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__col">
+          <a href="/" class="footer__brand">
+            <div class="footer__brand-icon"><i data-lucide="printer" class="icon-18"></i></div>
+            <div class="footer__brand-name">PrintKingDriver</div>
+          </a>
+          <p>Your trusted source for printer & system driver information.</p>
+        </div>
+        
+        <div class="footer__col">
+          <h4>Core Drivers</h4>
+          <ul><li><a href="/drivers/chipset">Chipset Driver</a></li><li><a href="/drivers/graphics">Graphics Driver</a></li><li><a href="/drivers/audio">Audio Driver</a></li><li><a href="/drivers/network">Network Driver</a></li><li><a href="/drivers/storage">Storage Controller</a></li><li><a href="/drivers/usb">USB Support</a></li><li><a href="/drivers/bluetooth">Bluetooth Driver</a></li><li><a href="/drivers/input">Input Drivers</a></li><li><a href="/drivers/printer">Printer Driver</a></li><li><a href="/drivers/scanner">Scanner Support</a></li><li><a href="/drivers/webcam">Webcam Driver</a></li><li><a href="/drivers/bios">BIOS / UEFI</a></li><li><a href="/drivers/security">Security Drivers</a></li><li><a href="/drivers/monitor">Monitor Driver</a></li></ul>
+        </div>
+        <div class="footer__col">
+          <h4>Quick Links</h4>
+          <ul><li><a href="/">Home</a></li><li><a href="/drivers">Explore Drivers</a></li><li><a href="/how-it-works">How It Works</a></li><li><a href="/about">About Guide</a></li></ul>
+        </div>
+        <div class="footer__col">
+          <h4>System Support</h4>
+          <ul><li><a href="/contact">Contact Us</a></li><li><a href="/how-it-works">FAQ</a></li><li><a href="/contact">Technical Support</a></li><li><a href="/drivers">Documentation Library</a></li></ul>
+        </div>
+      </div>
+      <div class="footer__bot">
+        <p>© 2026 PrintKingDriver.com. All rights reserved.</p>
+        <ul>
+          <li><a href="/privacy">Privacy Policy</a></li>
+          <li><a href="/terms">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="/assets/scripts.js" defer></script>
+  </body>
+  </html>

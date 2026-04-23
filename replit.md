@@ -25,3 +25,14 @@ pnpm workspace monorepo using TypeScript. Each package manages its own dependenc
 - `pnpm --filter @workspace/api-server run dev` — run API server locally
 
 See the `pnpm-workspace` skill for workspace structure, TypeScript setup, and package details.
+
+## PrintKingDriver Artifact
+
+`artifacts/printkingdriver` is a static multi-page informational site about printer & system drivers. It has **no framework dependencies** — pure HTML/CSS/JS served by a small Node http server.
+
+- **Stack**: zero-dep Node `http` server (`serve.mjs`) for dev, static-file deployment in production.
+- **Build**: `build.mjs` copies `public/` to `dist/public/`.
+- **Pages**: each page is a standalone `.html` file under `public/` (home, drivers, how-it-works, about, contact, privacy, terms, 404, plus 14 driver detail pages under `public/drivers/`). Navbar and footer are inlined per page for SEO.
+- **Routing**: pretty URLs (`/about` → `/about.html`, `/drivers/printer` → `/drivers/printer.html`); unknown paths serve `404.html`. Production uses `serve = "static"` with `notFoundPage = "/404.html"` (no SPA rewrite).
+- **Design system**: Inter + Plus Jakarta Sans (Google Fonts), Lucide icons via CDN. Cream/sand/teal palette defined in `public/assets/styles.css`.
+- **Interactive JS** (`public/assets/scripts.js`, vanilla, no deps): mobile drawer, mega-menu hover/click, in-nav search with arrow-key nav, horizontal slider with dots, FAQ accordion, contact-form validation with success state.

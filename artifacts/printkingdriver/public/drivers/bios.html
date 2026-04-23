@@ -1,0 +1,269 @@
+<!doctype html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>BIOS / UEFI Driver — Reference Guide | PrintKingDriver</title>
+    <meta name="description" content="Initialises hardware before the OS loads. Learn what a bios / uefi driver does, how it works, and why it matters." />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta property="og:title" content="BIOS / UEFI Driver — Reference Guide | PrintKingDriver" />
+    <meta property="og:description" content="Initialises hardware before the OS loads. Learn what a bios / uefi driver does, how it works, and why it matters." />
+    <meta property="og:image" content="/opengraph.jpg" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="canonical" href="https://printkingdriver.com/drivers/bios" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/assets/styles.css" />
+  </head>
+  <body>
+  
+  <nav class="nav">
+    <div class="container nav__inner">
+      <a href="/" class="nav__brand">
+        <div class="nav__logo"><i data-lucide="printer" class="icon-20"></i></div>
+        <div>
+          <div class="nav__title">PrintKingDriver</div>
+          <div class="nav__sub">System Guide Portal</div>
+        </div>
+      </a>
+
+      <div class="nav__search">
+        <span class="nav__search-icon"><i data-lucide="search" class="icon-16"></i></span>
+        <input type="text" placeholder="Search drivers, pages, hardware..." aria-label="Search" />
+        <button class="nav__search-clear" type="button" aria-label="Clear search"><i data-lucide="x" class="icon-14"></i></button>
+        <div class="nav__search-results"></div>
+      </div>
+
+      <div class="nav__links">
+        <a href="/" class="nav__link" data-nav-link="/">Home</a>
+        <div class="mega-wrap" style="position:relative;">
+          <button type="button" class="mega-trigger ">Explore Drivers <i data-lucide="chevron-down" class="icon-14"></i></button>
+        </div>
+        <a href="/how-it-works" class="nav__link" data-nav-link="/how-it-works">How It Works</a>
+        <a href="/about" class="nav__link" data-nav-link="/about">About Guide</a>
+        <a href="/contact" class="nav__cta">⚡ Get In Touch</a>
+      </div>
+
+      <button class="nav__menu-trigger" aria-label="Open menu"><i data-lucide="menu" class="icon-20"></i></button>
+    </div>
+
+    <div class="mega"><div class="mega__panel">
+      <div class="mega__grid">
+      <div class="mega__col">
+        <div class="mega__heading">
+          <span class="mega__chip">01</span>
+          <div class="mega__head-text">Essential Drivers</div>
+        </div>
+        <ul class="mega__list">
+          <li><a href="/drivers/chipset">
+            <div class="mega__item-name">Chipset Driver</div>
+            <div class="mega__item-desc">Motherboard logic & CPU sync</div>
+          </a></li>
+          <li><a href="/drivers/graphics">
+            <div class="mega__item-name">Graphics Driver</div>
+            <div class="mega__item-desc">Visual rendering & GPU</div>
+          </a></li>
+          <li><a href="/drivers/audio">
+            <div class="mega__item-name">Audio Driver</div>
+            <div class="mega__item-desc">Sound input/output</div>
+          </a></li>
+          <li><a href="/drivers/network">
+            <div class="mega__item-name">Network Driver</div>
+            <div class="mega__item-desc">Wired & wireless networking</div>
+          </a></li>
+        </ul>
+      </div>
+      <div class="mega__col">
+        <div class="mega__heading">
+          <span class="mega__chip">02</span>
+          <div class="mega__head-text">Hardware-Specific</div>
+        </div>
+        <ul class="mega__list">
+          <li><a href="/drivers/storage">
+            <div class="mega__item-name">Storage Controller</div>
+            <div class="mega__item-desc">SSDs & hard drives</div>
+          </a></li>
+          <li><a href="/drivers/usb">
+            <div class="mega__item-name">USB Support</div>
+            <div class="mega__item-desc">Port & device recognition</div>
+          </a></li>
+          <li><a href="/drivers/bluetooth">
+            <div class="mega__item-name">Bluetooth Driver</div>
+            <div class="mega__item-desc">Wireless peripheral pairing</div>
+          </a></li>
+          <li><a href="/drivers/input">
+            <div class="mega__item-name">Input Drivers</div>
+            <div class="mega__item-desc">Touchpad & keyboard</div>
+          </a></li>
+        </ul>
+      </div>
+      <div class="mega__col">
+        <div class="mega__heading">
+          <span class="mega__chip">03</span>
+          <div class="mega__head-text">Peripheral Drivers</div>
+        </div>
+        <ul class="mega__list">
+          <li><a href="/drivers/printer">
+            <div class="mega__item-name">Printer Driver</div>
+            <div class="mega__item-desc">Document to print commands</div>
+          </a></li>
+          <li><a href="/drivers/scanner">
+            <div class="mega__item-name">Scanner Support</div>
+            <div class="mega__item-desc">Image capture & OCR</div>
+          </a></li>
+          <li><a href="/drivers/webcam">
+            <div class="mega__item-name">Webcam Driver</div>
+            <div class="mega__item-desc">Video stream capture</div>
+          </a></li>
+        </ul>
+      </div>
+      <div class="mega__col">
+        <div class="mega__heading">
+          <span class="mega__chip">04</span>
+          <div class="mega__head-text">Advanced Systems</div>
+        </div>
+        <ul class="mega__list">
+          <li><a href="/drivers/bios">
+            <div class="mega__item-name">BIOS / UEFI</div>
+            <div class="mega__item-desc">Pre-boot initialisation</div>
+          </a></li>
+          <li><a href="/drivers/security">
+            <div class="mega__item-name">Security Drivers</div>
+            <div class="mega__item-desc">Encryption & secure boot</div>
+          </a></li>
+          <li><a href="/drivers/monitor">
+            <div class="mega__item-name">Monitor Driver</div>
+            <div class="mega__item-desc">Colour & refresh control</div>
+          </a></li>
+        </ul>
+      </div></div>
+      <div class="mega__footer">
+        <div class="mega__footer-text">Browse the full reference for each driver type.</div>
+        <a href="/drivers">View all drivers <span aria-hidden="true">→</span></a>
+      </div>
+    </div></div>
+  </nav>
+
+  <div class="drawer-backdrop"></div>
+  <aside class="drawer" aria-hidden="true">
+    <button class="drawer__close" aria-label="Close menu"><i data-lucide="x" class="icon-20"></i></button>
+    <div class="drawer__list">
+      <a href="/" data-nav-link="/">Home</a>
+      <button type="button" data-mobile-explore>Explore Drivers <i data-lucide="chevron-down" class="icon-16"></i></button>
+      <div class="drawer__sub">
+      <h5>Essential Drivers</h5>
+      <ul><li><a href="/drivers/chipset">Chipset Driver</a></li><li><a href="/drivers/graphics">Graphics Driver</a></li><li><a href="/drivers/audio">Audio Driver</a></li><li><a href="/drivers/network">Network Driver</a></li></ul>
+      <h5>Hardware-Specific</h5>
+      <ul><li><a href="/drivers/storage">Storage Controller</a></li><li><a href="/drivers/usb">USB Support</a></li><li><a href="/drivers/bluetooth">Bluetooth Driver</a></li><li><a href="/drivers/input">Input Drivers</a></li></ul>
+      <h5>Peripheral Drivers</h5>
+      <ul><li><a href="/drivers/printer">Printer Driver</a></li><li><a href="/drivers/scanner">Scanner Support</a></li><li><a href="/drivers/webcam">Webcam Driver</a></li></ul>
+      <h5>Advanced Systems</h5>
+      <ul><li><a href="/drivers/bios">BIOS / UEFI</a></li><li><a href="/drivers/security">Security Drivers</a></li><li><a href="/drivers/monitor">Monitor Driver</a></li></ul><a href="/drivers" style="display:inline-block;color:var(--primary);font-weight:600;font-size:13px;padding-top:8px;">View all drivers →</a></div>
+      <a href="/how-it-works" data-nav-link="/how-it-works">How It Works</a>
+      <a href="/about" data-nav-link="/about">About Guide</a>
+      <a href="/contact" class="drawer__cta">⚡ Get In Touch</a>
+    </div>
+  </aside>
+  <main>
+  
+  <div class="detail-bg">
+    <div class="container" style="max-width:980px;">
+      <a href="/drivers" class="legal__back"><i data-lucide="arrow-left" class="icon-14"></i> Back to all drivers</a>
+
+      <header class="detail-head">
+        <div class="detail-head__icon c-purple"><i data-lucide="microchip" class="icon-32"></i></div>
+        <div>
+          <div class="eyebrow">Driver Reference</div>
+          <h1>BIOS / UEFI Driver</h1>
+          <p>Initialises hardware before the OS loads.</p>
+        </div>
+      </header>
+
+      <section class="detail-card">
+        <h2>What Is It?</h2>
+        <p>BIOS and UEFI firmware act as the lowest-level driver layer of the system. They start the hardware, run early diagnostics, and hand control to the operating system loader.</p>
+      </section>
+
+      <section class="detail-card">
+        <h2>How It Works</h2>
+        <p>When power is applied, the firmware checks each major component, configures memory and CPU features, and selects a boot device. It then loads the OS bootloader and provides a minimal interface the OS uses until its own drivers are ready.</p>
+        <div class="detail-flow">
+          <div class="detail-flow__step"><div class="detail-flow__icon c-purple"><i data-lucide="monitor" class="icon-18"></i></div><div class="detail-flow__label">Application</div></div>
+          <i data-lucide="arrow-right" class="icon-16 detail-flow__arrow"></i>
+          <div class="detail-flow__step"><div class="detail-flow__icon c-purple"><i data-lucide="server" class="icon-18"></i></div><div class="detail-flow__label">Operating System</div></div>
+          <i data-lucide="arrow-right" class="icon-16 detail-flow__arrow"></i>
+          <div class="detail-flow__step is-highlight"><div class="detail-flow__icon c-purple"><i data-lucide="microchip" class="icon-18"></i></div><div class="detail-flow__label">BIOS Driver</div></div>
+          <i data-lucide="arrow-right" class="icon-16 detail-flow__arrow"></i>
+          <div class="detail-flow__step"><div class="detail-flow__icon c-teal"><i data-lucide="cpu" class="icon-18"></i></div><div class="detail-flow__label">Hardware</div></div>
+        </div>
+      </section>
+
+      <section class="detail-card">
+        <h2>Key Functions</h2>
+        <ul class="detail-list">
+          <li><span class="detail-list__bullet"><i data-lucide="check" class="icon-12"></i></span><span>Performs the power-on self-test (POST).</span></li><li><span class="detail-list__bullet"><i data-lucide="check" class="icon-12"></i></span><span>Initialises memory, CPU features, and storage controllers.</span></li><li><span class="detail-list__bullet"><i data-lucide="check" class="icon-12"></i></span><span>Selects and launches the boot loader.</span></li><li><span class="detail-list__bullet"><i data-lucide="check" class="icon-12"></i></span><span>Provides runtime services for time, NVRAM, and secure boot.</span></li>
+        </ul>
+      </section>
+
+      <section class="detail-card">
+        <h2>Components &amp; Examples</h2>
+        <div class="tbl-wrap"><div class="tbl-scroll"><table class="tbl">
+          <thead><tr><th>Component</th><th>Role</th><th class="hide-md">Example</th></tr></thead>
+          <tbody><tr><td class="strong">POST</td><td>Hardware checks</td><td class="hide-md mono small">Memory test</td></tr><tr><td class="strong">Boot manager</td><td>OS selection</td><td class="hide-md mono small">UEFI boot order</td></tr><tr><td class="strong">Secure Boot</td><td>Trust verification</td><td class="hide-md mono small">Signed bootloader</td></tr></tbody>
+        </table></div></div>
+      </section>
+
+      <section class="detail-card detail-card--accent">
+        <h2>Why It Matters</h2>
+        <p>Without functioning firmware, the computer never reaches the operating system. UEFI quality affects boot speed, hardware compatibility, and platform security.</p>
+      </section>
+
+      <section style="margin-top:48px;">
+        <h2 class="font-heading" style="font-size:1.25rem;font-weight:700;margin-bottom:16px;">Other Drivers to Explore</h2>
+        <div class="related-grid">
+          <a href="/drivers/chipset" class="related-card"><div class="related-card__icon"><i data-lucide="cpu" class="icon-18"></i></div><div class="related-card__name">Chipset Driver</div><i data-lucide="arrow-right" class="icon-14 related-card__arrow"></i></a><a href="/drivers/graphics" class="related-card"><div class="related-card__icon"><i data-lucide="monitor" class="icon-18"></i></div><div class="related-card__name">Graphics Driver</div><i data-lucide="arrow-right" class="icon-14 related-card__arrow"></i></a><a href="/drivers/audio" class="related-card"><div class="related-card__icon"><i data-lucide="volume-2" class="icon-18"></i></div><div class="related-card__name">Audio Driver</div><i data-lucide="arrow-right" class="icon-14 related-card__arrow"></i></a><a href="/drivers/network" class="related-card"><div class="related-card__icon"><i data-lucide="wifi" class="icon-18"></i></div><div class="related-card__name">Network Driver</div><i data-lucide="arrow-right" class="icon-14 related-card__arrow"></i></a><a href="/drivers/storage" class="related-card"><div class="related-card__icon"><i data-lucide="hard-drive" class="icon-18"></i></div><div class="related-card__name">Storage Controller Driver</div><i data-lucide="arrow-right" class="icon-14 related-card__arrow"></i></a><a href="/drivers/usb" class="related-card"><div class="related-card__icon"><i data-lucide="usb" class="icon-18"></i></div><div class="related-card__name">USB Driver</div><i data-lucide="arrow-right" class="icon-14 related-card__arrow"></i></a>
+        </div>
+      </section>
+    </div>
+  </div>
+  </main>
+  
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__col">
+          <a href="/" class="footer__brand">
+            <div class="footer__brand-icon"><i data-lucide="printer" class="icon-18"></i></div>
+            <div class="footer__brand-name">PrintKingDriver</div>
+          </a>
+          <p>Your trusted source for printer & system driver information.</p>
+        </div>
+        
+        <div class="footer__col">
+          <h4>Core Drivers</h4>
+          <ul><li><a href="/drivers/chipset">Chipset Driver</a></li><li><a href="/drivers/graphics">Graphics Driver</a></li><li><a href="/drivers/audio">Audio Driver</a></li><li><a href="/drivers/network">Network Driver</a></li><li><a href="/drivers/storage">Storage Controller</a></li><li><a href="/drivers/usb">USB Support</a></li><li><a href="/drivers/bluetooth">Bluetooth Driver</a></li><li><a href="/drivers/input">Input Drivers</a></li><li><a href="/drivers/printer">Printer Driver</a></li><li><a href="/drivers/scanner">Scanner Support</a></li><li><a href="/drivers/webcam">Webcam Driver</a></li><li><a href="/drivers/bios">BIOS / UEFI</a></li><li><a href="/drivers/security">Security Drivers</a></li><li><a href="/drivers/monitor">Monitor Driver</a></li></ul>
+        </div>
+        <div class="footer__col">
+          <h4>Quick Links</h4>
+          <ul><li><a href="/">Home</a></li><li><a href="/drivers">Explore Drivers</a></li><li><a href="/how-it-works">How It Works</a></li><li><a href="/about">About Guide</a></li></ul>
+        </div>
+        <div class="footer__col">
+          <h4>System Support</h4>
+          <ul><li><a href="/contact">Contact Us</a></li><li><a href="/how-it-works">FAQ</a></li><li><a href="/contact">Technical Support</a></li><li><a href="/drivers">Documentation Library</a></li></ul>
+        </div>
+      </div>
+      <div class="footer__bot">
+        <p>© 2026 PrintKingDriver.com. All rights reserved.</p>
+        <ul>
+          <li><a href="/privacy">Privacy Policy</a></li>
+          <li><a href="/terms">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="/assets/scripts.js" defer></script>
+  </body>
+  </html>
