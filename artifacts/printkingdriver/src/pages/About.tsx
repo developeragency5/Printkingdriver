@@ -17,7 +17,7 @@ export default function About() {
         <div className="container mx-auto max-w-3xl text-center">
           <h2 className="font-heading font-bold text-3xl mb-6">Our Mission</h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            PrintKingDriver was built to simplify the confusing world of printer drivers. Whether you're a home user setting up a new printer or an IT professional managing multiple devices, our guide gives you clear, straightforward information to help you identify, troubleshoot, and install the right driver for your printer.
+            PrintKingDriver was built to simplify the confusing world of printer drivers. Whether you're a home user setting up a new printer or an IT professional managing multiple devices, our guide gives you clear, straightforward information to help you identify, troubleshoot, and choose the right driver for your printer.
           </p>
         </div>
       </section>

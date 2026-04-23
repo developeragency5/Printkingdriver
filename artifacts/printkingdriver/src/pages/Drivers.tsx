@@ -46,7 +46,7 @@ const driverTypes = [
     icon: <HardDrive className="w-6 h-6 text-red-600" />,
     name: "IPP Everywhere",
     full: "Internet Printing Protocol",
-    desc: "A driverless printing standard supported by modern operating systems. Allows printing without manually installing a dedicated driver file.",
+    desc: "A driverless printing standard supported by modern operating systems. Allows printing without manually adding a dedicated driver file.",
     best: "Modern Driverless Setup",
     os: "Windows 10+, macOS, iOS",
     bg: "bg-red-50",
@@ -65,12 +65,12 @@ const driverTypes = [
 ];
 
 const troubleshootingRows = [
-  { issue: "Printer Not Detected", cause: "Missing or corrupt driver", fix: "Reinstall the correct driver for your OS version" },
-  { issue: "Driver Conflict", cause: "Old driver not fully removed before new install", fix: "Clean uninstall all driver files, then reinstall fresh" },
+  { issue: "Printer Not Detected", cause: "Missing or corrupt driver", fix: "Re-add the correct driver for your OS version" },
+  { issue: "Driver Conflict", cause: "Old driver not fully removed before adding a new one", fix: "Cleanly remove all driver files, then add a fresh copy" },
   { issue: "Print Queue Stuck", cause: "Corrupted print job or unresponsive spooler", fix: "Restart the print spooler service and clear the spooler folder" },
   { issue: "Printer Shows Offline", cause: "Driver lost communication pathway to device", fix: "Check port settings and disable 'Use Printer Offline' option" },
-  { issue: "Poor Quality After OS Update", cause: "OS update changed driver interaction layer", fix: "Install updated driver released by manufacturer post-update" },
-  { issue: "Driver Install Fails", cause: "Residual files or security software blocking setup", fix: "Run installer as Administrator with antivirus temporarily paused" },
+  { issue: "Poor Quality After OS Update", cause: "OS update changed driver interaction layer", fix: "Use the updated driver released by manufacturer post-update" },
+  { issue: "Driver Setup Fails", cause: "Residual files or security software blocking setup", fix: "Run setup as Administrator with antivirus temporarily paused" },
   { issue: "Incorrect Page Size Output", cause: "Driver paper settings mismatch", fix: "Verify paper size settings in driver preferences and printing app" },
   { issue: "Slow Printing Speed", cause: "Driver using wrong rendering mode", fix: "Switch from high-quality to standard mode in driver settings" },
 ];
@@ -165,7 +165,7 @@ export default function Drivers() {
         {/* ── Driver Types Cards ── */}
         <section className="mb-16">
           <h2 className="font-heading font-bold text-2xl text-[#111110] mb-2">Types of Printer Drivers</h2>
-          <p className="text-sm text-muted-foreground mb-8">Each driver type serves a different use case. Understanding which type applies to your printer helps ensure correct installation and performance.</p>
+          <p className="text-sm text-muted-foreground mb-8">Each driver type serves a different use case. Understanding which type applies to your printer helps ensure correct setup and performance.</p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             {driverTypes.map((d) => (

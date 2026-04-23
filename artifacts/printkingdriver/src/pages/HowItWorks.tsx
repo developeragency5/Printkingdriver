@@ -37,7 +37,7 @@ export default function HowItWorks() {
             <div className="font-heading font-[800] text-[3rem] text-primary/20 leading-none mb-4">03</div>
             <h3 className="font-heading font-[700] text-xl mb-4 text-primary">Contact Our Team</h3>
             <p className="text-muted-foreground leading-relaxed text-sm">
-              Still need help? Reach out to our support team via the contact page and a technician will guide you through the installation process.
+              Still need help? Reach out to our support team via the contact page and a technician will guide you through the setup process.
             </p>
           </div>
         </div>

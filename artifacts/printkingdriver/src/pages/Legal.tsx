@@ -9,7 +9,7 @@ const content: Record<string, { title: string; tagline: string; sections: { head
     sections: [
       {
         heading: "Overview",
-        body: "PrintKingDriver.com is an informational website that explains how printer and system drivers work. It does not sell, distribute, or install software, and does not require accounts or sign-ins to read its guides.",
+        body: "PrintKingDriver.com is an informational website that explains how printer and system drivers work. It does not sell or distribute software, and does not require accounts or sign-ins to read its guides.",
       },
       {
         heading: "Information We Collect",
@@ -39,7 +39,7 @@ const content: Record<string, { title: string; tagline: string; sections: { head
       },
       {
         heading: "No Software Distribution",
-        body: "This site does not provide downloads, installers, or driver files. All driver software should be obtained directly from the manufacturer of your hardware.",
+        body: "This site does not provide downloads or driver files. All driver software should be obtained directly from the manufacturer of your hardware.",
       },
       {
         heading: "Accuracy of Information",
