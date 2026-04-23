@@ -11,10 +11,10 @@ const exploreCategories = [
     title: "Essential Drivers",
     desc: "Core system drivers required for basic operation. They allow the OS to recognise and use the most fundamental components of a computer.",
     items: [
-      { name: "Chipset Driver", note: "Coordinates motherboard logic and CPU communication." },
-      { name: "Graphics Driver", note: "Handles visual rendering and GPU instructions." },
-      { name: "Audio Driver", note: "Manages sound input and output processing." },
-      { name: "Network Driver", note: "Enables wired and wireless network connectivity." },
+      { icon: <Cpu className="w-3.5 h-3.5 text-blue-600" />, name: "Chipset Driver", note: "Coordinates motherboard logic and CPU communication." },
+      { icon: <Monitor className="w-3.5 h-3.5 text-blue-600" />, name: "Graphics Driver", note: "Handles visual rendering and GPU instructions." },
+      { icon: <Volume2 className="w-3.5 h-3.5 text-blue-600" />, name: "Audio Driver", note: "Manages sound input and output processing." },
+      { icon: <Wifi className="w-3.5 h-3.5 text-blue-600" />, name: "Network Driver", note: "Enables wired and wireless network connectivity." },
     ],
   },
   {
@@ -24,10 +24,10 @@ const exploreCategories = [
     title: "Hardware-Specific Drivers",
     desc: "Drivers that control specialised internal hardware. They enable the OS to fully use each component's features and performance.",
     items: [
-      { name: "Storage Controller", note: "Manages data transfer with SSDs and hard drives." },
-      { name: "USB Driver", note: "Detects ports and connected USB devices." },
-      { name: "Bluetooth Driver", note: "Pairs and manages nearby wireless devices." },
-      { name: "Touchpad / Keyboard", note: "Translates input gestures and keystrokes." },
+      { icon: <HardDrive className="w-3.5 h-3.5 text-orange-600" />, name: "Storage Controller", note: "Manages data transfer with SSDs and hard drives." },
+      { icon: <Usb className="w-3.5 h-3.5 text-orange-600" />, name: "USB Driver", note: "Detects ports and connected USB devices." },
+      { icon: <Bluetooth className="w-3.5 h-3.5 text-orange-600" />, name: "Bluetooth Driver", note: "Pairs and manages nearby wireless devices." },
+      { icon: <MousePointer2 className="w-3.5 h-3.5 text-orange-600" />, name: "Touchpad / Keyboard", note: "Translates input gestures and keystrokes." },
     ],
   },
   {
@@ -37,10 +37,10 @@ const exploreCategories = [
     title: "Peripheral Drivers",
     desc: "Drivers for external devices that connect to a computer. They define how peripherals exchange data with the host system.",
     items: [
-      { name: "Printer Driver", note: "Translates documents into printer commands." },
-      { name: "Scanner Driver", note: "Captures images and handles OCR exchange." },
-      { name: "Webcam Driver", note: "Processes video stream capture and resolution." },
-      { name: "Display Driver", note: "Controls external monitor signal output." },
+      { icon: <Printer className="w-3.5 h-3.5 text-teal-600" />, name: "Printer Driver", note: "Translates documents into printer commands." },
+      { icon: <Scan className="w-3.5 h-3.5 text-teal-600" />, name: "Scanner Driver", note: "Captures images and handles OCR exchange." },
+      { icon: <Webcam className="w-3.5 h-3.5 text-teal-600" />, name: "Webcam Driver", note: "Processes video stream capture and resolution." },
+      { icon: <MonitorSpeaker className="w-3.5 h-3.5 text-teal-600" />, name: "Display Driver", note: "Controls external monitor signal output." },
     ],
   },
   {
@@ -50,10 +50,10 @@ const exploreCategories = [
     title: "Advanced Systems",
     desc: "Low-level firmware and security drivers that operate close to the hardware and influence overall platform integrity.",
     items: [
-      { name: "BIOS / UEFI", note: "Initialises hardware before the OS loads." },
-      { name: "Security Driver", note: "Supports encryption and secure boot." },
-      { name: "Monitor Calibration", note: "Manages colour accuracy and profiles." },
-      { name: "Power Management", note: "Coordinates CPU and battery efficiency." },
+      { icon: <Microchip className="w-3.5 h-3.5 text-purple-600" />, name: "BIOS / UEFI", note: "Initialises hardware before the OS loads." },
+      { icon: <Shield className="w-3.5 h-3.5 text-purple-600" />, name: "Security Driver", note: "Supports encryption and secure boot." },
+      { icon: <MonitorSpeaker className="w-3.5 h-3.5 text-purple-600" />, name: "Monitor Calibration", note: "Manages colour accuracy and profiles." },
+      { icon: <RefreshCw className="w-3.5 h-3.5 text-purple-600" />, name: "Power Management", note: "Coordinates CPU and battery efficiency." },
     ],
   },
 ];
@@ -190,9 +190,9 @@ export default function Home() {
         <div className="container mx-auto max-w-6xl">
           <div className="mb-10">
             <div className="text-xs uppercase tracking-wider text-blue-700 font-semibold mb-2">Explore</div>
-            <h2 className="font-heading font-bold text-3xl text-[#111110] mb-3">Explore Driver Categories</h2>
+            <h2 className="font-heading font-bold text-3xl text-[#111110] mb-3">Explore Drivers</h2>
             <p className="text-sm text-muted-foreground max-w-2xl leading-relaxed">
-              An organised overview of the major driver categories that exist in modern operating systems, with examples of the components each one supports.
+              Find and learn about all essential system drivers, organised into clear categories for easy reference.
             </p>
           </div>
 
@@ -206,11 +206,16 @@ export default function Home() {
                 <h3 className="font-heading font-bold text-lg text-[#111110] mb-2">{c.title}</h3>
                 <p className="text-[13px] text-muted-foreground leading-relaxed mb-4">{c.desc}</p>
 
-                <ul className="border-t border-border pt-3 space-y-2.5 mt-auto">
+                <ul className="border-t border-border pt-3 space-y-3 mt-auto">
                   {c.items.map((it) => (
-                    <li key={it.name}>
-                      <div className="text-[12px] font-semibold text-[#111110]">{it.name}</div>
-                      <div className="text-[11px] text-muted-foreground leading-snug">{it.note}</div>
+                    <li key={it.name} className="flex gap-2.5">
+                      <div className={`w-6 h-6 ${c.bg} rounded-md flex items-center justify-center flex-shrink-0 mt-0.5`}>
+                        {it.icon}
+                      </div>
+                      <div className="min-w-0">
+                        <div className="text-[12px] font-semibold text-[#111110]">{it.name}</div>
+                        <div className="text-[11px] text-muted-foreground leading-snug">{it.note}</div>
+                      </div>
                     </li>
                   ))}
                 </ul>
