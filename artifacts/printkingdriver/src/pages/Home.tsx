@@ -1,7 +1,72 @@
 import Layout from "@/components/Layout";
-import { Cpu, Monitor, Volume2, Wifi, HardDrive, Usb, Bluetooth, MousePointer2, Printer, Scan, Webcam, Microchip, Shield, MonitorSpeaker, AlertCircle, RefreshCw, FileQuestion, XOctagon, VolumeX, WifiOff } from "lucide-react";
+import { Cpu, Monitor, Volume2, Wifi, HardDrive, Usb, Bluetooth, MousePointer2, Printer, Scan, Webcam, Microchip, Shield, MonitorSpeaker, AlertCircle, RefreshCw, FileQuestion, XOctagon, VolumeX, WifiOff, Layers, Server, ArrowRight, ArrowDown } from "lucide-react";
 import DriverGrid from "@/components/DriverGrid";
 import { Link } from "wouter";
+
+const exploreCategories = [
+  {
+    tag: "Category 01",
+    icon: <Cpu className="w-5 h-5 text-blue-600" />,
+    bg: "bg-blue-50",
+    title: "Essential Drivers",
+    desc: "Core system drivers required for basic operation. They allow the OS to recognise and use the most fundamental components of a computer.",
+    items: [
+      { name: "Chipset Driver", note: "Coordinates motherboard logic and CPU communication." },
+      { name: "Graphics Driver", note: "Handles visual rendering and GPU instructions." },
+      { name: "Audio Driver", note: "Manages sound input and output processing." },
+      { name: "Network Driver", note: "Enables wired and wireless network connectivity." },
+    ],
+  },
+  {
+    tag: "Category 02",
+    icon: <HardDrive className="w-5 h-5 text-orange-600" />,
+    bg: "bg-orange-50",
+    title: "Hardware-Specific Drivers",
+    desc: "Drivers that control specialised internal hardware. They enable the OS to fully use each component's features and performance.",
+    items: [
+      { name: "Storage Controller", note: "Manages data transfer with SSDs and hard drives." },
+      { name: "USB Driver", note: "Detects ports and connected USB devices." },
+      { name: "Bluetooth Driver", note: "Pairs and manages nearby wireless devices." },
+      { name: "Touchpad / Keyboard", note: "Translates input gestures and keystrokes." },
+    ],
+  },
+  {
+    tag: "Category 03",
+    icon: <Printer className="w-5 h-5 text-teal-600" />,
+    bg: "bg-teal-50",
+    title: "Peripheral Drivers",
+    desc: "Drivers for external devices that connect to a computer. They define how peripherals exchange data with the host system.",
+    items: [
+      { name: "Printer Driver", note: "Translates documents into printer commands." },
+      { name: "Scanner Driver", note: "Captures images and handles OCR exchange." },
+      { name: "Webcam Driver", note: "Processes video stream capture and resolution." },
+      { name: "Display Driver", note: "Controls external monitor signal output." },
+    ],
+  },
+  {
+    tag: "Category 04",
+    icon: <Microchip className="w-5 h-5 text-purple-600" />,
+    bg: "bg-purple-50",
+    title: "Advanced Systems",
+    desc: "Low-level firmware and security drivers that operate close to the hardware and influence overall platform integrity.",
+    items: [
+      { name: "BIOS / UEFI", note: "Initialises hardware before the OS loads." },
+      { name: "Security Driver", note: "Supports encryption and secure boot." },
+      { name: "Monitor Calibration", note: "Manages colour accuracy and profiles." },
+      { name: "Power Management", note: "Coordinates CPU and battery efficiency." },
+    ],
+  },
+];
+
+const driverRoleRows = [
+  { type: "Graphics Driver", fn: "Translates rendering commands into GPU instructions.", use: "Display visuals, video playback, gaming." },
+  { type: "Audio Driver", fn: "Manages sound signal processing between OS and audio chip.", use: "Music playback, voice calls, system sound." },
+  { type: "Network Driver", fn: "Handles data packet exchange over wired or wireless links.", use: "Internet access, file sharing, streaming." },
+  { type: "Storage Controller", fn: "Coordinates read and write operations to internal storage.", use: "Booting the OS, saving files, data caching." },
+  { type: "USB Driver", fn: "Detects and routes data for connected USB devices.", use: "Flash drives, keyboards, mice, peripherals." },
+  { type: "Printer Driver", fn: "Converts digital documents into printer-readable commands.", use: "Office printing, design output, scanning." },
+  { type: "BIOS / UEFI", fn: "Initialises hardware components before the OS loads.", use: "System boot sequence and firmware updates." },
+];
 
 export default function Home() {
   return (
@@ -119,6 +184,120 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* ── Explore Driver Categories ── */}
+      <section className="py-20 px-4 bg-[#f4f6fb]">
+        <div className="container mx-auto max-w-6xl">
+          <div className="mb-10">
+            <div className="text-xs uppercase tracking-wider text-blue-700 font-semibold mb-2">Explore</div>
+            <h2 className="font-heading font-bold text-3xl text-[#111110] mb-3">Explore Driver Categories</h2>
+            <p className="text-sm text-muted-foreground max-w-2xl leading-relaxed">
+              An organised overview of the major driver categories that exist in modern operating systems, with examples of the components each one supports.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {exploreCategories.map((c) => (
+              <article key={c.title} className="rounded-2xl border border-border bg-white p-5 shadow-[0_1px_2px_rgba(0,0,0,0.03)] hover:shadow-[0_4px_14px_rgba(0,0,0,0.05)] transition-shadow flex flex-col">
+                <div className="flex items-center gap-2.5 mb-4">
+                  <div className={`w-9 h-9 ${c.bg} rounded-lg flex items-center justify-center flex-shrink-0`}>{c.icon}</div>
+                  <span className="text-[10px] uppercase tracking-wider font-semibold text-muted-foreground">{c.tag}</span>
+                </div>
+                <h3 className="font-heading font-bold text-lg text-[#111110] mb-2">{c.title}</h3>
+                <p className="text-[13px] text-muted-foreground leading-relaxed mb-4">{c.desc}</p>
+
+                <ul className="border-t border-border pt-3 space-y-2.5 mt-auto">
+                  {c.items.map((it) => (
+                    <li key={it.name}>
+                      <div className="text-[12px] font-semibold text-[#111110]">{it.name}</div>
+                      <div className="text-[11px] text-muted-foreground leading-snug">{it.note}</div>
+                    </li>
+                  ))}
+                </ul>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── How Drivers Work ── */}
+      <section className="py-20 px-4 bg-white">
+        <div className="container mx-auto max-w-5xl">
+          <div className="mb-10">
+            <div className="text-xs uppercase tracking-wider text-blue-700 font-semibold mb-2">Concept</div>
+            <h2 className="font-heading font-bold text-3xl text-[#111110] mb-3">How Drivers Work</h2>
+            <p className="text-sm text-muted-foreground max-w-2xl leading-relaxed">
+              A driver is the bridge between physical hardware and the software running on the operating system. The diagram below shows the typical flow of communication.
+            </p>
+          </div>
+
+          <div className="bg-[#f9f9f7] border border-border rounded-2xl p-8 md:p-10 shadow-[0_1px_2px_rgba(0,0,0,0.03)]">
+            <div className="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-5">
+              {[
+                { icon: <Cpu className="w-6 h-6 text-blue-700" />, label: "Hardware", sub: "Physical device or component", bg: "bg-blue-50", border: "border-blue-100" },
+                { icon: <Layers className="w-6 h-6 text-[#1d4ed8]" />, label: "Driver", sub: "Software translator layer", bg: "bg-[#eff6ff]", border: "border-blue-300", highlight: true },
+                { icon: <Server className="w-6 h-6 text-purple-700" />, label: "Operating System", sub: "Manages resources & I/O", bg: "bg-purple-50", border: "border-purple-100" },
+                { icon: <Monitor className="w-6 h-6 text-teal-700" />, label: "Application", sub: "User-facing program", bg: "bg-teal-50", border: "border-teal-100" },
+              ].map((step, i, arr) => (
+                <div key={step.label} className="flex flex-col md:flex-row items-center md:flex-1 gap-5 md:gap-3">
+                  <div className={`flex-1 w-full md:w-auto rounded-xl border ${step.border} ${step.bg} px-5 py-5 text-center ${step.highlight ? "ring-2 ring-blue-400 ring-offset-2" : ""}`}>
+                    <div className="w-11 h-11 bg-white border border-white shadow-sm rounded-lg flex items-center justify-center mx-auto mb-3">
+                      {step.icon}
+                    </div>
+                    <div className={`font-heading font-bold text-sm ${step.highlight ? "text-[#1d4ed8]" : "text-[#111110]"}`}>{step.label}</div>
+                    <div className="text-[11px] text-muted-foreground mt-1 leading-snug">{step.sub}</div>
+                  </div>
+                  {i < arr.length - 1 && (
+                    <>
+                      <ArrowRight className="hidden md:block w-5 h-5 text-muted-foreground flex-shrink-0" />
+                      <ArrowDown className="md:hidden w-5 h-5 text-muted-foreground flex-shrink-0" />
+                    </>
+                  )}
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-8 pt-6 border-t border-border text-xs text-muted-foreground leading-relaxed">
+              When an application makes a request, the operating system routes it to the correct <span className="font-semibold text-[#1d4ed8]">Driver</span>, which translates it into instructions the hardware can execute. The result then travels back up the chain to the user.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Types of Drivers and Their Roles ── */}
+      <section className="py-20 px-4 bg-[#f4f6fb]">
+        <div className="container mx-auto max-w-5xl">
+          <div className="mb-10">
+            <div className="text-xs uppercase tracking-wider text-blue-700 font-semibold mb-2">Reference</div>
+            <h2 className="font-heading font-bold text-3xl text-[#111110] mb-3">Types of Drivers and Their Roles</h2>
+            <p className="text-sm text-muted-foreground max-w-2xl leading-relaxed">
+              A summary of common driver types, the function each one performs, and a typical use case in everyday computing.
+            </p>
+          </div>
+
+          <div className="border border-border rounded-2xl overflow-hidden bg-white shadow-[0_1px_2px_rgba(0,0,0,0.03)]">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="bg-[#f4f4f0] border-b border-border">
+                  <th className="text-left px-5 py-4 font-heading font-bold text-xs text-[#111110] uppercase tracking-wider">Driver Type</th>
+                  <th className="text-left px-5 py-4 font-heading font-bold text-xs text-[#111110] uppercase tracking-wider">Function</th>
+                  <th className="text-left px-5 py-4 font-heading font-bold text-xs text-[#111110] uppercase tracking-wider hidden md:table-cell">Example Use Case</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-border">
+                {driverRoleRows.map((r) => (
+                  <tr key={r.type} className="hover:bg-[#f9f9f7] transition-colors">
+                    <td className="px-5 py-4 font-semibold text-[#111110] align-top w-44">{r.type}</td>
+                    <td className="px-5 py-4 text-muted-foreground align-top">{r.fn}</td>
+                    <td className="px-5 py-4 text-muted-foreground align-top hidden md:table-cell">{r.use}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
     </Layout>
   );
 }
