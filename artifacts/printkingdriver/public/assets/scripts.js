@@ -240,6 +240,58 @@
     });
   }
 
-  // Initialize Lucide icons
+  // Initialize Lucide icons (no-op now — icons are precompiled inline at build time)
   if (window.lucide) window.lucide.createIcons();
+
+  // === Instant navigation: prefetch on hover/focus + speculation rules ===
+  const prefetched = new Set();
+  const prefetch = (url) => {
+    if (prefetched.has(url)) return;
+    prefetched.add(url);
+    const link = document.createElement("link");
+    link.rel = "prefetch";
+    link.href = url;
+    link.as = "document";
+    document.head.appendChild(link);
+  };
+  const isInternal = (a) => {
+    try {
+      const u = new URL(a.href, location.href);
+      if (u.origin !== location.origin) return false;
+      if (u.pathname === location.pathname) return false;
+      if (a.target === "_blank") return false;
+      if (a.hasAttribute("download")) return false;
+      return true;
+    } catch { return false; }
+  };
+  document.addEventListener("mouseover", (e) => {
+    const a = e.target.closest("a[href]");
+    if (a && isInternal(a)) prefetch(a.href);
+  }, { passive: true });
+  document.addEventListener("focusin", (e) => {
+    const a = e.target.closest && e.target.closest("a[href]");
+    if (a && isInternal(a)) prefetch(a.href);
+  });
+  document.addEventListener("touchstart", (e) => {
+    const a = e.target.closest && e.target.closest("a[href]");
+    if (a && isInternal(a)) prefetch(a.href);
+  }, { passive: true });
+
+  // Speculation Rules API: prerender on hover (Chrome/Edge)
+  if (HTMLScriptElement.supports && HTMLScriptElement.supports("speculationrules")) {
+    const rules = document.createElement("script");
+    rules.type = "speculationrules";
+    rules.textContent = JSON.stringify({
+      prerender: [{ source: "document", where: { and: [
+        { href_matches: "/*" },
+        { not: { href_matches: "/*.png" } },
+        { not: { href_matches: "/*.webp" } },
+        { not: { href_matches: "/*.jpg" } },
+        { not: { href_matches: "/*.svg" } },
+        { not: { selector_matches: "[target=_blank]" } },
+        { not: { selector_matches: "[rel~=external]" } },
+      ]}, eagerness: "moderate" }],
+    });
+    document.head.appendChild(rules);
+  }
 })();
