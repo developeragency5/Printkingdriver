@@ -80,11 +80,11 @@ export default function Home() {
           </div>
           
           <h1 className="font-heading font-[800] text-[2.4rem] md:text-[2.8rem] text-[#111110] leading-[1.1] tracking-tight mb-6 animate-fade-in-up">
-            Find, Fix & Install Printer Drivers — Instantly
+            Understand Printer Drivers — A Clear, Practical Guide
           </h1>
           
           <p className="text-lg text-muted-foreground mb-10 max-w-2xl mx-auto leading-relaxed">
-            PrintKingDriver helps you locate the right driver for any printer brand, troubleshoot errors, and get your device working in minutes.
+            PrintKingDriver is an informational portal explaining what printer drivers are, how they work, the categories that exist, and how to recognise common issues.
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
