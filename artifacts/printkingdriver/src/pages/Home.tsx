@@ -201,7 +201,7 @@ export default function Home() {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="pt-[100px] pb-[90px] px-4 relative overflow-hidden bg-[#fbfbf8]">
+      <section className="pt-[100px] pb-[90px] px-4 relative overflow-hidden bg-[#F1EEDC]">
         {/* Decorative grid backdrop */}
         <div
           aria-hidden
@@ -220,20 +220,20 @@ export default function Home() {
         <div
           aria-hidden
           className="absolute -top-40 left-1/2 -translate-x-1/2 w-[900px] h-[500px] -z-10 rounded-full blur-3xl opacity-60"
-          style={{ background: "radial-gradient(closest-side, #dbe7ff 0%, transparent 70%)" }}
+          style={{ background: "radial-gradient(closest-side, #BED7DC 0%, transparent 70%)" }}
         />
 
         <div className="container mx-auto text-center max-w-4xl relative z-10">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-border/80 shadow-sm text-[12px] font-medium text-[#111110] mb-7">
-            <span className="w-1.5 h-1.5 rounded-full bg-blue-600 animate-pulse" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-border/80 shadow-sm text-[12px] font-medium text-[#2a2a26] mb-7">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#4a6b75] animate-pulse" />
             <span className="tracking-wide">Printer Driver Information Guide</span>
           </div>
 
-          <h1 className="font-heading font-[800] text-[2.6rem] md:text-[3.6rem] text-[#0b1220] leading-[1.05] tracking-[-0.035em] mb-7 animate-fade-in-up">
+          <h1 className="font-heading font-[800] text-[2.6rem] md:text-[3.6rem] text-[#2a2a26] leading-[1.05] tracking-[-0.035em] mb-7 animate-fade-in-up">
             Understand Printer Drivers.
             <br className="hidden md:block" />
-            <span className="text-[#1d4ed8]"> A clear, practical </span>
-            <span className="italic font-[700] text-[#0b1220]">guide.</span>
+            <span className="text-[#4a6b75]"> A clear, practical </span>
+            <span className="italic font-[700] text-[#2a2a26]">guide.</span>
           </h1>
 
           <p className="text-[1.05rem] md:text-lg text-muted-foreground mb-10 max-w-2xl mx-auto leading-relaxed">
@@ -244,13 +244,13 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3.5">
             <Link
               href="/drivers"
-              className="w-full sm:w-auto px-8 py-3.5 bg-[#0b1220] text-white rounded-full font-semibold hover:bg-[#1d2a44] transition-colors shadow-[0_10px_30px_-10px_rgba(11,18,32,0.55)]"
+              className="w-full sm:w-auto px-8 py-3.5 bg-[#4a6b75] text-white rounded-full font-semibold hover:bg-[#3b5860] transition-colors shadow-[0_10px_30px_-10px_rgba(74,107,117,0.55)]"
             >
               Explore Drivers →
             </Link>
             <Link
               href="/how-it-works"
-              className="w-full sm:w-auto px-8 py-3.5 bg-white text-[#0b1220] border border-border rounded-full font-semibold hover:border-[#0b1220]/40 hover:bg-[#fafafa] transition-colors"
+              className="w-full sm:w-auto px-8 py-3.5 bg-white text-[#2a2a26] border border-border rounded-full font-semibold hover:border-[#4a6b75]/40 hover:bg-[#F1EEDC] transition-colors"
             >
               How It Works
             </Link>
@@ -262,8 +262,8 @@ export default function Home() {
       <section className="py-20 md:py-28 px-4 bg-white">
         <div className="container mx-auto">
           <div className="text-center max-w-2xl mx-auto mb-16">
-            <div className="text-[11px] uppercase tracking-[0.18em] text-blue-700 font-semibold mb-3">Reference</div>
-            <h2 className="font-heading font-bold text-[2rem] md:text-[2.4rem] text-[#0b1220] tracking-[-0.025em] mb-4">
+            <div className="text-[11px] uppercase tracking-[0.18em] text-[#4a6b75] font-semibold mb-3">Reference</div>
+            <h2 className="font-heading font-bold text-[2rem] md:text-[2.4rem] text-[#2a2a26] tracking-[-0.025em] mb-4">
               Browse by Driver Type
             </h2>
             <p className="text-muted-foreground leading-relaxed">
@@ -323,8 +323,8 @@ export default function Home() {
       <section className="py-24 px-4 bg-background">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center max-w-2xl mx-auto mb-14">
-            <div className="text-[11px] uppercase tracking-[0.18em] text-blue-700 font-semibold mb-3">Diagnostics</div>
-            <h2 className="font-heading font-bold text-[2rem] md:text-[2.4rem] text-[#0b1220] tracking-[-0.025em] mb-4">
+            <div className="text-[11px] uppercase tracking-[0.18em] text-[#4a6b75] font-semibold mb-3">Diagnostics</div>
+            <h2 className="font-heading font-bold text-[2rem] md:text-[2.4rem] text-[#2a2a26] tracking-[-0.025em] mb-4">
               Common Driver Issues, Explained
             </h2>
             <p className="text-muted-foreground leading-relaxed">
@@ -348,7 +348,7 @@ export default function Home() {
                 <div className={`w-11 h-11 rounded-xl ${issue.ring} ring-1 flex items-center justify-center mb-5 ${issue.color}`}>
                   {issue.icon}
                 </div>
-                <h4 className="font-heading font-bold text-[1.05rem] text-[#0b1220] mb-2 tracking-tight">{issue.title}</h4>
+                <h4 className="font-heading font-bold text-[1.05rem] text-[#2a2a26] mb-2 tracking-tight">{issue.title}</h4>
                 <p className="text-[13.5px] text-muted-foreground leading-relaxed">{issue.desc}</p>
               </div>
             ))}
@@ -357,7 +357,7 @@ export default function Home() {
           <div className="text-center">
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 px-8 py-3.5 bg-[#0b1220] text-white rounded-full font-semibold hover:bg-[#1d2a44] transition-colors shadow-[0_10px_30px_-10px_rgba(11,18,32,0.55)]"
+              className="inline-flex items-center gap-2 px-8 py-3.5 bg-[#4a6b75] text-white rounded-full font-semibold hover:bg-[#3b5860] transition-colors shadow-[0_10px_30px_-10px_rgba(74,107,117,0.55)]"
             >
               Get Support →
             </Link>
@@ -366,11 +366,11 @@ export default function Home() {
       </section>
 
       {/* ── Explore Driver Categories ── */}
-      <section className="py-20 px-4 bg-[#f4f6fb]">
+      <section className="py-20 px-4 bg-[#E5DDC5]">
         <div className="container mx-auto max-w-6xl">
           <div className="mb-10">
-            <div className="text-xs uppercase tracking-wider text-blue-700 font-semibold mb-2">Explore</div>
-            <h2 className="font-heading font-bold text-3xl text-[#111110] mb-3">Explore Drivers</h2>
+            <div className="text-xs uppercase tracking-wider text-[#4a6b75] font-semibold mb-2">Explore</div>
+            <h2 className="font-heading font-bold text-3xl text-[#2a2a26] mb-3">Explore Drivers</h2>
             <p className="text-sm text-muted-foreground max-w-2xl leading-relaxed">
               Find and learn about all essential system drivers, organised into clear categories for easy reference.
             </p>
@@ -384,8 +384,8 @@ export default function Home() {
       <section className="py-20 px-4 bg-white">
         <div className="container mx-auto max-w-5xl">
           <div className="mb-10">
-            <div className="text-xs uppercase tracking-wider text-blue-700 font-semibold mb-2">Concept</div>
-            <h2 className="font-heading font-bold text-3xl text-[#111110] mb-3">How Drivers Work</h2>
+            <div className="text-xs uppercase tracking-wider text-[#4a6b75] font-semibold mb-2">Concept</div>
+            <h2 className="font-heading font-bold text-3xl text-[#2a2a26] mb-3">How Drivers Work</h2>
             <p className="text-sm text-muted-foreground max-w-2xl leading-relaxed">
               A driver is the bridge between physical hardware and the software running on the operating system. The diagram below shows the typical flow of communication.
             </p>
@@ -425,11 +425,11 @@ export default function Home() {
       </section>
 
       {/* ── Types of Drivers and Their Roles ── */}
-      <section className="py-20 px-4 bg-[#f4f6fb]">
+      <section className="py-20 px-4 bg-[#E5DDC5]">
         <div className="container mx-auto max-w-5xl">
           <div className="mb-10">
-            <div className="text-xs uppercase tracking-wider text-blue-700 font-semibold mb-2">Reference</div>
-            <h2 className="font-heading font-bold text-3xl text-[#111110] mb-3">Types of Drivers and Their Roles</h2>
+            <div className="text-xs uppercase tracking-wider text-[#4a6b75] font-semibold mb-2">Reference</div>
+            <h2 className="font-heading font-bold text-3xl text-[#2a2a26] mb-3">Types of Drivers and Their Roles</h2>
             <p className="text-sm text-muted-foreground max-w-2xl leading-relaxed">
               A summary of common driver types, the function each one performs, and a typical use case in everyday computing.
             </p>
