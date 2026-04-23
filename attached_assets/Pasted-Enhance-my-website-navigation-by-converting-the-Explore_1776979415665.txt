@@ -1,0 +1,75 @@
+Enhance my website navigation by converting the “Explore Drivers” menu into a mega dropdown (multi-column dropdown). This should function as a navigation system to multiple informational pages.
+
+IMPORTANT REQUIREMENT:
+Every driver item inside the dropdown MUST be clickable and MUST open a dedicated informational page. These are NOT static labels — they are navigation links to full pages.
+
+1. DROPDOWN STRUCTURE
+   When the user hovers or clicks “Explore Drivers”:
+
+* Show a large dropdown panel with 4 columns.
+
+Columns:
+
+Essential Drivers:
+
+* Chipset Driver → /drivers/chipset.html
+* Graphics Driver → /drivers/graphics.html
+* Audio Driver → /drivers/audio.html
+* Network Driver → /drivers/network.html
+
+Hardware-Specific:
+
+* Storage Controller → /drivers/storage.html
+* USB Support → /drivers/usb.html
+* Bluetooth Driver → /drivers/bluetooth.html
+* Input Drivers → /drivers/input.html
+
+Peripheral Drivers:
+
+* Printer Driver → /drivers/printer.html
+* Scanner Support → /drivers/scanner.html
+* Webcam Driver → /drivers/webcam.html
+
+Advanced Systems:
+
+* BIOS/UEFI → /drivers/bios.html
+* Security Drivers → /drivers/security.html
+* Monitor Driver → /drivers/monitor.html
+
+2. CLICK BEHAVIOR (VERY IMPORTANT)
+
+* Each item must be wrapped in an <a> tag.
+* Clicking any item should navigate to its respective page.
+* Do NOT use buttons or dummy links (#).
+
+3. DRIVER PAGES (MANDATORY)
+   Each linked page must exist and contain:
+
+* Driver title
+* Explanation (what it is)
+* How it works
+* Diagram (Hardware → Driver → OS → Application)
+* Key functions
+* Table of technical details
+
+These pages must be informational only (no downloads, no installation prompts).
+
+4. UI REQUIREMENTS
+
+* Clean, documentation-style design
+* White background, soft shadows
+* Proper spacing and typography
+* Smooth hover effect on links
+
+5. MOBILE SUPPORT
+
+* Dropdown should become a collapsible menu
+* Items should remain clickable and accessible
+
+6. DO NOT:
+
+* Remove any existing sections
+* Add download buttons
+* Add promotional or commercial elements
+
+The dropdown should act as a structured knowledge navigation system where every item leads to a detailed guide page.
