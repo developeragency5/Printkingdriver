@@ -1,7 +1,120 @@
+import { useRef, useState, useEffect } from "react";
 import Layout from "@/components/Layout";
-import { Cpu, Monitor, Volume2, Wifi, HardDrive, Usb, Bluetooth, MousePointer2, Printer, Scan, Webcam, Microchip, Shield, MonitorSpeaker, AlertCircle, RefreshCw, FileQuestion, XOctagon, VolumeX, WifiOff, Layers, Server, ArrowRight, ArrowDown } from "lucide-react";
+import { Cpu, Monitor, Volume2, Wifi, HardDrive, Usb, Bluetooth, MousePointer2, Printer, Scan, Webcam, Microchip, Shield, MonitorSpeaker, AlertCircle, RefreshCw, FileQuestion, XOctagon, VolumeX, WifiOff, Layers, Server, ArrowRight, ArrowDown, ChevronLeft, ChevronRight } from "lucide-react";
 import DriverGrid from "@/components/DriverGrid";
 import { Link } from "wouter";
+
+type ExploreCategory = {
+  tag: string;
+  icon: React.ReactNode;
+  bg: string;
+  title: string;
+  desc: string;
+  items: { icon: React.ReactNode; name: string; note: string }[];
+};
+
+function ExploreSlider({ categories }: { categories: ExploreCategory[] }) {
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const [activeIdx, setActiveIdx] = useState(0);
+
+  const scrollToIdx = (idx: number) => {
+    const el = scrollRef.current;
+    if (!el) return;
+    const card = el.children[idx] as HTMLElement | undefined;
+    if (card) el.scrollTo({ left: card.offsetLeft - el.offsetLeft, behavior: "smooth" });
+  };
+
+  const handleScroll = () => {
+    const el = scrollRef.current;
+    if (!el) return;
+    const children = Array.from(el.children) as HTMLElement[];
+    let nearest = 0;
+    let min = Infinity;
+    children.forEach((c, i) => {
+      const d = Math.abs(c.offsetLeft - el.offsetLeft - el.scrollLeft);
+      if (d < min) { min = d; nearest = i; }
+    });
+    setActiveIdx(nearest);
+  };
+
+  useEffect(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+    el.addEventListener("scroll", handleScroll, { passive: true });
+    return () => el.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const prev = () => scrollToIdx(Math.max(0, activeIdx - 1));
+  const next = () => scrollToIdx(Math.min(categories.length - 1, activeIdx + 1));
+
+  return (
+    <div className="relative">
+      <div
+        ref={scrollRef}
+        className="flex gap-5 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-4 -mx-4 px-4 [&::-webkit-scrollbar]:hidden [scrollbar-width:none]"
+      >
+        {categories.map((c) => (
+          <article
+            key={c.title}
+            className="snap-start flex-shrink-0 w-[85%] sm:w-[48%] lg:w-[31%] xl:w-[23.5%] rounded-2xl border border-border bg-white p-5 shadow-[0_1px_2px_rgba(0,0,0,0.03)] hover:shadow-[0_4px_14px_rgba(0,0,0,0.05)] transition-shadow flex flex-col"
+          >
+            <div className="text-[11px] uppercase tracking-wider text-muted-foreground font-semibold mb-3">{c.tag}</div>
+            <div className={`w-10 h-10 ${c.bg} rounded-lg flex items-center justify-center mb-3`}>
+              {c.icon}
+            </div>
+            <h3 className="font-heading font-bold text-lg text-[#111110] mb-2">{c.title}</h3>
+            <p className="text-[13px] text-muted-foreground leading-relaxed mb-4">{c.desc}</p>
+
+            <ul className="border-t border-border pt-3 space-y-3 mt-auto">
+              {c.items.map((it) => (
+                <li key={it.name} className="flex gap-2.5">
+                  <div className={`w-6 h-6 ${c.bg} rounded-md flex items-center justify-center flex-shrink-0 mt-0.5`}>
+                    {it.icon}
+                  </div>
+                  <div className="min-w-0">
+                    <div className="text-[12px] font-semibold text-[#111110]">{it.name}</div>
+                    <div className="text-[11px] text-muted-foreground leading-snug">{it.note}</div>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </article>
+        ))}
+      </div>
+
+      <div className="flex items-center justify-between mt-6">
+        <div className="flex gap-1.5">
+          {categories.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => scrollToIdx(i)}
+              aria-label={`Go to slide ${i + 1}`}
+              className={`h-1.5 rounded-full transition-all ${i === activeIdx ? "w-6 bg-primary" : "w-1.5 bg-border"}`}
+            />
+          ))}
+        </div>
+        <div className="flex gap-2">
+          <button
+            onClick={prev}
+            disabled={activeIdx === 0}
+            aria-label="Previous"
+            className="w-10 h-10 rounded-full border border-border bg-white flex items-center justify-center hover:bg-muted disabled:opacity-40 disabled:cursor-not-allowed transition"
+          >
+            <ChevronLeft className="w-4 h-4" />
+          </button>
+          <button
+            onClick={next}
+            disabled={activeIdx === categories.length - 1}
+            aria-label="Next"
+            className="w-10 h-10 rounded-full border border-border bg-white flex items-center justify-center hover:bg-muted disabled:opacity-40 disabled:cursor-not-allowed transition"
+          >
+            <ChevronRight className="w-4 h-4" />
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
 
 const exploreCategories = [
   {
@@ -196,32 +309,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            {exploreCategories.map((c) => (
-              <article key={c.title} className="rounded-2xl border border-border bg-white p-5 shadow-[0_1px_2px_rgba(0,0,0,0.03)] hover:shadow-[0_4px_14px_rgba(0,0,0,0.05)] transition-shadow flex flex-col">
-                <div className="flex items-center gap-2.5 mb-4">
-                  <div className={`w-9 h-9 ${c.bg} rounded-lg flex items-center justify-center flex-shrink-0`}>{c.icon}</div>
-                  <span className="text-[10px] uppercase tracking-wider font-semibold text-muted-foreground">{c.tag}</span>
-                </div>
-                <h3 className="font-heading font-bold text-lg text-[#111110] mb-2">{c.title}</h3>
-                <p className="text-[13px] text-muted-foreground leading-relaxed mb-4">{c.desc}</p>
-
-                <ul className="border-t border-border pt-3 space-y-3 mt-auto">
-                  {c.items.map((it) => (
-                    <li key={it.name} className="flex gap-2.5">
-                      <div className={`w-6 h-6 ${c.bg} rounded-md flex items-center justify-center flex-shrink-0 mt-0.5`}>
-                        {it.icon}
-                      </div>
-                      <div className="min-w-0">
-                        <div className="text-[12px] font-semibold text-[#111110]">{it.name}</div>
-                        <div className="text-[11px] text-muted-foreground leading-snug">{it.note}</div>
-                      </div>
-                    </li>
-                  ))}
-                </ul>
-              </article>
-            ))}
-          </div>
+          <ExploreSlider categories={exploreCategories} />
         </div>
       </section>
 
