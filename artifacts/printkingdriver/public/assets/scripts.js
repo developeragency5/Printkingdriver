@@ -218,7 +218,6 @@
           extra: (v) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v) ? "" : "Invalid email address" },
         { n: "phone",            req: false },
         { n: "printerModel",     req: true,  msg: "Printer model is required" },
-        { n: "operatingSystem",  req: true,  msg: "Please select an operating system" },
         { n: "issueDescription", req: true,  msg: "Description is required",
           extra: (v) => v.length >= 10 ? "" : "Description must be at least 10 characters" },
       ];
