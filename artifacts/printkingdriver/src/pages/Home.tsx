@@ -201,37 +201,90 @@ export default function Home() {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="pt-[80px] pb-[60px] px-4 relative overflow-hidden" style={{background: 'radial-gradient(ellipse at top, #eff6ff 0%, #f9f9f7 60%)'}}>
-        <div className="absolute inset-0 -z-10"></div>
+      <section className="pt-[100px] pb-[90px] px-4 relative overflow-hidden bg-[#fbfbf8]">
+        {/* Decorative grid backdrop */}
+        <div
+          aria-hidden
+          className="absolute inset-0 -z-10 opacity-[0.35]"
+          style={{
+            backgroundImage:
+              "linear-gradient(to right, rgba(15,23,42,0.06) 1px, transparent 1px), linear-gradient(to bottom, rgba(15,23,42,0.06) 1px, transparent 1px)",
+            backgroundSize: "44px 44px",
+            maskImage:
+              "radial-gradient(ellipse 70% 60% at 50% 30%, #000 35%, transparent 80%)",
+            WebkitMaskImage:
+              "radial-gradient(ellipse 70% 60% at 50% 30%, #000 35%, transparent 80%)",
+          }}
+        />
+        {/* Soft color glow */}
+        <div
+          aria-hidden
+          className="absolute -top-40 left-1/2 -translate-x-1/2 w-[900px] h-[500px] -z-10 rounded-full blur-3xl opacity-60"
+          style={{ background: "radial-gradient(closest-side, #dbe7ff 0%, transparent 70%)" }}
+        />
+
         <div className="container mx-auto text-center max-w-4xl relative z-10">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 text-blue-800 text-sm font-medium mb-6">
-            <span>Printer Driver Information Guide</span>
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-border/80 shadow-sm text-[12px] font-medium text-[#111110] mb-7">
+            <span className="w-1.5 h-1.5 rounded-full bg-blue-600 animate-pulse" />
+            <span className="tracking-wide">Printer Driver Information Guide</span>
           </div>
-          
-          <h1 className="font-heading font-[800] text-[2.4rem] md:text-[2.8rem] text-[#111110] leading-[1.1] tracking-tight mb-6 animate-fade-in-up">
-            Understand Printer Drivers — A Clear, Practical Guide
+
+          <h1 className="font-heading font-[800] text-[2.6rem] md:text-[3.6rem] text-[#0b1220] leading-[1.05] tracking-[-0.035em] mb-7 animate-fade-in-up">
+            Understand Printer Drivers.
+            <br className="hidden md:block" />
+            <span className="text-[#1d4ed8]"> A clear, practical </span>
+            <span className="italic font-[700] text-[#0b1220]">guide.</span>
           </h1>
-          
-          <p className="text-lg text-muted-foreground mb-10 max-w-2xl mx-auto leading-relaxed">
-            PrintKingDriver is an informational portal explaining what printer drivers are, how they work, the categories that exist, and how to recognise common issues.
+
+          <p className="text-[1.05rem] md:text-lg text-muted-foreground mb-10 max-w-2xl mx-auto leading-relaxed">
+            PrintKingDriver is an informational portal explaining what printer drivers are,
+            how they work, the categories that exist, and how to recognise common issues.
           </p>
-          
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
-            <Link href="/drivers" className="w-full sm:w-auto px-8 py-3.5 bg-primary text-white rounded-full font-semibold hover:bg-primary/90 transition-colors shadow-lg shadow-primary/25">
+
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3.5 mb-14">
+            <Link
+              href="/drivers"
+              className="w-full sm:w-auto px-8 py-3.5 bg-[#0b1220] text-white rounded-full font-semibold hover:bg-[#1d2a44] transition-colors shadow-[0_10px_30px_-10px_rgba(11,18,32,0.55)]"
+            >
               Explore Drivers →
             </Link>
-            <Link href="/how-it-works" className="w-full sm:w-auto px-8 py-3.5 bg-white text-foreground border border-border rounded-full font-semibold hover:bg-secondary transition-colors">
+            <Link
+              href="/how-it-works"
+              className="w-full sm:w-auto px-8 py-3.5 bg-white text-[#0b1220] border border-border rounded-full font-semibold hover:border-[#0b1220]/40 hover:bg-[#fafafa] transition-colors"
+            >
               How It Works
             </Link>
           </div>
-          
+
+          {/* Trust strip */}
+          <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-[12px] text-muted-foreground">
+            {[
+              "14 driver categories",
+              "Plain-language explanations",
+              "Vendor-neutral reference",
+              "Updated guidance",
+            ].map((t) => (
+              <div key={t} className="inline-flex items-center gap-2">
+                <span className="w-1 h-1 rounded-full bg-[#0b1220]/40" />
+                <span className="font-medium tracking-wide uppercase text-[11px]">{t}</span>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* Driver Categories */}
-      <section className="py-16 md:py-24 px-4 bg-white">
+      <section className="py-20 md:py-28 px-4 bg-white">
         <div className="container mx-auto">
-          <h2 className="font-heading font-bold text-3xl text-center mb-16">Browse by Driver Type</h2>
+          <div className="text-center max-w-2xl mx-auto mb-16">
+            <div className="text-[11px] uppercase tracking-[0.18em] text-blue-700 font-semibold mb-3">Reference</div>
+            <h2 className="font-heading font-bold text-[2rem] md:text-[2.4rem] text-[#0b1220] tracking-[-0.025em] mb-4">
+              Browse by Driver Type
+            </h2>
+            <p className="text-muted-foreground leading-relaxed">
+              Each section groups drivers by purpose — from essential foundations to advanced firmware — so you can find what you need in seconds.
+            </p>
+          </div>
           
           <DriverGrid 
             title="Section 1 — Essential Drivers"
@@ -282,32 +335,45 @@ export default function Home() {
       </section>
 
       {/* Common Issues */}
-      <section className="py-20 px-4 bg-background">
-        <div className="container mx-auto max-w-5xl">
-          <div className="text-center mb-12">
-            <h2 className="font-heading font-bold text-3xl mb-3">Common Driver Issues We Resolve</h2>
-            <p className="text-muted-foreground">From missing drivers to conflict errors — we have the information.</p>
+      <section className="py-24 px-4 bg-background">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center max-w-2xl mx-auto mb-14">
+            <div className="text-[11px] uppercase tracking-[0.18em] text-blue-700 font-semibold mb-3">Diagnostics</div>
+            <h2 className="font-heading font-bold text-[2rem] md:text-[2.4rem] text-[#0b1220] tracking-[-0.025em] mb-4">
+              Common Driver Issues, Explained
+            </h2>
+            <p className="text-muted-foreground leading-relaxed">
+              From missing drivers to conflict errors — recognise the symptoms and learn what they really mean before reaching for support.
+            </p>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-14">
             {[
-              { title: "Printer Offline", desc: "Device not detected by the operating system.", icon: <AlertCircle className="w-6 h-6 text-orange-500" /> },
-              { title: "Driver Conflict", desc: "Two drivers clashing and causing errors.", icon: <XOctagon className="w-6 h-6 text-red-500" /> },
-              { title: "Missing Driver", desc: "Required driver not found or corrupted.", icon: <FileQuestion className="w-6 h-6 text-blue-500" /> },
-              { title: "Print Queue Stuck", desc: "Jobs stuck and not clearing from queue.", icon: <RefreshCw className="w-6 h-6 text-purple-500" /> },
-              { title: "Audio Errors", desc: "Sound driver failure or no audio output.", icon: <VolumeX className="w-6 h-6 text-pink-500" /> },
-              { title: "Network Drops", desc: "Wi-Fi or LAN driver instability issues.", icon: <WifiOff className="w-6 h-6 text-teal-500" /> },
+              { title: "Printer Offline", desc: "Device not detected by the operating system.", icon: <AlertCircle className="w-5 h-5" />, color: "text-orange-600", ring: "bg-orange-50 ring-orange-100" },
+              { title: "Driver Conflict", desc: "Two drivers clashing and causing errors.", icon: <XOctagon className="w-5 h-5" />, color: "text-red-600", ring: "bg-red-50 ring-red-100" },
+              { title: "Missing Driver", desc: "Required driver not found or corrupted.", icon: <FileQuestion className="w-5 h-5" />, color: "text-blue-600", ring: "bg-blue-50 ring-blue-100" },
+              { title: "Print Queue Stuck", desc: "Jobs stuck and not clearing from queue.", icon: <RefreshCw className="w-5 h-5" />, color: "text-purple-600", ring: "bg-purple-50 ring-purple-100" },
+              { title: "Audio Errors", desc: "Sound driver failure or no audio output.", icon: <VolumeX className="w-5 h-5" />, color: "text-pink-600", ring: "bg-pink-50 ring-pink-100" },
+              { title: "Network Drops", desc: "Wi-Fi or LAN driver instability issues.", icon: <WifiOff className="w-5 h-5" />, color: "text-teal-600", ring: "bg-teal-50 ring-teal-100" },
             ].map((issue, i) => (
-              <div key={i} className="bg-white border border-border rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
-                <div className="mb-4">{issue.icon}</div>
-                <h4 className="font-heading font-bold text-lg mb-2">{issue.title}</h4>
-                <p className="text-sm text-muted-foreground">{issue.desc}</p>
+              <div
+                key={i}
+                className="group relative bg-white border border-border/70 rounded-2xl p-6 shadow-[0_1px_2px_rgba(0,0,0,0.03)] hover:shadow-[0_18px_40px_-22px_rgba(11,18,32,0.25)] hover:-translate-y-0.5 hover:border-[#0b1220]/15 transition-all duration-300"
+              >
+                <div className={`w-11 h-11 rounded-xl ${issue.ring} ring-1 flex items-center justify-center mb-5 ${issue.color}`}>
+                  {issue.icon}
+                </div>
+                <h4 className="font-heading font-bold text-[1.05rem] text-[#0b1220] mb-2 tracking-tight">{issue.title}</h4>
+                <p className="text-[13.5px] text-muted-foreground leading-relaxed">{issue.desc}</p>
               </div>
             ))}
           </div>
-          
+
           <div className="text-center">
-            <Link href="/contact" className="inline-flex px-8 py-3.5 bg-primary text-white rounded-full font-semibold hover:bg-primary/90 transition-colors shadow-md">
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 px-8 py-3.5 bg-[#0b1220] text-white rounded-full font-semibold hover:bg-[#1d2a44] transition-colors shadow-[0_10px_30px_-10px_rgba(11,18,32,0.55)]"
+            >
               Get Support →
             </Link>
           </div>
