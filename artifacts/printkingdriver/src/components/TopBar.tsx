@@ -1,3 +1,5 @@
+import { Link } from "wouter";
+
 export default function TopBar() {
   return (
     <div className="h-9 bg-[#111110] text-[#a3a39a] text-xs flex items-center">
@@ -9,8 +11,8 @@ export default function TopBar() {
           </div>
         </div>
         <div className="flex items-center gap-4">
-          <a href="#" className="hover:text-white transition-colors">Documentation Library</a>
-          <a href="#" className="hover:text-white transition-colors hidden sm:inline">Technical Support</a>
+          <Link href="/drivers" className="hover:text-white transition-colors">Documentation Library</Link>
+          <Link href="/contact" className="hover:text-white transition-colors hidden sm:inline">Technical Support</Link>
         </div>
       </div>
     </div>

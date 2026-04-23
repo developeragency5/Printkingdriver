@@ -10,6 +10,7 @@ import DriverDetail from "@/pages/DriverDetail";
 import HowItWorks from "@/pages/HowItWorks";
 import About from "@/pages/About";
 import Contact from "@/pages/Contact";
+import Legal from "@/pages/Legal";
 
 const queryClient = new QueryClient();
 
@@ -22,6 +23,8 @@ function Router() {
       <Route path="/how-it-works" component={HowItWorks} />
       <Route path="/about" component={About} />
       <Route path="/contact" component={Contact} />
+      <Route path="/privacy" component={Legal} />
+      <Route path="/terms" component={Legal} />
       <Route component={NotFound} />
     </Switch>
   );

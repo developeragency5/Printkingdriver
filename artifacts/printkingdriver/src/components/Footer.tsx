@@ -15,35 +15,35 @@ export default function Footer() {
             </Link>
             <p className="text-sm leading-relaxed">Your trusted source for printer & system driver information.</p>
           </div>
-          
+
           <div>
             <h4 className="text-white font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2 text-sm">
-              <li><Link href="/"><span className="hover:text-white transition-colors cursor-pointer">Home</span></Link></li>
-              <li><Link href="/drivers"><span className="hover:text-white transition-colors cursor-pointer">Explore Drivers</span></Link></li>
-              <li><Link href="/how-it-works"><span className="hover:text-white transition-colors cursor-pointer">How It Works</span></Link></li>
-              <li><Link href="/about"><span className="hover:text-white transition-colors cursor-pointer">About</span></Link></li>
+              <li><Link href="/" className="hover:text-white transition-colors">Home</Link></li>
+              <li><Link href="/drivers" className="hover:text-white transition-colors">Explore Drivers</Link></li>
+              <li><Link href="/how-it-works" className="hover:text-white transition-colors">How It Works</Link></li>
+              <li><Link href="/about" className="hover:text-white transition-colors">About</Link></li>
             </ul>
           </div>
-          
+
           <div>
             <h4 className="text-white font-semibold mb-4">Support</h4>
             <ul className="space-y-2 text-sm">
-              <li><Link href="/contact"><span className="hover:text-white transition-colors cursor-pointer">Contact Us</span></Link></li>
-              <li><a href="#" className="hover:text-white transition-colors">FAQ</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Technical Support</a></li>
+              <li><Link href="/contact" className="hover:text-white transition-colors">Contact Us</Link></li>
+              <li><Link href="/how-it-works" className="hover:text-white transition-colors">FAQ</Link></li>
+              <li><Link href="/contact" className="hover:text-white transition-colors">Technical Support</Link></li>
             </ul>
           </div>
-          
+
           <div>
             <h4 className="text-white font-semibold mb-4">Legal</h4>
             <ul className="space-y-2 text-sm">
-              <li><a href="#" className="hover:text-white transition-colors">Privacy Policy</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Terms of Service</a></li>
+              <li><Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link></li>
+              <li><Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link></li>
             </ul>
           </div>
         </div>
-        
+
         <div className="pt-8 border-t border-[#2a2a28] flex items-center justify-between text-sm">
           <p>© 2025 PrintKingDriver.com. All rights reserved.</p>
         </div>
