@@ -1,0 +1,30 @@
+Update my existing website into a clean, formal, informational “Driver Guide Portal” instead of a download or marketplace site. Remove any elements that suggest installation, purchasing, or downloading (no buttons like “Install”, “Get Driver”, “Download Now”, or brand-specific promotions). The website should feel like a technical knowledge platform similar to documentation sites.
+
+In the Explore section, convert the current layout into structured informational cards. Each card should represent a category of drivers such as “Essential Drivers”, “Hardware-Specific Drivers”, “Peripheral Drivers”, and “Advanced Systems”. Each card must contain:
+
+* A small category label (tag)
+* A clear heading
+* A short explanatory paragraph
+* A simple list of driver types with one-line explanations (no links or actions)
+
+Add a new section below the cards called “How Drivers Work” that visually explains the interaction between Hardware, Operating System, and Drivers. Create this as a simple diagram using HTML/CSS (boxes and arrows), not images. The flow should be:
+Hardware → Driver → Operating System → Application
+
+Below that, add a clean comparison table titled “Types of Drivers and Their Roles”. The table should have columns like:
+Driver Type | Function | Example Use Case
+Populate it with entries such as Graphics Driver, Audio Driver, Network Driver, Storage Controller, etc.
+
+Maintain a minimal, professional design:
+
+* Use soft colors, light backgrounds, and subtle shadows
+* No flashy banners or promotional elements
+* Use spacing and typography to improve readability
+* Cards should be evenly spaced in a responsive grid
+* Icons can be used but should remain subtle and informational
+
+Ensure the tone of all text is educational and neutral, not sales-driven. The website should guide users to understand what drivers are, how they function, and why they are important, without encouraging downloads or product actions.
+
+Also, update the footer to reflect a documentation-style guide with sections like:
+“Driver Basics”, “System Components”, “Hardware Compatibility”, and “Security & Firmware”
+
+The final result should look like a structured learning resource, not a commercial product site.
