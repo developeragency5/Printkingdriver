@@ -1,8 +1,9 @@
 import { Link, useLocation } from "wouter";
-import { Search, Menu, Printer, ChevronDown } from "lucide-react";
+import { Search, Menu, Printer, ChevronDown, X } from "lucide-react";
 import { Button } from "./ui/button";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
+import { driverPages, mainNav } from "@/lib/siteConfig";
 
 const driverColumns: {
   heading: string;
@@ -51,6 +52,62 @@ export default function Navbar() {
   const [mobileExploreOpen, setMobileExploreOpen] = useState(false);
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const megaRef = useRef<HTMLDivElement>(null);
+  const searchRef = useRef<HTMLDivElement>(null);
+  const [, navigate] = useLocation();
+  const [query, setQuery] = useState("");
+  const [searchOpen, setSearchOpen] = useState(false);
+  const [activeMatchIdx, setActiveMatchIdx] = useState(0);
+
+  const searchIndex = useMemo(
+    () => [
+      ...driverPages.map((d) => ({ label: d.label, href: d.href, type: "Driver" })),
+      ...mainNav.map((n) => ({ label: n.label, href: n.href, type: "Page" })),
+    ],
+    []
+  );
+
+  const matches = useMemo(() => {
+    const q = query.trim().toLowerCase();
+    if (!q) return [];
+    return searchIndex
+      .filter((it) => it.label.toLowerCase().includes(q))
+      .slice(0, 6);
+  }, [query, searchIndex]);
+
+  useEffect(() => {
+    setActiveMatchIdx(0);
+  }, [query]);
+
+  useEffect(() => {
+    const onClick = (e: MouseEvent) => {
+      if (!searchRef.current) return;
+      if (!searchRef.current.contains(e.target as Node)) setSearchOpen(false);
+    };
+    document.addEventListener("mousedown", onClick);
+    return () => document.removeEventListener("mousedown", onClick);
+  }, []);
+
+  const goTo = (href: string) => {
+    setQuery("");
+    setSearchOpen(false);
+    navigate(href);
+  };
+
+  const onSearchKey = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "ArrowDown") {
+      e.preventDefault();
+      setActiveMatchIdx((i) => Math.min(matches.length - 1, i + 1));
+    } else if (e.key === "ArrowUp") {
+      e.preventDefault();
+      setActiveMatchIdx((i) => Math.max(0, i - 1));
+    } else if (e.key === "Enter") {
+      e.preventDefault();
+      if (matches[activeMatchIdx]) goTo(matches[activeMatchIdx].href);
+      else if (query.trim()) goTo("/drivers");
+    } else if (e.key === "Escape") {
+      setSearchOpen(false);
+    }
+  };
 
   const openMega = () => {
     if (closeTimer.current) clearTimeout(closeTimer.current);
@@ -86,14 +143,65 @@ export default function Navbar() {
         </Link>
 
         <div className="hidden md:flex items-center justify-center flex-1 max-w-md mx-8">
-          <div className="relative w-full">
-            <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground w-4 h-4" />
+          <div className="relative w-full" ref={searchRef}>
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground w-4 h-4 pointer-events-none" />
             <input
               type="text"
-              placeholder="Search hardware, drivers or firmware..."
-              className="w-full h-10 pl-9 pr-4 rounded-full bg-secondary border-none focus:ring-2 focus:ring-primary/20 text-sm outline-none"
-              readOnly
+              value={query}
+              onChange={(e) => { setQuery(e.target.value); setSearchOpen(true); }}
+              onFocus={() => setSearchOpen(true)}
+              onKeyDown={onSearchKey}
+              placeholder="Search drivers, pages, hardware..."
+              className="w-full h-10 pl-9 pr-9 rounded-full bg-secondary border border-transparent focus:border-primary/30 focus:ring-2 focus:ring-primary/20 text-sm outline-none"
+              data-testid="input-search"
             />
+            {query && (
+              <button
+                type="button"
+                onClick={() => { setQuery(""); setSearchOpen(false); }}
+                aria-label="Clear search"
+                className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground"
+              >
+                <X className="w-4 h-4" />
+              </button>
+            )}
+
+            {searchOpen && query && (
+              <div className="absolute left-0 right-0 mt-2 bg-white border border-border rounded-xl shadow-lg overflow-hidden z-50">
+                {matches.length === 0 ? (
+                  <div className="px-4 py-6 text-center">
+                    <div className="text-sm text-muted-foreground mb-2">No direct matches.</div>
+                    <button
+                      onClick={() => goTo("/drivers")}
+                      className="text-sm font-semibold text-primary hover:underline"
+                    >
+                      Browse all drivers →
+                    </button>
+                  </div>
+                ) : (
+                  <ul className="py-1.5">
+                    {matches.map((m, i) => (
+                      <li key={m.href}>
+                        <button
+                          type="button"
+                          onMouseEnter={() => setActiveMatchIdx(i)}
+                          onClick={() => goTo(m.href)}
+                          className={`w-full flex items-center justify-between gap-3 px-4 py-2.5 text-left text-sm transition-colors ${
+                            i === activeMatchIdx ? "bg-secondary" : "hover:bg-secondary/60"
+                          }`}
+                        >
+                          <span className="flex items-center gap-2.5 min-w-0">
+                            <Search className="w-3.5 h-3.5 text-muted-foreground flex-shrink-0" />
+                            <span className="font-medium text-foreground truncate">{m.label}</span>
+                          </span>
+                          <span className="text-[10px] uppercase tracking-wider text-muted-foreground flex-shrink-0">{m.type}</span>
+                        </button>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            )}
           </div>
         </div>
 
