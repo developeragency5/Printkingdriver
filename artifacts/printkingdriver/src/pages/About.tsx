@@ -51,26 +51,6 @@ export default function About() {
       </section>
 
 
-      <section className="py-20 px-4 container mx-auto max-w-4xl text-center">
-        <h2 className="font-heading font-bold text-3xl mb-12">Meet the Team</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
-          <div className="flex flex-col items-center">
-            <div className="w-24 h-24 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center text-2xl font-bold mb-4 shadow-inner">AM</div>
-            <h4 className="font-heading font-bold text-lg">Alex Morgan</h4>
-            <p className="text-sm text-muted-foreground">Founder & Lead Engineer</p>
-          </div>
-          <div className="flex flex-col items-center">
-            <div className="w-24 h-24 rounded-full bg-green-100 text-green-700 flex items-center justify-center text-2xl font-bold mb-4 shadow-inner">SC</div>
-            <h4 className="font-heading font-bold text-lg">Sarah Chen</h4>
-            <p className="text-sm text-muted-foreground">Driver Database Manager</p>
-          </div>
-          <div className="flex flex-col items-center">
-            <div className="w-24 h-24 rounded-full bg-purple-100 text-purple-700 flex items-center justify-center text-2xl font-bold mb-4 shadow-inner">RP</div>
-            <h4 className="font-heading font-bold text-lg">Raj Patel</h4>
-            <p className="text-sm text-muted-foreground">Technical Support Lead</p>
-          </div>
-        </div>
-      </section>
     </Layout>
   );
 }
