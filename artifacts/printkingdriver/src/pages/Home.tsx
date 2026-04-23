@@ -70,7 +70,7 @@ function ExploreSlider({ categories }: { categories: ExploreCategory[] }) {
         {categories.map((c, idx) => (
           <article
             key={c.title}
-            className="group relative snap-start flex-shrink-0 w-[85%] sm:w-[48%] lg:w-[31%] xl:w-[23.5%] rounded-2xl border border-border/70 bg-white p-6 shadow-[0_1px_2px_rgba(0,0,0,0.03)] hover:shadow-[0_22px_45px_-22px_rgba(74,107,117,0.32)] hover:-translate-y-0.5 hover:border-primary/25 transition-all duration-300 flex flex-col overflow-hidden"
+            className="group relative snap-start flex-shrink-0 w-[85%] sm:w-[48%] lg:w-[31%] xl:w-[24%] 2xl:w-[24%] rounded-2xl border border-border/70 bg-white p-6 shadow-[0_1px_2px_rgba(0,0,0,0.03)] hover:shadow-[0_22px_45px_-22px_rgba(74,107,117,0.32)] hover:-translate-y-0.5 hover:border-primary/25 transition-all duration-300 flex flex-col overflow-hidden"
           >
             {/* subtle hover glow */}
             <div
@@ -413,8 +413,8 @@ export default function Home() {
       </section>
 
       {/* ── Explore Driver Categories ── */}
-      <section className="py-20 px-4 bg-[#E5DDC5]">
-        <div className="container mx-auto max-w-6xl">
+      <section className="py-20 px-6 lg:px-10 xl:px-16 bg-[#E5DDC5]">
+        <div className="w-full">
           <div className="mb-10">
             <div className="text-xs uppercase tracking-wider text-[#4a6b75] font-semibold mb-2">Explore</div>
             <h2 className="font-heading font-bold text-3xl text-[#2a2a26] mb-3">Explore Drivers</h2>
