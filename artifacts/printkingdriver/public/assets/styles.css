@@ -398,8 +398,9 @@ main { flex: 1; }
 .dot.c-orange { background: #ea580c; } .dot.c-red { background: #dc2626; }
 .dot.c-blue { background: #2563eb; } .dot.c-purple { background: #9333ea; }
 .dot.c-pink { background: #db2777; } .dot.c-teal { background: #0d9488; }
-.issue__diag { font-size: 10.5px; text-transform: uppercase; letter-spacing: .16em; font-weight: 700; color: rgba(107,102,90,.7); transition: color .2s; }
-.issue:hover .issue__diag { color: var(--primary); }
+.issue__diag { font-size: 10.5px; text-transform: uppercase; letter-spacing: .16em; font-weight: 700; color: rgba(107,102,90,.7); transition: color .2s, transform .2s; text-decoration: none; cursor: pointer; display: inline-block; }
+.issue__diag:hover, .issue:hover .issue__diag { color: var(--primary); transform: translateX(2px); }
+.issue__diag:focus-visible { outline: 2px solid var(--primary); outline-offset: 3px; border-radius: 3px; }
 
 /* ===================== EXPLORE SLIDER ===================== */
 .explore-section { padding: 80px 1.5rem; background: var(--bg-2); }
