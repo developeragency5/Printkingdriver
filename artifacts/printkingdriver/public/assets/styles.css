@@ -1499,3 +1499,6 @@ main { flex: 1; }
 .tree-cat__sub { font-size: 12.5px; line-height: 1.45; color: #6b6253; }
 @media (max-width: 880px) { .tree-cats { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 480px) { .tree-cats { grid-template-columns: 1fr; } }
+
+.tree__img { display: inline-block; width: 32px; height: 32px; border-radius: 6px; object-fit: cover; vertical-align: -10px; margin: 0 6px 0 2px; box-shadow: 0 1px 2px rgba(0,0,0,.18); border: 1px solid rgba(0,0,0,.08); filter: grayscale(.6) contrast(1.1); }
+@media (max-width: 640px) { .tree__img { width: 24px; height: 24px; vertical-align: -8px; } }
