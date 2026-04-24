@@ -17,6 +17,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="/assets/styles.css" />
       <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.printkingdriver.com/#organization","name":"PrintKingDriver","url":"https://www.printkingdriver.com/","email":"support@printkingdriver.com","logo":{"@type":"ImageObject","url":"https://www.printkingdriver.com/assets/images/logo-crown.png"},"contactPoint":{"@type":"ContactPoint","contactType":"customer support","email":"support@printkingdriver.com","telephone":"+1-800-123-4567","availableLanguage":["English"]}},{"@type":"WebSite","@id":"https://www.printkingdriver.com/#website","url":"https://www.printkingdriver.com/","name":"PrintKingDriver","description":"Driver Assistance Hub — clear, free guides on chipset, graphics, audio, network and printer drivers.","publisher":{"@id":"https://www.printkingdriver.com/#organization"},"inLanguage":"en-GB"},{"@type":"WebPage","@id":"https://www.printkingdriver.com/privacy#webpage","url":"https://www.printkingdriver.com/privacy","name":"Privacy Policy — PrintKingDriver","description":"How PrintKingDriver handles information on this informational site.","isPartOf":{"@id":"https://www.printkingdriver.com/#website"},"about":{"@id":"https://www.printkingdriver.com/#organization"},"inLanguage":"en-GB"}]}</script>
+      <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied',
+        analytics_storage: 'denied',
+        functionality_storage: 'granted',
+        security_storage: 'granted',
+        wait_for_update: 500
+      });
+      /* Microsoft Advertising (Bing) UET tag — pending tag ID. Loads bat.bing.com only after user accepts. */
+    </script>
   </head>
   <body>
   
@@ -131,7 +145,7 @@
         </div>
         <ul class="mega__list">
           <li><a href="/drivers/bios">
-            <div class="mega__item-name">BIOS / UEFI</div>
+            <div class="mega__item-name">Boot Firmware</div>
             <div class="mega__item-desc">Pre-boot initialisation</div>
           </a></li>
           <li><a href="/drivers/security">
@@ -165,7 +179,7 @@
       <h5>Peripheral Drivers</h5>
       <ul><li><a href="/drivers/printer">Printer Driver</a></li><li><a href="/drivers/scanner">Scanner Support</a></li><li><a href="/drivers/webcam">Webcam Driver</a></li></ul>
       <h5>Advanced Systems</h5>
-      <ul><li><a href="/drivers/bios">BIOS / UEFI</a></li><li><a href="/drivers/security">Security Drivers</a></li><li><a href="/drivers/monitor">Monitor Driver</a></li></ul></div>
+      <ul><li><a href="/drivers/bios">Boot Firmware</a></li><li><a href="/drivers/security">Security Drivers</a></li><li><a href="/drivers/monitor">Monitor Driver</a></li></ul></div>
       <a href="/how-it-works" data-nav-link="/how-it-works">How It Works</a>
       <a href="/about" data-nav-link="/about">About Guide</a>
       <a href="/contact" class="drawer__cta">⚡ Get In Touch</a>
@@ -291,8 +305,11 @@
             <li>Understand general usage patterns through privacy-respecting analytics</li>
             <li>Improve the speed, performance, and security of the site</li>
           </ul>
-          <p>You can manage or disable cookies at any time through your browser settings, or by re-opening our cookie banner via the <a href="#" data-pkd-cookie-open>Do Not Sell or Share My Personal Information</a> link in the footer. Disabling cookies will not prevent you from reading our guides, but some convenience features may not work as expected.</p>
+          <p>You can manage or disable cookies at any time through your browser settings, or by re-opening our cookie banner via the <a href="/privacy#do-not-sell" data-pkd-cookie-open>Do Not Sell or Share My Personal Information</a> link in the footer. Disabling cookies will not prevent you from reading our guides, but some convenience features may not work as expected.</p>
           <p><strong>Advertising platforms (Google Ads &amp; Microsoft Advertising / Bing).</strong> If we run paid campaigns, the relevant ad platform may set cookies or use pixel-based conversion tracking on this website — for example the Google Ads tag or the Microsoft Advertising UET tag — to measure ad performance and reach. These advertising and analytics cookies are set <strong>only after you actively accept</strong> on our cookie banner. We use Google Consent Mode v2 with all advertising and analytics storage defaulting to <strong>denied</strong>. You can opt out of personalised advertising at any time at <a href="https://account.microsoft.com/privacy/ad-settings" rel="noopener noreferrer" target="_blank">Microsoft personalised ad settings</a>, <a href="https://adssettings.google.com" rel="noopener noreferrer" target="_blank">Google ad settings</a>, or industry-wide via <a href="https://optout.aboutads.info" rel="noopener noreferrer" target="_blank">DAA AdChoices</a> and <a href="https://optout.networkadvertising.org" rel="noopener noreferrer" target="_blank">the Network Advertising Initiative</a>.</p>
+          <h3 id="do-not-sell" class="u-mt-20">Do Not Sell or Share My Personal Information</h3>
+          <p>Under the California Consumer Privacy Act (CCPA/CPRA) and similar U.S. state privacy laws, you have the right to opt out of the sale or sharing of your personal information for cross-context behavioural advertising. <strong>PrintKingDriver does not sell personal information for money.</strong> However, when advertising or analytics cookies are active, the use of third-party advertising tags (such as Google Ads or the Microsoft Advertising / Bing UET tag) may be considered "sharing" under California law.</p>
+          <p>To opt out, click the <a href="#" data-pkd-cookie-open><strong>Do Not Sell or Share My Personal Information</strong></a> link in the footer of any page. This will immediately revoke advertising and analytics consent and re-open the cookie banner so you can confirm your preference. You may also send an opt-out request directly to <a href="mailto:support@printkingdriver.com">support@printkingdriver.com</a>.</p>
         </section>
 
         <section class="legal-section">
@@ -383,7 +400,7 @@
         <p>© 2026 PrintKingDriver.com. All rights reserved.</p>
         <ul>
           <li><a href="/privacy">Privacy Policy</a></li>
-          <li><a href="/disclaimer">Disclaimer</a></li><li><a href="#" data-pkd-cookie-open>Do Not Sell or Share My Personal Information</a></li>
+          <li><a href="/disclaimer">Disclaimer</a></li><li><a href="/privacy#do-not-sell" data-pkd-cookie-open>Do Not Sell or Share My Personal Information</a></li>
           <li><a href="/terms">Terms of Service</a></li>
         </ul>
       </div>

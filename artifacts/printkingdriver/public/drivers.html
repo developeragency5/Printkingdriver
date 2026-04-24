@@ -3,11 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <title>What Are Drivers? — Types, Roles & Troubleshooting | PrintKingDriver</title>
-    <meta name="description" content="A clear reference guide to printer driver types — PCL, PostScript, Host-Based, Universal, IPP, Network — including how they work and how to resolve common issues." />
+    <title>What Are Drivers? Types &amp; Troubleshooting | PrintKingDriver</title>
+    <meta name="description" content="A clear reference guide to driver categories — chipset, graphics, audio, network, storage, USB and printer — covering how each works and how to fix issues." />
     <link rel="icon" type="image/png" href="/favicon.png" />
     <meta property="og:title" content="What Are Drivers? — Types, Roles & Troubleshooting | PrintKingDriver" />
-    <meta property="og:description" content="A clear reference guide to printer driver types — PCL, PostScript, Host-Based, Universal, IPP, Network — including how they work and how to resolve common issues." />
+    <meta property="og:description" content="A clear reference guide to driver categories — chipset, graphics, audio, network, storage, USB and printer — covering how each works and how to fix issues." />
     <meta property="og:image" content="/opengraph.jpg" />
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary_large_image" />
@@ -17,6 +17,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="/assets/styles.css" />
       <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.printkingdriver.com/#organization","name":"PrintKingDriver","url":"https://www.printkingdriver.com/","email":"support@printkingdriver.com","logo":{"@type":"ImageObject","url":"https://www.printkingdriver.com/assets/images/logo-crown.png"},"contactPoint":{"@type":"ContactPoint","contactType":"customer support","email":"support@printkingdriver.com","telephone":"+1-800-123-4567","availableLanguage":["English"]}},{"@type":"WebSite","@id":"https://www.printkingdriver.com/#website","url":"https://www.printkingdriver.com/","name":"PrintKingDriver","description":"Driver Assistance Hub — clear, free guides on chipset, graphics, audio, network and printer drivers.","publisher":{"@id":"https://www.printkingdriver.com/#organization"},"inLanguage":"en-GB"},{"@type":"WebPage","@id":"https://www.printkingdriver.com/drivers#webpage","url":"https://www.printkingdriver.com/drivers","name":"What Are Drivers? — Types, Roles & Troubleshooting | PrintKingDriver","description":"A clear reference guide to printer driver types — PCL, PostScript, Host-Based, Universal, IPP, Network — including how they work and how to resolve common issues.","isPartOf":{"@id":"https://www.printkingdriver.com/#website"},"about":{"@id":"https://www.printkingdriver.com/#organization"},"inLanguage":"en-GB"}]}</script>
+      <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied',
+        analytics_storage: 'denied',
+        functionality_storage: 'granted',
+        security_storage: 'granted',
+        wait_for_update: 500
+      });
+      /* Microsoft Advertising (Bing) UET tag — pending tag ID. Loads bat.bing.com only after user accepts. */
+    </script>
   </head>
   <body>
   
@@ -131,7 +145,7 @@
         </div>
         <ul class="mega__list">
           <li><a href="/drivers/bios">
-            <div class="mega__item-name">BIOS / UEFI</div>
+            <div class="mega__item-name">Boot Firmware</div>
             <div class="mega__item-desc">Pre-boot initialisation</div>
           </a></li>
           <li><a href="/drivers/security">
@@ -165,7 +179,7 @@
       <h5>Peripheral Drivers</h5>
       <ul><li><a href="/drivers/printer">Printer Driver</a></li><li><a href="/drivers/scanner">Scanner Support</a></li><li><a href="/drivers/webcam">Webcam Driver</a></li></ul>
       <h5>Advanced Systems</h5>
-      <ul><li><a href="/drivers/bios">BIOS / UEFI</a></li><li><a href="/drivers/security">Security Drivers</a></li><li><a href="/drivers/monitor">Monitor Driver</a></li></ul></div>
+      <ul><li><a href="/drivers/bios">Boot Firmware</a></li><li><a href="/drivers/security">Security Drivers</a></li><li><a href="/drivers/monitor">Monitor Driver</a></li></ul></div>
       <a href="/how-it-works" data-nav-link="/how-it-works">How It Works</a>
       <a href="/about" data-nav-link="/about">About Guide</a>
       <a href="/contact" class="drawer__cta">⚡ Get In Touch</a>
@@ -217,7 +231,7 @@
   <path d="m10 13-2 2 2 2" />
   <path d="m14 17 2-2-2-2" /></svg></div>
               <div class="flow__label is-highlight">Printer Driver</div>
-              <div class="flow__sub">Translates to printer language (PCL / PS)</div>
+              <div class="flow__sub">Translates to a printer-readable command stream</div>
             </div>
             <div class="flow__arrow h"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-20" aria-hidden="true"><path d="M5 12h14" />
   <path d="m12 5 7 7-7 7" /></svg></div><div class="flow__arrow v"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-20" aria-hidden="true"><path d="M12 5v14" />
@@ -285,7 +299,7 @@
               <div class="core-doc-card__sub">What it does</div>
               <ul>
                 <li>Enables CPU power management and thermal control</li>
-                <li>Activates SATA, NVMe, and PCIe controller features</li>
+                <li>Activates storage and expansion controller features</li>
                 <li>Coordinates memory channels and bus speeds</li>
                 <li>Unlocks integrated USB, audio, and LAN controllers</li>
               </ul>
@@ -296,7 +310,7 @@
                 <li>Sluggish performance after a fresh OS install</li>
                 <li>USB ports intermittently dropping devices</li>
                 <li>Higher-than-expected idle CPU temperatures</li>
-                <li>Storage drives appearing in the wrong AHCI mode</li>
+                <li>Storage drives appearing in the wrong controller mode</li>
               </ul>
             </div>
           </div>
@@ -363,7 +377,7 @@
                 <li>Routes sound between apps and physical devices</li>
                 <li>Converts digital audio formats and sample rates</li>
                 <li>Manages microphone input, gain, and noise reduction</li>
-                <li>Detects connection of headphones, HDMI, and USB audio</li>
+                <li>Detects connection of headphones, display audio, and USB audio</li>
               </ul>
             </div>
             <div>
@@ -497,7 +511,7 @@
           <h3 class="dtype-card__title">Advanced System Drivers</h3>
           <p class="dtype-card__desc">The deeper layer that runs before — and beneath — the operating system itself, governing initialisation, identity, integrity, and how the picture you see on screen is finally rendered.</p>
           <ul class="dtype-card__list">
-            <li>BIOS / UEFI Firmware</li>
+            <li>Boot Firmware</li>
             <li>Security Drivers</li>
             <li>Monitor Driver</li>
           </ul>
@@ -519,7 +533,7 @@
           <tr><td class="strong">Essential</td><td>Core system communication</td><td class="hide-md small">Chipset, Graphics, Audio, Network</td><td>Day-to-day system stability</td><td class="hide-lg small">Windows, macOS, Linux</td></tr>
           <tr><td class="strong">Hardware-Specific</td><td>Internal device control</td><td class="hide-md small">Storage, USB, Bluetooth, Input</td><td>Performance &amp; recognition</td><td class="hide-lg small">Windows, macOS, Linux</td></tr>
           <tr><td class="strong">Peripheral</td><td>External device interaction</td><td class="hide-md small">Printer, Scanner, Webcam</td><td>Productivity workflows</td><td class="hide-lg small">Windows, macOS</td></tr>
-          <tr><td class="strong">Advanced System</td><td>Boot, security, display</td><td class="hide-md small">BIOS / UEFI, Security, Monitor</td><td>System integrity &amp; setup</td><td class="hide-lg small">Firmware &amp; OS</td></tr>
+          <tr><td class="strong">Advanced System</td><td>Boot, security, display</td><td class="hide-md small">Boot Firmware, Security, Monitor</td><td>System integrity &amp; setup</td><td class="hide-lg small">Firmware &amp; OS</td></tr>
         </tbody>
       </table></div></div>
     </section>
@@ -569,7 +583,7 @@
         <p>© 2026 PrintKingDriver.com. All rights reserved.</p>
         <ul>
           <li><a href="/privacy">Privacy Policy</a></li>
-          <li><a href="/disclaimer">Disclaimer</a></li><li><a href="#" data-pkd-cookie-open>Do Not Sell or Share My Personal Information</a></li>
+          <li><a href="/disclaimer">Disclaimer</a></li><li><a href="/privacy#do-not-sell" data-pkd-cookie-open>Do Not Sell or Share My Personal Information</a></li>
           <li><a href="/terms">Terms of Service</a></li>
         </ul>
       </div>
