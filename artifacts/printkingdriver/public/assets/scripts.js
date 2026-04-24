@@ -276,12 +276,12 @@
     if (a && isInternal(a)) prefetch(a.href);
   }, { passive: true });
 
-  // Speculation Rules API: prerender on hover (Chrome/Edge)
+  // Speculation Rules API: prefetch on hover (Chrome/Edge) — prefetch only to avoid bfcache conflicts
   if (HTMLScriptElement.supports && HTMLScriptElement.supports("speculationrules")) {
     const rules = document.createElement("script");
     rules.type = "speculationrules";
     rules.textContent = JSON.stringify({
-      prerender: [{ source: "document", where: { and: [
+      prefetch: [{ source: "document", where: { and: [
         { href_matches: "/*" },
         { not: { href_matches: "/*.png" } },
         { not: { href_matches: "/*.webp" } },

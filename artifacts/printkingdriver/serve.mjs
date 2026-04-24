@@ -33,7 +33,7 @@ if (IS_DEV) {
     console.warn("Live reload watcher failed:", e.message);
   }
 }
-const RELOAD_SNIPPET = `<script>(function(){try{var es=new EventSource('/__reload');es.onmessage=function(){location.reload();};}catch(e){}})();</script>`;
+const RELOAD_SNIPPET = `<script>(function(){try{var es;function connect(){es=new EventSource('/__reload');es.onmessage=function(){location.reload()};}connect();window.addEventListener('pagehide',function(){if(es){es.close();es=null;}});window.addEventListener('pageshow',function(e){if(e.persisted&&!es)connect();});}catch(e){}})();</script>`;
 
 const PORT = Number(process.env.PORT);
 if (!PORT || Number.isNaN(PORT)) {
