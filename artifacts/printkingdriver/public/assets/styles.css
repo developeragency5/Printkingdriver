@@ -1463,3 +1463,17 @@ main { flex: 1; }
   .spotlight--reverse .spotlight__rail { border-left: none; border-right: 2px solid var(--sp-accent); padding-left: 0; padding-right: 16px; text-align: right; }
   .spotlight--reverse .spotlight__rail .spotlight__link { float: right; }
 }
+
+.tree-wrap { background: #fbf7ef; border: 1px solid #e8dec8; border-radius: 14px; padding: 28px 24px; box-shadow: 0 1px 0 rgba(0,0,0,.02), 0 8px 24px -18px rgba(74,107,117,.25); overflow-x: auto; }
+.tree { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; font-size: 13.5px; line-height: 1.65; color: #4a4338; margin: 0; white-space: pre; background: transparent; padding: 0; }
+.tree strong { color: #2d2620; font-weight: 700; }
+.tree__root { color: #2d2620; font-weight: 800; font-size: 15px; letter-spacing: .01em; }
+.tree__cat { font-weight: 800; padding: 1px 8px; border-radius: 6px; color: #fff; letter-spacing: .01em; }
+.tree__cat--essential { background: #4a6b75; }
+.tree__cat--hardware  { background: #b87333; }
+.tree__cat--peripheral { background: #9c4a5b; }
+.tree__cat--advanced  { background: #4a5d8a; }
+@media (max-width: 640px) {
+  .tree { font-size: 12px; line-height: 1.55; }
+  .tree-wrap { padding: 18px 14px; }
+}
