@@ -693,7 +693,7 @@ main { flex: 1; }
 }
 .footer__grid { display: grid; gap: 40px; grid-template-columns: 1fr; margin-bottom: 48px; }
 @media (min-width: 600px) { .footer__grid { grid-template-columns: 1fr 1fr; gap: 40px 48px; } }
-@media (min-width: 1024px) { .footer__grid { grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 48px 56px; } }
+@media (min-width: 1024px) { .footer__grid { grid-template-columns: 1.6fr 1fr 1fr 1fr 1fr; gap: 48px 40px; } }
 .footer__brand { display: inline-flex; align-items: center; gap: 12px; margin-bottom: 18px; text-decoration: none; }
 .footer__brand-icon {
   width: 40px; height: 40px;
