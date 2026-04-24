@@ -1241,13 +1241,14 @@ main { flex: 1; }
   height: 100%;
   object-fit: cover;
   display: block;
-  filter: grayscale(1) contrast(1.05) brightness(1.04);
+  filter: grayscale(1) contrast(1.35) brightness(.88);
 }
 .cat-block__media::after {
   content: "";
   position: absolute; inset: 0;
   background: linear-gradient(135deg, var(--cat-grad-a) 0%, var(--cat-grad-b) 100%);
   mix-blend-mode: color;
+  opacity: .92;
   pointer-events: none;
 }
 .cat-block__media::before {
