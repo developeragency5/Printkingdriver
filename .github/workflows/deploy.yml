@@ -21,28 +21,50 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Prepare site (clean URLs + .nojekyll)
+      - name: Prepare site (rewrite paths + clean URLs + .nojekyll)
+        env:
+          REPO_NAME: ${{ github.event.repository.name }}
+          HAS_CUSTOM_DOMAIN: ${{ vars.HAS_CUSTOM_DOMAIN }}
         run: |
           cd artifacts/printkingdriver/public
           touch .nojekyll
           node -e "
           const fs = require('fs');
           const path = require('path');
-          function walk(dir) {
+          const repo = process.env.REPO_NAME || '';
+          const useBase = !process.env.HAS_CUSTOM_DOMAIN && repo;
+          const base = useBase ? '/' + repo : '';
+          console.log('Base path:', base || '(root)');
+          function rewritePaths(content) {
+            if (!base) return content;
+            content = content.replace(/(\\b(?:href|src|action|poster|content|data-src)=[\"'])\\/(?!\\/)/g, '\$1' + base + '/');
+            content = content.replace(/\\burl\\((['\"]?)\\/(?!\\/)/g, 'url(\$1' + base + '/');
+            return content;
+          }
+          function walk(dir, fn) {
             for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
               const full = path.join(dir, entry.name);
-              if (entry.isDirectory()) { walk(full); continue; }
-              if (!entry.name.endsWith('.html')) continue;
-              const base = entry.name.replace(/\.html\$/, '');
-              if (base === 'index' || base === '404') continue;
-              const folder = path.join(dir, base);
-              if (fs.existsSync(folder) && fs.statSync(folder).isDirectory()) continue;
-              fs.mkdirSync(folder, { recursive: true });
-              fs.copyFileSync(full, path.join(folder, 'index.html'));
+              if (entry.isDirectory()) walk(full, fn);
+              else fn(full, entry.name);
             }
           }
-          walk('.');
-          console.log('Generated clean-URL folders.');
+          walk('.', (full, name) => {
+            if (name.endsWith('.html') || name.endsWith('.css') || name.endsWith('.js')) {
+              const before = fs.readFileSync(full, 'utf8');
+              const after = rewritePaths(before);
+              if (after !== before) fs.writeFileSync(full, after);
+            }
+          });
+          walk('.', (full, name) => {
+            if (!name.endsWith('.html')) return;
+            const b = name.replace(/\\.html\$/, '');
+            if (b === 'index' || b === '404') return;
+            const folder = path.join(path.dirname(full), b);
+            if (fs.existsSync(folder) && fs.statSync(folder).isDirectory()) return;
+            fs.mkdirSync(folder, { recursive: true });
+            fs.copyFileSync(full, path.join(folder, 'index.html'));
+          });
+          console.log('Site prepared.');
           "
 
       - name: Configure Pages
