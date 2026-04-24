@@ -654,7 +654,15 @@ main { flex: 1; }
 .legal-section { background: white; border: 1px solid var(--border); border-radius: var(--r-2xl); padding: 32px; box-shadow: 0 1px 2px rgba(0,0,0,.03); }
 .legal-section + .legal-section { margin-top: 20px; }
 .legal-section h2 { font-family: var(--font-heading); font-weight: 700; font-size: 1.125rem; margin-bottom: 12px; }
+.legal-section h3 { font-family: var(--font-heading); font-weight: 600; font-size: 1rem; margin: 22px 0 8px; color: #1a1a1a; letter-spacing: -.01em; }
 .legal-section p { font-size: 15px; color: rgba(42,42,38,.85); line-height: 1.75; }
+.legal-section p + p { margin-top: 12px; }
+.legal-section ul, .legal-section ol { margin: 12px 0 12px 22px; padding: 0; color: rgba(42,42,38,.85); font-size: 15px; line-height: 1.75; }
+.legal-section ul li, .legal-section ol li { margin: 6px 0; padding-left: 4px; }
+.legal-section ul { list-style: disc; }
+.legal-section ol { list-style: decimal; }
+.legal-section a { color: var(--primary); text-decoration: underline; text-underline-offset: 2px; }
+.legal-section a:hover { text-decoration: none; }
 
 /* ===================== NOT FOUND ===================== */
 .notfound { min-height: 60vh; display: flex; align-items: center; justify-content: center; padding: 60px 1rem; }
