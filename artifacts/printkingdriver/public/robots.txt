@@ -1,0 +1,9 @@
+# PrintKingDriver — robots.txt
+# Allow all reputable search engines and AI crawlers to index the entire site.
+
+User-agent: *
+Allow: /
+Disallow: /404
+
+# Reference the sitemap so crawlers discover every page on the first visit.
+Sitemap: https://printkingdriver.com/sitemap.xml
