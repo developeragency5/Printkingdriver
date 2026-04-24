@@ -1,0 +1,64 @@
+Improve my website’s SEO crawlability and page discovery so that tools like SEMrush can crawl at least 150+ pages instead of the current limited number.
+
+Analyze the entire project and implement the following improvements:
+
+1. Sitemap Optimization:
+
+* Generate or update a dynamic sitemap.xml file.
+* Ensure all pages (drivers, guides, categories, blog posts) are included.
+* Automatically update sitemap when new pages are added.
+* Place sitemap at /sitemap.xml.
+
+2. Internal Linking Structure:
+
+* Ensure every page is reachable within 2–3 clicks.
+* Add internal links between related pages.
+* Create sections like “Related Drivers”, “Popular Drivers”, and “Explore More”.
+* Add global footer links pointing to important pages.
+
+3. Category & Index Pages:
+
+* Create category pages such as:
+  /printers
+  /scanners
+  /hp-drivers
+  /canon-drivers
+* Each category page should dynamically list and link to multiple pages (20–50 items).
+
+4. Navigation Improvements:
+
+* Improve the main navigation and dropdowns to expose more pages.
+* Ensure all major sections are linked from the homepage.
+
+5. Remove Crawl Barriers:
+
+* Check for and remove any "noindex" meta tags unless जरूरी.
+* Ensure robots.txt does not block important pages.
+* Make all important pages accessible to crawlers.
+
+6. Pagination / Listing System:
+
+* If there are many pages, implement pagination (Page 1, 2, 3…).
+* Ensure all paginated pages are crawlable.
+
+7. SEO Enhancements:
+
+* Add proper title and meta description for each page.
+* Use clean URLs.
+* Ensure fast loading and mobile-friendly structure.
+
+8. Auto Linking System:
+
+* Automatically interlink pages based on category or keywords.
+* Example: a printer driver page should link to other printer drivers.
+
+9. Testing:
+
+* Ensure all pages return status 200.
+* No broken links.
+* Validate sitemap and internal links.
+
+Goal:
+Make the website fully crawlable and structured so that SEO tools like SEMrush and search engines can discover and crawl 150+ pages efficiently.
+
+Do not change design unnecessarily—focus on structure, linking, and SEO improvements.

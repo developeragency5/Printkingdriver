@@ -1,0 +1,194 @@
+<!doctype html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>macOS Printer Setup — Complete Driver Guide | PrintKingDriver</title>
+    <meta name="description" content="Step-by-step guide to setting up any printer on macOS. Covers wired, wireless and network printers, driver options, and the common errors people hit." />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <meta property="og:title" content="macOS Printer Setup — Complete Driver Guide | PrintKingDriver" />
+    <meta property="og:description" content="Step-by-step guide to setting up any printer on macOS. Covers wired, wireless and network printers, driver options, and the common errors people hit." />
+    <meta property="og:image" content="/opengraph.jpg" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="canonical" href="https://www.printkingdriver.com/guides/macos-printer-setup" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/assets/styles.css" />
+      <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.printkingdriver.com/#organization","name":"PrintKingDriver","url":"https://www.printkingdriver.com/","email":"support@printkingdriver.com","logo":{"@type":"ImageObject","url":"https://www.printkingdriver.com/assets/images/logo-crown.png"}},{"@type":"WebSite","@id":"https://www.printkingdriver.com/#website","url":"https://www.printkingdriver.com/","name":"PrintKingDriver","publisher":{"@id":"https://www.printkingdriver.com/#organization"},"inLanguage":"en-GB"},{"@type":"WebPage","@id":"https://www.printkingdriver.com/guides/macos-printer-setup#webpage","url":"https://www.printkingdriver.com/guides/macos-printer-setup","name":"macOS Printer Setup — Complete Driver Guide | PrintKingDriver","description":"Step-by-step guide to setting up any printer on macOS. Covers wired, wireless and network printers, driver options, and the common errors people hit.","isPartOf":{"@id":"https://www.printkingdriver.com/#website"},"inLanguage":"en-GB"}]}</script>
+      <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied',
+        analytics_storage: 'denied', functionality_storage: 'granted',
+        security_storage: 'granted', wait_for_update: 500
+      });
+    </script>
+  </head>
+  <body>
+  <nav class="nav">
+    <div class="container nav__inner">
+      <a href="/" class="nav__brand">
+        <div class="nav__logo"><img src="/assets/images/logo-crown.png" alt="PrintKingDriver crown logo" width="38" height="38" /></div>
+        <div><div class="nav__title">PrintKingDriver</div><div class="nav__sub">Driver Assistance Hub</div></div>
+      </a>
+      <div class="nav__search">
+        <span class="nav__search-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-16" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></span>
+        <input type="text" placeholder="Search drivers, pages, hardware..." aria-label="Search" />
+        <button class="nav__search-clear" type="button" aria-label="Clear search"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-14" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button>
+        <div class="nav__search-results"></div>
+      </div>
+      <div class="nav__links">
+        <a href="/" class="nav__link" data-nav-link="/">Home</a>
+        <div class="mega-wrap u-relative">
+          <button type="button" class="mega-trigger ">Explore Drivers <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-14" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+        </div>
+        <a href="/how-it-works" class="nav__link" data-nav-link="/how-it-works">How It Works</a>
+        <a href="/about" class="nav__link" data-nav-link="/about">About Guide</a>
+        <a href="/contact" class="nav__cta">⚡ Get In Touch</a>
+      </div>
+      <button class="nav__menu-trigger" aria-label="Open menu"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-20" aria-hidden="true"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg></button>
+    </div>
+    <div class="mega"><div class="mega__panel">
+      <div class="mega__grid">
+      <div class="mega__col"><div class="mega__heading"><span class="mega__chip">01</span><div class="mega__head-text">Essential Drivers</div></div>
+        <ul class="mega__list">
+          <li><a href="/drivers/chipset"><div class="mega__item-name">Chipset Driver</div><div class="mega__item-desc">Motherboard logic & CPU sync</div></a></li>
+          <li><a href="/drivers/graphics"><div class="mega__item-name">Graphics Driver</div><div class="mega__item-desc">Visual rendering & GPU</div></a></li>
+          <li><a href="/drivers/audio"><div class="mega__item-name">Audio Driver</div><div class="mega__item-desc">Sound input/output</div></a></li>
+          <li><a href="/drivers/network"><div class="mega__item-name">Network Driver</div><div class="mega__item-desc">Wired & wireless networking</div></a></li>
+        </ul></div>
+      <div class="mega__col"><div class="mega__heading"><span class="mega__chip">02</span><div class="mega__head-text">Hardware-Specific</div></div>
+        <ul class="mega__list">
+          <li><a href="/drivers/storage"><div class="mega__item-name">Storage Controller</div><div class="mega__item-desc">SSDs & hard drives</div></a></li>
+          <li><a href="/drivers/usb"><div class="mega__item-name">USB Support</div><div class="mega__item-desc">Port & device recognition</div></a></li>
+          <li><a href="/drivers/bluetooth"><div class="mega__item-name">Bluetooth Driver</div><div class="mega__item-desc">Wireless peripheral pairing</div></a></li>
+          <li><a href="/drivers/input"><div class="mega__item-name">Input Drivers</div><div class="mega__item-desc">Touchpad & keyboard</div></a></li>
+        </ul></div>
+      <div class="mega__col"><div class="mega__heading"><span class="mega__chip">03</span><div class="mega__head-text">Peripheral Drivers</div></div>
+        <ul class="mega__list">
+          <li><a href="/drivers/printer"><div class="mega__item-name">Printer Driver</div><div class="mega__item-desc">Document to print commands</div></a></li>
+          <li><a href="/drivers/scanner"><div class="mega__item-name">Scanner Support</div><div class="mega__item-desc">Image capture & OCR</div></a></li>
+          <li><a href="/drivers/webcam"><div class="mega__item-name">Webcam Driver</div><div class="mega__item-desc">Video stream capture</div></a></li>
+        </ul></div>
+      <div class="mega__col"><div class="mega__heading"><span class="mega__chip">04</span><div class="mega__head-text">Advanced Systems</div></div>
+        <ul class="mega__list">
+          <li><a href="/drivers/bios"><div class="mega__item-name">Boot Firmware</div><div class="mega__item-desc">Pre-boot initialisation</div></a></li>
+          <li><a href="/drivers/security"><div class="mega__item-name">Security Drivers</div><div class="mega__item-desc">Encryption & secure boot</div></a></li>
+          <li><a href="/drivers/monitor"><div class="mega__item-name">Monitor Driver</div><div class="mega__item-desc">Colour & refresh control</div></a></li>
+        </ul></div></div>
+      <div class="mega__footer"><div class="mega__footer-text"><a href="/guides">Setup Guides</a> · <a href="/how-to">How-To Library</a> · <a href="/tech">Print Tech Explained</a> · <a href="/brands">Brand Pages</a> · <a href="/troubleshooting">Troubleshooting</a></div></div>
+    </div></div>
+  </nav>
+
+  <div class="drawer-backdrop"></div>
+  <aside class="drawer" aria-hidden="true">
+    <button class="drawer__close" aria-label="Close menu"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-20" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button>
+    <div class="drawer__list">
+      <a href="/" data-nav-link="/">Home</a>
+      <button type="button" data-mobile-explore>Explore Drivers <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-16" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+      <div class="drawer__sub">
+      <h5>Essential Drivers</h5>
+      <ul><li><a href="/drivers/chipset">Chipset Driver</a></li><li><a href="/drivers/graphics">Graphics Driver</a></li><li><a href="/drivers/audio">Audio Driver</a></li><li><a href="/drivers/network">Network Driver</a></li></ul>
+      <h5>Hardware-Specific</h5>
+      <ul><li><a href="/drivers/storage">Storage Controller</a></li><li><a href="/drivers/usb">USB Support</a></li><li><a href="/drivers/bluetooth">Bluetooth Driver</a></li><li><a href="/drivers/input">Input Drivers</a></li></ul>
+      <h5>Peripheral Drivers</h5>
+      <ul><li><a href="/drivers/printer">Printer Driver</a></li><li><a href="/drivers/scanner">Scanner Support</a></li><li><a href="/drivers/webcam">Webcam Driver</a></li></ul>
+      <h5>Advanced Systems</h5>
+      <ul><li><a href="/drivers/bios">Boot Firmware</a></li><li><a href="/drivers/security">Security Drivers</a></li><li><a href="/drivers/monitor">Monitor Driver</a></li></ul>
+      <h5>Reference Library</h5>
+      <ul><li><a href="/brands">Printer Brands</a></li><li><a href="/guides">Setup Guides</a></li><li><a href="/how-to">How-To Library</a></li><li><a href="/tech">Print Tech</a></li><li><a href="/troubleshooting">Troubleshooting</a></li><li><a href="/glossary">Glossary</a></li></ul></div>
+      <a href="/how-it-works" data-nav-link="/how-it-works">How It Works</a>
+      <a href="/about" data-nav-link="/about">About Guide</a>
+      <a href="/contact" class="drawer__cta">⚡ Get In Touch</a>
+    </div>
+  </aside>
+  <main>
+  <div class="detail-bg cat-essential">
+    <div class="container u-max-980">
+      <a href="/guides" class="legal__back"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-14" aria-hidden="true"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg> Back to setup guides</a>
+      <header class="detail-head"><div class="detail-head__icon cat-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-32" aria-hidden="true"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M2 12h20"/></svg></div><div><div class="eyebrow">Setup Guide</div><h1>macOS Printer Setup</h1><p>Everything you need to add a printer on macOS, choose the right driver and avoid the install errors people most often hit.</p></div></header>
+      <section class="detail-card"><h2>Before You Start</h2><p>Setting up a printer on macOS is usually painless if you start from a clean state. Make sure macOS itself is fully updated, the printer is powered on and within reach of the network you intend to use it on, and you know whether you want to connect by USB, Ethernet or Wi-Fi. Mixing connection types mid-install is the most common cause of a stuck setup.</p>
+        <p>macOS prefers AirPrint over vendor drivers wherever possible — let the OS choose AirPrint if it offers, then install the vendor driver only for scanning or fax.</p></section>
+      <section class="detail-card"><h2>Step 1 — Open Printer Settings</h2><p>Open <strong>System Settings &raquo; Printers & Scanners</strong>. This is where every printer-related task on macOS starts. Click <strong>Add a printer or scanner</strong> (or the equivalent on your distribution).</p>
+        <p>macOS will scan the local network for any printer that supports the modern CUPS with AirPrint stack. Most printers from the last six years will appear within 30 seconds. If yours does not, move on to step two.</p></section>
+      <section class="detail-card"><h2>Step 2 — Choose How to Add the Printer</h2><p>macOS offers several ways to add a printer. The right choice depends on the connection:</p>
+        <ul class="detail-list"><li><span class="detail-list__bullet"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-12" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span><strong>Wireless / network printer</strong> — pick the device from the auto-discovered list. macOS downloads the right driver automatically using CUPS with AirPrint.</span></li><li><span class="detail-list__bullet"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-12" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span><strong>USB printer</strong> — connect the cable. macOS should detect it and install the driver in 10–30 seconds.</span></li><li><span class="detail-list__bullet"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-12" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span><strong>Manual add by IP</strong> — choose "Add by IP address" or the equivalent and enter the printer's IP. Use this when the printer is on a different subnet to your computer.</span></li><li><span class="detail-list__bullet"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-12" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span><strong>Vendor installer</strong> — download the manufacturer's package when you need scanning, faxing or any vendor-specific feature beyond basic print.</span></li></ul></section>
+      <section class="detail-card"><h2>Step 3 — Pick the Driver</h2><p>After macOS has identified the printer, it will offer a driver. You usually have three options:</p>
+        <div class="tbl-wrap"><div class="tbl-scroll"><table class="tbl">
+          <thead><tr><th>Driver Choice</th><th>What You Get</th><th class="hide-md">When to Use</th></tr></thead>
+          <tbody>
+            <tr><td class="strong">Built-in / generic</td><td>Print only — no scan, no fax, no ink-level monitor.</td><td class="hide-md small">Quick setup, occasional printing.</td></tr>
+            <tr><td class="strong">Vendor full package</td><td>Print, scan, fax, status monitor, vendor app integration.</td><td class="hide-md small">Multi-function devices used daily.</td></tr>
+            <tr><td class="strong">PostScript or PCL</td><td>Page-description language driver for graphics or office workloads.</td><td class="hide-md small">Design studios, large workgroups.</td></tr>
+          </tbody>
+        </table></div></div>
+        <p>For most users at home or in a small office, the vendor full package is the right choice. See our <a href="/brands">brand pages</a> for where to download the package for your specific device.</p></section>
+      <section class="detail-card"><h2>Step 4 — Print a Test Page</h2><p>Once the driver is installed, macOS adds the printer to the queue list with a status of "Ready". Right-click (or long-press on touch devices) and choose <strong>Print test page</strong>. The test page confirms three things: the connection is alive, the driver is rendering correctly, and the printer itself is in working order.</p>
+        <p>If the test page does not arrive, it is almost always a connection issue rather than a driver problem. Check the <a href="/troubleshooting/printer-offline">printer offline</a> guide for the next steps.</p></section>
+      <section class="detail-card"><h2>Common macOS Setup Issues</h2>
+        <div class="tbl-wrap"><div class="tbl-scroll"><table class="tbl">
+          <thead><tr><th>Symptom</th><th>Cause</th><th class="hide-md">Fix</th></tr></thead>
+          <tbody>
+            <tr><td class="strong">Printer not discovered on Wi-Fi</td><td>Computer and printer on different subnets or guest network.</td><td class="hide-md small">Confirm both are on the same SSID and IP range.</td></tr>
+            <tr><td class="strong">"Driver unavailable" message</td><td>macOS could not download the driver from its update service.</td><td class="hide-md small">Run macOS updates first, retry. If still failing, install the vendor driver.</td></tr>
+            <tr><td class="strong">Printer adds but won't print</td><td>Wrong driver matched to the model.</td><td class="hide-md small">Remove the printer, install the vendor driver, add it again.</td></tr>
+            <tr><td class="strong">Scanner missing from list</td><td>Print driver installed but scan driver was skipped.</td><td class="hide-md small">Reinstall the full vendor package, not the print-only one.</td></tr>
+          </tbody>
+        </table></div></div></section>
+      <section class="detail-card detail-card--accent"><h2>After Setup — Recommended Settings</h2><p>Once the printer prints, three quick changes will save you trouble later:</p>
+        <ul class="detail-list"><li><span class="detail-list__bullet"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-12" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Set the right paper size as default. Mismatched defaults (US Letter vs A4) cause silent crops on every job.</span></li><li><span class="detail-list__bullet"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-12" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Set <strong>print quality</strong> to <em>Normal</em>, not <em>Best</em> or <em>Photo</em>. The visual difference is small for everyday work; the speed and ink saving is large.</span></li><li><span class="detail-list__bullet"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-12" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Disable any auto-update tool the vendor installs unless you actively want it. Quietly self-updating drivers cause more problems than they solve.</span></li><li><span class="detail-list__bullet"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-12" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>For network printers, set a static IP at the router so the print queue does not break when the IP changes.</span></li></ul></section>
+      <section class="detail-card"><h2>Frequently Asked Questions</h2><div class="faq__inner u-mt-8-0-0"><div class="faq__item"><button type="button" class="faq__q">Do I always need to install the vendor driver on macOS?<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-16" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button><div class="faq__a"><p class="u-pt-0">No. macOS ships CUPS with AirPrint which works with most modern printers without any extra install. You only need the vendor driver for scanning, faxing or vendor-specific features.</p></div></div><div class="faq__item"><button type="button" class="faq__q">Why is my printer described as "Generic" in the printer list?<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-16" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button><div class="faq__a"><p class="u-pt-0">macOS could not match it to a specific model and is using the universal IPP class driver. It will print fine but advanced features will be missing. Install the vendor driver to fix this.</p></div></div><div class="faq__item"><button type="button" class="faq__q">Can I add the same printer twice with different settings?<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-16" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button><div class="faq__a"><p class="u-pt-0">Yes. macOS treats each addition as a separate queue, so you can have one queue set to draft mode and another set to high-quality colour, both pointing at the same physical device.</p></div></div><div class="faq__item"><button type="button" class="faq__q">How do I remove a printer cleanly on macOS?<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-16" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button><div class="faq__a"><p class="u-pt-0">Open System Settings &raquo; Printers & Scanners, select the printer and choose Remove. Then restart the print service so any cached driver files are released.</p></div></div></div></section>
+      <section class="related-section"><div class="related-section__head"><div><span class="related-section__eyebrow">Continue Reading</span><h2 class="related-section__title">Related Guides</h2><p class="related-section__sub">Pair this macOS setup guide with the connection type and brand pages that match your printer.</p></div></div><div class="related-grid"><a href="/guides/wifi-printer-setup" class="related-card"><div class="related-card__icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-18" aria-hidden="true"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M2 12h20"/></svg></div><div class="related-card__name">Wi-Fi Printer Setup</div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-14 related-card__arrow" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a><a href="/guides/usb-printer-setup" class="related-card"><div class="related-card__icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-18" aria-hidden="true"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M2 12h20"/></svg></div><div class="related-card__name">USB Printer Setup</div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-14 related-card__arrow" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a><a href="/guides/ethernet-printer-setup" class="related-card"><div class="related-card__icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-18" aria-hidden="true"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M2 12h20"/></svg></div><div class="related-card__name">Ethernet Printer Setup</div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-14 related-card__arrow" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a><a href="/brands" class="related-card"><div class="related-card__icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-18" aria-hidden="true"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M2 12h20"/></svg></div><div class="related-card__name">Brand-Specific Pages</div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-14 related-card__arrow" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a><a href="/troubleshooting/printer-offline" class="related-card"><div class="related-card__icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-18" aria-hidden="true"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M2 12h20"/></svg></div><div class="related-card__name">Printer Offline Fix</div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-14 related-card__arrow" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></div></section>
+    </div>
+  </div>
+  </main>
+  
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__col">
+          <a href="/" class="footer__brand">
+            <div class="footer__brand-icon"><img src="/assets/images/logo-crown.png" alt="PrintKingDriver crown logo" width="36" height="36" /></div>
+            <div class="footer__brand-name">PrintKingDriver</div>
+          </a>
+          <p>Your trusted source for printer & system driver information.</p>
+          <div class="footer__contact">
+            <div class="footer__contact-row"><span class="footer__contact-label">Company</span><span class="footer__contact-val">PrintKingDriver</span></div>
+            <div class="footer__contact-row"><span class="footer__contact-label">Email</span><a class="footer__contact-val" href="mailto:support@printkingdriver.com">support@printkingdriver.com</a></div>
+            <div class="footer__contact-row footer__contact-row--phone"><span class="footer__contact-label">Phone</span><a class="footer__contact-val" href="tel:+18001234567">+1 (800) 123-4567</a></div>
+          </div>
+        </div>
+        <div class="footer__col">
+          <h4>Core Drivers</h4>
+          <ul><li><a href="/drivers/chipset">Chipset Drivers</a></li><li><a href="/drivers/graphics">Graphics Driver</a></li><li><a href="/drivers/audio">Audio Driver</a></li><li><a href="/drivers/network">Network Driver</a></li></ul>
+        </div>
+        <div class="footer__col">
+          <h4>Brands & Help</h4>
+          <ul><li><a href="/brands">Printer Brands</a></li><li><a href="/troubleshooting">Troubleshooting</a></li><li><a href="/glossary">Driver Glossary</a></li><li><a href="/how-it-works">How It Works</a></li></ul>
+        </div>
+        <div class="footer__col">
+          <h4>Guides & How-To</h4>
+          <ul><li><a href="/guides">Setup Guides</a></li><li><a href="/how-to">How-To Library</a></li><li><a href="/tech">Print Tech Explained</a></li><li><a href="/drivers">Driver Reference</a></li></ul>
+        </div>
+        <div class="footer__col">
+          <h4>System Support</h4>
+          <ul><li><a href="/contact">Contact Us</a></li><li><a href="/how-it-works">FAQ</a></li><li><a href="/contact">Technical Support</a></li><li><a href="/about">About Guide</a></li></ul>
+        </div>
+      </div>
+      <div class="footer__bot">
+        <p>© 2026 PrintKingDriver.com. All rights reserved.</p>
+        <ul>
+          <li><a href="/privacy">Privacy Policy</a></li>
+          <li><a href="/disclaimer">Disclaimer</a></li><li><a href="/privacy#do-not-sell" data-pkd-cookie-open>Do Not Sell or Share My Personal Information</a></li>
+          <li><a href="/terms">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+<script src="/assets/scripts.js" defer></script>
+  <script src="/assets/cookie-banner.js" defer></script>
+  </body>
+  </html>
