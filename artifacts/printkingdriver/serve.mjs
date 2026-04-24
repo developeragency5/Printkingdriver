@@ -1,11 +1,39 @@
 import http from "node:http";
 import fs from "node:fs/promises";
-import { existsSync } from "node:fs";
+import { existsSync, watch as fsWatch } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, "public");
+const IS_DEV = process.env.NODE_ENV !== "production";
+
+// --- Live reload (dev only) -------------------------------------------------
+const reloadClients = new Set();
+let reloadTimer = null;
+function notifyReload() {
+  if (reloadTimer) return;
+  reloadTimer = setTimeout(() => {
+    reloadTimer = null;
+    for (const res of reloadClients) {
+      try { res.write("data: reload\n\n"); } catch {}
+    }
+  }, 120); // debounce burst writes (e.g. minify run touching many files)
+}
+if (IS_DEV) {
+  try {
+    fsWatch(ROOT, { recursive: true }, (_evt, filename) => {
+      if (!filename) return;
+      // Ignore editor swap files
+      if (/(^|\/)\./.test(filename)) return;
+      notifyReload();
+    });
+    console.log("Live reload watcher active on", ROOT);
+  } catch (e) {
+    console.warn("Live reload watcher failed:", e.message);
+  }
+}
+const RELOAD_SNIPPET = `<script>(function(){try{var es=new EventSource('/__reload');es.onmessage=function(){location.reload();};}catch(e){}})();</script>`;
 
 const PORT = Number(process.env.PORT);
 if (!PORT || Number.isNaN(PORT)) {
@@ -76,6 +104,19 @@ async function resolvePath(urlPath) {
 
 const server = http.createServer(async (req, res) => {
   try {
+    // Live-reload SSE endpoint (dev only)
+    if (IS_DEV && req.url === "/__reload") {
+      res.writeHead(200, {
+        "Content-Type": "text/event-stream",
+        "Cache-Control": "no-cache",
+        "Connection": "keep-alive",
+      });
+      res.write("retry: 1000\n\n");
+      reloadClients.add(res);
+      req.on("close", () => reloadClients.delete(res));
+      return;
+    }
+
     const file = await resolvePath(req.url);
     if (!file) {
       const notFound = path.join(ROOT, "404.html");
@@ -91,7 +132,7 @@ const server = http.createServer(async (req, res) => {
       return;
     }
     const ext = path.extname(file).toLowerCase();
-    const data = await fs.readFile(file);
+    let data = await fs.readFile(file);
     const isAsset = /\.(webp|png|jpe?g|gif|svg|ico|css|js|woff2?|ttf)$/i.test(file);
     const isHtml = ext === ".html";
     let cacheControl;
@@ -101,6 +142,15 @@ const server = http.createServer(async (req, res) => {
       else cacheControl = "public, max-age=3600";
     } else {
       cacheControl = "no-store";
+    }
+    // Dev-only: inject live-reload snippet before </body> so the browser
+    // refreshes automatically when files in /public change.
+    if (IS_DEV && isHtml) {
+      const html = data.toString("utf8");
+      const injected = html.includes("</body>")
+        ? html.replace("</body>", RELOAD_SNIPPET + "</body>")
+        : html + RELOAD_SNIPPET;
+      data = Buffer.from(injected, "utf8");
     }
     res.writeHead(200, {
       "Content-Type": MIME[ext] ?? "application/octet-stream",
