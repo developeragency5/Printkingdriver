@@ -1606,3 +1606,60 @@ a.footer__contact-val:hover { color: var(--primary, #d4af37); text-decoration: u
 .core-doc-card__link:hover { background: #4a6b75; color: #fff; border-color: #4a6b75; }
 .core-doc-card__link span { display: inline-block; transition: transform .2s; margin-left: 4px; }
 .core-doc-card__link:hover span { transform: translateX(3px); }
+
+/* ===== Cookie consent banner ===== */
+.pkd-cookie { position: fixed; left: 16px; right: 16px; bottom: 16px; z-index: 9999; background: #fff; border: 1px solid #e8e0d0; border-radius: 14px; box-shadow: 0 18px 38px -16px rgba(74,107,117,.35), 0 4px 12px rgba(0,0,0,.06); padding: 18px 22px; opacity: 0; transform: translateY(16px); transition: opacity .25s ease, transform .25s ease; max-width: 880px; margin: 0 auto; }
+.pkd-cookie--visible { opacity: 1; transform: translateY(0); }
+.pkd-cookie--leaving { opacity: 0; transform: translateY(16px); }
+.pkd-cookie__inner { display: flex; align-items: center; gap: 22px; flex-wrap: wrap; }
+.pkd-cookie__copy { flex: 1 1 320px; min-width: 0; }
+.pkd-cookie__title { display: block; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 15px; font-weight: 700; color: #2a2a2a; margin-bottom: 4px; letter-spacing: -.005em; }
+.pkd-cookie__text { font-size: 13px; line-height: 1.55; color: #4a4438; margin: 0; }
+.pkd-cookie__text a { color: #4a6b75; text-decoration: underline; text-underline-offset: 2px; }
+.pkd-cookie__actions { display: flex; gap: 10px; flex-wrap: wrap; }
+.pkd-cookie__btn { font-family: inherit; font-size: 13px; font-weight: 600; padding: 10px 16px; border-radius: 8px; cursor: pointer; transition: background .18s, color .18s, border-color .18s, transform .15s; border: 1px solid transparent; line-height: 1.2; }
+.pkd-cookie__btn--ghost { background: transparent; color: #4a6b75; border-color: rgba(74,107,117,.4); }
+.pkd-cookie__btn--ghost:hover { background: rgba(74,107,117,.08); }
+.pkd-cookie__btn--primary { background: #4a6b75; color: #fff; }
+.pkd-cookie__btn--primary:hover { background: #3a565f; transform: translateY(-1px); }
+@media (max-width: 540px) { .pkd-cookie { padding: 16px; } .pkd-cookie__actions { width: 100%; } .pkd-cookie__btn { flex: 1 1 auto; } }
+
+/* ===== Utility classes (replacing common inline styles) ===== */
+.u-flex-min { min-width: 0; flex: 1; }
+.u-mb-16 { margin-bottom: 16px; }
+.u-mb-32 { margin-bottom: 32px; }
+.u-mb-40 { margin-bottom: 40px; }
+.u-pt-0 { padding-top: 0; }
+.u-mt-8-0-0 { margin: 8px 0 0; }
+.u-max-1080 { max-width: 1080px; }
+.u-narrow-text { color: var(--muted); font-size: 14px; line-height: 1.65; max-width: 36rem; }
+.u-narrow-text--center { color: var(--muted); font-size: 14px; line-height: 1.65; max-width: 42rem; margin: 0 auto; }
+.u-section-h2 { font-size: 2rem; font-weight: 700; letter-spacing: -.025em; margin: 8px 0 12px; }
+.u-center-block { margin-bottom: 32px; text-align: center; }
+.u-relative { position: relative; }
+
+/* ===== Additional utility classes (replacing inline styles) ===== */
+.u-max-980 { max-width: 980px; }
+.u-max-880 { max-width: 880px; }
+.u-max-760 { max-width: 760px; }
+.u-max-760-center { max-width: 760px; text-align: center; }
+.u-mb-14 { margin-bottom: 14px; }
+.u-mb-18 { margin-bottom: 18px; }
+.u-mb-20 { margin-bottom: 20px; }
+.u-mb-22 { margin-bottom: 22px; }
+.u-mb-24 { margin-bottom: 24px; }
+.u-mb-36 { margin-bottom: 36px; }
+.u-mb-64 { margin-bottom: 64px; }
+.u-mb-8 { margin-bottom: 8px; }
+.u-center-mb36 { text-align: center; margin-bottom: 36px; }
+.u-py-32-80 { padding-top: 32px; padding-bottom: 80px; }
+.u-muted-body { color: var(--muted); font-size: 1.05rem; line-height: 1.8; }
+.u-muted-body--mb22 { color: var(--muted); font-size: 1.05rem; line-height: 1.8; margin-bottom: 22px; }
+.u-muted-body--mb14 { color: var(--muted); font-size: 1.05rem; line-height: 1.8; margin-bottom: 14px; }
+.u-muted-body--tight { color: var(--muted); font-size: 1.05rem; line-height: 1.7; }
+.u-muted-small { color: var(--muted); font-size: 14px; margin-bottom: 24px; }
+.u-h-strong { font-size: 1.2rem; font-weight: 700; margin-bottom: 8px; }
+.u-h-section { font-size: 1.9rem; font-weight: 700; margin-top: 48px; margin-bottom: 18px; }
+.u-h-section--standalone { font-size: 1.9rem; font-weight: 700; margin-bottom: 18px; }
+.u-h-card { font-size: 1.5rem; font-weight: 700; letter-spacing: -.015em; margin-bottom: 8px; }
+.u-h-large { font-size: 2rem; font-weight: 700; margin-bottom: 20px; }

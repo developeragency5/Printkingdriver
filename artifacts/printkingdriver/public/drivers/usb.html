@@ -16,6 +16,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="/assets/styles.css" />
+      <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.printkingdriver.com/#organization","name":"PrintKingDriver","url":"https://www.printkingdriver.com/","email":"support@printkingdriver.com","logo":{"@type":"ImageObject","url":"https://www.printkingdriver.com/assets/images/logo-crown.png"},"contactPoint":{"@type":"ContactPoint","contactType":"customer support","email":"support@printkingdriver.com","telephone":"+1-800-123-4567","availableLanguage":["English"]}},{"@type":"WebSite","@id":"https://www.printkingdriver.com/#website","url":"https://www.printkingdriver.com/","name":"PrintKingDriver","description":"Driver Assistance Hub — clear, free guides on chipset, graphics, audio, network and printer drivers.","publisher":{"@id":"https://www.printkingdriver.com/#organization"},"inLanguage":"en-GB"},{"@type":"WebPage","@id":"https://www.printkingdriver.com/drivers/usb#webpage","url":"https://www.printkingdriver.com/drivers/usb","name":"USB Driver — Reference Guide | PrintKingDriver","description":"Detects ports and connected USB devices. Learn what a usb driver does, how it works, and why it matters.","isPartOf":{"@id":"https://www.printkingdriver.com/#website"},"about":{"@id":"https://www.printkingdriver.com/#organization"},"inLanguage":"en-GB"}]}</script>
   </head>
   <body>
   
@@ -40,7 +41,7 @@
 
       <div class="nav__links">
         <a href="/" class="nav__link" data-nav-link="/">Home</a>
-        <div class="mega-wrap" style="position:relative;">
+        <div class="mega-wrap u-relative">
           <button type="button" class="mega-trigger ">Explore Drivers <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-14" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg></button>
         </div>
         <a href="/how-it-works" class="nav__link" data-nav-link="/how-it-works">How It Works</a>
@@ -173,7 +174,7 @@
   <main>
   
   <div class="detail-bg cat-hardware">
-    <div class="container" style="max-width:980px;">
+    <div class="container u-max-980">
       <a href="/drivers" class="legal__back"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-14" aria-hidden="true"><path d="m12 19-7-7 7-7" />
   <path d="M19 12H5" /></svg> Back to all drivers</a>
 
@@ -261,7 +262,7 @@
 
       <section class="detail-card">
         <h2>Common Issues &amp; Symptoms</h2>
-        <p style="margin-bottom:16px;">Recognising the symptom is the first step in narrowing down whether the problem really is the driver, the hardware or another part of the system.</p>
+        <p class="u-mb-16">Recognising the symptom is the first step in narrowing down whether the problem really is the driver, the hardware or another part of the system.</p>
         <div class="tbl-wrap"><div class="tbl-scroll"><table class="tbl">
           <thead><tr><th>Symptom</th><th>Likely Cause</th><th class="hide-md">What It Affects</th></tr></thead>
           <tbody><tr><td class="strong">Devices not recognised in some ports</td><td>xHCI host controller driver missing or downgraded.</td><td class="hide-md small">Connectivity</td></tr><tr><td class="strong">USB 3.0 device runs at USB 2.0 speed</td><td>Wrong driver loaded; device fell back to legacy mode.</td><td class="hide-md small">Performance</td></tr><tr><td class="strong">Power surge / device disabled error</td><td>Driver-enforced current limit triggered.</td><td class="hide-md small">Power delivery</td></tr><tr><td class="strong">Devices disconnect when laptop is on battery</td><td>Selective suspend setting in driver too aggressive.</td><td class="hide-md small">Mobility</td></tr><tr><td class="strong">Audio interfaces produce clicks over USB</td><td>Bus latency / isochronous bandwidth shared.</td><td class="hide-md small">Audio quality</td></tr></tbody>
@@ -270,7 +271,7 @@
 
       <section class="detail-card">
         <h2>Best Practices</h2>
-        <p style="margin-bottom:16px;">A short checklist to keep this driver healthy and reduce the chance of running into the issues above.</p>
+        <p class="u-mb-16">A short checklist to keep this driver healthy and reduce the chance of running into the issues above.</p>
         <ul class="detail-list">
           <li><span class="detail-list__bullet"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-12" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg></span><span>Install both chipset and USB controller drivers from the OEM after a fresh Windows install.</span></li><li><span class="detail-list__bullet"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-12" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg></span><span>Disable USB selective suspend on desktops, or for sensitive devices like audio interfaces.</span></li><li><span class="detail-list__bullet"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-12" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg></span><span>Use the rear-panel ports on a desktop for high-bandwidth devices — they connect directly to the controller.</span></li><li><span class="detail-list__bullet"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-12" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg></span><span>Avoid daisy-chaining hubs three deep; bandwidth and power both degrade.</span></li><li><span class="detail-list__bullet"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-12" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg></span><span>Update the USB driver if you switch to USB 3.2 / USB4 / Thunderbolt hardware.</span></li>
         </ul>
@@ -278,23 +279,23 @@
 
       <section class="detail-card">
         <h2>Frequently Asked Questions</h2>
-        <div class="faq__inner" style="margin:8px 0 0;">
+        <div class="faq__inner u-mt-8-0-0">
           
           <div class="faq__item">
             <button type="button" class="faq__q">What is xHCI?<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-16" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg></button>
-            <div class="faq__a"><p style="padding-top:0;">xHCI is the host controller standard introduced for USB 3.x. It replaces the older EHCI / OHCI controllers and handles all USB speeds (1.1, 2.0, 3.0+) through a single driver.</p></div>
+            <div class="faq__a"><p class="u-pt-0">xHCI is the host controller standard introduced for USB 3.x. It replaces the older EHCI / OHCI controllers and handles all USB speeds (1.1, 2.0, 3.0+) through a single driver.</p></div>
           </div>
           <div class="faq__item">
             <button type="button" class="faq__q">Why does Windows say my fast SSD is on a slower port?<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-16" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg></button>
-            <div class="faq__a"><p style="padding-top:0;">The OS reports the negotiated link speed. If the driver loaded an older controller mode, you will see USB 2.0 speeds even on a 3.0 port. Reinstalling the chipset / USB driver typically fixes this.</p></div>
+            <div class="faq__a"><p class="u-pt-0">The OS reports the negotiated link speed. If the driver loaded an older controller mode, you will see USB 2.0 speeds even on a 3.0 port. Reinstalling the chipset / USB driver typically fixes this.</p></div>
           </div>
           <div class="faq__item">
             <button type="button" class="faq__q">Do USB-C and Thunderbolt share drivers?<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-16" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg></button>
-            <div class="faq__a"><p style="padding-top:0;">They share the USB layer but Thunderbolt adds its own controller and security driver. Both are needed for full-speed Thunderbolt devices.</p></div>
+            <div class="faq__a"><p class="u-pt-0">They share the USB layer but Thunderbolt adds its own controller and security driver. Both are needed for full-speed Thunderbolt devices.</p></div>
           </div>
           <div class="faq__item">
             <button type="button" class="faq__q">How do I stop devices disconnecting in sleep mode?<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-16" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg></button>
-            <div class="faq__a"><p style="padding-top:0;">Open Device Manager, right-click the USB Root Hub, choose Properties → Power Management, and uncheck “Allow the computer to turn off this device”.</p></div>
+            <div class="faq__a"><p class="u-pt-0">Open Device Manager, right-click the USB Root Hub, choose Properties → Power Management, and uncheck “Allow the computer to turn off this device”.</p></div>
           </div>
         </div>
       </section>
@@ -352,6 +353,7 @@
           <div class="footer__contact">
             <div class="footer__contact-row"><span class="footer__contact-label">Company</span><span class="footer__contact-val">PrintKingDriver</span></div>
             <div class="footer__contact-row"><span class="footer__contact-label">Email</span><a class="footer__contact-val" href="mailto:support@printkingdriver.com">support@printkingdriver.com</a></div>
+            <div class="footer__contact-row footer__contact-row--phone"><span class="footer__contact-label">Phone</span><a class="footer__contact-val" href="tel:+18001234567">+1 (800) 123-4567</a></div>
           </div>
         </div>
         
@@ -372,12 +374,13 @@
         <p>© 2026 PrintKingDriver.com. All rights reserved.</p>
         <ul>
           <li><a href="/privacy">Privacy Policy</a></li>
-          <li><a href="/disclaimer">Disclaimer</a></li>
+          <li><a href="/disclaimer">Disclaimer</a></li><li><a href="#" data-pkd-cookie-open>Do Not Sell or Share My Personal Information</a></li>
           <li><a href="/terms">Terms of Service</a></li>
         </ul>
       </div>
     </div>
   </footer>
 <script src="/assets/scripts.js" defer></script>
+  <script src="/assets/cookie-banner.js" defer></script>
   </body>
   </html>

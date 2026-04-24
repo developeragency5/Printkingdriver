@@ -16,6 +16,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="/assets/styles.css" />
+      <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.printkingdriver.com/#organization","name":"PrintKingDriver","url":"https://www.printkingdriver.com/","email":"support@printkingdriver.com","logo":{"@type":"ImageObject","url":"https://www.printkingdriver.com/assets/images/logo-crown.png"},"contactPoint":{"@type":"ContactPoint","contactType":"customer support","email":"support@printkingdriver.com","telephone":"+1-800-123-4567","availableLanguage":["English"]}},{"@type":"WebSite","@id":"https://www.printkingdriver.com/#website","url":"https://www.printkingdriver.com/","name":"PrintKingDriver","description":"Driver Assistance Hub — clear, free guides on chipset, graphics, audio, network and printer drivers.","publisher":{"@id":"https://www.printkingdriver.com/#organization"},"inLanguage":"en-GB"},{"@type":"WebPage","@id":"https://www.printkingdriver.com/drivers/storage#webpage","url":"https://www.printkingdriver.com/drivers/storage","name":"Storage Controller Driver — Reference Guide | PrintKingDriver","description":"Manages data transfer with SSDs and hard drives. Learn what a storage controller driver does, how it works, and why it matters.","isPartOf":{"@id":"https://www.printkingdriver.com/#website"},"about":{"@id":"https://www.printkingdriver.com/#organization"},"inLanguage":"en-GB"}]}</script>
   </head>
   <body>
   
@@ -40,7 +41,7 @@
 
       <div class="nav__links">
         <a href="/" class="nav__link" data-nav-link="/">Home</a>
-        <div class="mega-wrap" style="position:relative;">
+        <div class="mega-wrap u-relative">
           <button type="button" class="mega-trigger ">Explore Drivers <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-14" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg></button>
         </div>
         <a href="/how-it-works" class="nav__link" data-nav-link="/how-it-works">How It Works</a>
@@ -173,7 +174,7 @@
   <main>
   
   <div class="detail-bg cat-hardware">
-    <div class="container" style="max-width:980px;">
+    <div class="container u-max-980">
       <a href="/drivers" class="legal__back"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-14" aria-hidden="true"><path d="m12 19-7-7 7-7" />
   <path d="M19 12H5" /></svg> Back to all drivers</a>
 
@@ -255,40 +256,40 @@
 
       <section class="detail-card">
         <h2>Common Issues &amp; Symptoms</h2>
-        <p style="margin-bottom:16px;">Recognising the symptom is the first step in narrowing down whether the problem really is the driver, the hardware or another part of the system.</p>
+        <p class="u-mb-16">Recognising the symptom is the first step in narrowing down whether the problem really is the driver, the hardware or another part of the system.</p>
         <div class="tbl-wrap"><div class="tbl-scroll"><table class="tbl">
           <thead><tr><th>Symptom</th><th>Likely Cause</th><th class="hide-md">What It Affects</th></tr></thead>
-          <tbody><tr><td class="strong">SSD reporting wrong size or unallocated</td><td>Storage controller mode (AHCI / RAID / NVMe) mismatched.</td><td class="hide-md small">Disk visibility</td></tr><tr><td class="strong">Slow read/write on a known-fast NVMe drive</td><td>Generic Microsoft NVMe driver instead of vendor-tuned one.</td><td class="hide-md small">Performance</td></tr><tr><td class="strong">Frequent “disk timeout” errors in event log</td><td>Old controller driver mishandles queued commands.</td><td class="hide-md small">Reliability</td></tr><tr><td class="strong">Bluescreen referencing storahci.sys or stornvme.sys</td><td>Driver bug or corrupt cached firmware table.</td><td class="hide-md small">System stability</td></tr><tr><td class="strong">Drives disappear after sleep</td><td>Power state transitions not handled.</td><td class="hide-md small">Availability</td></tr></tbody>
+          <tbody><tr><td class="strong">A solid-state drive reports the wrong size or appears unallocated</td><td>Controller mode (such as Ahci, Raid or NVMe) mismatched in the firmware.</td><td class="hide-md small">Disk visibility</td></tr><tr><td class="strong">Slow read/write on a known-fast NVMe drive</td><td>Generic Microsoft driver in use instead of a vendor-tuned one.</td><td class="hide-md small">Performance</td></tr><tr><td class="strong">Frequent “disk timeout” errors in event log</td><td>Old controller driver mishandles queued commands.</td><td class="hide-md small">Reliability</td></tr><tr><td class="strong">Bluescreen referencing storahci.sys or stornvme.sys</td><td>Driver bug or corrupt cached firmware table.</td><td class="hide-md small">System stability</td></tr><tr><td class="strong">Drives disappear after sleep</td><td>Power state transitions not handled.</td><td class="hide-md small">Availability</td></tr></tbody>
         </table></div></div>
       </section>
 
       <section class="detail-card">
         <h2>Best Practices</h2>
-        <p style="margin-bottom:16px;">A short checklist to keep this driver healthy and reduce the chance of running into the issues above.</p>
+        <p class="u-mb-16">A short checklist to keep this driver healthy and reduce the chance of running into the issues above.</p>
         <ul class="detail-list">
-          <li><span class="detail-list__bullet"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-12" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg></span><span>Never switch BIOS storage mode (AHCI ↔ RAID) without preparing Windows — it will fail to boot.</span></li><li><span class="detail-list__bullet"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-12" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg></span><span>Install the chipset driver first; it provides the controller infrastructure storage drivers depend on.</span></li><li><span class="detail-list__bullet"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-12" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg></span><span>For NVMe SSDs, install the manufacturer driver (Samsung, WD, Crucial) for best performance.</span></li><li><span class="detail-list__bullet"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-12" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg></span><span>Keep firmware on the SSD itself updated alongside the controller driver.</span></li><li><span class="detail-list__bullet"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-12" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg></span><span>After a major Windows update, recheck the active driver in Device Manager.</span></li>
+          <li><span class="detail-list__bullet"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-12" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg></span><span>Never switch the firmware storage mode (Ahci ↔ Raid) without preparing Windows — it will fail to boot.</span></li><li><span class="detail-list__bullet"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-12" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg></span><span>Install the chipset driver first; it provides the controller infrastructure storage drivers depend on.</span></li><li><span class="detail-list__bullet"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-12" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg></span><span>For modern solid-state drives, install the manufacturer driver (Samsung, Western Digital, Crucial) for best performance.</span></li><li><span class="detail-list__bullet"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-12" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg></span><span>Keep firmware on the drive itself updated alongside the controller driver.</span></li><li><span class="detail-list__bullet"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-12" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg></span><span>After a major Windows update, recheck the active driver in Device Manager.</span></li>
         </ul>
       </section>
 
       <section class="detail-card">
         <h2>Frequently Asked Questions</h2>
-        <div class="faq__inner" style="margin:8px 0 0;">
+        <div class="faq__inner u-mt-8-0-0">
           
           <div class="faq__item">
-            <button type="button" class="faq__q">Do I need a driver for SATA hard drives?<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-16" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg></button>
-            <div class="faq__a"><p style="padding-top:0;">Windows ships with generic AHCI drivers that work for any SATA disk. A vendor driver from Intel, AMD or your motherboard maker can improve queueing and power management.</p></div>
+            <button type="button" class="faq__q">Do I need a driver for Sata hard drives?<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-16" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg></button>
+            <div class="faq__a"><p class="u-pt-0">Windows ships with a generic controller driver that works for any standard disk. A vendor driver from Intel, AMD or your motherboard maker can improve queueing and power management.</p></div>
           </div>
           <div class="faq__item">
             <button type="button" class="faq__q">Will the wrong storage driver lose my data?<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-16" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg></button>
-            <div class="faq__a"><p style="padding-top:0;">It will not erase data, but a mismatched controller mode can prevent the drive from being recognised, making partitions appear missing until the correct driver loads.</p></div>
+            <div class="faq__a"><p class="u-pt-0">It will not erase data, but a mismatched controller mode can prevent the drive from being recognised, making partitions appear missing until the correct driver loads.</p></div>
           </div>
           <div class="faq__item">
-            <button type="button" class="faq__q">What is the difference between AHCI and NVMe?<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-16" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg></button>
-            <div class="faq__a"><p style="padding-top:0;">AHCI is the protocol for SATA disks. NVMe is a faster protocol designed for SSDs that connect directly to PCIe. Each requires its own driver class.</p></div>
+            <button type="button" class="faq__q">What is the difference between Ahci and NVMe?<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-16" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg></button>
+            <div class="faq__a"><p class="u-pt-0">Ahci is the protocol used for older standard drives. NVMe is a faster protocol designed for newer solid-state drives that connect directly to the PCIe bus. Each requires its own driver class.</p></div>
           </div>
           <div class="faq__item">
             <button type="button" class="faq__q">How do I check which storage driver is in use?<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-16" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg></button>
-            <div class="faq__a"><p style="padding-top:0;">Open Device Manager → Storage controllers → Properties → Driver tab. The provider field tells you whether it is Microsoft generic or a vendor build.</p></div>
+            <div class="faq__a"><p class="u-pt-0">Open Device Manager → Storage controllers → Properties → Driver tab. The provider field tells you whether it is Microsoft generic or a vendor build.</p></div>
           </div>
         </div>
       </section>
@@ -349,6 +350,7 @@
           <div class="footer__contact">
             <div class="footer__contact-row"><span class="footer__contact-label">Company</span><span class="footer__contact-val">PrintKingDriver</span></div>
             <div class="footer__contact-row"><span class="footer__contact-label">Email</span><a class="footer__contact-val" href="mailto:support@printkingdriver.com">support@printkingdriver.com</a></div>
+            <div class="footer__contact-row footer__contact-row--phone"><span class="footer__contact-label">Phone</span><a class="footer__contact-val" href="tel:+18001234567">+1 (800) 123-4567</a></div>
           </div>
         </div>
         
@@ -369,12 +371,13 @@
         <p>© 2026 PrintKingDriver.com. All rights reserved.</p>
         <ul>
           <li><a href="/privacy">Privacy Policy</a></li>
-          <li><a href="/disclaimer">Disclaimer</a></li>
+          <li><a href="/disclaimer">Disclaimer</a></li><li><a href="#" data-pkd-cookie-open>Do Not Sell or Share My Personal Information</a></li>
           <li><a href="/terms">Terms of Service</a></li>
         </ul>
       </div>
     </div>
   </footer>
 <script src="/assets/scripts.js" defer></script>
+  <script src="/assets/cookie-banner.js" defer></script>
   </body>
   </html>
