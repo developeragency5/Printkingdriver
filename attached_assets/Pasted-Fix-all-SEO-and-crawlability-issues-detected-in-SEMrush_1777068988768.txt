@@ -1,0 +1,90 @@
+Fix all SEO and crawlability issues detected in SEMrush for my website.
+
+Analyze the full project and implement the following improvements:
+
+1. Fix Broken External Links:
+
+* Scan all pages for external links.
+* Replace broken or blocked links with valid official URLs.
+* Add rel="nofollow noopener noreferrer" and target="_blank" to all external links.
+
+2. Fix Invalid URLs:
+
+* Ensure all URLs use proper format (https://).
+* Remove malformed URLs (no backslashes, no missing protocol).
+* Validate all href attributes across the site.
+
+3. Improve Internal Linking (CRITICAL):
+
+* Add a “Related Links” section on every page linking to at least 5–10 relevant pages.
+* Ensure each page has incoming internal links from other pages.
+* Create strong cross-linking between:
+
+  * Brands pages
+  * Driver pages
+  * Guides
+  * Troubleshooting pages
+
+4. Create Global Footer Navigation:
+
+* Add footer links to:
+
+  * All brand pages
+  * All driver categories
+  * Guides and troubleshooting sections
+* Ensure footer appears on every page.
+
+5. Homepage Linking:
+
+* Add sections:
+
+  * Popular Drivers
+  * Explore by Brand
+  * Troubleshooting Guides
+* Each section should link to multiple deep pages (not just categories).
+
+6. Create HTML Sitemap Page:
+
+* Create /all-pages page.
+* List all URLs from sitemap.xml as clickable links.
+* Group links by category.
+
+7. Fix Orphan Pages:
+
+* Ensure every page is reachable within 3 clicks from homepage.
+* No page should exist without internal links pointing to it.
+
+8. Fix llms.txt Issue:
+
+* Create /llms.txt in root directory.
+* Add:
+  User-agent: *
+  Allow: /
+
+  # Site: PrintKingDriver
+
+  # Description: Printer driver guides and troubleshooting
+
+9. Optimize Content for SEO:
+
+* Add proper H1, H2, H3 headings.
+* Add FAQ sections where relevant.
+* Improve readability and structure.
+
+10. Performance Fix:
+
+* Minify CSS and JS files.
+* Add defer to JavaScript.
+* Enable compression (gzip or brotli).
+
+11. Validation:
+
+* Ensure all pages return status 200.
+* Remove broken links.
+* Ensure sitemap.xml includes all pages.
+* Ensure pages are crawlable by bots.
+
+Goal:
+Increase crawled pages from ~26 to 150+ and fix all SEMrush errors related to links, crawlability, and SEO structure.
+
+Do not change design unnecessarily. Focus on SEO structure, linking, and crawlability improvements.

@@ -1,0 +1,55 @@
+User-agent: *
+Allow: /
+
+# Site: PrintKingDriver
+# URL: https://www.printkingdriver.com
+# Description: Printer driver guides and troubleshooting for Windows, macOS, and Linux.
+
+## Driver Reference Pages
+- /drivers/chipset
+- /drivers/graphics
+- /drivers/audio
+- /drivers/network
+- /drivers/storage
+- /drivers/usb
+- /drivers/bluetooth
+- /drivers/input
+- /drivers/printer
+- /drivers/scanner
+- /drivers/webcam
+- /drivers/bios
+- /drivers/security
+- /drivers/monitor
+
+## Brand Support Pages
+- /brands/hp
+- /brands/canon
+- /brands/epson
+- /brands/brother
+- /brands/dell
+- /brands/lexmark
+- /brands/ricoh
+- /brands/xerox
+- /brands/kyocera
+- /brands/samsung
+
+## How-To Guides
+- /how-to
+
+## Troubleshooting Guides
+- /troubleshooting
+
+## Tech Explainers
+- /tech
+
+## Key Pages
+- /
+- /drivers
+- /how-it-works
+- /about
+- /contact
+- /glossary
+- /brands
+- /guides
+- /sitemap.xml
+- /all-pages
