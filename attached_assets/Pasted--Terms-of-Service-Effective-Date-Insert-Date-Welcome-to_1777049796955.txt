@@ -1,0 +1,118 @@
+# 📄 Terms of Service
+
+**Effective Date:** [Insert Date]
+
+Welcome to **[Your Website Name] ("we," "us," or "our")**. These Terms of Service ("Terms") govern your use of our website and services ("Services"). By accessing or using our Services, you agree to be bound by these Terms.
+
+If you do not agree, please do not use our Services.
+
+---
+
+## 📘 1. Use of Our Services
+
+Our website provides informational content, guides, and resources related to system drivers, hardware, and software optimization.
+
+You agree to use our Services only for lawful purposes and in accordance with these Terms. You must not:
+
+* Use the website in any way that violates applicable laws
+* Attempt to gain unauthorized access to systems or data
+* Interfere with website functionality or security
+* Use automated tools (bots/scrapers) without permission
+
+---
+
+## ⚙️ 2. Informational Purpose Only
+
+All content provided on this website is for **informational and educational purposes only**.
+
+We do not guarantee:
+
+* That drivers or recommendations will work for every system
+* Error-free or uninterrupted operation
+* Compatibility with all hardware or software
+
+Users are responsible for verifying information before applying any changes to their system.
+
+---
+
+## ⚠️ 3. No Professional or Technical Guarantee
+
+We are not responsible for:
+
+* System damage, data loss, or hardware issues
+* Incorrect driver installations
+* Performance changes resulting from user actions
+
+Any actions you take based on our content are **at your own risk**.
+
+---
+
+## 🔗 4. Third-Party Links
+
+Our website may include links to third-party websites or resources.
+
+We are not responsible for:
+
+* The content or accuracy of third-party sites
+* Their privacy practices or policies
+* Any damages resulting from their use
+
+Use third-party services at your own discretion.
+
+---
+
+## 🔐 5. Intellectual Property
+
+All content on this website, including text, design, graphics, and layout, is owned by **[Your Website Name]** and protected under applicable copyright and intellectual property laws.
+
+You may not:
+
+* Copy, reproduce, or redistribute content without permission
+* Use our content for commercial purposes without authorization
+
+---
+
+## 🚫 6. Limitation of Liability
+
+To the fullest extent permitted by law, **[Your Website Name]** shall not be liable for:
+
+* Any indirect, incidental, or consequential damages
+* Loss of data, revenue, or system functionality
+* Issues arising from the use or inability to use our Services
+
+---
+
+## 🛡️ 7. Indemnification
+
+You agree to defend and hold harmless **[Your Website Name]** from any claims, damages, or expenses resulting from:
+
+* Your use of the Services
+* Violation of these Terms
+* Misuse of information provided on the website
+
+---
+
+## 🔄 8. Changes to These Terms
+
+We may update these Terms from time to time. Updates will be posted on this page with a revised effective date.
+
+Continued use of the Services after changes means you accept the updated Terms.
+
+---
+
+## ⚖️ 9. Governing Law
+
+These Terms are governed by the laws of the **United States**, without regard to conflict of law principles.
+
+---
+
+## 📩 10. Contact Us
+
+If you have any questions about these Terms, you may contact us at:
+
+📧 **[[your-email@example.com](mailto:your-email@example.com)]**
+🌐 **[yourwebsite.com]**
+
+---
+
+By using our Services, you agree to these Terms of Service.
