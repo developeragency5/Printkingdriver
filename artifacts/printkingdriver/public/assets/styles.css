@@ -1536,3 +1536,25 @@ main { flex: 1; }
   .faq-elegant__label { font-size: .95rem; }
   .faq-elegant__a { padding: 0 18px 18px; padding-left: 18px; }
 }
+
+
+/* ===== Types of Drivers — elegant category cards ===== */
+.dtype-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;}
+.dtype-card{position:relative;background:#fff;border:1px solid var(--line,#e8e0d0);border-radius:14px;padding:28px 26px 24px;display:flex;flex-direction:column;overflow:hidden;transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease;}
+.dtype-card:hover{transform:translateY(-3px);box-shadow:0 14px 40px -22px rgba(0,0,0,.18);border-color:rgba(0,0,0,.08);}
+.dtype-card__rail{position:absolute;top:0;left:0;height:100%;width:4px;background:var(--cat,#4a6b75);}
+.dtype-card--essential{--cat:#4a6b75;}
+.dtype-card--hardware{--cat:#b87333;}
+.dtype-card--peripheral{--cat:#9c4a5b;}
+.dtype-card--advanced{--cat:#4a5d8a;}
+.dtype-card__head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px;}
+.dtype-card__num{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px;font-weight:600;letter-spacing:.08em;color:var(--cat);opacity:.85;}
+.dtype-card__chip{font-size:11px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;color:var(--cat);background:color-mix(in srgb,var(--cat) 10%,#fff);border:1px solid color-mix(in srgb,var(--cat) 22%,#fff);padding:4px 10px;border-radius:999px;}
+.dtype-card__title{font-family:var(--font-heading,Georgia,serif);font-size:1.25rem;font-weight:700;letter-spacing:-.015em;color:#1a1a1a;margin:0 0 10px;}
+.dtype-card__desc{color:var(--muted,#5a5347);font-size:14px;line-height:1.6;margin:0 0 18px;}
+.dtype-card__list{list-style:none;padding:0;margin:0 0 20px;display:flex;flex-wrap:wrap;gap:6px 8px;}
+.dtype-card__list li{font-size:12.5px;font-weight:500;color:var(--cat);background:color-mix(in srgb,var(--cat) 7%,#fff);border:1px solid color-mix(in srgb,var(--cat) 18%,#fff);padding:5px 11px;border-radius:6px;}
+.dtype-card__foot{margin-top:auto;border-top:1px dashed color-mix(in srgb,var(--cat) 25%,#e8e0d0);padding-top:14px;display:flex;flex-direction:column;gap:6px;}
+.dtype-card__foot > div{display:flex;justify-content:space-between;gap:12px;font-size:12.5px;}
+.dtype-card__foot > div > span:first-child{color:var(--muted,#5a5347);text-transform:uppercase;letter-spacing:.06em;font-size:11px;font-weight:600;}
+.dtype-card__foot > div > span:last-child{color:#2a2a2a;font-weight:500;text-align:right;}
