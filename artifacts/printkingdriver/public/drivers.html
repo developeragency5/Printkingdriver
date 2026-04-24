@@ -260,6 +260,170 @@
     </section>
 
     <section style="margin-bottom:64px;">
+      <div style="display:flex;align-items:baseline;justify-content:space-between;gap:24px;margin-bottom:8px;flex-wrap:wrap;">
+        <h2 class="font-heading" style="font-size:1.5rem;font-weight:700;letter-spacing:-.015em;margin:0;">Core Drivers — Reference Library</h2>
+        <span style="font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#4a6b75;background:rgba(74,107,117,.1);padding:5px 11px;border-radius:6px;">Foundation Layer · 04 Drivers</span>
+      </div>
+      <p style="color:var(--muted);font-size:14px;margin-bottom:28px;max-width:780px;">The four foundational drivers that every modern computer relies on. Each one governs a critical conversation between your operating system and the silicon, the screen, the speakers, or the network. Understanding what they do — and recognising when they go wrong — is the starting point for almost every system issue.</p>
+
+      <div class="core-doc-grid">
+
+        <article class="core-doc-card">
+          <div class="core-doc-card__rail"></div>
+          <header class="core-doc-card__head">
+            <span class="core-doc-card__num">01</span>
+            <div>
+              <div class="core-doc-card__chip">Motherboard &amp; CPU</div>
+              <h3 class="core-doc-card__title">Chipset Driver</h3>
+            </div>
+          </header>
+          <p class="core-doc-card__desc">The chipset driver is the conductor of your motherboard. It coordinates how the CPU, memory, storage controllers, USB ports, and PCIe lanes communicate with one another and with the operating system. Without it, your system can boot — but it will not perform.</p>
+
+          <div class="core-doc-card__split">
+            <div>
+              <div class="core-doc-card__sub">What it does</div>
+              <ul>
+                <li>Enables CPU power management and thermal control</li>
+                <li>Activates SATA, NVMe, and PCIe controller features</li>
+                <li>Coordinates memory channels and bus speeds</li>
+                <li>Unlocks integrated USB, audio, and LAN controllers</li>
+              </ul>
+            </div>
+            <div>
+              <div class="core-doc-card__sub">Common signs of trouble</div>
+              <ul>
+                <li>Sluggish performance after a fresh OS install</li>
+                <li>USB ports intermittently dropping devices</li>
+                <li>Higher-than-expected idle CPU temperatures</li>
+                <li>Storage drives appearing in the wrong AHCI mode</li>
+              </ul>
+            </div>
+          </div>
+
+          <footer class="core-doc-card__foot">
+            <div class="core-doc-card__meta"><span>Vendors</span><span>Intel, AMD</span></div>
+            <a class="core-doc-card__link" href="/drivers/chipset">Read full chipset guide <span aria-hidden="true">→</span></a>
+          </footer>
+        </article>
+
+        <article class="core-doc-card">
+          <div class="core-doc-card__rail"></div>
+          <header class="core-doc-card__head">
+            <span class="core-doc-card__num">02</span>
+            <div>
+              <div class="core-doc-card__chip">Visual Rendering</div>
+              <h3 class="core-doc-card__title">Graphics Driver</h3>
+            </div>
+          </header>
+          <p class="core-doc-card__desc">The graphics driver translates every pixel your operating system wants to display into instructions the GPU can execute. It governs window composition, video playback, hardware acceleration, multi-monitor layouts, and the heavy 3D workloads behind games and creative software.</p>
+
+          <div class="core-doc-card__split">
+            <div>
+              <div class="core-doc-card__sub">What it does</div>
+              <ul>
+                <li>Renders the desktop, applications, and video</li>
+                <li>Provides DirectX, OpenGL, Vulkan, and Metal support</li>
+                <li>Manages display resolution, refresh rate, and HDR</li>
+                <li>Enables hardware video decoding and encoding</li>
+              </ul>
+            </div>
+            <div>
+              <div class="core-doc-card__sub">Common signs of trouble</div>
+              <ul>
+                <li>Black screens, flickering, or screen tearing</li>
+                <li>Wrong resolution or refresh rate options</li>
+                <li>Crashes or stutters in games and 3D applications</li>
+                <li>External display not detected on connection</li>
+              </ul>
+            </div>
+          </div>
+
+          <footer class="core-doc-card__foot">
+            <div class="core-doc-card__meta"><span>Vendors</span><span>NVIDIA, AMD, Intel</span></div>
+            <a class="core-doc-card__link" href="/drivers/graphics">Read full graphics guide <span aria-hidden="true">→</span></a>
+          </footer>
+        </article>
+
+        <article class="core-doc-card">
+          <div class="core-doc-card__rail"></div>
+          <header class="core-doc-card__head">
+            <span class="core-doc-card__num">03</span>
+            <div>
+              <div class="core-doc-card__chip">Sound Input &amp; Output</div>
+              <h3 class="core-doc-card__title">Audio Driver</h3>
+            </div>
+          </header>
+          <p class="core-doc-card__desc">The audio driver is the bridge between every sound your operating system produces and the speakers, headphones, or microphones plugged into your system. It handles routing, format conversion, volume mixing, and the subtle effects that make audio sound natural.</p>
+
+          <div class="core-doc-card__split">
+            <div>
+              <div class="core-doc-card__sub">What it does</div>
+              <ul>
+                <li>Routes sound between apps and physical devices</li>
+                <li>Converts digital audio formats and sample rates</li>
+                <li>Manages microphone input, gain, and noise reduction</li>
+                <li>Detects connection of headphones, HDMI, and USB audio</li>
+              </ul>
+            </div>
+            <div>
+              <div class="core-doc-card__sub">Common signs of trouble</div>
+              <ul>
+                <li>No sound output despite the device being detected</li>
+                <li>Crackling, popping, or distorted playback</li>
+                <li>Microphone not recognised by calling apps</li>
+                <li>Audio cuts out when switching between devices</li>
+              </ul>
+            </div>
+          </div>
+
+          <footer class="core-doc-card__foot">
+            <div class="core-doc-card__meta"><span>Vendors</span><span>Realtek, Conexant, Intel</span></div>
+            <a class="core-doc-card__link" href="/drivers/audio">Read full audio guide <span aria-hidden="true">→</span></a>
+          </footer>
+        </article>
+
+        <article class="core-doc-card">
+          <div class="core-doc-card__rail"></div>
+          <header class="core-doc-card__head">
+            <span class="core-doc-card__num">04</span>
+            <div>
+              <div class="core-doc-card__chip">Wired &amp; Wireless</div>
+              <h3 class="core-doc-card__title">Network Driver</h3>
+            </div>
+          </header>
+          <p class="core-doc-card__desc">The network driver is the gateway between your machine and the rest of the world. It powers wired Ethernet, Wi-Fi radios, and the protocols that move every webpage, message, and download in or out of your computer. When it falters, everything online stops.</p>
+
+          <div class="core-doc-card__split">
+            <div>
+              <div class="core-doc-card__sub">What it does</div>
+              <ul>
+                <li>Operates Ethernet and Wi-Fi network adapters</li>
+                <li>Negotiates link speed, duplex, and wireless standards</li>
+                <li>Handles TCP/IP, DNS, and DHCP at the device level</li>
+                <li>Enables features such as Wake-on-LAN and Wi-Fi roaming</li>
+              </ul>
+            </div>
+            <div>
+              <div class="core-doc-card__sub">Common signs of trouble</div>
+              <ul>
+                <li>No internet despite a connected network</li>
+                <li>Wi-Fi drops repeatedly or refuses to reconnect</li>
+                <li>Very slow throughput on a known-good connection</li>
+                <li>Adapter missing entirely from network settings</li>
+              </ul>
+            </div>
+          </div>
+
+          <footer class="core-doc-card__foot">
+            <div class="core-doc-card__meta"><span>Vendors</span><span>Intel, Realtek, Broadcom, Qualcomm</span></div>
+            <a class="core-doc-card__link" href="/drivers/network">Read full network guide <span aria-hidden="true">→</span></a>
+          </footer>
+        </article>
+
+      </div>
+    </section>
+
+    <section style="margin-bottom:64px;">
       <h2 class="font-heading" style="font-size:1.5rem;font-weight:700;letter-spacing:-.015em;margin-bottom:8px;">Types of Drivers</h2>
       <p style="color:var(--muted);font-size:14px;margin-bottom:28px;">Drivers fall into four broad families, each serving a distinct role in keeping your computer fluent in the language of its hardware.</p>
       <div class="dtype-grid">
