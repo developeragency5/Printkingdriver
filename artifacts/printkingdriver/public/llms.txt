@@ -3,53 +3,165 @@ Allow: /
 
 # Site: PrintKingDriver
 # URL: https://www.printkingdriver.com
-# Description: Printer driver guides and troubleshooting for Windows, macOS, and Linux.
+# Description: Printer driver guides, installation how-tos, technology explainers, and brand-specific support for Windows, macOS, and Linux.
+
+## Key Entry Points
+- / (Homepage)
+- /drivers (All driver categories)
+- /how-it-works (How drivers work)
+- /about (About this guide)
+- /contact (Contact)
+- /glossary (Driver glossary)
+- /brands (All printer brands)
+- /guides (Installation guides)
+- /how-to (How-to articles)
+- /tech (Technology explainers)
+- /troubleshooting (Troubleshooting guides)
+- /all-pages (Full HTML sitemap)
 
 ## Driver Reference Pages
-- /drivers/chipset
-- /drivers/graphics
-- /drivers/audio
-- /drivers/network
-- /drivers/storage
-- /drivers/usb
-- /drivers/bluetooth
-- /drivers/input
-- /drivers/printer
-- /drivers/scanner
-- /drivers/webcam
-- /drivers/bios
-- /drivers/security
-- /drivers/monitor
+- /drivers/chipset (Chipset & motherboard drivers)
+- /drivers/graphics (Graphics card drivers)
+- /drivers/audio (Audio & sound card drivers)
+- /drivers/network (Network & Wi-Fi adapter drivers)
+- /drivers/storage (SSD & hard drive controller drivers)
+- /drivers/usb (USB controller drivers)
+- /drivers/bluetooth (Bluetooth adapter drivers)
+- /drivers/input (Keyboard & mouse drivers)
+- /drivers/printer (Printer drivers)
+- /drivers/scanner (Scanner drivers)
+- /drivers/webcam (Webcam drivers)
+- /drivers/bios (BIOS & UEFI firmware)
+- /drivers/security (Security & TPM drivers)
+- /drivers/monitor (Monitor calibration drivers)
 
-## Brand Support Pages
-- /brands/hp
-- /brands/canon
-- /brands/epson
-- /brands/brother
-- /brands/dell
-- /brands/lexmark
-- /brands/ricoh
-- /brands/xerox
-- /brands/kyocera
-- /brands/samsung
+## Installation Guides
+- /guides/wifi-printer-setup (Wi-Fi printer setup)
+- /guides/usb-printer-setup (USB printer setup)
+- /guides/ethernet-printer-setup (Ethernet printer setup)
+- /guides/bluetooth-printer-setup (Bluetooth printer setup)
+- /guides/windows-11-printer-setup (Windows 11 printer setup)
+- /guides/windows-10-printer-setup (Windows 10 printer setup)
+- /guides/macos-printer-setup (macOS printer setup)
+- /guides/linux-printer-setup (Linux printer setup)
+- /guides/cloud-printing (Cloud printing)
+- /guides/airprint-and-mopria (AirPrint and Mopria)
 
-## How-To Guides
-- /how-to
+## How-To Articles
+- /how-to/install-printer-driver-windows (Install printer driver on Windows)
+- /how-to/install-printer-driver-mac (Install printer driver on Mac)
+- /how-to/uninstall-printer-driver (Uninstall printer driver)
+- /how-to/update-printer-firmware (Update printer firmware)
+- /how-to/add-network-printer (Add a network printer)
+- /how-to/clear-print-queue (Clear print queue)
+- /how-to/restart-print-spooler (Restart print spooler)
+- /how-to/find-printer-ip-address (Find printer IP address)
+- /how-to/print-double-sided (Print double-sided)
+- /how-to/print-from-iphone (Print from iPhone)
+- /how-to/print-from-android (Print from Android)
+- /how-to/print-from-chromebook (Print from Chromebook)
+- /how-to/print-poster-multipage (Print poster / multi-page)
+- /how-to/clean-print-head (Clean print head)
+- /how-to/replace-toner-cartridge (Replace toner cartridge)
+- /how-to/scan-to-computer (Scan to computer)
+- /how-to/scan-to-email (Scan to email)
+- /how-to/scan-to-pdf (Scan to PDF)
+- /how-to/share-printer-windows (Share printer on Windows)
+- /how-to/share-printer-mac (Share printer on Mac)
+
+## Technology Explainers
+- /tech/airprint-explained (AirPrint explained)
+- /tech/mopria-explained (Mopria explained)
+- /tech/ipp-everywhere-explained (IPP-Everywhere explained)
+- /tech/cups-explained (CUPS explained)
+- /tech/pcl-vs-postscript (PCL vs PostScript)
+- /tech/laser-vs-inkjet (Laser vs inkjet printers)
+- /tech/dpi-explained (DPI explained)
+- /tech/twain-explained (TWAIN explained)
+- /tech/duplex-printing-explained (Duplex printing explained)
+- /tech/print-spooler-explained (Print spooler explained)
+
+## Printer Brand Pages
+- /brands/hp (HP printers)
+- /brands/hp/windows-11 (HP on Windows 11)
+- /brands/hp/windows-10 (HP on Windows 10)
+- /brands/hp/macos (HP on macOS)
+- /brands/hp/linux (HP on Linux)
+- /brands/hp/wireless-setup (HP wireless setup)
+- /brands/hp/scanner-setup (HP scanner setup)
+- /brands/hp/firmware-update (HP firmware update)
+- /brands/canon (Canon printers)
+- /brands/canon/windows-11 (Canon on Windows 11)
+- /brands/canon/windows-10 (Canon on Windows 10)
+- /brands/canon/macos (Canon on macOS)
+- /brands/canon/linux (Canon on Linux)
+- /brands/canon/wireless-setup (Canon wireless setup)
+- /brands/canon/scanner-setup (Canon scanner setup)
+- /brands/canon/firmware-update (Canon firmware update)
+- /brands/epson (Epson printers)
+- /brands/epson/windows-11 (Epson on Windows 11)
+- /brands/epson/windows-10 (Epson on Windows 10)
+- /brands/epson/macos (Epson on macOS)
+- /brands/epson/linux (Epson on Linux)
+- /brands/epson/wireless-setup (Epson wireless setup)
+- /brands/epson/scanner-setup (Epson scanner setup)
+- /brands/epson/firmware-update (Epson firmware update)
+- /brands/brother (Brother printers)
+- /brands/brother/windows-11 (Brother on Windows 11)
+- /brands/brother/windows-10 (Brother on Windows 10)
+- /brands/brother/macos (Brother on macOS)
+- /brands/brother/linux (Brother on Linux)
+- /brands/brother/wireless-setup (Brother wireless setup)
+- /brands/brother/scanner-setup (Brother scanner setup)
+- /brands/brother/firmware-update (Brother firmware update)
+- /brands/dell (Dell printers)
+- /brands/dell/windows-11 (Dell on Windows 11)
+- /brands/dell/windows-10 (Dell on Windows 10)
+- /brands/dell/macos (Dell on macOS)
+- /brands/dell/linux (Dell on Linux)
+- /brands/dell/wireless-setup (Dell wireless setup)
+- /brands/dell/scanner-setup (Dell scanner setup)
+- /brands/dell/firmware-update (Dell firmware update)
+- /brands/lexmark (Lexmark printers)
+- /brands/lexmark/windows-11 (Lexmark on Windows 11)
+- /brands/lexmark/windows-10 (Lexmark on Windows 10)
+- /brands/lexmark/macos (Lexmark on macOS)
+- /brands/lexmark/linux (Lexmark on Linux)
+- /brands/lexmark/wireless-setup (Lexmark wireless setup)
+- /brands/lexmark/scanner-setup (Lexmark scanner setup)
+- /brands/lexmark/firmware-update (Lexmark firmware update)
+- /brands/ricoh (Ricoh printers)
+- /brands/ricoh/windows-11 (Ricoh on Windows 11)
+- /brands/ricoh/windows-10 (Ricoh on Windows 10)
+- /brands/ricoh/macos (Ricoh on macOS)
+- /brands/ricoh/linux (Ricoh on Linux)
+- /brands/ricoh/wireless-setup (Ricoh wireless setup)
+- /brands/ricoh/scanner-setup (Ricoh scanner setup)
+- /brands/ricoh/firmware-update (Ricoh firmware update)
+- /brands/xerox (Xerox printers)
+- /brands/xerox/windows-11 (Xerox on Windows 11)
+- /brands/xerox/windows-10 (Xerox on Windows 10)
+- /brands/xerox/macos (Xerox on macOS)
+- /brands/xerox/linux (Xerox on Linux)
+- /brands/xerox/wireless-setup (Xerox wireless setup)
+- /brands/xerox/scanner-setup (Xerox scanner setup)
+- /brands/xerox/firmware-update (Xerox firmware update)
+- /brands/kyocera (Kyocera printers)
+- /brands/kyocera/windows-11 (Kyocera on Windows 11)
+- /brands/kyocera/windows-10 (Kyocera on Windows 10)
+- /brands/kyocera/macos (Kyocera on macOS)
+- /brands/kyocera/linux (Kyocera on Linux)
+- /brands/kyocera/wireless-setup (Kyocera wireless setup)
+- /brands/kyocera/scanner-setup (Kyocera scanner setup)
+- /brands/kyocera/firmware-update (Kyocera firmware update)
+- /brands/samsung (Samsung printers)
+- /brands/samsung/windows-11 (Samsung on Windows 11)
+- /brands/samsung/windows-10 (Samsung on Windows 10)
+- /brands/samsung/macos (Samsung on macOS)
+- /brands/samsung/linux (Samsung on Linux)
+- /brands/samsung/wireless-setup (Samsung wireless setup)
+- /brands/samsung/scanner-setup (Samsung scanner setup)
+- /brands/samsung/firmware-update (Samsung firmware update)
 
 ## Troubleshooting Guides
-- /troubleshooting
-
-## Tech Explainers
-- /tech
-
-## Key Pages
-- /
-- /drivers
-- /how-it-works
-- /about
-- /contact
-- /glossary
-- /brands
-- /guides
-- /sitemap.xml
-- /all-pages
+- /troubleshooting (All troubleshooting guides)

@@ -36,3 +36,7 @@ See the `pnpm-workspace` skill for workspace structure, TypeScript setup, and pa
 - **Routing**: pretty URLs (`/about` → `/about.html`, `/drivers/printer` → `/drivers/printer.html`); unknown paths serve `404.html`. Production uses `serve = "static"` with `notFoundPage = "/404.html"` (no SPA rewrite).
 - **Design system**: Inter + Plus Jakarta Sans (Google Fonts), Lucide icons via CDN. Cream/sand/teal palette defined in `public/assets/styles.css`.
 - **Interactive JS** (`public/assets/scripts.js`, vanilla, no deps): mobile drawer, mega-menu hover/click, in-nav search with arrow-key nav, horizontal slider with dots, FAQ accordion, contact-form validation with success state.
+- **SEO / Schema**: All 124 content pages (guides, how-to, tech, brands) have FAQPage + BreadcrumbList JSON-LD injected into the existing `@graph` array. All 20 how-to pages also have HowTo + HowToStep schema. Section index pages have short FAQ sections added to support the schema. `/llms.txt` lists all 167 pages/paths with descriptions for AI crawlers.
+- **Asset pipeline**: edit `styles.css` → `node minify.mjs` → `styles.min.css` (referenced by all pages). Same for `scripts.js`.
+- **External links**: All brand/vendor support links have `rel="nofollow noopener noreferrer" target="_blank"`.
+- **Scale**: 164 HTML pages total; 163 in sitemap.xml (404 excluded via robots.txt).
