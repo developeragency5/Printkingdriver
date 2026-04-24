@@ -1,167 +1,144 @@
-User-agent: *
-Allow: /
+# PrintKingDriver
 
-# Site: PrintKingDriver
-# URL: https://www.printkingdriver.com
-# Description: Printer driver guides, installation how-tos, technology explainers, and brand-specific support for Windows, macOS, and Linux.
+> A free, plain-English reference guide to printer drivers, system drivers, and print technology. Covers installation guides, step-by-step how-tos, technology explainers, and brand-specific driver pages for HP, Canon, Epson, Brother, Samsung, and more — for Windows, macOS, and Linux.
 
 ## Key Entry Points
-- / (Homepage)
-- /drivers (All driver categories)
-- /how-it-works (How drivers work)
-- /about (About this guide)
-- /contact (Contact)
-- /glossary (Driver glossary)
-- /brands (All printer brands)
-- /guides (Installation guides)
-- /how-to (How-to articles)
-- /tech (Technology explainers)
-- /troubleshooting (Troubleshooting guides)
-- /all-pages (Full HTML sitemap)
+
+- [Home](https://www.printkingdriver.com/): Main entry point explaining what printer drivers are, how they work, and how to find the right guide
+- [How It Works](https://www.printkingdriver.com/how-it-works): Plain-English explanation of how drivers communicate between OS and hardware
+- [About](https://www.printkingdriver.com/about): About PrintKingDriver — purpose, editorial approach, and scope
+- [Glossary](https://www.printkingdriver.com/glossary): Driver terminology glossary — PCL, PostScript, spooler, TWAIN, WIA, and more
+- [All Pages](https://www.printkingdriver.com/all-pages): Complete HTML sitemap of all pages on the site
+- [Troubleshooting](https://www.printkingdriver.com/troubleshooting): Index of all printer troubleshooting guides
 
 ## Driver Reference Pages
-- /drivers/chipset (Chipset & motherboard drivers)
-- /drivers/graphics (Graphics card drivers)
-- /drivers/audio (Audio & sound card drivers)
-- /drivers/network (Network & Wi-Fi adapter drivers)
-- /drivers/storage (SSD & hard drive controller drivers)
-- /drivers/usb (USB controller drivers)
-- /drivers/bluetooth (Bluetooth adapter drivers)
-- /drivers/input (Keyboard & mouse drivers)
-- /drivers/printer (Printer drivers)
-- /drivers/scanner (Scanner drivers)
-- /drivers/webcam (Webcam drivers)
-- /drivers/bios (BIOS & UEFI firmware)
-- /drivers/security (Security & TPM drivers)
-- /drivers/monitor (Monitor calibration drivers)
+
+- [Printer Drivers](https://www.printkingdriver.com/drivers/printer): Overview of printer driver types and how to find the right one
+- [Chipset Drivers](https://www.printkingdriver.com/drivers/chipset): Chipset and motherboard logic drivers
+- [Graphics Drivers](https://www.printkingdriver.com/drivers/graphics): GPU and display adapter drivers
+- [Audio Drivers](https://www.printkingdriver.com/drivers/audio): Sound card and audio interface drivers
+- [Network Drivers](https://www.printkingdriver.com/drivers/network): Wired and wireless network adapter drivers
+- [Storage Drivers](https://www.printkingdriver.com/drivers/storage): SSD and hard drive controller drivers
+- [USB Drivers](https://www.printkingdriver.com/drivers/usb): USB controller and port drivers
+- [Bluetooth Drivers](https://www.printkingdriver.com/drivers/bluetooth): Bluetooth adapter drivers
+- [Input Drivers](https://www.printkingdriver.com/drivers/input): Keyboard, mouse, and touchpad drivers
+- [Scanner Drivers](https://www.printkingdriver.com/drivers/scanner): Image scanner and document feeder drivers
+- [Webcam Drivers](https://www.printkingdriver.com/drivers/webcam): Webcam and video capture drivers
+- [BIOS & Firmware](https://www.printkingdriver.com/drivers/bios): BIOS and UEFI firmware update guides
+- [Security & TPM](https://www.printkingdriver.com/drivers/security): Security chip and TPM drivers
+- [Monitor Drivers](https://www.printkingdriver.com/drivers/monitor): Monitor calibration and display drivers
 
 ## Installation Guides
-- /guides/wifi-printer-setup (Wi-Fi printer setup)
-- /guides/usb-printer-setup (USB printer setup)
-- /guides/ethernet-printer-setup (Ethernet printer setup)
-- /guides/bluetooth-printer-setup (Bluetooth printer setup)
-- /guides/windows-11-printer-setup (Windows 11 printer setup)
-- /guides/windows-10-printer-setup (Windows 10 printer setup)
-- /guides/macos-printer-setup (macOS printer setup)
-- /guides/linux-printer-setup (Linux printer setup)
-- /guides/cloud-printing (Cloud printing)
-- /guides/airprint-and-mopria (AirPrint and Mopria)
+
+- [Wi-Fi Printer Setup](https://www.printkingdriver.com/guides/wifi-printer-setup): Complete guide to setting up a printer over Wi-Fi on Windows, macOS, and Linux
+- [USB Printer Setup](https://www.printkingdriver.com/guides/usb-printer-setup): Step-by-step USB printer connection guide for Windows and macOS
+- [Ethernet Printer Setup](https://www.printkingdriver.com/guides/ethernet-printer-setup): Wired network printer setup with IP reservation for reliable office printing
+- [Bluetooth Printer Setup](https://www.printkingdriver.com/guides/bluetooth-printer-setup): Pairing a Bluetooth printer to a laptop, phone, or tablet
+- [Windows 11 Printer Setup](https://www.printkingdriver.com/guides/windows-11-printer-setup): Add a printer in Windows 11 via Settings, IP address, or legacy Control Panel
+- [Windows 10 Printer Setup](https://www.printkingdriver.com/guides/windows-10-printer-setup): Add a printer in Windows 10 via Devices and Printers or Settings
+- [macOS Printer Setup](https://www.printkingdriver.com/guides/macos-printer-setup): Add a printer on macOS using System Settings, AirPrint, or a vendor driver
+- [Linux Printer Setup](https://www.printkingdriver.com/guides/linux-printer-setup): CUPS-based printer setup on Ubuntu, Fedora, Debian, and headless servers
+- [Cloud Printing](https://www.printkingdriver.com/guides/cloud-printing): Cloud printing options after Google Cloud Print — HP Smart, Epson Connect, Brother Web Connect
+- [AirPrint and Mopria](https://www.printkingdriver.com/guides/airprint-and-mopria): Driverless printing via AirPrint (Apple) and Mopria (Android) — setup and compatibility
 
 ## How-To Articles
-- /how-to/install-printer-driver-windows (Install printer driver on Windows)
-- /how-to/install-printer-driver-mac (Install printer driver on Mac)
-- /how-to/uninstall-printer-driver (Uninstall printer driver)
-- /how-to/update-printer-firmware (Update printer firmware)
-- /how-to/add-network-printer (Add a network printer)
-- /how-to/clear-print-queue (Clear print queue)
-- /how-to/restart-print-spooler (Restart print spooler)
-- /how-to/find-printer-ip-address (Find printer IP address)
-- /how-to/print-double-sided (Print double-sided)
-- /how-to/print-from-iphone (Print from iPhone)
-- /how-to/print-from-android (Print from Android)
-- /how-to/print-from-chromebook (Print from Chromebook)
-- /how-to/print-poster-multipage (Print poster / multi-page)
-- /how-to/clean-print-head (Clean print head)
-- /how-to/replace-toner-cartridge (Replace toner cartridge)
-- /how-to/scan-to-computer (Scan to computer)
-- /how-to/scan-to-email (Scan to email)
-- /how-to/scan-to-pdf (Scan to PDF)
-- /how-to/share-printer-windows (Share printer on Windows)
-- /how-to/share-printer-mac (Share printer on Mac)
+
+- [Install Printer Driver on Windows](https://www.printkingdriver.com/how-to/install-printer-driver-windows): Download, install, and configure a printer driver on Windows step by step
+- [Install Printer Driver on Mac](https://www.printkingdriver.com/how-to/install-printer-driver-mac): Install a printer driver on macOS — automatic and manual methods
+- [Uninstall a Printer Driver](https://www.printkingdriver.com/how-to/uninstall-printer-driver): Completely remove a printer driver from Windows or macOS
+- [Update Printer Firmware](https://www.printkingdriver.com/how-to/update-printer-firmware): Update printer firmware via the web interface or manufacturer software
+- [Restart the Print Spooler](https://www.printkingdriver.com/how-to/restart-print-spooler): Restart the Windows Print Spooler to clear stuck jobs and fix offline errors
+- [Find Printer IP Address](https://www.printkingdriver.com/how-to/find-printer-ip-address): Four methods to find a printer's IP address on any brand
+- [Add a Network Printer](https://www.printkingdriver.com/how-to/add-network-printer): Add a network printer manually by IP address on Windows and macOS
+- [Share Printer on Windows](https://www.printkingdriver.com/how-to/share-printer-windows): Share a USB-connected printer with other Windows computers on the network
+- [Share Printer on Mac](https://www.printkingdriver.com/how-to/share-printer-mac): Share a USB-connected printer from macOS to other devices
+- [Scan to Computer](https://www.printkingdriver.com/how-to/scan-to-computer): Set up scanning to a Windows or macOS computer from an all-in-one printer
+- [Scan to Email](https://www.printkingdriver.com/how-to/scan-to-email): Configure SMTP scan-to-email on a printer for Gmail, Outlook, and company mail
+- [Scan to PDF](https://www.printkingdriver.com/how-to/scan-to-pdf): Scan single or multi-page documents directly to PDF on Windows and macOS
+- [Print from iPhone](https://www.printkingdriver.com/how-to/print-from-iphone): Print from an iPhone using AirPrint — no app or driver required
+- [Print from Android](https://www.printkingdriver.com/how-to/print-from-android): Print from an Android phone using Mopria Print Service
+- [Print from Chromebook](https://www.printkingdriver.com/how-to/print-from-chromebook): Add and use a printer on a Chromebook via CUPS
+- [Print Double-Sided](https://www.printkingdriver.com/how-to/print-double-sided): Enable automatic or manual duplex printing in any application
+- [Print a Poster](https://www.printkingdriver.com/how-to/print-poster-multipage): Tile a large image or document across multiple pages for poster printing
+- [Clear Print Queue](https://www.printkingdriver.com/how-to/clear-print-queue): Remove stuck jobs from the Windows print queue — three methods in order
+- [Clean Print Head](https://www.printkingdriver.com/how-to/clean-print-head): Run automatic or manual print head cleaning on an inkjet printer
+- [Replace Toner Cartridge](https://www.printkingdriver.com/how-to/replace-toner-cartridge): Replace a toner cartridge in a laser printer without damaging the drum
 
 ## Technology Explainers
-- /tech/airprint-explained (AirPrint explained)
-- /tech/mopria-explained (Mopria explained)
-- /tech/ipp-everywhere-explained (IPP-Everywhere explained)
-- /tech/cups-explained (CUPS explained)
-- /tech/pcl-vs-postscript (PCL vs PostScript)
-- /tech/laser-vs-inkjet (Laser vs inkjet printers)
-- /tech/dpi-explained (DPI explained)
-- /tech/twain-explained (TWAIN explained)
-- /tech/duplex-printing-explained (Duplex printing explained)
-- /tech/print-spooler-explained (Print spooler explained)
+
+- [AirPrint Explained](https://www.printkingdriver.com/tech/airprint-explained): What AirPrint is, how it works, and which printers support it
+- [Mopria Explained](https://www.printkingdriver.com/tech/mopria-explained): What Mopria Print Service is and how it enables driverless Android printing
+- [IPP Everywhere Explained](https://www.printkingdriver.com/tech/ipp-everywhere-explained): The open print standard underpinning AirPrint, Mopria, and modern CUPS printing
+- [CUPS Explained](https://www.printkingdriver.com/tech/cups-explained): How the Common Unix Printing System works on macOS and Linux
+- [PCL vs PostScript](https://www.printkingdriver.com/tech/pcl-vs-postscript): Comparing HP's PCL and Adobe's PostScript printer languages for office and design work
+- [Laser vs Inkjet](https://www.printkingdriver.com/tech/laser-vs-inkjet): Comparing laser and inkjet printer technology for different use cases and budgets
+- [DPI Explained](https://www.printkingdriver.com/tech/dpi-explained): What dots per inch means for print quality and when higher DPI matters
+- [TWAIN Explained](https://www.printkingdriver.com/tech/twain-explained): How the TWAIN scanning interface works between scanners and applications
+- [Duplex Printing Explained](https://www.printkingdriver.com/tech/duplex-printing-explained): How automatic and manual duplex printing works and how to enable it by default
+- [Print Spooler Explained](https://www.printkingdriver.com/tech/print-spooler-explained): How the Windows Print Spooler service manages queues and what to do when it crashes
 
 ## Printer Brand Pages
-- /brands/hp (HP printers)
-- /brands/hp/windows-11 (HP on Windows 11)
-- /brands/hp/windows-10 (HP on Windows 10)
-- /brands/hp/macos (HP on macOS)
-- /brands/hp/linux (HP on Linux)
-- /brands/hp/wireless-setup (HP wireless setup)
-- /brands/hp/scanner-setup (HP scanner setup)
-- /brands/hp/firmware-update (HP firmware update)
-- /brands/canon (Canon printers)
-- /brands/canon/windows-11 (Canon on Windows 11)
-- /brands/canon/windows-10 (Canon on Windows 10)
-- /brands/canon/macos (Canon on macOS)
-- /brands/canon/linux (Canon on Linux)
-- /brands/canon/wireless-setup (Canon wireless setup)
-- /brands/canon/scanner-setup (Canon scanner setup)
-- /brands/canon/firmware-update (Canon firmware update)
-- /brands/epson (Epson printers)
-- /brands/epson/windows-11 (Epson on Windows 11)
-- /brands/epson/windows-10 (Epson on Windows 10)
-- /brands/epson/macos (Epson on macOS)
-- /brands/epson/linux (Epson on Linux)
-- /brands/epson/wireless-setup (Epson wireless setup)
-- /brands/epson/scanner-setup (Epson scanner setup)
-- /brands/epson/firmware-update (Epson firmware update)
-- /brands/brother (Brother printers)
-- /brands/brother/windows-11 (Brother on Windows 11)
-- /brands/brother/windows-10 (Brother on Windows 10)
-- /brands/brother/macos (Brother on macOS)
-- /brands/brother/linux (Brother on Linux)
-- /brands/brother/wireless-setup (Brother wireless setup)
-- /brands/brother/scanner-setup (Brother scanner setup)
-- /brands/brother/firmware-update (Brother firmware update)
-- /brands/dell (Dell printers)
-- /brands/dell/windows-11 (Dell on Windows 11)
-- /brands/dell/windows-10 (Dell on Windows 10)
-- /brands/dell/macos (Dell on macOS)
-- /brands/dell/linux (Dell on Linux)
-- /brands/dell/wireless-setup (Dell wireless setup)
-- /brands/dell/scanner-setup (Dell scanner setup)
-- /brands/dell/firmware-update (Dell firmware update)
-- /brands/lexmark (Lexmark printers)
-- /brands/lexmark/windows-11 (Lexmark on Windows 11)
-- /brands/lexmark/windows-10 (Lexmark on Windows 10)
-- /brands/lexmark/macos (Lexmark on macOS)
-- /brands/lexmark/linux (Lexmark on Linux)
-- /brands/lexmark/wireless-setup (Lexmark wireless setup)
-- /brands/lexmark/scanner-setup (Lexmark scanner setup)
-- /brands/lexmark/firmware-update (Lexmark firmware update)
-- /brands/ricoh (Ricoh printers)
-- /brands/ricoh/windows-11 (Ricoh on Windows 11)
-- /brands/ricoh/windows-10 (Ricoh on Windows 10)
-- /brands/ricoh/macos (Ricoh on macOS)
-- /brands/ricoh/linux (Ricoh on Linux)
-- /brands/ricoh/wireless-setup (Ricoh wireless setup)
-- /brands/ricoh/scanner-setup (Ricoh scanner setup)
-- /brands/ricoh/firmware-update (Ricoh firmware update)
-- /brands/xerox (Xerox printers)
-- /brands/xerox/windows-11 (Xerox on Windows 11)
-- /brands/xerox/windows-10 (Xerox on Windows 10)
-- /brands/xerox/macos (Xerox on macOS)
-- /brands/xerox/linux (Xerox on Linux)
-- /brands/xerox/wireless-setup (Xerox wireless setup)
-- /brands/xerox/scanner-setup (Xerox scanner setup)
-- /brands/xerox/firmware-update (Xerox firmware update)
-- /brands/kyocera (Kyocera printers)
-- /brands/kyocera/windows-11 (Kyocera on Windows 11)
-- /brands/kyocera/windows-10 (Kyocera on Windows 10)
-- /brands/kyocera/macos (Kyocera on macOS)
-- /brands/kyocera/linux (Kyocera on Linux)
-- /brands/kyocera/wireless-setup (Kyocera wireless setup)
-- /brands/kyocera/scanner-setup (Kyocera scanner setup)
-- /brands/kyocera/firmware-update (Kyocera firmware update)
-- /brands/samsung (Samsung printers)
-- /brands/samsung/windows-11 (Samsung on Windows 11)
-- /brands/samsung/windows-10 (Samsung on Windows 10)
-- /brands/samsung/macos (Samsung on macOS)
-- /brands/samsung/linux (Samsung on Linux)
-- /brands/samsung/wireless-setup (Samsung wireless setup)
-- /brands/samsung/scanner-setup (Samsung scanner setup)
-- /brands/samsung/firmware-update (Samsung firmware update)
+
+- [HP Printers](https://www.printkingdriver.com/brands/hp): HP printer driver guides for Windows, macOS, Linux, wireless setup, and firmware
+- [HP Windows 11](https://www.printkingdriver.com/brands/hp/windows-11): Installing and using HP printers on Windows 11
+- [HP Windows 10](https://www.printkingdriver.com/brands/hp/windows-10): Installing and using HP printers on Windows 10
+- [HP macOS](https://www.printkingdriver.com/brands/hp/macos): HP printer setup on macOS
+- [HP Linux](https://www.printkingdriver.com/brands/hp/linux): HP printer drivers and HPLIP for Linux
+- [HP Wireless Setup](https://www.printkingdriver.com/brands/hp/wireless-setup): HP wireless printer setup and Wi-Fi troubleshooting
+- [HP Scanner Setup](https://www.printkingdriver.com/brands/hp/scanner-setup): HP scanner driver installation and scan-to-computer setup
+- [HP Firmware Update](https://www.printkingdriver.com/brands/hp/firmware-update): How to update HP printer firmware
+- [Canon Printers](https://www.printkingdriver.com/brands/canon): Canon printer driver guides for all operating systems
+- [Canon Windows 11](https://www.printkingdriver.com/brands/canon/windows-11): Installing Canon printers on Windows 11
+- [Canon Windows 10](https://www.printkingdriver.com/brands/canon/windows-10): Installing Canon printers on Windows 10
+- [Canon macOS](https://www.printkingdriver.com/brands/canon/macos): Canon printer setup on macOS
+- [Canon Linux](https://www.printkingdriver.com/brands/canon/linux): Canon CUPS drivers and setup on Linux
+- [Canon Wireless Setup](https://www.printkingdriver.com/brands/canon/wireless-setup): Canon wireless printer setup guide
+- [Canon Scanner Setup](https://www.printkingdriver.com/brands/canon/scanner-setup): Canon scanner driver and CanoScan setup
+- [Canon Firmware Update](https://www.printkingdriver.com/brands/canon/firmware-update): How to update Canon printer firmware
+- [Epson Printers](https://www.printkingdriver.com/brands/epson): Epson printer driver guides for all operating systems
+- [Epson Windows 11](https://www.printkingdriver.com/brands/epson/windows-11): Installing Epson printers on Windows 11
+- [Epson Windows 10](https://www.printkingdriver.com/brands/epson/windows-10): Installing Epson printers on Windows 10
+- [Epson macOS](https://www.printkingdriver.com/brands/epson/macos): Epson printer setup on macOS
+- [Epson Linux](https://www.printkingdriver.com/brands/epson/linux): Epson Linux drivers and Gutenprint setup
+- [Epson Wireless Setup](https://www.printkingdriver.com/brands/epson/wireless-setup): Epson Wi-Fi printer setup and EpsonNet config
+- [Epson Scanner Setup](https://www.printkingdriver.com/brands/epson/scanner-setup): Epson scanner and EpsonScan2 setup
+- [Epson Firmware Update](https://www.printkingdriver.com/brands/epson/firmware-update): How to update Epson printer firmware
+- [Brother Printers](https://www.printkingdriver.com/brands/brother): Brother printer driver guides for all operating systems
+- [Brother Windows 11](https://www.printkingdriver.com/brands/brother/windows-11): Installing Brother printers on Windows 11
+- [Brother Windows 10](https://www.printkingdriver.com/brands/brother/windows-10): Installing Brother printers on Windows 10
+- [Brother macOS](https://www.printkingdriver.com/brands/brother/macos): Brother printer setup on macOS
+- [Brother Linux](https://www.printkingdriver.com/brands/brother/linux): Brother Linux drivers and .deb package installation
+- [Brother Wireless Setup](https://www.printkingdriver.com/brands/brother/wireless-setup): Brother wireless printer setup guide
+- [Brother Scanner Setup](https://www.printkingdriver.com/brands/brother/scanner-setup): Brother scanner driver and ControlCenter setup
+- [Brother Firmware Update](https://www.printkingdriver.com/brands/brother/firmware-update): How to update Brother printer firmware
+- [Samsung Printers](https://www.printkingdriver.com/brands/samsung): Samsung printer driver guides (now HP-managed)
+- [Samsung Windows 11](https://www.printkingdriver.com/brands/samsung/windows-11): Installing Samsung printers on Windows 11
+- [Samsung Windows 10](https://www.printkingdriver.com/brands/samsung/windows-10): Installing Samsung printers on Windows 10
+- [Samsung macOS](https://www.printkingdriver.com/brands/samsung/macos): Samsung printer setup on macOS
+- [Samsung Linux](https://www.printkingdriver.com/brands/samsung/linux): Samsung Linux drivers and setup
+- [Samsung Wireless Setup](https://www.printkingdriver.com/brands/samsung/wireless-setup): Samsung wireless printer setup guide
+- [Samsung Scanner Setup](https://www.printkingdriver.com/brands/samsung/scanner-setup): Samsung scanner driver setup
+- [Samsung Firmware Update](https://www.printkingdriver.com/brands/samsung/firmware-update): How to update Samsung printer firmware
+- [Dell Printers](https://www.printkingdriver.com/brands/dell): Dell printer driver guides
+- [Lexmark Printers](https://www.printkingdriver.com/brands/lexmark): Lexmark printer driver guides
+- [Ricoh Printers](https://www.printkingdriver.com/brands/ricoh): Ricoh printer driver guides
+- [Xerox Printers](https://www.printkingdriver.com/brands/xerox): Xerox printer driver guides
+- [Kyocera Printers](https://www.printkingdriver.com/brands/kyocera): Kyocera printer driver guides
 
 ## Troubleshooting Guides
-- /troubleshooting (All troubleshooting guides)
+
+- [All Troubleshooting](https://www.printkingdriver.com/troubleshooting): Index of all printer troubleshooting guides
+- [Printer Offline](https://www.printkingdriver.com/troubleshooting/printer-offline): Fix a printer showing as offline in Windows and macOS
+- [Driver Not Installing](https://www.printkingdriver.com/troubleshooting/driver-not-installing): Fix printer driver installation failures on Windows
+- [Print Spooler Keeps Stopping](https://www.printkingdriver.com/troubleshooting/print-spooler-keeps-stopping): Fix a Windows Print Spooler that crashes repeatedly
+- [Printer Won't Connect to Wi-Fi](https://www.printkingdriver.com/troubleshooting/printer-wont-connect-wifi): Fix a printer that cannot join or stay on the Wi-Fi network
+- [Print Queue Stuck](https://www.printkingdriver.com/troubleshooting/print-queue-stuck): Clear a stuck print queue that won't empty
+- [Paper Jam](https://www.printkingdriver.com/troubleshooting/paper-jam): Clear a paper jam without damaging the printer
+- [Slow Printing](https://www.printkingdriver.com/troubleshooting/slow-printing): Fix a printer that is printing unusually slowly
+- [Streaks or Lines on Prints](https://www.printkingdriver.com/troubleshooting/streaks-or-lines-on-prints): Fix streaks, lines, and banding on printed pages
+- [Wrong Colours](https://www.printkingdriver.com/troubleshooting/wrong-colours): Fix incorrect or washed-out colours in printed output
+- [Ghost or Faded Prints](https://www.printkingdriver.com/troubleshooting/ghost-or-faded-prints): Fix ghosting, shadows, or faded output on laser printers
+- [Scanner Not Found](https://www.printkingdriver.com/troubleshooting/scanner-not-found): Fix a scanner that is not detected in Windows or macOS
+- [Duplex Not Working](https://www.printkingdriver.com/troubleshooting/duplex-not-working): Fix automatic duplex printing that fails or prints incorrectly
+- [Printer Printing Blank Pages](https://www.printkingdriver.com/troubleshooting/printer-printing-blank-pages): Fix a printer that outputs blank pages instead of content
+- [Bluetooth Printer Not Pairing](https://www.printkingdriver.com/troubleshooting/bluetooth-printer-not-pairing): Fix a Bluetooth printer that won't pair or connect
