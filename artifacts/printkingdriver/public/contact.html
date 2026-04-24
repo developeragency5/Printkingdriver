@@ -185,70 +185,336 @@
       <a href="/contact" class="drawer__cta">⚡ Get In Touch</a>
     </div>
   </aside>
+  <style>
+    /* ── Contact page enhancements ── */
+    .contact-hero {
+      background: linear-gradient(135deg, #f5f0e8 0%, #eae4d6 100%);
+      border-bottom: 1px solid #ddd5c0;
+      padding: 72px 24px 64px;
+      text-align: center;
+    }
+    .contact-hero__eyebrow {
+      display: inline-block;
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: #5a8a82;
+      margin-bottom: 14px;
+    }
+    .contact-hero h1 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 800;
+      line-height: 1.15;
+      color: #1a1a1a;
+      margin: 0 0 16px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .contact-hero__sub {
+      font-size: 1.05rem;
+      color: #555;
+      max-width: 480px;
+      margin: 0 auto;
+      line-height: 1.65;
+    }
+
+    /* ── Layout ── */
+    .cx-wrap {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 72px 24px 96px;
+      display: grid;
+      grid-template-columns: 1fr 400px;
+      gap: 56px;
+      align-items: start;
+    }
+    @media (max-width: 900px) {
+      .cx-wrap { grid-template-columns: 1fr; gap: 40px; }
+    }
+
+    /* ── Form card ── */
+    .cx-form-card {
+      background: #fff;
+      border: 1px solid #e2dbd0;
+      border-radius: 16px;
+      padding: 48px 44px;
+      box-shadow: 0 4px 24px rgba(0,0,0,.06);
+    }
+    .cx-form-card h2 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin: 0 0 4px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .cx-form-card .cx-form-sub {
+      font-size: .875rem;
+      color: #777;
+      margin: 0 0 32px;
+    }
+    .cx-divider {
+      border: none;
+      border-top: 1px solid #ede8df;
+      margin: 0 0 32px;
+    }
+    .cx-field { margin-bottom: 20px; }
+    .cx-field label {
+      display: block;
+      font-size: .8rem;
+      font-weight: 600;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      color: #444;
+      margin-bottom: 7px;
+    }
+    .cx-field input,
+    .cx-field textarea {
+      width: 100%;
+      box-sizing: border-box;
+      background: #faf9f6;
+      border: 1.5px solid #ddd5c0;
+      border-radius: 10px;
+      padding: 12px 15px;
+      font-size: .95rem;
+      color: #1a1a1a;
+      transition: border-color .18s, box-shadow .18s;
+      outline: none;
+      font-family: inherit;
+      resize: vertical;
+    }
+    .cx-field input::placeholder,
+    .cx-field textarea::placeholder { color: #b0a898; }
+    .cx-field input:focus,
+    .cx-field textarea:focus {
+      border-color: #5a8a82;
+      box-shadow: 0 0 0 3px rgba(90,138,130,.12);
+      background: #fff;
+    }
+    .cx-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    @media (max-width: 560px) { .cx-row { grid-template-columns: 1fr; } }
+    .cx-optional {
+      font-size: .72rem;
+      font-weight: 400;
+      color: #aaa;
+      margin-left: 4px;
+      text-transform: none;
+      letter-spacing: 0;
+    }
+    .cx-submit {
+      width: 100%;
+      padding: 14px 24px;
+      background: #2d5c54;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      font-size: .95rem;
+      font-weight: 700;
+      letter-spacing: .02em;
+      cursor: pointer;
+      transition: background .18s, transform .12s;
+      margin-top: 8px;
+      font-family: inherit;
+    }
+    .cx-submit:hover { background: #244a43; transform: translateY(-1px); }
+    .cx-submit:active { transform: none; }
+    .field__error {
+      font-size: .78rem;
+      color: #c0392b;
+      margin-top: 4px;
+      min-height: 18px;
+    }
+
+    /* ── Success state ── */
+    .contact-success {
+      text-align: center;
+      padding: 48px 0;
+    }
+    .contact-success__icon {
+      width: 64px;
+      height: 64px;
+      background: #eaf3f1;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      color: #2d5c54;
+    }
+
+    /* ── Info sidebar ── */
+    .cx-info { display: flex; flex-direction: column; gap: 16px; }
+    .cx-info-card {
+      background: #fff;
+      border: 1px solid #e2dbd0;
+      border-radius: 14px;
+      padding: 22px 24px;
+      display: flex;
+      align-items: flex-start;
+      gap: 18px;
+      box-shadow: 0 2px 12px rgba(0,0,0,.04);
+      transition: box-shadow .18s;
+    }
+    .cx-info-card:hover { box-shadow: 0 4px 20px rgba(0,0,0,.09); }
+    .cx-info-icon {
+      width: 44px;
+      height: 44px;
+      min-width: 44px;
+      border-radius: 10px;
+      background: #f0ece4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #5a8a82;
+    }
+    .cx-info-icon--green { background: #e8f4f2; color: #2d7a6e; }
+    .cx-info-body {}
+    .cx-info-label {
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: #999;
+      margin-bottom: 3px;
+    }
+    .cx-info-value {
+      font-size: .95rem;
+      font-weight: 600;
+      color: #1a1a1a;
+      margin: 0;
+    }
+    .cx-info-value a { color: #2d5c54; text-decoration: none; }
+    .cx-info-value a:hover { text-decoration: underline; }
+    .cx-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: #e8f5e9;
+      color: #2e7d32;
+      font-size: .7rem;
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      padding: 2px 8px;
+      border-radius: 20px;
+      margin-left: 8px;
+      vertical-align: middle;
+    }
+    .cx-badge::before {
+      content: '';
+      width: 6px; height: 6px;
+      background: #43a047;
+      border-radius: 50%;
+      display: inline-block;
+    }
+    .cx-response-note {
+      background: #f5f0e8;
+      border: 1px solid #ddd5c0;
+      border-left: 3px solid #5a8a82;
+      border-radius: 10px;
+      padding: 16px 18px;
+      font-size: .85rem;
+      color: #555;
+      line-height: 1.6;
+    }
+    .cx-response-note strong { color: #333; }
+  </style>
+
   <main>
-  
-  <div class="page-banner">
-    <div class="container" style="max-width:880px;text-align:center;">
-      <h1>Get In Touch</h1>
-      <p>Have a driver question or need personalised support? We're here to help.</p>
-    </div>
+
+  <div class="contact-hero">
+    <div class="contact-hero__eyebrow">Support</div>
+    <h1>Get In Touch</h1>
+    <p class="contact-hero__sub">Have a question or need personalised support? Send us a message and we will get back to you within 24 hours.</p>
   </div>
 
-  <section class="section section--bg-cream" style="padding-top:48px;padding-bottom:80px;">
-  <div class="container" style="max-width:1180px;">
-    <div class="contact-grid">
-      <div class="contact-form-wrap">
-        <form class="contact-form" novalidate>
-          <div class="field">
-            <label for="cf-name">Full Name *</label>
-            <input id="cf-name" name="fullName" type="text" placeholder="John Doe" required />
+  <div class="cx-wrap">
+
+    <!-- Form -->
+    <div class="cx-form-card">
+      <h2>Send Us a Message</h2>
+      <p class="cx-form-sub">Fill in the details below and our support team will respond promptly.</p>
+      <hr class="cx-divider" />
+      <form class="contact-form" novalidate>
+        <div class="cx-row">
+          <div class="cx-field">
+            <label for="cf-name">Full Name</label>
+            <input id="cf-name" name="fullName" type="text" placeholder="Your full name" required />
             <div class="field__error" data-error-for="fullName"></div>
           </div>
-          <div class="field-row">
-            <div class="field">
-              <label for="cf-email">Email Address *</label>
-              <input id="cf-email" name="email" type="email" placeholder="john@example.com" required />
-              <div class="field__error" data-error-for="email"></div>
-            </div>
-            <div class="field">
-              <label for="cf-phone">Phone Number (Optional)</label>
-              <input id="cf-phone" name="phone" type="tel" placeholder="+1 (555) 000-0000" />
-            </div>
+          <div class="cx-field">
+            <label for="cf-email">Email Address</label>
+            <input id="cf-email" name="email" type="email" placeholder="you@example.com" required />
+            <div class="field__error" data-error-for="email"></div>
           </div>
-          <div class="field">
-            <label for="cf-printer">Brand &amp; Model *</label>
-            <input id="cf-printer" name="printerModel" type="text" placeholder="HP LaserJet Pro M404n" required />
+        </div>
+        <div class="cx-row">
+          <div class="cx-field">
+            <label for="cf-phone">Phone <span class="cx-optional">— optional</span></label>
+            <input id="cf-phone" name="phone" type="tel" placeholder="+1 (555) 000-0000" />
+          </div>
+          <div class="cx-field">
+            <label for="cf-printer">Device Model</label>
+            <input id="cf-printer" name="printerModel" type="text" placeholder="e.g. LaserJet Pro M404n" required />
             <div class="field__error" data-error-for="printerModel"></div>
           </div>
-          <div class="field">
-            <label for="cf-issue">Issue Description *</label>
-            <textarea id="cf-issue" name="issueDescription" rows="5" placeholder="Describe your driver issue in detail..." required></textarea>
-            <div class="field__error" data-error-for="issueDescription"></div>
-          </div>
-          <button type="submit" class="btn btn-primary btn-full">Send Message →</button>
-        </form>
-
-        <div class="contact-success" hidden>
-          <div class="contact-success__icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-32" aria-hidden="true"><circle cx="12" cy="12" r="10" />
-  <path d="m9 12 2 2 4-4" /></svg></div>
-          <h3>Message Sent Successfully!</h3>
-          <p>Thank you! Our team will get back to you within 24 hours.</p>
-          <a href="/" class="btn btn-primary">Return Home</a>
         </div>
-      </div>
+        <div class="cx-field">
+          <label for="cf-issue">Describe Your Issue</label>
+          <textarea id="cf-issue" name="issueDescription" rows="6" placeholder="Please describe the problem in as much detail as possible — the more context you give us, the faster we can help." required></textarea>
+          <div class="field__error" data-error-for="issueDescription"></div>
+        </div>
+        <button type="submit" class="cx-submit">Send Message &rarr;</button>
+      </form>
 
-      <div class="contact-info">
-        <div class="info-card"><div class="info-card__icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-18" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2" />
-  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" /></svg></div><div><h4>Email</h4><p>support@printkingdriver.com</p></div></div>
-        <div class="info-card"><div class="info-card__icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-18" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" /></svg></div><div><h4>Phone</h4><p>+1 (800) 123-4567</p></div></div>
-        <div class="info-card"><div class="info-card__icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-18" aria-hidden="true"><circle cx="12" cy="12" r="10" />
-  <polyline points="12 6 12 12 16 14" /></svg></div><div><h4>Hours</h4><p>Monday–Friday, 9AM–6PM EST</p></div></div>
-        <div class="info-card"><div class="info-card__icon info-card__icon--green"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-18" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" /></svg></div><div><div class="info-card__title-row"><h4>Live Chat</h4><span class="info-card__badge">Online</span></div><p>Available Now</p></div></div>
-        <div class="info-note"><span class="info-note__bold">ℹ️ Response Time:</span> We typically respond to all enquiries within 24 business hours. For urgent issues, please call us directly.</div>
+      <div class="contact-success" hidden>
+        <div class="contact-success__icon"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg></div>
+        <h3>Message Sent Successfully</h3>
+        <p>Thank you for reaching out. Our team will respond within 24 hours.</p>
+        <a href="/" class="btn btn-primary">Return Home</a>
       </div>
     </div>
+
+    <!-- Info sidebar -->
+    <div class="cx-info">
+      <div class="cx-info-card">
+        <div class="cx-info-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></div>
+        <div class="cx-info-body">
+          <div class="cx-info-label">Email</div>
+          <p class="cx-info-value"><a href="mailto:support@printkingdriver.com">support@printkingdriver.com</a></p>
+        </div>
+      </div>
+      <div class="cx-info-card">
+        <div class="cx-info-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+        <div class="cx-info-body">
+          <div class="cx-info-label">Phone</div>
+          <p class="cx-info-value"><a href="tel:+18001234567">+1 (800) 123-4567</a></p>
+        </div>
+      </div>
+      <div class="cx-info-card">
+        <div class="cx-info-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+        <div class="cx-info-body">
+          <div class="cx-info-label">Office Hours</div>
+          <p class="cx-info-value">Monday – Friday, 9AM – 6PM EST</p>
+        </div>
+      </div>
+      <div class="cx-info-card">
+        <div class="cx-info-icon cx-info-icon--green"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg></div>
+        <div class="cx-info-body">
+          <div class="cx-info-label">Live Chat <span class="cx-badge">Online</span></div>
+          <p class="cx-info-value">Available Now</p>
+        </div>
+      </div>
+      <div class="cx-response-note">
+        <strong>Response Time</strong><br />
+        We typically respond to all enquiries within 24 business hours. For urgent matters, please call us directly.
+      </div>
+    </div>
+
   </div>
-  </section>
   
   <section class="section section--bg-cream">
     <div class="container">
