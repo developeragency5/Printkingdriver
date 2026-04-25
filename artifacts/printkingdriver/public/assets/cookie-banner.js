@@ -44,7 +44,7 @@
       '<div class="pkd-cookie__inner">' +
         '<div class="pkd-cookie__copy">' +
           '<strong class="pkd-cookie__title">Your privacy choices</strong>' +
-          '<p class="pkd-cookie__text">We use cookies to keep this site secure and understand how visitors use it. With your consent, our advertising partners (including Google Ads and Microsoft Advertising / Bing UET tag) may also set cookies. You can accept or reject these at any time. Read our <a href="/privacy">Privacy Policy</a> for full details on Microsoft, Bing and Google tracking.</p>' +
+          '<p class="pkd-cookie__text">We use cookies to keep this site secure and understand how visitors use it. With your consent, our advertising partners may also set cookies. You can accept or reject these at any time. Read our <a href="/privacy">Privacy Policy</a> for full details.</p>' +
         '</div>' +
         '<div class="pkd-cookie__actions">' +
           '<button type="button" class="pkd-cookie__btn pkd-cookie__btn--reject" data-pkd-consent="essential">Reject all</button>' +
