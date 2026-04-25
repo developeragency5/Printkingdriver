@@ -436,7 +436,7 @@
       <div class="section__header">
         <div class="eyebrow">Diagnostics</div>
         <h2>Common Driver Issues, Explained</h2>
-        <p>From missing drivers to conflict errors — recognise the symptoms and learn what they really mean before reaching for support.</p>
+        <p>From driver mismatches to configuration questions — recognise the patterns and learn what they really mean before reaching for support.</p>
       </div>
       <div class="issues">
         
@@ -445,7 +445,7 @@
             <div class="issue__icon c-orange"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-20" aria-hidden="true"><circle cx="12" cy="12" r="10" />
   <line x1="12" x2="12" y1="8" y2="12" />
   <line x1="12" x2="12.01" y1="16" y2="16" /></svg></div>
-            <span class="issue__code">ERR-01</span>
+            <span class="issue__code">REF-01</span>
           </div>
           <h4>Device Offline</h4>
           <p>Device not detected by the operating system.</p>
@@ -459,12 +459,12 @@
             <div class="issue__icon c-red"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-20" aria-hidden="true"><polygon points="7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2" />
   <path d="m15 9-6 6" />
   <path d="m9 9 6 6" /></svg></div>
-            <span class="issue__code">ERR-02</span>
+            <span class="issue__code">REF-02</span>
           </div>
           <h4>Driver Conflict</h4>
-          <p>Two drivers clashing and causing errors.</p>
+          <p>Two drivers competing for the same resource.</p>
           <div class="issue__foot">
-            <div class="issue__sev"><span class="dot c-red"></span>Critical</div>
+            <div class="issue__sev"><span class="dot c-red"></span>Common</div>
             <a class="issue__diag" href="/contact" aria-label="Diagnose this issue — Get In Touch">Diagnose →</a>
           </div>
         </div>
@@ -473,12 +473,12 @@
             <div class="issue__icon c-blue"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-20" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" />
   <path d="M10 10.3c.2-.4.5-.8.9-1a2.1 2.1 0 0 1 2.6.4c.3.4.5.8.5 1.3 0 1.3-2 2-2 2" />
   <path d="M12 17h.01" /></svg></div>
-            <span class="issue__code">ERR-03</span>
+            <span class="issue__code">REF-03</span>
           </div>
-          <h4>Missing Driver</h4>
-          <p>Required driver not found or incomplete.</p>
+          <h4>Driver Not Loaded</h4>
+          <p>Driver entry was not located in the system catalogue.</p>
           <div class="issue__foot">
-            <div class="issue__sev"><span class="dot c-blue"></span>High</div>
+            <div class="issue__sev"><span class="dot c-blue"></span>Frequent</div>
             <a class="issue__diag" href="/contact" aria-label="Diagnose this issue — Get In Touch">Diagnose →</a>
           </div>
         </div>
@@ -488,7 +488,7 @@
   <path d="M21 3v5h-5" />
   <path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16" />
   <path d="M8 16H3v5" /></svg></div>
-            <span class="issue__code">ERR-04</span>
+            <span class="issue__code">REF-04</span>
           </div>
           <h4>Print Queue Stuck</h4>
           <p>Jobs stuck and not clearing from queue.</p>
@@ -502,7 +502,7 @@
             <div class="issue__icon c-pink"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-20" aria-hidden="true"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
   <line x1="22" x2="16" y1="9" y2="15" />
   <line x1="16" x2="22" y1="9" y2="15" /></svg></div>
-            <span class="issue__code">ERR-05</span>
+            <span class="issue__code">REF-05</span>
           </div>
           <h4>Audio Errors</h4>
           <p>Sound driver failure or no audio output.</p>
@@ -520,12 +520,12 @@
   <path d="M2 8.82a15 15 0 0 1 4.177-2.643" />
   <path d="M22 8.82a15 15 0 0 0-11.288-3.764" />
   <path d="m2 2 20 20" /></svg></div>
-            <span class="issue__code">ERR-06</span>
+            <span class="issue__code">REF-06</span>
           </div>
           <h4>Network Drops</h4>
           <p>Wi-Fi or LAN driver instability issues.</p>
           <div class="issue__foot">
-            <div class="issue__sev"><span class="dot c-teal"></span>High</div>
+            <div class="issue__sev"><span class="dot c-teal"></span>Frequent</div>
             <a class="issue__diag" href="/contact" aria-label="Diagnose this issue — Get In Touch">Diagnose →</a>
           </div>
         </div>
@@ -904,7 +904,7 @@
           <p class="spotlight__lede">The chipset driver is one of the most fundamental components of any computer system, responsible for managing communication between the processor (CPU), memory (RAM), storage devices, and other motherboard components.</p>
           <div class="spotlight__body">
             <p>It acts as a central coordinator, ensuring that data flows efficiently between hardware elements without conflicts or delays. Without a properly set up or updated chipset driver, your system may fail to recognise certain hardware components or may operate below its optimal performance level.</p>
-            <p>Modern chipsets handle multiple functions, including PCIe lane management, USB communication, storage interfaces, and power distribution. The chipset driver ensures that the operating system correctly understands how to interact with these features. It also plays a critical role in system stability — preventing stops responding, freezes, and compatibility issues that can arise from miscommunication between hardware and software layers.</p>
+            <p>Modern chipsets handle multiple functions, including PCIe lane management, USB communication, storage interfaces, and power distribution. The chipset driver ensures that the operating system correctly understands how to interact with these features. It also plays a critical role in system stability — preventing becomes unresponsive, freezes, and compatibility issues that can arise from miscommunication between hardware and software layers.</p>
             <p>Another important aspect of chipset drivers is <strong>power management</strong>. They help regulate how different components consume power, improving battery life in laptops and reducing heat generation in desktops. Updated chipset drivers often include optimisations that enhance system responsiveness and enable support for newer hardware technologies.</p>
             <p>In addition, chipset drivers are essential for enabling advanced motherboard features such as overclocking support, virtualisation, and high-speed data transfer protocols. They ensure that these features work seamlessly with the operating system and other drivers set up on the system.</p>
             <p class="spotlight__close">Regular updates to chipset drivers can significantly improve overall system performance, fix bugs, and enhance compatibility with new operating system updates. For any stable and high-performing system, keeping the chipset driver up to date is not optional — it is essential.</p>
@@ -916,7 +916,7 @@
             </div>
             <div class="spotlight__pillar">
               <div class="spotlight__pillar-h">Stabilises the system</div>
-              <div class="spotlight__pillar-d">Prevents stops responding from hardware/software miscommunication.</div>
+              <div class="spotlight__pillar-d">Prevents becomes unresponsive from hardware/software miscommunication.</div>
             </div>
             <div class="spotlight__pillar">
               <div class="spotlight__pillar-h">Manages power</div>
@@ -991,7 +991,7 @@
           <h2 class="spotlight__title">Why Graphics Drivers Matter</h2>
           <p class="spotlight__lede">Graphics drivers manage the interaction between your operating system and the GPU — handling everything you see on screen, from gaming and video editing to design work and everyday browsing.</p>
           <div class="spotlight__body">
-            <p>A graphics driver translates software instructions into commands that the GPU can execute. It optimises how frames are rendered, manages memory usage, and ensures graphical tasks are processed efficiently. Without an updated graphics driver, users may experience screen tearing, lag, low frame rates, or even application stops responding.</p>
+            <p>A graphics driver translates software instructions into commands that the GPU can execute. It optimises how frames are rendered, manages memory usage, and ensures graphical tasks are processed efficiently. Without an updated graphics driver, users may experience screen tearing, lag, low frame rates, or even application becomes unresponsive.</p>
             <p>Modern graphics drivers come with advanced features such as <strong>hardware acceleration, ray tracing support, and AI-based upscaling technologies</strong>. These enhancements significantly improve visual quality and performance, especially in high-end applications and games. Manufacturers update them frequently to add support for new software, fix bugs, and improve compatibility.</p>
             <p>Another key function is <strong>display management</strong>. Graphics drivers control resolution, refresh rate, colour calibration, and multi-monitor configurations — ensuring users get the best possible visual experience based on their hardware capabilities.</p>
             <p>They also contribute to system efficiency by optimising GPU workload and reducing unnecessary power consumption. This is particularly important for laptops, where efficient GPU usage can extend battery life.</p>
@@ -1000,7 +1000,7 @@
           <div class="spotlight__pillars">
             <div class="spotlight__pillar">
               <div class="spotlight__pillar-h">Smooth rendering</div>
-              <div class="spotlight__pillar-d">Steady frame rates without tearing, lag, or stops responding.</div>
+              <div class="spotlight__pillar-d">Steady frame rates without tearing, lag, or becomes unresponsive.</div>
             </div>
             <div class="spotlight__pillar">
               <div class="spotlight__pillar-h">Modern GPU features</div>
@@ -1319,7 +1319,7 @@
         <div class="faq__item"><button type="button" class="faq__q">What is a driver?<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-16" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button><div class="faq__a"><p class="u-pt-0">A driver is a small software package that sits between your operating system and a hardware device. It translates generic operating system commands into the exact instructions the device understands, allowing it to function correctly.</p></div></div>
         <div class="faq__item"><button type="button" class="faq__q">Do I need to set up a driver for every device?<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-16" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button><div class="faq__a"><p class="u-pt-0">Not always. Modern devices that support AirPrint (Apple), Mopria (Android), or IPP Everywhere can be used without a manufacturer driver on PC 10/11, macOS, iOS, and Android. For older devices or features like scanning and stapling, you still need the vendor's full driver package.</p></div></div>
         <div class="faq__item"><button type="button" class="faq__q">Where do I get the correct driver for my device?<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-16" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button><div class="faq__a"><p class="u-pt-0">Always download from the manufacturer's official support website. Search by the exact model number printed on the label under the device, not the name on the packaging, to ensure you find the correct file.</p></div></div>
-        <div class="faq__item"><button type="button" class="faq__q">What should I do if my driver is not working?<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-16" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button><div class="faq__a"><p class="u-pt-0">Start with the common issues guides on this site — most driver problems fall into a handful of categories: wrong driver version, a stuck print spooler, an incomplete driver file, or a firewall blocking the device port. The step-by-step guides walk through each scenario in order.</p></div></div>
+        <div class="faq__item"><button type="button" class="faq__q">What should I do if my driver is not working?<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-16" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button><div class="faq__a"><p class="u-pt-0">Start with the common issues guides on this site — most driver problems fall into a handful of categories: wrong driver version, a stuck print spooler, an partial driver file, or a firewall blocking the device port. The step-by-step guides walk through each scenario in order.</p></div></div>
         <div class="faq__item"><button type="button" class="faq__q">Is PrintKingDriver affiliated with any device manufacturer?<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-16" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button><div class="faq__a"><p class="u-pt-0">No. PrintKingDriver is an independent information site. It is not affiliated with, sponsored by, or endorsed by any hardware or software manufacturer. All content is published for general informational and educational purposes only.</p></div></div>
       </div>
     </div>
