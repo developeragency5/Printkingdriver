@@ -45,7 +45,6 @@
 
 - [Install Printer Driver on Windows](https://www.printkingdriver.com/how-to/install-printer-driver-windows): Download, install, and configure a printer driver on Windows step by step
 - [Install Printer Driver on Mac](https://www.printkingdriver.com/how-to/install-printer-driver-mac): Install a printer driver on macOS — automatic and manual methods
-- [Uninstall a Printer Driver](https://www.printkingdriver.com/how-to/uninstall-printer-driver): Completely remove a printer driver from Windows or macOS
 - [Update Printer Firmware](https://www.printkingdriver.com/how-to/update-printer-firmware): Update printer firmware via the web interface or manufacturer software
 - [Restart the Print Spooler](https://www.printkingdriver.com/how-to/restart-print-spooler): Restart the Windows Print Spooler to clear stuck jobs and fix offline errors
 - [Find Printer IP Address](https://www.printkingdriver.com/how-to/find-printer-ip-address): Four methods to find a printer's IP address on any brand
