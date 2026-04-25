@@ -125,7 +125,7 @@
         </div>
         <ul class="mega__list">
           <li><a href="/drivers/printer">
-            <div class="mega__item-name">Printer Driver</div>
+            <div class="mega__item-name">Device Driver</div>
             <div class="mega__item-desc">Document to print commands</div>
           </a></li>
           <li><a href="/drivers/scanner">
@@ -159,7 +159,7 @@
         </ul>
       </div></div>
       <div class="mega__footer">
-        <div class="mega__footer-text"><a href="/guides">Setup Guides</a> · <a href="/how-to">How-To Library</a> · <a href="/tech">Print Tech Explained</a> · <a href="/brands">Brand Pages</a> · <a href="/troubleshooting">Troubleshooting</a></div>
+        <div class="mega__footer-text"><a href="/guides">Setup Guides</a> · <a href="/how-to">How-To Library</a> · <a href="/tech">Print Tech Explained</a> · <a href="/brands">Brand Pages</a> · <a href="/troubleshooting">Common Issues</a></div>
       </div>
     </div></div>
   </nav>
@@ -177,7 +177,7 @@
       <h5>Hardware-Specific</h5>
       <ul><li><a href="/drivers/storage">Storage Controller</a></li><li><a href="/drivers/usb">USB Support</a></li><li><a href="/drivers/bluetooth">Bluetooth Driver</a></li><li><a href="/drivers/input">Input Drivers</a></li></ul>
       <h5>Peripheral Drivers</h5>
-      <ul><li><a href="/drivers/printer">Printer Driver</a></li><li><a href="/drivers/scanner">Scanner Support</a></li><li><a href="/drivers/webcam">Webcam Driver</a></li></ul>
+      <ul><li><a href="/drivers/printer">Device Driver</a></li><li><a href="/drivers/scanner">Scanner Support</a></li><li><a href="/drivers/webcam">Webcam Driver</a></li></ul>
       <h5>Advanced Systems</h5>
       <ul><li><a href="/drivers/bios">Boot Firmware</a></li><li><a href="/drivers/security">Security Drivers</a></li><li><a href="/drivers/monitor">Monitor Driver</a></li></ul></div>
       <a href="/how-it-works" data-nav-link="/how-it-works">How It Works</a>
@@ -282,7 +282,7 @@
         <p class="u-mb-16">Recognising the symptom is the first step in narrowing down whether the problem really is the driver, the hardware or another part of the system.</p>
         <div class="tbl-wrap"><div class="tbl-scroll"><table class="tbl">
           <thead><tr><th>Symptom</th><th>Likely Cause</th><th class="hide-md">What It Affects</th></tr></thead>
-          <tbody><tr><td class="strong">New CPU not recognised after install</td><td>Firmware microcode predates the chip.</td><td class="hide-md small">Compatibility</td></tr><tr><td class="strong">System won’t boot after firmware change</td><td>Settings reset; boot order or secure boot incorrect.</td><td class="hide-md small">Boot reliability</td></tr><tr><td class="strong">Security module (Trusted Platform Module) not detected by Windows</td><td>Firmware security module (fTPM) disabled in setup.</td><td class="hide-md small">Security & Windows 11</td></tr><tr><td class="strong">Fans run at full speed</td><td>Fan curve table missing in current firmware.</td><td class="hide-md small">Thermals & noise</td></tr><tr><td class="strong">Slow boot times after firmware update</td><td>Fast Boot or legacy-compatibility settings reset to defaults.</td><td class="hide-md small">Performance</td></tr></tbody>
+          <tbody><tr><td class="strong">New CPU not recognised after install</td><td>Firmware microcode predates the chip.</td><td class="hide-md small">Compatibility</td></tr><tr><td class="strong">System won’t boot after firmware change</td><td>Settings reset; boot order or secure boot incorrect.</td><td class="hide-md small">Boot reliability</td></tr><tr><td class="strong">Security module (Trusted Platform Module) not detected by PC</td><td>Firmware security module (fTPM) disabled in setup.</td><td class="hide-md small">Security & PC 11</td></tr><tr><td class="strong">Fans run at full speed</td><td>Fan curve table missing in current firmware.</td><td class="hide-md small">Thermals & noise</td></tr><tr><td class="strong">Slow boot times after firmware update</td><td>Fast Boot or legacy-compatibility settings reset to defaults.</td><td class="hide-md small">Performance</td></tr></tbody>
         </table></div></div>
       </section>
 
@@ -307,8 +307,8 @@
             <div class="faq__a"><p class="u-pt-0">Modern flashing tools are robust, but there is always a small risk if power is lost mid-update. Only flash when you have a clear reason — a fix, new CPU support, or a security advisory.</p></div>
           </div>
           <div class="faq__item">
-            <button type="button" class="faq__q">Why does Windows ask for the security module after a firmware update?<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-16" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg></button>
-            <div class="faq__a"><p class="u-pt-0">Updates sometimes reset the firmware security module. Re-enabling “fTPM” or the platform-trust setting in setup, then booting back into Windows, restores it.</p></div>
+            <button type="button" class="faq__q">Why does PC ask for the security module after a firmware update?<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-16" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg></button>
+            <div class="faq__a"><p class="u-pt-0">Updates sometimes reset the firmware security module. Re-enabling “fTPM” or the platform-trust setting in setup, then booting back into PC, restores it.</p></div>
           </div>
           <div class="faq__item">
             <button type="button" class="faq__q">Can I downgrade firmware?<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-16" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg></button>
@@ -328,7 +328,7 @@
             <div class="footer__brand-icon"><img src="/assets/images/logo-crown.png" alt="PrintKingDriver crown logo" width="36" height="36" /></div>
             <div class="footer__brand-name">PrintKingDriver</div>
           </a>
-          <p>Your trusted source for printer & system driver information.</p>
+          <p>Your trusted source for device & system driver information.</p>
           <div class="footer__contact">
             <div class="footer__contact-row"><span class="footer__contact-label">Company</span><span class="footer__contact-val">PrintKingDriver</span></div>
             <div class="footer__contact-row"><span class="footer__contact-label">Email</span><a class="footer__contact-val" href="mailto:support@printkingdriver.com">support@printkingdriver.com</a></div>

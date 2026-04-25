@@ -125,7 +125,7 @@
         </div>
         <ul class="mega__list">
           <li><a href="/drivers/printer">
-            <div class="mega__item-name">Printer Driver</div>
+            <div class="mega__item-name">Device Driver</div>
             <div class="mega__item-desc">Document to print commands</div>
           </a></li>
           <li><a href="/drivers/scanner">
@@ -159,7 +159,7 @@
         </ul>
       </div></div>
       <div class="mega__footer">
-        <div class="mega__footer-text"><a href="/guides">Setup Guides</a> · <a href="/how-to">How-To Library</a> · <a href="/tech">Print Tech Explained</a> · <a href="/brands">Brand Pages</a> · <a href="/troubleshooting">Troubleshooting</a></div>
+        <div class="mega__footer-text"><a href="/guides">Setup Guides</a> · <a href="/how-to">How-To Library</a> · <a href="/tech">Print Tech Explained</a> · <a href="/brands">Brand Pages</a> · <a href="/troubleshooting">Common Issues</a></div>
       </div>
     </div></div>
   </nav>
@@ -177,7 +177,7 @@
       <h5>Hardware-Specific</h5>
       <ul><li><a href="/drivers/storage">Storage Controller</a></li><li><a href="/drivers/usb">USB Support</a></li><li><a href="/drivers/bluetooth">Bluetooth Driver</a></li><li><a href="/drivers/input">Input Drivers</a></li></ul>
       <h5>Peripheral Drivers</h5>
-      <ul><li><a href="/drivers/printer">Printer Driver</a></li><li><a href="/drivers/scanner">Scanner Support</a></li><li><a href="/drivers/webcam">Webcam Driver</a></li></ul>
+      <ul><li><a href="/drivers/printer">Device Driver</a></li><li><a href="/drivers/scanner">Scanner Support</a></li><li><a href="/drivers/webcam">Webcam Driver</a></li></ul>
       <h5>Advanced Systems</h5>
       <ul><li><a href="/drivers/bios">Boot Firmware</a></li><li><a href="/drivers/security">Security Drivers</a></li><li><a href="/drivers/monitor">Monitor Driver</a></li></ul></div>
       <a href="/how-it-works" data-nav-link="/how-it-works">How It Works</a>
@@ -285,7 +285,7 @@
         <p class="u-mb-16">Recognising the symptom is the first step in narrowing down whether the problem really is the driver, the hardware or another part of the system.</p>
         <div class="tbl-wrap"><div class="tbl-scroll"><table class="tbl">
           <thead><tr><th>Symptom</th><th>Likely Cause</th><th class="hide-md">What It Affects</th></tr></thead>
-          <tbody><tr><td class="strong">Slow USB or unstable peripherals</td><td>Outdated chipset drivers misroute bus traffic.</td><td class="hide-md small">I/O stability</td></tr><tr><td class="strong">CPU running at low clock speed</td><td>Power management profiles not registered correctly.</td><td class="hide-md small">Performance</td></tr><tr><td class="strong">Random freezes after sleep/wake</td><td>ACPI handlers fail to re-initialise.</td><td class="hide-md small">Reliability</td></tr><tr><td class="strong">New RAM not detected fully</td><td>Memory controller table missing in old driver build.</td><td class="hide-md small">Hardware support</td></tr><tr><td class="strong">Yellow exclamation marks in Device Manager</td><td>Generic Windows driver loaded instead of vendor build.</td><td class="hide-md small">System health</td></tr></tbody>
+          <tbody><tr><td class="strong">Slow USB or unstable peripherals</td><td>Outdated chipset drivers misroute bus traffic.</td><td class="hide-md small">I/O stability</td></tr><tr><td class="strong">CPU running at low clock speed</td><td>Power management profiles not registered correctly.</td><td class="hide-md small">Performance</td></tr><tr><td class="strong">Random freezes after sleep/wake</td><td>ACPI handlers fail to re-initialise.</td><td class="hide-md small">Reliability</td></tr><tr><td class="strong">New RAM not detected fully</td><td>Memory controller table missing in old driver build.</td><td class="hide-md small">Hardware support</td></tr><tr><td class="strong">Yellow exclamation marks in Device Manager</td><td>Generic PC driver loaded instead of vendor build.</td><td class="hide-md small">System health</td></tr></tbody>
         </table></div></div>
       </section>
 
@@ -293,7 +293,7 @@
         <h2>Best Practices</h2>
         <p class="u-mb-16">A short checklist to keep this driver healthy and reduce the chance of running into the issues above.</p>
         <ul class="detail-list">
-          <li><span class="detail-list__bullet"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-12" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg></span><span>Install the chipset package before any other driver — it sets the foundation everything else depends on.</span></li><li><span class="detail-list__bullet"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-12" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg></span><span>Always source chipset drivers directly from the motherboard or laptop manufacturer.</span></li><li><span class="detail-list__bullet"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-12" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg></span><span>Reboot after installation; many low-level changes only apply after a clean boot.</span></li><li><span class="detail-list__bullet"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-12" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg></span><span>Keep the BIOS firmware roughly aligned with the chipset driver version.</span></li><li><span class="detail-list__bullet"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-12" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg></span><span>Re-run the chipset installer after major Windows feature updates.</span></li>
+          <li><span class="detail-list__bullet"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-12" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg></span><span>Install the chipset package before any other driver — it sets the foundation everything else depends on.</span></li><li><span class="detail-list__bullet"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-12" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg></span><span>Always source chipset drivers directly from the motherboard or laptop manufacturer.</span></li><li><span class="detail-list__bullet"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-12" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg></span><span>Reboot after installation; many low-level changes only apply after a clean boot.</span></li><li><span class="detail-list__bullet"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-12" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg></span><span>Keep the BIOS firmware roughly aligned with the chipset driver version.</span></li><li><span class="detail-list__bullet"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-12" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg></span><span>Re-run the chipset installer after major PC feature updates.</span></li>
         </ul>
       </section>
 
@@ -303,15 +303,15 @@
           
           <div class="faq__item">
             <button type="button" class="faq__q">Should I install the chipset driver first?<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-16" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg></button>
-            <div class="faq__a"><p class="u-pt-0">Yes. The chipset driver tells Windows how to talk to the CPU, memory controller and on-board buses. Installing GPU, audio or network drivers before it can leave them running on incomplete plumbing.</p></div>
+            <div class="faq__a"><p class="u-pt-0">Yes. The chipset driver tells PC how to talk to the CPU, memory controller and on-board buses. Installing GPU, audio or network drivers before it can leave them running on incomplete plumbing.</p></div>
           </div>
           <div class="faq__item">
             <button type="button" class="faq__q">Where is the best place to download chipset drivers?<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-16" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg></button>
             <div class="faq__a"><p class="u-pt-0">From the motherboard or laptop maker (e.g. ASUS, major manufacturersLenovo). They package versions tested for that exact board, including BIOS / power-profile dependencies.</p></div>
           </div>
           <div class="faq__item">
-            <button type="button" class="faq__q">Do I need to reinstall after a Windows feature update?<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-16" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg></button>
-            <div class="faq__a"><p class="u-pt-0">It is good practice. Major Windows updates can roll back vendor drivers to generic ones, especially around USB, SATA and power management.</p></div>
+            <button type="button" class="faq__q">Do I need to reinstall after a PC feature update?<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-16" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg></button>
+            <div class="faq__a"><p class="u-pt-0">It is good practice. Major PC updates can roll back vendor drivers to generic ones, especially around USB, SATA and power management.</p></div>
           </div>
           <div class="faq__item">
             <button type="button" class="faq__q">Can a bad chipset driver damage hardware?<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-16" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg></button>
@@ -331,7 +331,7 @@
             <div class="footer__brand-icon"><img src="/assets/images/logo-crown.png" alt="PrintKingDriver crown logo" width="36" height="36" /></div>
             <div class="footer__brand-name">PrintKingDriver</div>
           </a>
-          <p>Your trusted source for printer & system driver information.</p>
+          <p>Your trusted source for device & system driver information.</p>
           <div class="footer__contact">
             <div class="footer__contact-row"><span class="footer__contact-label">Company</span><span class="footer__contact-val">PrintKingDriver</span></div>
             <div class="footer__contact-row"><span class="footer__contact-label">Email</span><a class="footer__contact-val" href="mailto:support@printkingdriver.com">support@printkingdriver.com</a></div>

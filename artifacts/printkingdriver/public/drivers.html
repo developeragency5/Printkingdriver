@@ -3,11 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <title>What Are Drivers? Types &amp; Troubleshooting | PrintKingDriver</title>
-    <meta name="description" content="A clear reference guide to driver categories — chipset, graphics, audio, network, storage, USB and printer — covering how each works and how to fix issues." />
+    <title>What Are Drivers? Types &amp; Common Issues | PrintKingDriver</title>
+    <meta name="description" content="A clear reference guide to driver categories — chipset, graphics, audio, network, storage, USB and device — covering how each works and how to fix issues." />
     <link rel="icon" type="image/png" href="/favicon.png" />
-    <meta property="og:title" content="What Are Drivers? — Types, Roles & Troubleshooting | PrintKingDriver" />
-    <meta property="og:description" content="A clear reference guide to driver categories — chipset, graphics, audio, network, storage, USB and printer — covering how each works and how to fix issues." />
+    <meta property="og:title" content="What Are Drivers? — Types, Roles & Common Issues | PrintKingDriver" />
+    <meta property="og:description" content="A clear reference guide to driver categories — chipset, graphics, audio, network, storage, USB and device — covering how each works and how to fix issues." />
     <meta property="og:image" content="/opengraph.jpg" />
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary_large_image" />
@@ -125,7 +125,7 @@
         </div>
         <ul class="mega__list">
           <li><a href="/drivers/printer">
-            <div class="mega__item-name">Printer Driver</div>
+            <div class="mega__item-name">Device Driver</div>
             <div class="mega__item-desc">Document to print commands</div>
           </a></li>
           <li><a href="/drivers/scanner">
@@ -159,7 +159,7 @@
         </ul>
       </div></div>
       <div class="mega__footer">
-        <div class="mega__footer-text"><a href="/guides">Setup Guides</a> · <a href="/how-to">How-To Library</a> · <a href="/tech">Print Tech Explained</a> · <a href="/brands">Brand Pages</a> · <a href="/troubleshooting">Troubleshooting</a></div>
+        <div class="mega__footer-text"><a href="/guides">Setup Guides</a> · <a href="/how-to">How-To Library</a> · <a href="/tech">Print Tech Explained</a> · <a href="/brands">Brand Pages</a> · <a href="/troubleshooting">Common Issues</a></div>
       </div>
     </div></div>
   </nav>
@@ -177,7 +177,7 @@
       <h5>Hardware-Specific</h5>
       <ul><li><a href="/drivers/storage">Storage Controller</a></li><li><a href="/drivers/usb">USB Support</a></li><li><a href="/drivers/bluetooth">Bluetooth Driver</a></li><li><a href="/drivers/input">Input Drivers</a></li></ul>
       <h5>Peripheral Drivers</h5>
-      <ul><li><a href="/drivers/printer">Printer Driver</a></li><li><a href="/drivers/scanner">Scanner Support</a></li><li><a href="/drivers/webcam">Webcam Driver</a></li></ul>
+      <ul><li><a href="/drivers/printer">Device Driver</a></li><li><a href="/drivers/scanner">Scanner Support</a></li><li><a href="/drivers/webcam">Webcam Driver</a></li></ul>
       <h5>Advanced Systems</h5>
       <ul><li><a href="/drivers/bios">Boot Firmware</a></li><li><a href="/drivers/security">Security Drivers</a></li><li><a href="/drivers/monitor">Monitor Driver</a></li></ul></div>
       <a href="/how-it-works" data-nav-link="/how-it-works">How It Works</a>
@@ -198,7 +198,7 @@
 
     <section class="u-mb-64">
       <h2 class="font-heading u-h-card">How a Driver Functions</h2>
-      <p class="u-muted-small">The flow below shows how a print command travels from your application to the physical printer through the driver layer.</p>
+      <p class="u-muted-small">The flow below shows how a print command travels from your application to the physical device through the driver layer.</p>
       <div class="flow-box">
         <div class="flow">
           
@@ -230,8 +230,8 @@
   <path d="M14 2v4a2 2 0 0 0 2 2h4" />
   <path d="m10 13-2 2 2 2" />
   <path d="m14 17 2-2-2-2" /></svg></div>
-              <div class="flow__label is-highlight">Printer Driver</div>
-              <div class="flow__sub">Translates to a printer-readable command stream</div>
+              <div class="flow__label is-highlight">Device Driver</div>
+              <div class="flow__sub">Translates to a device-readable command stream</div>
             </div>
             <div class="flow__arrow h"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-20" aria-hidden="true"><path d="M5 12h14" />
   <path d="m12 5 7 7-7 7" /></svg></div><div class="flow__arrow v"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-20" aria-hidden="true"><path d="M12 5v14" />
@@ -250,7 +250,7 @@
   <path d="M9 2v2" />
   <path d="M9 20v2" /></svg></div>
               <div class="flow__label">Firmware</div>
-              <div class="flow__sub">Printer processes the command</div>
+              <div class="flow__sub">Device processes the command</div>
             </div>
             <div class="flow__arrow h"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-20" aria-hidden="true"><path d="M5 12h14" />
   <path d="m12 5 7 7-7 7" /></svg></div><div class="flow__arrow v"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-20" aria-hidden="true"><path d="M12 5v14" />
@@ -269,7 +269,7 @@
         </div>
         <div class="flow__legend">
           <span class="flow__legend-dot"></span>
-          The <span style="color:#9c4a5b;font-weight:600;margin:0 4px;">Printer Driver</span> is the critical translation layer — without it, the OS cannot communicate with the hardware.
+          The <span style="color:#9c4a5b;font-weight:600;margin:0 4px;">Device Driver</span> is the critical translation layer — without it, the OS cannot communicate with the hardware.
         </div>
       </div>
     </section>
@@ -459,7 +459,7 @@
           </ul>
           <footer class="dtype-card__foot">
             <div><span>Role</span><span>Core system communication</span></div>
-            <div><span>OS Support</span><span>Windows, macOS, Linux</span></div>
+            <div><span>OS Support</span><span>PC, macOS, Linux</span></div>
           </footer>
         </article>
 
@@ -479,7 +479,7 @@
           </ul>
           <footer class="dtype-card__foot">
             <div><span>Role</span><span>Internal device control</span></div>
-            <div><span>OS Support</span><span>Windows, macOS, Linux</span></div>
+            <div><span>OS Support</span><span>PC, macOS, Linux</span></div>
           </footer>
         </article>
 
@@ -492,13 +492,13 @@
           <h3 class="dtype-card__title">Peripheral Drivers</h3>
           <p class="dtype-card__desc">The translators for everything you plug in or pair to your system — from document workflows to image capture and live video — handling format, quality, and feature negotiation behind the scenes.</p>
           <ul class="dtype-card__list">
-            <li>Printer Driver</li>
+            <li>Device Driver</li>
             <li>Scanner Driver</li>
             <li>Webcam Driver</li>
           </ul>
           <footer class="dtype-card__foot">
             <div><span>Role</span><span>External device interaction</span></div>
-            <div><span>OS Support</span><span>Windows, macOS</span></div>
+            <div><span>OS Support</span><span>PC, macOS</span></div>
           </footer>
         </article>
 
@@ -530,20 +530,20 @@
       <div class="tbl-wrap"><div class="tbl-scroll"><table class="tbl">
         <thead><tr><th>Category</th><th>Primary Role</th><th class="hide-md">Covers</th><th>Best For</th><th class="hide-lg">OS</th></tr></thead>
         <tbody>
-          <tr><td class="strong">Essential</td><td>Core system communication</td><td class="hide-md small">Chipset, Graphics, Audio, Network</td><td>Day-to-day system stability</td><td class="hide-lg small">Windows, macOS, Linux</td></tr>
-          <tr><td class="strong">Hardware-Specific</td><td>Internal device control</td><td class="hide-md small">Storage, USB, Bluetooth, Input</td><td>Performance &amp; recognition</td><td class="hide-lg small">Windows, macOS, Linux</td></tr>
-          <tr><td class="strong">Peripheral</td><td>External device interaction</td><td class="hide-md small">Printer, Scanner, Webcam</td><td>Productivity workflows</td><td class="hide-lg small">Windows, macOS</td></tr>
+          <tr><td class="strong">Essential</td><td>Core system communication</td><td class="hide-md small">Chipset, Graphics, Audio, Network</td><td>Day-to-day system stability</td><td class="hide-lg small">PC, macOS, Linux</td></tr>
+          <tr><td class="strong">Hardware-Specific</td><td>Internal device control</td><td class="hide-md small">Storage, USB, Bluetooth, Input</td><td>Performance &amp; recognition</td><td class="hide-lg small">PC, macOS, Linux</td></tr>
+          <tr><td class="strong">Peripheral</td><td>External device interaction</td><td class="hide-md small">Device, Scanner, Webcam</td><td>Productivity workflows</td><td class="hide-lg small">PC, macOS</td></tr>
           <tr><td class="strong">Advanced System</td><td>Boot, security, display</td><td class="hide-md small">Boot Firmware, Security, Monitor</td><td>System integrity &amp; setup</td><td class="hide-lg small">Firmware &amp; OS</td></tr>
         </tbody>
       </table></div></div>
     </section>
 
     <section>
-      <h2 class="font-heading u-h-card">Troubleshooting Reference</h2>
+      <h2 class="font-heading u-h-card">Common Issues Reference</h2>
       <p class="u-muted-small">Common driver issues, their root causes, and the recommended fix for each.</p>
       <div class="tbl-wrap"><div class="tbl-scroll"><table class="tbl">
         <thead><tr><th>Issue</th><th class="hide-md">Likely Cause</th><th>Recommended Fix</th></tr></thead>
-        <tbody><tr><td class="strong">Printer Not Detected</td><td class="hide-md">Missing or corrupt driver</td><td>Re-add the correct driver for your OS version</td></tr><tr><td class="strong">Driver Conflict</td><td class="hide-md">Old driver not fully removed before adding a new one</td><td>Cleanly remove all driver files, then add a fresh copy</td></tr><tr><td class="strong">Print Queue Stuck</td><td class="hide-md">Corrupted print job or unresponsive spooler</td><td>Restart the print spooler service and clear the spooler folder</td></tr><tr><td class="strong">Printer Shows Offline</td><td class="hide-md">Driver lost communication pathway to device</td><td>Check port settings and disable 'Use Printer Offline' option</td></tr><tr><td class="strong">Poor Quality After OS Update</td><td class="hide-md">OS update changed driver interaction layer</td><td>Use the updated driver released by manufacturer post-update</td></tr><tr><td class="strong">Driver Setup Fails</td><td class="hide-md">Residual files or security software blocking setup</td><td>Run setup as Administrator with antivirus temporarily paused</td></tr><tr><td class="strong">Incorrect Page Size Output</td><td class="hide-md">Driver paper settings mismatch</td><td>Verify paper size settings in driver preferences and printing app</td></tr><tr><td class="strong">Slow Printing Speed</td><td class="hide-md">Driver using wrong rendering mode</td><td>Switch from high-quality to standard mode in driver settings</td></tr></tbody>
+        <tbody><tr><td class="strong">Device Not Detected</td><td class="hide-md">Missing or corrupt driver</td><td>Re-add the correct driver for your OS version</td></tr><tr><td class="strong">Driver Conflict</td><td class="hide-md">Old driver not fully removed before adding a new one</td><td>Cleanly remove all driver files, then add a fresh copy</td></tr><tr><td class="strong">Print Queue Stuck</td><td class="hide-md">Corrupted print job or unresponsive spooler</td><td>Restart the print spooler service and clear the spooler folder</td></tr><tr><td class="strong">Device Shows Offline</td><td class="hide-md">Driver lost communication pathway to device</td><td>Check port settings and disable 'Use Device Offline' option</td></tr><tr><td class="strong">Poor Quality After OS Update</td><td class="hide-md">OS update changed driver interaction layer</td><td>Use the updated driver released by manufacturer post-update</td></tr><tr><td class="strong">Driver Setup Fails</td><td class="hide-md">Residual files or security software blocking setup</td><td>Run setup as Administrator with antivirus temporarily paused</td></tr><tr><td class="strong">Incorrect Page Size Output</td><td class="hide-md">Driver paper settings mismatch</td><td>Verify paper size settings in driver preferences and printing app</td></tr><tr><td class="strong">Slow Printing Speed</td><td class="hide-md">Driver using wrong rendering mode</td><td>Switch from high-quality to standard mode in driver settings</td></tr></tbody>
       </table></div></div>
     </section>
 
@@ -558,7 +558,7 @@
             <div class="footer__brand-icon"><img src="/assets/images/logo-crown.png" alt="PrintKingDriver crown logo" width="36" height="36" /></div>
             <div class="footer__brand-name">PrintKingDriver</div>
           </a>
-          <p>Your trusted source for printer & system driver information.</p>
+          <p>Your trusted source for device & system driver information.</p>
           <div class="footer__contact">
             <div class="footer__contact-row"><span class="footer__contact-label">Company</span><span class="footer__contact-val">PrintKingDriver</span></div>
             <div class="footer__contact-row"><span class="footer__contact-label">Email</span><a class="footer__contact-val" href="mailto:support@printkingdriver.com">support@printkingdriver.com</a></div>

@@ -125,7 +125,7 @@
         </div>
         <ul class="mega__list">
           <li><a href="/drivers/printer">
-            <div class="mega__item-name">Printer Driver</div>
+            <div class="mega__item-name">Device Driver</div>
             <div class="mega__item-desc">Document to print commands</div>
           </a></li>
           <li><a href="/drivers/scanner">
@@ -159,7 +159,7 @@
         </ul>
       </div></div>
       <div class="mega__footer">
-        <div class="mega__footer-text"><a href="/guides">Setup Guides</a> · <a href="/how-to">How-To Library</a> · <a href="/tech">Print Tech Explained</a> · <a href="/brands">Brand Pages</a> · <a href="/troubleshooting">Troubleshooting</a></div>
+        <div class="mega__footer-text"><a href="/guides">Setup Guides</a> · <a href="/how-to">How-To Library</a> · <a href="/tech">Print Tech Explained</a> · <a href="/brands">Brand Pages</a> · <a href="/troubleshooting">Common Issues</a></div>
       </div>
     </div></div>
   </nav>
@@ -177,7 +177,7 @@
       <h5>Hardware-Specific</h5>
       <ul><li><a href="/drivers/storage">Storage Controller</a></li><li><a href="/drivers/usb">USB Support</a></li><li><a href="/drivers/bluetooth">Bluetooth Driver</a></li><li><a href="/drivers/input">Input Drivers</a></li></ul>
       <h5>Peripheral Drivers</h5>
-      <ul><li><a href="/drivers/printer">Printer Driver</a></li><li><a href="/drivers/scanner">Scanner Support</a></li><li><a href="/drivers/webcam">Webcam Driver</a></li></ul>
+      <ul><li><a href="/drivers/printer">Device Driver</a></li><li><a href="/drivers/scanner">Scanner Support</a></li><li><a href="/drivers/webcam">Webcam Driver</a></li></ul>
       <h5>Advanced Systems</h5>
       <ul><li><a href="/drivers/bios">Boot Firmware</a></li><li><a href="/drivers/security">Security Drivers</a></li><li><a href="/drivers/monitor">Monitor Driver</a></li></ul></div>
       <a href="/how-it-works" data-nav-link="/how-it-works">How It Works</a>
@@ -241,7 +241,7 @@
       <section class="detail-card">
         <h2>Key Functions</h2>
         <ul class="detail-list">
-          <li><span class="detail-list__bullet"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-12" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg></span><span>Stores and protects cryptographic keys.</span></li><li><span class="detail-list__bullet"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-12" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg></span><span>Measures boot components for integrity attestation.</span></li><li><span class="detail-list__bullet"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-12" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg></span><span>Accelerates disk and network encryption.</span></li><li><span class="detail-list__bullet"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-12" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg></span><span>Backs features like Windows Hello and FileVault.</span></li>
+          <li><span class="detail-list__bullet"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-12" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg></span><span>Stores and protects cryptographic keys.</span></li><li><span class="detail-list__bullet"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-12" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg></span><span>Measures boot components for integrity attestation.</span></li><li><span class="detail-list__bullet"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-12" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg></span><span>Accelerates disk and network encryption.</span></li><li><span class="detail-list__bullet"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-12" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg></span><span>Backs features like PC Hello and FileVault.</span></li>
         </ul>
       </section>
 
@@ -264,7 +264,7 @@
         <p class="u-mb-16">Recognising the symptom is the first step in narrowing down whether the problem really is the driver, the hardware or another part of the system.</p>
         <div class="tbl-wrap"><div class="tbl-scroll"><table class="tbl">
           <thead><tr><th>Symptom</th><th>Likely Cause</th><th class="hide-md">What It Affects</th></tr></thead>
-          <tbody><tr><td class="strong">BitLocker prompts for recovery key after update</td><td>TPM measurements changed; driver lost trust chain.</td><td class="hide-md small">Data access</td></tr><tr><td class="strong">Antivirus driver causes file copy slowdown</td><td>Filter driver scanning every read.</td><td class="hide-md small">Performance</td></tr><tr><td class="strong">Windows Hello fingerprint stops working</td><td>Biometric driver corrupted or missing template.</td><td class="hide-md small">Sign-in</td></tr><tr><td class="strong">Smart card / CAC reader unrecognised</td><td>Class minidriver not installed.</td><td class="hide-md small">Authentication</td></tr><tr><td class="strong">Secure Boot fails after enabling</td><td>Unsigned driver in boot path blocks startup.</td><td class="hide-md small">System integrity</td></tr></tbody>
+          <tbody><tr><td class="strong">BitLocker prompts for recovery key after update</td><td>TPM measurements changed; driver lost trust chain.</td><td class="hide-md small">Data access</td></tr><tr><td class="strong">Antivirus driver causes file copy slowdown</td><td>Filter driver scanning every read.</td><td class="hide-md small">Performance</td></tr><tr><td class="strong">PC Hello fingerprint stops working</td><td>Biometric driver corrupted or missing template.</td><td class="hide-md small">Sign-in</td></tr><tr><td class="strong">Smart card / CAC reader unrecognised</td><td>Class minidriver not installed.</td><td class="hide-md small">Authentication</td></tr><tr><td class="strong">Secure Boot fails after enabling</td><td>Unsigned driver in boot path blocks startup.</td><td class="hide-md small">System integrity</td></tr></tbody>
         </table></div></div>
       </section>
 
@@ -272,7 +272,7 @@
         <h2>Best Practices</h2>
         <p class="u-mb-16">A short checklist to keep this driver healthy and reduce the chance of running into the issues above.</p>
         <ul class="detail-list">
-          <li><span class="detail-list__bullet"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-12" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg></span><span>Suspend BitLocker before BIOS or major hardware changes to avoid the recovery prompt.</span></li><li><span class="detail-list__bullet"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-12" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg></span><span>Keep only one real-time antivirus active — multiple filter drivers conflict and slow the system.</span></li><li><span class="detail-list__bullet"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-12" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg></span><span>Install fingerprint and face recognition drivers from the OEM, not generic vendor packages.</span></li><li><span class="detail-list__bullet"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-12" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg></span><span>Verify driver signing before allowing test-signed drivers to load — they weaken Secure Boot.</span></li><li><span class="detail-list__bullet"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-12" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg></span><span>Audit certificates in your TPM-protected key store after major Windows feature updates.</span></li>
+          <li><span class="detail-list__bullet"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-12" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg></span><span>Suspend BitLocker before BIOS or major hardware changes to avoid the recovery prompt.</span></li><li><span class="detail-list__bullet"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-12" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg></span><span>Keep only one real-time antivirus active — multiple filter drivers conflict and slow the system.</span></li><li><span class="detail-list__bullet"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-12" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg></span><span>Install fingerprint and face recognition drivers from the OEM, not generic vendor packages.</span></li><li><span class="detail-list__bullet"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-12" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg></span><span>Verify driver signing before allowing test-signed drivers to load — they weaken Secure Boot.</span></li><li><span class="detail-list__bullet"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-12" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg></span><span>Audit certificates in your TPM-protected key store after major PC feature updates.</span></li>
         </ul>
       </section>
 
@@ -282,19 +282,19 @@
           
           <div class="faq__item">
             <button type="button" class="faq__q">What does “driver signing” mean?<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-16" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg></button>
-            <div class="faq__a"><p class="u-pt-0">A signed driver carries a cryptographic signature from a trusted vendor and Microsoft. Windows refuses to load unsigned kernel drivers by default, which protects the system from malicious or tampered code.</p></div>
+            <div class="faq__a"><p class="u-pt-0">A signed driver carries a cryptographic signature from a trusted vendor and Microsoft. PC refuses to load unsigned kernel drivers by default, which protects the system from malicious or tampered code.</p></div>
           </div>
           <div class="faq__item">
             <button type="button" class="faq__q">Why does BitLocker keep asking for the recovery key?<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-16" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg></button>
-            <div class="faq__a"><p class="u-pt-0">BitLocker is bound to TPM measurements of the boot chain. BIOS updates, GPU swaps and even some Windows updates can change those measurements. Suspending BitLocker before the change avoids the prompt.</p></div>
+            <div class="faq__a"><p class="u-pt-0">BitLocker is bound to TPM measurements of the boot chain. BIOS updates, GPU swaps and even some PC updates can change those measurements. Suspending BitLocker before the change avoids the prompt.</p></div>
           </div>
           <div class="faq__item">
             <button type="button" class="faq__q">Are security drivers different from antivirus software?<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-16" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg></button>
             <div class="faq__a"><p class="u-pt-0">They overlap. The antivirus engine runs in user space, but its scanning relies on a kernel filter driver that watches every file operation. That driver is the part that needs proper signing and updates.</p></div>
           </div>
           <div class="faq__item">
-            <button type="button" class="faq__q">What is a TPM and why does Windows 11 need it?<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-16" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg></button>
-            <div class="faq__a"><p class="u-pt-0">A Trusted Platform Module is a small chip (or firmware feature) that stores cryptographic keys safely. Windows 11 requires TPM 2.0 to enable BitLocker, Windows Hello and other hardware-rooted security features.</p></div>
+            <button type="button" class="faq__q">What is a TPM and why does PC 11 need it?<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-16" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg></button>
+            <div class="faq__a"><p class="u-pt-0">A Trusted Platform Module is a small chip (or firmware feature) that stores cryptographic keys safely. PC 11 requires TPM 2.0 to enable BitLocker, PC Hello and other hardware-rooted security features.</p></div>
           </div>
         </div>
       </section>
@@ -310,7 +310,7 @@
             <div class="footer__brand-icon"><img src="/assets/images/logo-crown.png" alt="PrintKingDriver crown logo" width="36" height="36" /></div>
             <div class="footer__brand-name">PrintKingDriver</div>
           </a>
-          <p>Your trusted source for printer & system driver information.</p>
+          <p>Your trusted source for device & system driver information.</p>
           <div class="footer__contact">
             <div class="footer__contact-row"><span class="footer__contact-label">Company</span><span class="footer__contact-val">PrintKingDriver</span></div>
             <div class="footer__contact-row"><span class="footer__contact-label">Email</span><a class="footer__contact-val" href="mailto:support@printkingdriver.com">support@printkingdriver.com</a></div>

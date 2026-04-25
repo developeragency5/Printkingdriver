@@ -125,7 +125,7 @@
         </div>
         <ul class="mega__list">
           <li><a href="/drivers/printer">
-            <div class="mega__item-name">Printer Driver</div>
+            <div class="mega__item-name">Device Driver</div>
             <div class="mega__item-desc">Document to print commands</div>
           </a></li>
           <li><a href="/drivers/scanner">
@@ -159,7 +159,7 @@
         </ul>
       </div></div>
       <div class="mega__footer">
-        <div class="mega__footer-text"><a href="/guides">Setup Guides</a> · <a href="/how-to">How-To Library</a> · <a href="/tech">Print Tech Explained</a> · <a href="/brands">Brand Pages</a> · <a href="/troubleshooting">Troubleshooting</a></div>
+        <div class="mega__footer-text"><a href="/guides">Setup Guides</a> · <a href="/how-to">How-To Library</a> · <a href="/tech">Print Tech Explained</a> · <a href="/brands">Brand Pages</a> · <a href="/troubleshooting">Common Issues</a></div>
       </div>
     </div></div>
   </nav>
@@ -177,7 +177,7 @@
       <h5>Hardware-Specific</h5>
       <ul><li><a href="/drivers/storage">Storage Controller</a></li><li><a href="/drivers/usb">USB Support</a></li><li><a href="/drivers/bluetooth">Bluetooth Driver</a></li><li><a href="/drivers/input">Input Drivers</a></li></ul>
       <h5>Peripheral Drivers</h5>
-      <ul><li><a href="/drivers/printer">Printer Driver</a></li><li><a href="/drivers/scanner">Scanner Support</a></li><li><a href="/drivers/webcam">Webcam Driver</a></li></ul>
+      <ul><li><a href="/drivers/printer">Device Driver</a></li><li><a href="/drivers/scanner">Scanner Support</a></li><li><a href="/drivers/webcam">Webcam Driver</a></li></ul>
       <h5>Advanced Systems</h5>
       <ul><li><a href="/drivers/bios">Boot Firmware</a></li><li><a href="/drivers/security">Security Drivers</a></li><li><a href="/drivers/monitor">Monitor Driver</a></li></ul></div>
       <a href="/how-it-works" data-nav-link="/how-it-works">How It Works</a>
@@ -272,7 +272,7 @@
         <p class="u-mb-16">Recognising the symptom is the first step in narrowing down whether the problem really is the driver, the hardware or another part of the system.</p>
         <div class="tbl-wrap"><div class="tbl-scroll"><table class="tbl">
           <thead><tr><th>Symptom</th><th>Likely Cause</th><th class="hide-md">What It Affects</th></tr></thead>
-          <tbody><tr><td class="strong">Wrong native resolution offered</td><td>EDID not read correctly by driver.</td><td class="hide-md small">Display clarity</td></tr><tr><td class="strong">Refresh rate stuck at 60 Hz on a 144 Hz panel</td><td>Generic monitor driver loaded.</td><td class="hide-md small">Smoothness</td></tr><tr><td class="strong">Colours look washed out or oversaturated</td><td>ICC colour profile missing or wrong.</td><td class="hide-md small">Colour accuracy</td></tr><tr><td class="strong">HDR not available in Windows</td><td>Driver does not advertise HDR metadata.</td><td class="hide-md small">Visual quality</td></tr><tr><td class="strong">Second monitor flickers when first is active</td><td>Mixed-refresh-rate handling fails.</td><td class="hide-md small">Multi-display</td></tr></tbody>
+          <tbody><tr><td class="strong">Wrong native resolution offered</td><td>EDID not read correctly by driver.</td><td class="hide-md small">Display clarity</td></tr><tr><td class="strong">Refresh rate stuck at 60 Hz on a 144 Hz panel</td><td>Generic monitor driver loaded.</td><td class="hide-md small">Smoothness</td></tr><tr><td class="strong">Colours look washed out or oversaturated</td><td>ICC colour profile missing or wrong.</td><td class="hide-md small">Colour accuracy</td></tr><tr><td class="strong">HDR not available in PC</td><td>Driver does not advertise HDR metadata.</td><td class="hide-md small">Visual quality</td></tr><tr><td class="strong">Second monitor flickers when first is active</td><td>Mixed-refresh-rate handling fails.</td><td class="hide-md small">Multi-display</td></tr></tbody>
         </table></div></div>
       </section>
 
@@ -290,7 +290,7 @@
           
           <div class="faq__item">
             <button type="button" class="faq__q">Do monitors actually need a driver?<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-16" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg></button>
-            <div class="faq__a"><p class="u-pt-0">Windows can drive any monitor with a generic driver, but the manufacturer INF file unlocks correct refresh-rate options, native colour profile and HDR metadata. It is small but worth installing.</p></div>
+            <div class="faq__a"><p class="u-pt-0">PC can drive any monitor with a generic driver, but the manufacturer INF file unlocks correct refresh-rate options, native colour profile and HDR metadata. It is small but worth installing.</p></div>
           </div>
           <div class="faq__item">
             <button type="button" class="faq__q">What is EDID?<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-16" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg></button>
@@ -298,7 +298,7 @@
           </div>
           <div class="faq__item">
             <button type="button" class="faq__q">Why is HDR greyed out?<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-16" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg></button>
-            <div class="faq__a"><p class="u-pt-0">Either the monitor does not advertise HDR over the current cable / port, the GPU driver does not see it, or HDR is disabled in Windows. Updating the GPU driver and using a certified HDMI 2.0+ cable usually resolves it.</p></div>
+            <div class="faq__a"><p class="u-pt-0">Either the monitor does not advertise HDR over the current cable / port, the GPU driver does not see it, or HDR is disabled in PC. Updating the GPU driver and using a certified HDMI 2.0+ cable usually resolves it.</p></div>
           </div>
           <div class="faq__item">
             <button type="button" class="faq__q">Can I use one ICC profile across multiple monitors?<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-16" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg></button>
@@ -318,7 +318,7 @@
             <div class="footer__brand-icon"><img src="/assets/images/logo-crown.png" alt="PrintKingDriver crown logo" width="36" height="36" /></div>
             <div class="footer__brand-name">PrintKingDriver</div>
           </a>
-          <p>Your trusted source for printer & system driver information.</p>
+          <p>Your trusted source for device & system driver information.</p>
           <div class="footer__contact">
             <div class="footer__contact-row"><span class="footer__contact-label">Company</span><span class="footer__contact-val">PrintKingDriver</span></div>
             <div class="footer__contact-row"><span class="footer__contact-label">Email</span><a class="footer__contact-val" href="mailto:support@printkingdriver.com">support@printkingdriver.com</a></div>
