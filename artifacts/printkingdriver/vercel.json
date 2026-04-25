@@ -5,6 +5,28 @@
   "framework": null,
   "cleanUrls": true,
   "trailingSlash": false,
+  "redirects": [
+    { "source": "/brands/brother", "destination": "/brands/brand-a", "permanent": true },
+    { "source": "/brands/brother/:path*", "destination": "/brands/brand-a/:path*", "permanent": true },
+    { "source": "/brands/canon", "destination": "/brands/brand-b", "permanent": true },
+    { "source": "/brands/canon/:path*", "destination": "/brands/brand-b/:path*", "permanent": true },
+    { "source": "/brands/dell", "destination": "/brands/brand-c", "permanent": true },
+    { "source": "/brands/dell/:path*", "destination": "/brands/brand-c/:path*", "permanent": true },
+    { "source": "/brands/epson", "destination": "/brands/brand-d", "permanent": true },
+    { "source": "/brands/epson/:path*", "destination": "/brands/brand-d/:path*", "permanent": true },
+    { "source": "/brands/hp", "destination": "/brands/brand-e", "permanent": true },
+    { "source": "/brands/hp/:path*", "destination": "/brands/brand-e/:path*", "permanent": true },
+    { "source": "/brands/kyocera", "destination": "/brands/brand-f", "permanent": true },
+    { "source": "/brands/kyocera/:path*", "destination": "/brands/brand-f/:path*", "permanent": true },
+    { "source": "/brands/lexmark", "destination": "/brands/brand-g", "permanent": true },
+    { "source": "/brands/lexmark/:path*", "destination": "/brands/brand-g/:path*", "permanent": true },
+    { "source": "/brands/ricoh", "destination": "/brands/brand-h", "permanent": true },
+    { "source": "/brands/ricoh/:path*", "destination": "/brands/brand-h/:path*", "permanent": true },
+    { "source": "/brands/samsung", "destination": "/brands/brand-i", "permanent": true },
+    { "source": "/brands/samsung/:path*", "destination": "/brands/brand-i/:path*", "permanent": true },
+    { "source": "/brands/xerox", "destination": "/brands/brand-j", "permanent": true },
+    { "source": "/brands/xerox/:path*", "destination": "/brands/brand-j/:path*", "permanent": true }
+  ],
   "headers": [
     {
       "source": "/(.*)",
