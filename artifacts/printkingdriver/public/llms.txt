@@ -28,19 +28,6 @@
 - [Security & TPM](https://www.printkingdriver.com/drivers/security): Security chip and TPM drivers
 - [Monitor Drivers](https://www.printkingdriver.com/drivers/monitor): Monitor calibration and display drivers
 
-## Installation Guides
-
-- [Wi-Fi Device Setup](https://www.printkingdriver.com/guides/wifi-printer-setup): Complete guide to setting up a device over Wi-Fi on PC, macOS, and Linux
-- [USB Device Setup](https://www.printkingdriver.com/guides/usb-printer-setup): Step-by-step USB device connection guide for PC and macOS
-- [Ethernet Device Setup](https://www.printkingdriver.com/guides/ethernet-printer-setup): Wired network device setup with IP reservation for reliable office use
-- [Bluetooth Device Setup](https://www.printkingdriver.com/guides/bluetooth-printer-setup): Pairing a Bluetooth device to a laptop, phone, or tablet
-- [PC 11 Device Setup](https://www.printkingdriver.com/guides/windows-11-printer-setup): Add a device in PC 11 via Settings, IP address, or legacy Control Panel
-- [PC 10 Device Setup](https://www.printkingdriver.com/guides/windows-10-printer-setup): Add a device in PC 10 via Devices and Settings
-- [macOS Device Setup](https://www.printkingdriver.com/guides/macos-printer-setup): Add a device on macOS using System Settings, AirPrint, or a vendor driver
-- [Linux Device Setup](https://www.printkingdriver.com/guides/linux-printer-setup): CUPS-based device setup on Ubuntu, Fedora, Debian, and headless servers
-- [Cloud Printing](https://www.printkingdriver.com/guides/cloud-printing): Cloud printing options after legacy cloud services were retired
-- [AirPrint and Mopria](https://www.printkingdriver.com/guides/airprint-and-mopria): Driverless printing via AirPrint (Apple) and Mopria (Android) — setup and compatibility
-
 ## How-To Articles
 
 - [Install Device Driver on PC](https://www.printkingdriver.com/how-to/install-printer-driver-windows): Download, set up, and configure a device driver on PC step by step

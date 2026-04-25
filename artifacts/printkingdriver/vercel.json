@@ -25,7 +25,18 @@
     { "source": "/brands/samsung", "destination": "/brands/brand-i", "permanent": true },
     { "source": "/brands/samsung/:path*", "destination": "/brands/brand-i/:path*", "permanent": true },
     { "source": "/brands/xerox", "destination": "/brands/brand-j", "permanent": true },
-    { "source": "/brands/xerox/:path*", "destination": "/brands/brand-j/:path*", "permanent": true }
+    { "source": "/brands/xerox/:path*", "destination": "/brands/brand-j/:path*", "permanent": true },
+    { "source": "/guides", "destination": "/how-to", "permanent": true },
+    { "source": "/guides/windows-10-printer-setup", "destination": "/how-to/install-printer-driver-windows", "permanent": true },
+    { "source": "/guides/windows-11-printer-setup", "destination": "/how-to/install-printer-driver-windows", "permanent": true },
+    { "source": "/guides/macos-printer-setup", "destination": "/how-to/install-printer-driver-mac", "permanent": true },
+    { "source": "/guides/linux-printer-setup", "destination": "/how-to", "permanent": true },
+    { "source": "/guides/wifi-printer-setup", "destination": "/how-to", "permanent": true },
+    { "source": "/guides/ethernet-printer-setup", "destination": "/how-to/add-network-printer", "permanent": true },
+    { "source": "/guides/usb-printer-setup", "destination": "/how-to/install-printer-driver-windows", "permanent": true },
+    { "source": "/guides/bluetooth-printer-setup", "destination": "/troubleshooting/bluetooth-printer-not-pairing", "permanent": true },
+    { "source": "/guides/cloud-printing", "destination": "/how-to", "permanent": true },
+    { "source": "/guides/airprint-and-mopria", "destination": "/tech/airprint-explained", "permanent": true }
   ],
   "headers": [
     {
