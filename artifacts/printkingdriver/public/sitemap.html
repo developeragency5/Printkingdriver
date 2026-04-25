@@ -31,35 +31,62 @@
     });
     </script>
     <style>
-      .sm-hero { background: linear-gradient(135deg, #2d5c54 0%, #3d7a70 100%); padding: 56px 0 48px; }
-      .sm-hero__eyebrow { font-size: .72rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: rgba(255,255,255,.6); margin-bottom: 10px; }
-      .sm-hero__title { font-size: 2.2rem; font-weight: 800; font-family: 'Plus Jakarta Sans', sans-serif; color: #fff; line-height: 1.15; margin-bottom: 10px; }
-      .sm-hero__sub { font-size: 1rem; color: rgba(255,255,255,.78); max-width: 540px; }
-      .sm-body { padding: 56px 0 80px; }
-      .sm-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
-      @media (max-width: 860px) { .sm-grid { grid-template-columns: repeat(2, 1fr); } }
-      @media (max-width: 540px) { .sm-grid { grid-template-columns: 1fr; } }
-      .sm-block { background: #fff; border: 1px solid #e8dec8; border-radius: 14px; padding: 24px 26px 20px; }
-      .sm-block--wide { grid-column: span 3; }
-      @media (max-width: 860px) { .sm-block--wide { grid-column: span 2; } }
-      @media (max-width: 540px) { .sm-block--wide { grid-column: span 1; } }
-      .sm-block__heading { display: flex; align-items: center; gap: 10px; margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid #ede5d0; }
-      .sm-block__num { display: inline-flex; align-items: center; justify-content: center; width: 26px; height: 26px; border-radius: 6px; background: #2d5c54; color: #fff; font-size: .72rem; font-weight: 700; flex-shrink: 0; }
-      .sm-block__title { font-size: 1rem; font-weight: 700; color: #2d2620; font-family: 'Plus Jakarta Sans', sans-serif; }
-      .sm-block__count { margin-left: auto; font-size: .72rem; color: #9a8e7e; font-weight: 600; background: #f5f0e6; padding: 2px 8px; border-radius: 20px; }
-      .sm-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 2px; }
-      .sm-list a { display: block; font-size: .88rem; color: #3d5a54; text-decoration: none; padding: 4px 0; border-bottom: 1px solid transparent; transition: color .15s, border-color .15s; }
-      .sm-list a:hover { color: #2d5c54; border-bottom-color: #a8d5cf; }
-      .sm-list--cols { columns: 2; column-gap: 24px; }
-      @media (max-width: 540px) { .sm-list--cols { columns: 1; } }
+      /* ===== Hero ===== */
+      .sm-hero { position: relative; background: linear-gradient(135deg, #1f4a43 0%, #2d5c54 55%, #3d7a70 100%); padding: 96px 0 88px; overflow: hidden; }
+      .sm-hero::before { content: ""; position: absolute; inset: 0; background-image:
+        radial-gradient(circle at 18% 28%, rgba(255,255,255,.06) 0, transparent 38%),
+        radial-gradient(circle at 84% 76%, rgba(255,255,255,.05) 0, transparent 42%); pointer-events: none; }
+      .sm-hero__inner { position: relative; max-width: 720px; }
+      .sm-hero__eyebrow { display: inline-flex; align-items: center; gap: 12px; font-size: .68rem; font-weight: 700; letter-spacing: .22em; text-transform: uppercase; color: rgba(255,255,255,.62); margin-bottom: 22px; }
+      .sm-hero__eyebrow::before { content: ""; width: 28px; height: 1px; background: rgba(255,255,255,.4); display: inline-block; }
+      .sm-hero__title { font-size: clamp(2.4rem, 4.6vw, 3.6rem); font-weight: 800; font-family: 'Plus Jakarta Sans', sans-serif; color: #fff; line-height: 1.05; letter-spacing: -.02em; margin: 0 0 18px; }
+      .sm-hero__title em { font-style: italic; font-weight: 500; color: #cfe9e3; }
+      .sm-hero__sub { font-size: 1.05rem; line-height: 1.65; color: rgba(255,255,255,.78); max-width: 580px; margin: 0; }
+      .sm-hero__meta { display: flex; gap: 36px; margin-top: 36px; padding-top: 26px; border-top: 1px solid rgba(255,255,255,.14); }
+      .sm-hero__meta-item { color: rgba(255,255,255,.85); }
+      .sm-hero__meta-num { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.6rem; font-weight: 700; line-height: 1; color: #fff; }
+      .sm-hero__meta-lbl { display: block; margin-top: 6px; font-size: .68rem; letter-spacing: .18em; text-transform: uppercase; color: rgba(255,255,255,.55); }
+
+      /* ===== Jump Nav ===== */
+      .sm-jump { background: #fbf6ea; border-bottom: 1px solid #ede5d0; padding: 16px 0; position: sticky; top: 0; z-index: 20; backdrop-filter: blur(6px); }
+      .sm-jump__inner { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 22px; font-size: .82rem; }
+      .sm-jump__lbl { font-size: .68rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: #9a8e7e; margin-right: 8px; }
+      .sm-jump a { color: #3d5a54; text-decoration: none; font-weight: 500; padding: 4px 0; border-bottom: 1px solid transparent; transition: color .15s, border-color .15s; }
+      .sm-jump a:hover { color: #2d5c54; border-bottom-color: #2d5c54; }
+
+      /* ===== Body ===== */
+      .sm-body { padding: 72px 0 96px; }
+      .sm-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+      @media (max-width: 960px) { .sm-grid { grid-template-columns: repeat(2, 1fr); } }
+      @media (max-width: 600px) { .sm-grid { grid-template-columns: 1fr; gap: 22px; } }
+
+      .sm-block { position: relative; background: #fff; border: 1px solid #ece4d2; border-radius: 16px; padding: 30px 30px 26px; box-shadow: 0 1px 2px rgba(45,38,32,.03), 0 8px 24px -16px rgba(45,38,32,.10); transition: box-shadow .25s, transform .25s, border-color .25s; }
+      .sm-block:hover { box-shadow: 0 1px 2px rgba(45,38,32,.04), 0 14px 38px -18px rgba(45,38,32,.18); border-color: #ddd2b8; transform: translateY(-2px); }
+      .sm-block::before { content: ""; position: absolute; top: 0; left: 24px; right: 24px; height: 2px; background: linear-gradient(to right, #2d5c54 0%, #2d5c54 var(--accent, 32%), transparent var(--accent, 32%)); border-radius: 0 0 2px 2px; }
+
+      .sm-block__heading { display: flex; align-items: baseline; gap: 14px; margin-bottom: 22px; padding-bottom: 16px; border-bottom: 1px solid #f0e8d4; }
+      .sm-block__num { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.05rem; font-weight: 600; font-style: italic; color: #b89968; letter-spacing: .04em; flex-shrink: 0; line-height: 1; }
+      .sm-block__title { font-size: 1.18rem; font-weight: 700; color: #2d2620; font-family: 'Plus Jakarta Sans', sans-serif; letter-spacing: -.005em; line-height: 1.2; }
+      .sm-block__count { margin-left: auto; font-size: .68rem; color: #8a7e6e; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; }
+
+      .sm-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; }
+      .sm-list li { border-bottom: 1px dashed #f4ecd8; }
+      .sm-list li:last-child { border-bottom: none; }
+      .sm-list a { display: flex; align-items: center; justify-content: space-between; font-size: .92rem; color: #3d5a54; text-decoration: none; padding: 9px 0; transition: color .15s, padding .2s; line-height: 1.35; }
+      .sm-list a::after { content: "→"; font-size: .85rem; color: #c9bea8; opacity: 0; transform: translateX(-6px); transition: opacity .2s, transform .2s, color .2s; }
+      .sm-list a:hover { color: #2d5c54; padding-left: 6px; }
+      .sm-list a:hover::after { opacity: 1; transform: translateX(0); color: #2d5c54; }
+
+      .sm-list--cols { columns: 2; column-gap: 32px; }
+      @media (max-width: 600px) { .sm-list--cols { columns: 1; } }
       .sm-list--cols li { break-inside: avoid; }
-      .sm-brands-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; }
-      @media (max-width: 860px) { .sm-brands-grid { grid-template-columns: repeat(3, 1fr); } }
-      @media (max-width: 480px) { .sm-brands-grid { grid-template-columns: repeat(2, 1fr); } }
-      .sm-brand-col__name { font-size: .82rem; font-weight: 700; color: #4a4338; text-transform: uppercase; letter-spacing: .07em; margin-bottom: 8px; padding-bottom: 6px; border-bottom: 1px solid #ede5d0; }
-      .sm-brand-col .sm-list a { font-size: .82rem; }
-      .sm-total { text-align: center; padding: 28px 0 0; font-size: .9rem; color: #7a6e5e; }
-      .sm-total strong { color: #2d5c54; }
+
+      /* ===== Footer ornament ===== */
+      .sm-total { text-align: center; padding: 56px 0 0; font-size: .92rem; color: #7a6e5e; line-height: 1.7; }
+      .sm-total__rule { display: flex; align-items: center; justify-content: center; gap: 16px; margin-bottom: 16px; }
+      .sm-total__rule::before, .sm-total__rule::after { content: ""; width: 60px; height: 1px; background: #ddd2b8; }
+      .sm-total__diamond { width: 8px; height: 8px; background: #b89968; transform: rotate(45deg); }
+      .sm-total strong { color: #2d5c54; font-weight: 700; }
     </style>
   </head>
   <body>
@@ -133,9 +160,38 @@
 
   <div class="sm-hero">
     <div class="container">
-      <div class="sm-hero__eyebrow">Site Index</div>
-      <h1 class="sm-hero__title">Sitemap</h1>
-      <p class="sm-hero__sub">Every page on PrintKingDriver, organised by section. Use this index to navigate directly to any guide, article or reference page.</p>
+      <div class="sm-hero__inner">
+        <div class="sm-hero__eyebrow">Site Index</div>
+        <h1 class="sm-hero__title">A complete <em>map</em> of the guide.</h1>
+        <p class="sm-hero__sub">Every page on PrintKingDriver, organised by section. A single index for navigating directly to any guide, article or reference — without searching, scrolling or guessing.</p>
+        <div class="sm-hero__meta">
+          <div class="sm-hero__meta-item">
+            <span class="sm-hero__meta-num">83</span>
+            <span class="sm-hero__meta-lbl">Pages indexed</span>
+          </div>
+          <div class="sm-hero__meta-item">
+            <span class="sm-hero__meta-num">07</span>
+            <span class="sm-hero__meta-lbl">Sections</span>
+          </div>
+          <div class="sm-hero__meta-item">
+            <span class="sm-hero__meta-num">100%</span>
+            <span class="sm-hero__meta-lbl">Free access</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sm-jump">
+    <div class="container sm-jump__inner">
+      <span class="sm-jump__lbl">Jump to</span>
+      <a href="#sec-main">Main</a>
+      <a href="#sec-drivers">Drivers</a>
+      <a href="#sec-guides">Setup</a>
+      <a href="#sec-howto">How-To</a>
+      <a href="#sec-tech">Tech</a>
+      <a href="#sec-issues">Issues</a>
+      <a href="#sec-legal">Legal</a>
     </div>
   </div>
 
@@ -144,11 +200,11 @@
       <div class="sm-grid">
 
         <!-- Main Pages -->
-        <div class="sm-block">
+        <div class="sm-block" id="sec-main" style="--accent: 28%;">
           <div class="sm-block__heading">
-            <span class="sm-block__num">01</span>
+            <span class="sm-block__num">01 —</span>
             <span class="sm-block__title">Main Pages</span>
-            <span class="sm-block__count">10 pages</span>
+            <span class="sm-block__count">10 entries</span>
           </div>
           <ul class="sm-list">
             <li><a href="/">Home</a></li>
@@ -165,11 +221,11 @@
         </div>
 
         <!-- Driver Types -->
-        <div class="sm-block">
+        <div class="sm-block" id="sec-drivers" style="--accent: 40%;">
           <div class="sm-block__heading">
-            <span class="sm-block__num">02</span>
+            <span class="sm-block__num">02 —</span>
             <span class="sm-block__title">Driver Types</span>
-            <span class="sm-block__count">14 pages</span>
+            <span class="sm-block__count">14 entries</span>
           </div>
           <ul class="sm-list">
             <li><a href="/drivers/chipset">Chipset Driver</a></li>
@@ -190,11 +246,11 @@
         </div>
 
         <!-- Setup Guides -->
-        <div class="sm-block">
+        <div class="sm-block" id="sec-guides" style="--accent: 36%;">
           <div class="sm-block__heading">
-            <span class="sm-block__num">03</span>
+            <span class="sm-block__num">03 —</span>
             <span class="sm-block__title">Setup Guides</span>
-            <span class="sm-block__count">10 pages</span>
+            <span class="sm-block__count">10 entries</span>
           </div>
           <ul class="sm-list">
             <li><a href="/guides/windows-10-printer-setup">PC 10 Setup</a></li>
@@ -211,11 +267,11 @@
         </div>
 
         <!-- How-To Articles -->
-        <div class="sm-block">
+        <div class="sm-block" id="sec-howto" style="--accent: 56%;">
           <div class="sm-block__heading">
-            <span class="sm-block__num">04</span>
+            <span class="sm-block__num">04 —</span>
             <span class="sm-block__title">How-To Articles</span>
-            <span class="sm-block__count">20 pages</span>
+            <span class="sm-block__count">20 entries</span>
           </div>
           <ul class="sm-list sm-list--cols">
             <li><a href="/how-to/install-printer-driver-windows">Install Driver — PC</a></li>
@@ -242,11 +298,11 @@
         </div>
 
         <!-- Tech Explainers -->
-        <div class="sm-block">
+        <div class="sm-block" id="sec-tech" style="--accent: 32%;">
           <div class="sm-block__heading">
-            <span class="sm-block__num">05</span>
+            <span class="sm-block__num">05 —</span>
             <span class="sm-block__title">Tech Explained</span>
-            <span class="sm-block__count">10 pages</span>
+            <span class="sm-block__count">10 entries</span>
           </div>
           <ul class="sm-list">
             <li><a href="/tech/airprint-explained">AirPrint Explained</a></li>
@@ -263,11 +319,11 @@
         </div>
 
         <!-- Common Issues -->
-        <div class="sm-block">
+        <div class="sm-block" id="sec-issues" style="--accent: 44%;">
           <div class="sm-block__heading">
-            <span class="sm-block__num">06</span>
+            <span class="sm-block__num">06 —</span>
             <span class="sm-block__title">Common Issues</span>
-            <span class="sm-block__count">14 pages</span>
+            <span class="sm-block__count">14 entries</span>
           </div>
           <ul class="sm-list">
             <li><a href="/troubleshooting/printer-offline">Device Offline</a></li>
@@ -288,11 +344,11 @@
         </div>
 
         <!-- Legal & Info -->
-        <div class="sm-block">
+        <div class="sm-block" id="sec-legal" style="--accent: 22%;">
           <div class="sm-block__heading">
-            <span class="sm-block__num">07</span>
+            <span class="sm-block__num">07 —</span>
             <span class="sm-block__title">Legal & Info</span>
-            <span class="sm-block__count">4 pages</span>
+            <span class="sm-block__count">4 entries</span>
           </div>
           <ul class="sm-list">
             <li><a href="/privacy">Privacy Policy</a></li>
@@ -304,7 +360,10 @@
 
       </div>
 
-      <p class="sm-total">This sitemap covers <strong>83 pages</strong> across 7 sections — all freely accessible, no login required.</p>
+      <div class="sm-total">
+        <div class="sm-total__rule"><span class="sm-total__diamond"></span></div>
+        <p>This index covers <strong>83 pages</strong> across <strong>7 sections</strong>.<br />All content is freely accessible — no login, no downloads, no upsells.</p>
+      </div>
     </div>
   </main>
 
