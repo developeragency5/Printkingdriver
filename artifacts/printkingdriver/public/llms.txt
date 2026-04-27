@@ -1,6 +1,6 @@
 # PrintKingDriver
 
-> A free, plain-English reference guide to device drivers, system drivers, and print technology. Covers installation guides, step-by-step how-tos, technology explainers, and manufacturer-specific driver pages — for PC 11, PC 10, macOS, and Linux.
+> A free, plain-English reference guide to device drivers, system drivers, and print technology. Covers driver reference articles, brand-specific setup guides, and supporting documentation — for PC 11, PC 10, macOS, and Linux.
 
 ## Key Entry Points
 
@@ -9,7 +9,6 @@
 - [About](https://www.printkingdriver.com/about): About PrintKingDriver — purpose, editorial approach, and scope
 - [Glossary](https://www.printkingdriver.com/glossary): Driver terminology glossary — PCL, PostScript, spooler, TWAIN, WIA, and more
 - [All Pages](https://www.printkingdriver.com/all-pages): Complete HTML sitemap of all pages on the site
-- [Troubleshooting](https://www.printkingdriver.com/troubleshooting): Index of all device troubleshooting guides
 
 ## Driver Reference Pages
 
@@ -75,21 +74,3 @@
 - [Brand I Scanner Setup](https://www.printkingdriver.com/brands/brand-i/scanner-setup): Brand I scanner setup
 - [Brand I Firmware Update](https://www.printkingdriver.com/brands/brand-i/firmware-update): How to update Brand I device firmware
 - [Brand J](https://www.printkingdriver.com/brands/brand-j): Brand J device driver guides
-
-## Troubleshooting Guides
-
-- [All Troubleshooting](https://www.printkingdriver.com/troubleshooting): Index of all device troubleshooting guides
-- [Device Offline](https://www.printkingdriver.com/troubleshooting/printer-offline): Resolve a device showing as offline in PC and macOS
-- [Driver Not Setting Up](https://www.printkingdriver.com/troubleshooting/driver-not-installing): Resolve device driver setup failures on PC
-- [Print Spooler Keeps Stopping](https://www.printkingdriver.com/troubleshooting/print-spooler-keeps-stopping): Resolve a PC Print Spooler that crashes repeatedly
-- [Device Won't Connect to Wi-Fi](https://www.printkingdriver.com/troubleshooting/printer-wont-connect-wifi): Resolve a device that cannot join or stay on the Wi-Fi network
-- [Print Queue Stuck](https://www.printkingdriver.com/troubleshooting/print-queue-stuck): Clear a stuck print queue that won't empty
-- [Paper Jam](https://www.printkingdriver.com/troubleshooting/paper-jam): Clear a paper jam without damaging the device
-- [Slow Printing](https://www.printkingdriver.com/troubleshooting/slow-printing): Resolve a device that is printing unusually slowly
-- [Streaks or Lines on Prints](https://www.printkingdriver.com/troubleshooting/streaks-or-lines-on-prints): Resolve streaks, lines, and banding on printed pages
-- [Wrong Colours](https://www.printkingdriver.com/troubleshooting/wrong-colours): Resolve incorrect or washed-out colours in printed output
-- [Ghost or Faded Prints](https://www.printkingdriver.com/troubleshooting/ghost-or-faded-prints): Resolve ghosting, shadows, or faded output on laser devices
-- [Scanner Not Found](https://www.printkingdriver.com/troubleshooting/scanner-not-found): Resolve a scanner that is not detected in PC or macOS
-- [Duplex Not Working](https://www.printkingdriver.com/troubleshooting/duplex-not-working): Resolve automatic duplex printing that fails or prints incorrectly
-- [Device Outputs Blank Pages](https://www.printkingdriver.com/troubleshooting/printer-printing-blank-pages): Resolve a device that outputs blank pages instead of content
-- [Bluetooth Device Not Pairing](https://www.printkingdriver.com/troubleshooting/bluetooth-printer-not-pairing): Resolve a Bluetooth device that won't pair or connect
