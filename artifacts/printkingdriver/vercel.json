@@ -6,6 +6,7 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "redirects": [
+    { "source": "/drivers/device", "destination": "/drivers", "permanent": true },
     {
       "source": "/brands/brother",
       "destination": "/brands/brand-a",
@@ -173,12 +174,12 @@
     },
     {
       "source": "/how-to/clean-print-head",
-      "destination": "/drivers/device",
+      "destination": "/drivers",
       "permanent": true
     },
     {
       "source": "/how-to/clear-print-queue",
-      "destination": "/drivers/device",
+      "destination": "/drivers",
       "permanent": true
     },
     {
@@ -198,7 +199,7 @@
     },
     {
       "source": "/how-to/print-double-sided",
-      "destination": "/drivers/device",
+      "destination": "/drivers",
       "permanent": true
     },
     {
@@ -223,12 +224,12 @@
     },
     {
       "source": "/how-to/replace-toner-cartridge",
-      "destination": "/drivers/device",
+      "destination": "/drivers",
       "permanent": true
     },
     {
       "source": "/how-to/restart-print-spooler",
-      "destination": "/drivers/device",
+      "destination": "/drivers",
       "permanent": true
     },
     {
@@ -283,7 +284,7 @@
     },
     {
       "source": "/tech/duplex-printing-explained",
-      "destination": "/drivers/device",
+      "destination": "/drivers",
       "permanent": true
     },
     {
@@ -308,7 +309,7 @@
     },
     {
       "source": "/tech/print-spooler-explained",
-      "destination": "/drivers/device",
+      "destination": "/drivers",
       "permanent": true
     },
     {
@@ -333,27 +334,27 @@
     },
     {
       "source": "/troubleshooting/duplex-not-working",
-      "destination": "/drivers/device",
+      "destination": "/drivers",
       "permanent": true
     },
     {
       "source": "/troubleshooting/ghost-or-faded-prints",
-      "destination": "/drivers/device",
+      "destination": "/drivers",
       "permanent": true
     },
     {
       "source": "/troubleshooting/paper-jam",
-      "destination": "/drivers/device",
+      "destination": "/drivers",
       "permanent": true
     },
     {
       "source": "/troubleshooting/print-queue-stuck",
-      "destination": "/drivers/device",
+      "destination": "/drivers",
       "permanent": true
     },
     {
       "source": "/troubleshooting/print-spooler-keeps-stopping",
-      "destination": "/drivers/device",
+      "destination": "/drivers",
       "permanent": true
     },
     {
@@ -363,7 +364,7 @@
     },
     {
       "source": "/troubleshooting/printer-printing-blank-pages",
-      "destination": "/drivers/device",
+      "destination": "/drivers",
       "permanent": true
     },
     {
@@ -378,17 +379,17 @@
     },
     {
       "source": "/troubleshooting/slow-printing",
-      "destination": "/drivers/device",
+      "destination": "/drivers",
       "permanent": true
     },
     {
       "source": "/troubleshooting/streaks-or-lines-on-prints",
-      "destination": "/drivers/device",
+      "destination": "/drivers",
       "permanent": true
     },
     {
       "source": "/troubleshooting/wrong-colours",
-      "destination": "/drivers/device",
+      "destination": "/drivers",
       "permanent": true
     },
     {
@@ -403,12 +404,12 @@
     },
     {
       "source": "/drivers/printer",
-      "destination": "/drivers/device",
+      "destination": "/drivers",
       "permanent": true
     },
     {
       "source": "/drivers/printer/:path*",
-      "destination": "/drivers/device",
+      "destination": "/drivers",
       "permanent": true
     },
     {
