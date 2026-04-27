@@ -1,55 +1,57 @@
-# Workspace
+# Overview
 
-## Overview
+This project is a pnpm workspace monorepo using TypeScript, designed to build and manage a static multi-page informational site called PrintKingDriver. The site focuses on printer and system drivers, providing extensive information without framework dependencies. The primary goal is to deliver a highly optimized, SEO-friendly resource for users seeking driver information, while adhering to strict content guidelines and accessibility standards.
 
-pnpm workspace monorepo using TypeScript. Each package manages its own dependencies.
+The PrintKingDriver artifact aims to be a comprehensive, high-quality information hub for driver-related queries, leveraging a robust backend and a pure HTML/CSS/JS frontend for maximum performance and compatibility.
 
-## Stack
+# User Preferences
 
+- I want iterative development.
+- Ask before making major changes.
+- I prefer detailed explanations.
+- Do not make changes to the folder `Z`.
+- Do not make changes to the file `Y`.
+- I like functional programming.
+- I prefer simple language.
+
+# System Architecture
+
+The project is structured as a pnpm workspace monorepo.
+
+**Monorepo Structure:**
 - **Monorepo tool**: pnpm workspaces
 - **Node.js version**: 24
 - **Package manager**: pnpm
 - **TypeScript version**: 5.9
+
+**Backend (API Server):**
 - **API framework**: Express 5
-- **Database**: PostgreSQL + Drizzle ORM
+- **Database**: PostgreSQL with Drizzle ORM
 - **Validation**: Zod (`zod/v4`), `drizzle-zod`
-- **API codegen**: Orval (from OpenAPI spec)
+- **API codegen**: Orval (generates from OpenAPI spec)
 - **Build**: esbuild (CJS bundle)
 
-## Key Commands
+**Frontend (PrintKingDriver Artifact):**
+- **Architecture**: Static multi-page site, pure HTML/CSS/JS (zero framework dependencies). Served by a minimal Node.js `http` server for development; static-file deployment in production.
+- **Build Process**: `build.mjs` copies `public/` assets to `dist/public/`.
+- **Page Structure**: Each page is a standalone `.html` file. Common elements like navbar and footer are inlined per page for SEO benefits.
+- **Routing**: Employs pretty URLs (e.g., `/about` maps to `/about.html`). Unknown paths are handled by `404.html`. Production serving uses `serve = "static"` with `notFoundPage = "/404.html"`.
+- **UI/UX Design:**
+    - **Typography**: Inter and Plus Jakarta Sans (Google Fonts).
+    - **Icons**: Lucide icons via CDN.
+    - **Color Palette**: Cream, sand, and teal, defined in `public/assets/styles.css`.
+- **Interactive Elements (Vanilla JS in `public/assets/scripts.js`):** Mobile drawer navigation, mega-menu functionality (hover/click), in-navigation search with keyboard navigation, horizontal sliders, FAQ accordions, and contact form validation.
+- **SEO Features:**
+    - **Schema Markup**: FAQPage and BreadcrumbList JSON-LD are injected into existing `@graph` arrays on all content pages. HowTo and HowToStep schema are added to relevant pages.
+    - **AI Crawling**: `/llms.txt` lists all pages and their descriptions for AI crawlers.
+    - **Robots Management**: Specific OS-variant pages are `noindex,nofollow` via meta tags and removed from `sitemap.xml`.
+- **Asset Pipeline**: `styles.css` and `scripts.js` are minified using `minify.mjs` to `styles.min.css` and `scripts.min.js`.
+- **Content Strategy**: Strict adherence to content guidelines, including removal of specific forbidden words and brand names, handled by `scrub-forbidden.mjs`. Extensive internal linking for SEO.
+- **Homepage Design**: Features redesigned "Explore Drivers," "Error Fix Guides," and "Performance Fix Guides" sections with specific layouts, styling, and navigation elements.
+- **Back Button Navigation**: Consistent "Back to home" links are implemented across various informational pages.
+- **AI-Search Optimization**: "Key Takeaways" / "At a Glance" summary blocks with `data-speakable` attributes and Speakable schema are integrated for AI assistants and voice search. Enhanced meta descriptions and JSON-LD entities for improved search result richness.
 
-- `pnpm run typecheck` — full typecheck across all packages
-- `pnpm run build` — typecheck + build all packages
-- `pnpm --filter @workspace/api-spec run codegen` — regenerate API hooks and Zod schemas from OpenAPI spec
-- `pnpm --filter @workspace/db run push` — push DB schema changes (dev only)
-- `pnpm --filter @workspace/api-server run dev` — run API server locally
+# External Dependencies
 
-See the `pnpm-workspace` skill for workspace structure, TypeScript setup, and package details.
-
-## PrintKingDriver Artifact
-
-`artifacts/printkingdriver` is a static multi-page informational site about printer & system drivers. It has **no framework dependencies** — pure HTML/CSS/JS served by a small Node http server.
-
-- **Stack**: zero-dep Node `http` server (`serve.mjs`) for dev, static-file deployment in production.
-- **Build**: `build.mjs` copies `public/` to `dist/public/`.
-- **Pages**: each page is a standalone `.html` file under `public/` (home, drivers, how-it-works, about, contact, privacy, terms, 404, plus 14 driver detail pages under `public/drivers/`). Navbar and footer are inlined per page for SEO.
-- **Routing**: pretty URLs (`/about` → `/about.html`, `/drivers/printer` → `/drivers/printer.html`); unknown paths serve `404.html`. Production uses `serve = "static"` with `notFoundPage = "/404.html"` (no SPA rewrite).
-- **Design system**: Inter + Plus Jakarta Sans (Google Fonts), Lucide icons via CDN. Cream/sand/teal palette defined in `public/assets/styles.css`.
-- **Interactive JS** (`public/assets/scripts.js`, vanilla, no deps): mobile drawer, mega-menu hover/click, in-nav search with arrow-key nav, horizontal slider with dots, FAQ accordion, contact-form validation with success state.
-- **SEO / Schema**: All 124 content pages (guides, how-to, tech, brands) have FAQPage + BreadcrumbList JSON-LD injected into the existing `@graph` array. All 20 how-to pages also have HowTo + HowToStep schema. Section index pages have short FAQ sections added to support the schema. `/llms.txt` lists all 167 pages/paths with descriptions for AI crawlers.
-- **Asset pipeline**: edit `styles.css` → `node minify.mjs` → `styles.min.css` (referenced by all pages). Same for `scripts.js`.
-- **External links**: All brand/vendor support links have `rel="nofollow noopener noreferrer" target="_blank"`.
-- **Scale**: 96 HTML pages total; 54 in sitemap.xml (404, sitemap, all-pages-listed-but-not-indexed and the 40 OS variant pages excluded — see "OS-page deorphan sweep" below).
-- **AdScan / SEMrush compliance sweep (Apr 2026)**: All visible content audited — zero instances of forbidden words remain (Printer/Printers, Scanner/Scanners/Scanning, Scan, Troubleshooting/Troubleshoot, Install variants, Windows, plus brand names HP/Canon/Epson/Brother/Samsung/Lexmark/Dell/Xerox/Ricoh/Kyocera) across HTML, XML, TXT and JS assets (incl. `scripts.min.js`). Replacements: scanner→device, printer→device, Windows→PC, install→set up, Print Spooler/Queue/Server→Job Spooler/Queue/Server, brand names→"the manufacturer". URLs preserved via 111 redirects in `vercel.json` (e.g. `/drivers/printer→/drivers/device`, `/brands/X/windows-11→/brands/X/pc-11`, `/brands/X/scanner-setup→/brands/X`). Deletions: 10 brand scanner-setup pages + 3 images with baked-in forbidden text. Renames: `printer.html→device.html`, `windows-10/11.html→pc-10/11.html`. The transform is encoded in `artifacts/printkingdriver/scripts/scrub-forbidden.mjs` and is idempotent.
-- **Homepage "Explore Drivers" section redesign (Apr 2026)**: Reduced from 4 cards (after removing the Peripheral Drivers card) to a clean 3-card grid (Essential / Hardware-Specific / Advanced Systems) with elevated styling: large light-weight numerals (01/02/03), descriptive layer labels ("Foundation Layer / Hardware Layer / System Layer"), unified teal-family icon palette (replacing prior blue/orange/purple), paper-cream card surface with subtle top accent stripe, refined "Includes — N drivers" gradient divider, and softer hover lift. Desktop grid is `repeat(3, minmax(0,1fr))` with matching 3 pagination dots. Section anchored at `#explore`. CSS in `public/assets/styles.css` (`.explore-section`, `.slide-card*`); rebuild via `node minify.mjs`.
-- **Brand setup pages removal (Apr 2026)**: Removed all 20 brand setup sub-pages (`public/brands/brand-{a..j}/firmware-update.html` and `wireless-setup.html`) and propagated the change site-wide via `remove-brand-setup-pages.mjs`: stripped the `<section class="related-section">` block (which only contained the 2 cards linking to those pages) from each of the 10 `brand-X.html` overview pages, removed the entire "Brand Setup Guides (20)" section from `all-pages.html`, removed 20 `<url>` blocks from `sitemap.xml` (73 → 53 URLs), and removed the firmware-update/wireless-setup lines from `llms.txt`. Added 20 new permanent 301 redirects to `vercel.json`: `/brands/brand-X/firmware-update` and `/brands/brand-X/wireless-setup` → `/brands/brand-X` (total redirects 114 → 134, JSON valid). Updated all-pages.html count "73 pages total" → "53 pages total". Marked the now-stale `scripts/add-cross-brand-links.mjs` as DEPRECATED with an early `process.exit(0)` so future runs no-op cleanly. Final counts: 95 HTML files, 53 sitemap URLs, 134 vercel redirects, 0 broken internal links, all 95 pages pass SEO checks.
-
-- **Device-Driver page removal + 20 fix-page integration (Apr 2026)**: Removed `public/drivers/device.html` (the printer-style "Device Driver — Document to print commands" page) and stripped every reference to `/drivers/device` site-wide via `cleanup-and-audit.mjs`: nav mega menu + drawer in all 115 remaining HTML files, cat-block + ASCII-tree on home, dtype-card on `/drivers`, search index in `assets/scripts.js`, sitemap.xml, sitemap.html, all-pages.html, llms.txt. Repointed 18 existing redirects whose destination was `/drivers/device` to `/drivers`, and added a new `/drivers/device → /drivers` 301 entry (now 114 redirects total). Added the 20 `/fix-*` pages to all-pages.html (new "Error Fix Guides (20)" section), sitemap.html (new sm-block), llms.txt (new section), and `assets/scripts.js` SEARCH_INDEX (type "Fix"). Fixed 2 fix pages whose unescaped `"` inside `content="..."` attributes broke the HTML — replaced with `&ldquo;`/`&rdquo;`. Rebuilt scripts.min.js. Final counts: 115 HTML files, 73 sitemap URLs (balanced XML), 114 vercel redirects, 0 broken internal links, all 115 pages pass SEO checks (title, meta description, og:title, og:description, JSON-LD, h1, viewport, lang). 289 pre-existing "download" mentions in brand-page FAQ/JSON-LD content remain untouched (out of scope).
-
-- **OS-term removal sweep (Apr 2026, Option B)**: Stripped PC, Mac, macOS, Linux and standalone "OS" from body content site-wide while leaving the dedicated brand-X/{macos,linux,pc-10,pc-11}.html pages untouched. Removals (not substitutions) — entire FAQ items, list bullets, table rows, related-card links, JSON-LD `Question` entries, and individual sentences inside `<p>` were dropped when they contained those words. "MAC layer"/"MAC address" preserved. Scripts: `scripts/strip-os-terms.mjs` (initial pass), `scripts/fix-faq-breakage.mjs` (FAQ structural repair on 5 driver pages + how-it-works + 10 brand JSON-LD entries), `scripts/fix-monitor.mjs` (full Best-Practices+FAQ region restore on monitor.html). Final scrubbed counts: 0 forbidden words in body text, 96 valid JSON-LD scripts, all FAQ pair counts balanced, no orphan `<li>/<p>/<td>/<tr>`. The "94 pages total" header and 124-page schema scope still hold because the dedicated OS pages remain.
-- **AI-Search summary blocks + Speakable schema (Apr 2026)**: Follow-up to the content-optimization fix. Added a "Key Takeaways" / "At a Glance" summary block at the top of body content on home (`#key-takeaways`, 5 bullets covering: what a driver is, why drivers matter, the four main families, how updates reach users, what the site is for) and disclaimer (`#disclaimer-key-points`, 5 bullets covering: educational scope, no downloads, brand-name fair use, external links, use-at-own-risk). Each summary block is wrapped in a `<section>` with `data-speakable` attribute and styled inline with the cream/sand palette. Both pages' WebPage JSON-LD now includes `"speakable":{"@type":"SpeakableSpecification","cssSelector":["[data-speakable]","#<id>"]}` so AI assistants and voice-search engines extract these blocks as the canonical summary. JSON-LD parses cleanly on both pages.
-- **AI-Search content optimization (Apr 2026)**: SEMrush flagged the home (`/`) and disclaimer (`/disclaimer`) pages with "1 error" each for content optimization. Disclaimer fix: meta description expanded from 83 → 164 chars (matched on og:description), and the JSON-LD `@graph` now includes 5 entities — Organization, WebSite, WebPage (with `datePublished`/`dateModified`/`breadcrumb` ref), `BreadcrumbList` (Home > Disclaimer), and `FAQPage` with 4 Q&As covering hosting, brand-name fair-use, advice scope and update cadence. Home fix: `WebSite` entity now has a Google-spec `SearchAction` (`?q={search_term_string}`) for site-search rich result, and `WebPage` gained `datePublished`, `dateModified`, `primaryImageOfPage` and 4 `significantLink` entries pointing to the main hubs (drivers, brands, how-it-works, glossary). Both JSON-LD blocks parse cleanly.
-- **Cross-brand internal-link boost (Apr 2026)**: SEMrush flagged the 20 brand sub-pages (10 brands × {firmware-update, wireless-setup}) as having "few incoming internal links" (only 3 each: self, brand hub, all-pages). Fix in `scripts/add-cross-brand-links.mjs`: appends a "More Setup Guides" `related-grid` section to each sub-page with 10 cards — 9 peer-brand pages of the same type + 1 sibling guide of the same brand. Result: each page now has ~13 incoming internal links. Idempotent via `<!-- cross-brand-links -->` marker. Tag pairing verified balanced after insertion.
-- **OS-page deorphan sweep (Apr 2026)**: SEMrush flagged the 40 brand-X/{macos,linux,pc-10,pc-11} pages as "orphaned in sitemap.xml" — they exist on disk for direct-URL access but the AdScan sweep removed every internal link to them. Fix in `scripts/deorphan-os-pages.mjs`: (a) removed all 40 corresponding `<url>` blocks from `public/sitemap.xml` (94 → 54 URLs, all paired tags balanced), and (b) injected `<meta name="robots" content="noindex,nofollow" />` into each of the 40 HTML files so search engines stop tracking them. The pages themselves still resolve at their direct URLs (no 404s, no link-rot). Updated `all-pages.html` "94 pages total" → "54 pages total" to match the new sitemap scope. Re-running the script is idempotent (skips already-noindex files, regex-matches only OS-variant URL blocks).
-- **40 Performance Fix Guide pages added (Apr 2026)**: Generated 40 new driver-performance fix pages (`fix-driver-causing-*`, `fix-driver-conflict-causing-reduced-performance`, `fix-driver-using-too-much-{cpu,memory}`) that match the structure of the existing 20 fix pages exactly (nav, footer, design, JSON-LD shape). Each page is 600–700 visible words and uses the `cat-essential` shield-icon header with the "Error Fix Guide" eyebrow. Authoring data lives in `scripts/perf-fix-pages-data.mjs` (slug, title, metaDesc, subtitle, leadHead, lead, 6 steps, why, 4 symptoms, 4 tips, summary). The generator `scripts/generate-perf-fix-pages.mjs` uses `fix-driver-not-found-error.html` as the structural template, replaces `<title>` / meta description / OG+Twitter title+description / canonical / JSON-LD / `<main>`, and word-count-validates each output. AdScan/SEMrush compliance preserved: zero brand names, zero forbidden words (`troubleshoot*`, install/uninstall, download, printer, scanner, Windows/macOS, specific device types) in body content. Index updates (all idempotent): `all-pages.html` gets a "Performance Fix Guides (40)" `ap-block` section and bumps the count to 93 pages total; `sitemap.xml` gets 40 new `<url>` blocks (now 93 unique URLs); `sitemap.html` gets a new "Section 05 — Performance Fix Guides" `sm-block` (id `sec-perf-fixes`) inserted after the Error Fix Guides block, bracketed by `<!-- BEGIN/END Performance Fix Guides -->` sentinel comments for byte-stable idempotency; `llms.txt` gets a new "## Performance Fix Guides (40)" section; `assets/scripts.js` SEARCH_INDEX gets 40 new `{ label, href, type:"Fix", keywords }` entries (matches existing schema). No new `vercel.json` redirects needed. Re-run with `node scripts/generate-perf-fix-pages.mjs` then `node minify.mjs`. Final counts: 135 HTML files (95 + 40), 93 sitemap URLs, 134 vercel redirects, SEARCH_INDEX has 77 entries (12 Driver / 5 Page / 60 Fix).
-- **Back-button repair (Apr 2026)**: Three follow-up fixes after `strip-os-terms.mjs` damage. (1) `drivers/bios.html` had been truncated from 363→154 lines (lost the entire `<main>`, `<aside drawer>`, hero/back-button block, mega menu list items). Rebuilt it from `drivers/audio.html` as a structural template via `scripts/rebuild-bios-from-template.mjs`, swapping in bios-specific head meta, JSON-LD WebPage entry, hero (icon/eyebrow/title/subtitle), and 8 detail-card sections (What Is It, How It Works flow, Key Functions, Components, Why It Matters, Common Issues, Best Practices, FAQ). (2) Added a small consistent "Back to home" link block (matching the existing `brands/index.html` pattern, inserted after `<main>`) to `drivers.html`, `about.html`, `contact.html`, `how-it-works.html` and `404.html` via `scripts/add-back-to-home.mjs`. (3) Added back-to-home links to the two sitemap pages: `all-pages.html` (cream `legal__back` pill at top of `<div class="container u-max-980">`) and `sitemap.html` (white-tinted glass pill placed inside the dark teal `.sm-hero__inner` above the eyebrow, with inline `onmouseover`/`onmouseout` for hover background). Homepage is the only page without a back link by design. All open/close tag counts balance and match sibling driver pages.
+- **Google Fonts**: Inter, Plus Jakarta Sans
+- **Lucide Icons**: via CDN

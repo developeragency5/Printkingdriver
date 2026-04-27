@@ -402,6 +402,70 @@ main { flex: 1; }
 .issue__diag:hover, .issue:hover .issue__diag { color: var(--primary); transform: translateX(2px); }
 .issue__diag:focus-visible { outline: 2px solid var(--primary); outline-offset: 3px; border-radius: 3px; }
 
+/* ===================== FIX GUIDE CARDS ===================== */
+.fix-grid {
+  display: grid; gap: 22px;
+  grid-template-columns: 1fr;
+  margin-bottom: 48px;
+}
+@media (min-width: 700px) { .fix-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .fix-grid { grid-template-columns: repeat(3, 1fr); } }
+
+.fix-card {
+  display: flex; flex-direction: column;
+  background: var(--card);
+  border: 1px solid rgba(214, 205, 176, 0.7);
+  border-radius: var(--r-2xl);
+  padding: 26px 26px 22px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+  color: inherit;
+  text-decoration: none;
+  height: 100%;
+}
+.fix-card:hover,
+.fix-card:focus-visible {
+  transform: translateY(-3px);
+  box-shadow: 0 22px 45px -22px rgba(74, 107, 117, .32);
+  border-color: rgba(74, 107, 117, .25);
+}
+.fix-card:focus-visible { outline: 2px solid var(--primary); outline-offset: 3px; }
+
+.fix-card__eyebrow {
+  font-family: var(--font-mono); font-size: 10px; letter-spacing: .14em;
+  font-weight: 600; text-transform: uppercase;
+  color: rgba(107, 102, 90, .8);
+  padding: 4px 10px; border-radius: 6px;
+  background: rgba(229, 221, 197, .55);
+  border: 1px solid rgba(214, 205, 176, .6);
+  align-self: flex-start;
+  margin-bottom: 16px;
+}
+.fix-card__title {
+  font-family: var(--font-heading); font-weight: 700;
+  font-size: 1.08rem; letter-spacing: -0.015em;
+  color: var(--fg);
+  margin-bottom: 10px;
+  line-height: 1.35;
+}
+.fix-card__desc {
+  font-size: 13.5px; color: var(--muted);
+  line-height: 1.6;
+  margin-bottom: 20px;
+  flex: 1;
+}
+.fix-card__cta {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 10.5px; text-transform: uppercase; letter-spacing: .16em;
+  font-weight: 700;
+  color: var(--primary);
+  padding-top: 16px;
+  border-top: 1px solid rgba(214, 205, 176, .6);
+}
+.fix-card__cta-arrow { transition: transform .25s ease; display: inline-block; }
+.fix-card:hover .fix-card__cta-arrow,
+.fix-card:focus-visible .fix-card__cta-arrow { transform: translateX(3px); }
+
 /* ===================== EXPLORE SLIDER ===================== */
 .explore-section { padding: 96px 1.5rem; background: var(--bg-2); position: relative; }
 @media (min-width: 1024px) { .explore-section { padding: 112px 2.5rem; } }
