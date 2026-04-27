@@ -1,354 +1,344 @@
 <!doctype html>
-  <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <title>Graphics Driver — Reference Guide | PrintKingDriver</title>
-    <meta name="description" content="Handles visual rendering and GPU instructions. Learn what a graphics driver does, how it works, and why it matters." />
-    <link rel="icon" type="image/png" href="/favicon.png" />
-    <meta property="og:title" content="Graphics Driver — Reference Guide | PrintKingDriver" />
-    <meta property="og:description" content="Handles visual rendering and GPU instructions. Learn what a graphics driver does, how it works, and why it matters." />
-    <meta property="og:image" content="/opengraph.jpg" />
-    <meta property="og:type" content="website" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <link rel="canonical" href="https://www.printkingdriver.com/drivers/graphics" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="/assets/styles.min.css" />
-      <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.printkingdriver.com/#organization","name":"PrintKingDriver","url":"https://www.printkingdriver.com/","email":"support@printkingdriver.com","logo":{"@type":"ImageObject","url":"https://www.printkingdriver.com/assets/images/logo-crown.png"},"contactPoint":{"@type":"ContactPoint","contactType":"customer support","email":"support@printkingdriver.com","telephone":"+1-800-123-4567","availableLanguage":["English"]}},{"@type":"WebSite","@id":"https://www.printkingdriver.com/#website","url":"https://www.printkingdriver.com/","name":"PrintKingDriver","description":"Driver Assistance Hub — clear, free guides on chipset, graphics, audio, network and device drivers.","publisher":{"@id":"https://www.printkingdriver.com/#organization"},"inLanguage":"en-GB"},{"@type":"WebPage","@id":"https://www.printkingdriver.com/drivers/graphics#webpage","url":"https://www.printkingdriver.com/drivers/graphics","name":"Graphics Driver — Reference Guide | PrintKingDriver","description":"Handles visual rendering and GPU instructions. Learn what a graphics driver does, how it works, and why it matters.","isPartOf":{"@id":"https://www.printkingdriver.com/#website"},"about":{"@id":"https://www.printkingdriver.com/#organization"},"inLanguage":"en-GB"}]}</script>
-      <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('consent', 'default', {
-        ad_storage: 'denied',
-        ad_user_data: 'denied',
-        ad_personalization: 'denied',
-        analytics_storage: 'denied',
-        functionality_storage: 'granted',
-        security_storage: 'granted',
-        wait_for_update: 500
-      });
-      window._uetq = window._uetq || []; /* Microsoft Advertising / Bing UET tag queue — activated after user consent */
-      /* Microsoft Advertising (Bing) UET tag — pending tag ID. Loads bat.bing.com only after user accepts. */
-    </script>
-  </head>
-  <body>
-  
-  <nav class="nav">
-    <div class="container nav__inner">
-      <a href="/" class="nav__brand">
-        <div class="nav__logo"><img src="/assets/images/logo-crown.png" alt="PrintKingDriver crown logo" width="38" height="38" /></div>
-        <div>
-          <div class="nav__title">PrintKingDriver</div>
-          <div class="nav__sub">Driver Assistance Hub</div>
-        </div>
-      </a>
+ <html lang="en">
+ <head>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+ <title>Graphics Driver — Reference Guide | PrintKingDriver</title>
+ <meta name="description" content="Handles visual rendering and GPU instructions. Learn what a graphics driver does, how it works, and why it matters." />
+ <link rel="icon" type="image/png" href="/favicon.png" />
+ <meta property="og:title" content="Graphics Driver — Reference Guide | PrintKingDriver" />
+ <meta property="og:description" content="Handles visual rendering and GPU instructions. Learn what a graphics driver does, how it works, and why it matters." />
+ <meta property="og:image" content="/opengraph.jpg" />
+ <meta property="og:type" content="website" />
+ <meta name="twitter:card" content="summary_large_image" />
+ <link rel="canonical" href="https://www.printkingdriver.com/drivers/graphics" />
+ <link rel="preconnect" href="https://fonts.googleapis.com" />
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+ <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
+ <link rel="stylesheet" href="/assets/styles.min.css" />
+ <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.printkingdriver.com/#organization","name":"PrintKingDriver","url":"https://www.printkingdriver.com/","email":"support@printkingdriver.com","logo":{"@type":"ImageObject","url":"https://www.printkingdriver.com/assets/images/logo-crown.png"},"contactPoint":{"@type":"ContactPoint","contactType":"customer support","email":"support@printkingdriver.com","telephone":"+1-800-123-4567","availableLanguage":["English"]}},{"@type":"WebSite","@id":"https://www.printkingdriver.com/#website","url":"https://www.printkingdriver.com/","name":"PrintKingDriver","description":"Driver Assistance Hub — clear, free guides on chipset, graphics, audio, network and device drivers.","publisher":{"@id":"https://www.printkingdriver.com/#organization"},"inLanguage":"en-GB"},{"@type":"WebPage","@id":"https://www.printkingdriver.com/drivers/graphics#webpage","url":"https://www.printkingdriver.com/drivers/graphics","name":"Graphics Driver — Reference Guide | PrintKingDriver","description":"Handles visual rendering and GPU instructions. Learn what a graphics driver does, how it works, and why it matters.","isPartOf":{"@id":"https://www.printkingdriver.com/#website"},"about":{"@id":"https://www.printkingdriver.com/#organization"},"inLanguage":"en-GB"}]}</script>
+ <script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('consent', 'default', {
+ ad_storage: 'denied',
+ ad_user_data: 'denied',
+ ad_personalization: 'denied',
+ analytics_storage: 'denied',
+ functionality_storage: 'granted',
+ security_storage: 'granted',
+ wait_for_update: 500
+ });
+ window._uetq = window._uetq || []; /* Microsoft Advertising / Bing UET tag queue — activated after user consent */
+ /* Microsoft Advertising (Bing) UET tag — pending tag ID. Loads bat.bing.com only after user accepts. */
+ </script>
+ </head>
+ <body>
+ 
+ <nav class="nav">
+ <div class="container nav__inner">
+ <a href="/" class="nav__brand">
+ <div class="nav__logo"><img src="/assets/images/logo-crown.png" alt="PrintKingDriver crown logo" width="38" height="38" /></div>
+ <div>
+ <div class="nav__title">PrintKingDriver</div>
+ <div class="nav__sub">Driver Assistance Hub</div>
+ </div>
+ </a>
 
-      <div class="nav__search">
-        <span class="nav__search-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-16" aria-hidden="true"><circle cx="11" cy="11" r="8" />
-  <path d="m21 21-4.3-4.3" /></svg></span>
-        <input type="text" placeholder="Search drivers, pages, hardware..." aria-label="Search" />
-        <button class="nav__search-clear" type="button" aria-label="Clear search"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-14" aria-hidden="true"><path d="M18 6 6 18" />
-  <path d="m6 6 12 12" /></svg></button>
-        <div class="nav__search-results"></div>
-      </div>
+ <div class="nav__search">
+ <span class="nav__search-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-16" aria-hidden="true"><circle cx="11" cy="11" r="8" />
+ <path d="m21 21-4.3-4.3" /></svg></span>
+ <input type="text" placeholder="Search drivers, pages, hardware..." aria-label="Search" />
+ <button class="nav__search-clear" type="button" aria-label="Clear search"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-14" aria-hidden="true"><path d="M18 6 6 18" />
+ <path d="m6 6 12 12" /></svg></button>
+ <div class="nav__search-results"></div>
+ </div>
 
-      <div class="nav__links">
-        <a href="/" class="nav__link" data-nav-link="/">Home</a>
-        <div class="mega-wrap u-relative">
-          <button type="button" class="mega-trigger ">Explore Drivers <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-14" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg></button>
-        </div>
-        <a href="/how-it-works" class="nav__link" data-nav-link="/how-it-works">How It Works</a>
-        <a href="/about" class="nav__link" data-nav-link="/about">About Guide</a>
-        <a href="/contact" class="nav__cta">⚡ Get In Touch</a>
-      </div>
+ <div class="nav__links">
+ <a href="/" class="nav__link" data-nav-link="/">Home</a>
+ <div class="mega-wrap u-relative">
+ <button type="button" class="mega-trigger ">Explore Drivers <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-14" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg></button>
+ </div>
+ <a href="/how-it-works" class="nav__link" data-nav-link="/how-it-works">How It Works</a>
+ <a href="/about" class="nav__link" data-nav-link="/about">About Guide</a>
+ <a href="/contact" class="nav__cta">⚡ Get In Touch</a>
+ </div>
 
-      <button class="nav__menu-trigger" aria-label="Open menu"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-20" aria-hidden="true"><line x1="4" x2="20" y1="12" y2="12" />
-  <line x1="4" x2="20" y1="6" y2="6" />
-  <line x1="4" x2="20" y1="18" y2="18" /></svg></button>
-    </div>
+ <button class="nav__menu-trigger" aria-label="Open menu"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-20" aria-hidden="true"><line x1="4" x2="20" y1="12" y2="12" />
+ <line x1="4" x2="20" y1="6" y2="6" />
+ <line x1="4" x2="20" y1="18" y2="18" /></svg></button>
+ </div>
 
-    <div class="mega"><div class="mega__panel">
-      <div class="mega__grid">
-      <div class="mega__col">
-        <div class="mega__heading">
-          <span class="mega__chip">01</span>
-          <div class="mega__head-text">Essential Drivers</div>
-        </div>
-        <ul class="mega__list">
-          <li><a href="/drivers/chipset">
-            <div class="mega__item-name">Chipset Driver</div>
-            <div class="mega__item-desc">Motherboard logic & CPU sync</div>
-          </a></li>
-          <li><a href="/drivers/graphics">
-            <div class="mega__item-name">Graphics Driver</div>
-            <div class="mega__item-desc">Visual rendering & GPU</div>
-          </a></li>
-          <li><a href="/drivers/audio">
-            <div class="mega__item-name">Audio Driver</div>
-            <div class="mega__item-desc">Sound input/output</div>
-          </a></li>
-          <li><a href="/drivers/network">
-            <div class="mega__item-name">Network Driver</div>
-            <div class="mega__item-desc">Wired & wireless networking</div>
-          </a></li>
-        </ul>
-      </div>
-      <div class="mega__col">
-        <div class="mega__heading">
-          <span class="mega__chip">02</span>
-          <div class="mega__head-text">Hardware-Specific</div>
-        </div>
-        <ul class="mega__list">
-          <li><a href="/drivers/storage">
-            <div class="mega__item-name">Storage Controller</div>
-            <div class="mega__item-desc">SSDs & hard drives</div>
-          </a></li>
-          <li><a href="/drivers/usb">
-            <div class="mega__item-name">USB Support</div>
-            <div class="mega__item-desc">Port & device recognition</div>
-          </a></li>
-          <li><a href="/drivers/bluetooth">
-            <div class="mega__item-name">Bluetooth Driver</div>
-            <div class="mega__item-desc">Wireless peripheral pairing</div>
-          </a></li>
-          <li><a href="/drivers/input">
-            <div class="mega__item-name">Input Drivers</div>
-            <div class="mega__item-desc">Touchpad & keyboard</div>
-          </a></li>
-        </ul>
-      </div>
-      <div class="mega__col">
-        <div class="mega__heading">
-          <span class="mega__chip">03</span>
-          <div class="mega__head-text">Peripheral Drivers</div>
-        </div>
-        <ul class="mega__list">
-          <li><a href="/drivers/device">
-            <div class="mega__item-name">Device Driver</div>
-            <div class="mega__item-desc">Document to print commands</div>
-          </a></li>
-          <li><a href="/drivers/webcam">
-            <div class="mega__item-name">Webcam Driver</div>
-            <div class="mega__item-desc">Video stream capture</div>
-          </a></li>
-        </ul>
-      </div>
-      <div class="mega__col">
-        <div class="mega__heading">
-          <span class="mega__chip">04</span>
-          <div class="mega__head-text">Advanced Systems</div>
-        </div>
-        <ul class="mega__list">
-          <li><a href="/drivers/bios">
-            <div class="mega__item-name">Boot Firmware</div>
-            <div class="mega__item-desc">Pre-boot initialisation</div>
-          </a></li>
-          <li><a href="/drivers/security">
-            <div class="mega__item-name">Security Drivers</div>
-            <div class="mega__item-desc">Encryption & secure boot</div>
-          </a></li>
-          <li><a href="/drivers/monitor">
-            <div class="mega__item-name">Monitor Driver</div>
-            <div class="mega__item-desc">Colour & refresh control</div>
-          </a></li>
-        </ul>
-      </div></div>
-      <div class="mega__footer">
-        <div class="mega__footer-text"><a href="/brands">Brand Pages</a> · <a href="/drivers">Driver Reference</a></div>
-      </div>
-    </div></div>
-  </nav>
+ <div class="mega"><div class="mega__panel">
+ <div class="mega__grid">
+ <div class="mega__col">
+ <div class="mega__heading">
+ <span class="mega__chip">01</span>
+ <div class="mega__head-text">Essential Drivers</div>
+ </div>
+ <ul class="mega__list">
+ <li><a href="/drivers/chipset">
+ <div class="mega__item-name">Chipset Driver</div>
+ <div class="mega__item-desc">Motherboard logic & CPU sync</div>
+ </a></li>
+ <li><a href="/drivers/graphics">
+ <div class="mega__item-name">Graphics Driver</div>
+ <div class="mega__item-desc">Visual rendering & GPU</div>
+ </a></li>
+ <li><a href="/drivers/audio">
+ <div class="mega__item-name">Audio Driver</div>
+ <div class="mega__item-desc">Sound input/output</div>
+ </a></li>
+ <li><a href="/drivers/network">
+ <div class="mega__item-name">Network Driver</div>
+ <div class="mega__item-desc">Wired & wireless networking</div>
+ </a></li>
+ </ul>
+ </div>
+ <div class="mega__col">
+ <div class="mega__heading">
+ <span class="mega__chip">02</span>
+ <div class="mega__head-text">Hardware-Specific</div>
+ </div>
+ <ul class="mega__list">
+ <li><a href="/drivers/storage">
+ <div class="mega__item-name">Storage Controller</div>
+ <div class="mega__item-desc">SSDs & hard drives</div>
+ </a></li>
+ <li><a href="/drivers/usb">
+ <div class="mega__item-name">USB Support</div>
+ <div class="mega__item-desc">Port & device recognition</div>
+ </a></li>
+ <li><a href="/drivers/bluetooth">
+ <div class="mega__item-name">Bluetooth Driver</div>
+ <div class="mega__item-desc">Wireless peripheral pairing</div>
+ </a></li>
+ <li><a href="/drivers/input">
+ <div class="mega__item-name">Input Drivers</div>
+ <div class="mega__item-desc">Touchpad & keyboard</div>
+ </a></li>
+ </ul>
+ </div>
+ <div class="mega__col">
+ <div class="mega__heading">
+ <span class="mega__chip">03</span>
+ <div class="mega__head-text">Peripheral Drivers</div>
+ </div>
+ <ul class="mega__list">
+ <li><a href="/drivers/device">
+ <div class="mega__item-name">Device Driver</div>
+ <div class="mega__item-desc">Document to print commands</div>
+ </a></li>
+ <li><a href="/drivers/webcam">
+ <div class="mega__item-name">Webcam Driver</div>
+ <div class="mega__item-desc">Video stream capture</div>
+ </a></li>
+ </ul>
+ </div>
+ <div class="mega__col">
+ <div class="mega__heading">
+ <span class="mega__chip">04</span>
+ <div class="mega__head-text">Advanced Systems</div>
+ </div>
+ <ul class="mega__list">
+ <li><a href="/drivers/bios">
+ <div class="mega__item-name">Boot Firmware</div>
+ <div class="mega__item-desc">Pre-boot initialisation</div>
+ </a></li>
+ <li><a href="/drivers/security">
+ <div class="mega__item-name">Security Drivers</div>
+ <div class="mega__item-desc">Encryption & secure boot</div>
+ </a></li>
+ <li><a href="/drivers/monitor">
+ <div class="mega__item-name">Monitor Driver</div>
+ <div class="mega__item-desc">Colour & refresh control</div>
+ </a></li>
+ </ul>
+ </div></div>
+ <div class="mega__footer">
+ <div class="mega__footer-text"><a href="/brands">Brand Pages</a> · <a href="/drivers">Driver Reference</a></div>
+ </div>
+ </div></div>
+ </nav>
 
-  <div class="drawer-backdrop"></div>
-  <aside class="drawer" aria-hidden="true">
-    <button class="drawer__close" aria-label="Close menu"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-20" aria-hidden="true"><path d="M18 6 6 18" />
-  <path d="m6 6 12 12" /></svg></button>
-    <div class="drawer__list">
-      <a href="/" data-nav-link="/">Home</a>
-      <button type="button" data-mobile-explore>Explore Drivers <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-16" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg></button>
-      <div class="drawer__sub">
-      <h5>Essential Drivers</h5>
-      <ul><li><a href="/drivers/chipset">Chipset Driver</a></li><li><a href="/drivers/graphics">Graphics Driver</a></li><li><a href="/drivers/audio">Audio Driver</a></li><li><a href="/drivers/network">Network Driver</a></li></ul>
-      <h5>Hardware-Specific</h5>
-      <ul><li><a href="/drivers/storage">Storage Controller</a></li><li><a href="/drivers/usb">USB Support</a></li><li><a href="/drivers/bluetooth">Bluetooth Driver</a></li><li><a href="/drivers/input">Input Drivers</a></li></ul>
-      <h5>Peripheral Drivers</h5>
-      <ul><li><a href="/drivers/device">Device Driver</a></li><li><a href="/drivers/webcam">Webcam Driver</a></li></ul>
-      <h5>Advanced Systems</h5>
-      <ul><li><a href="/drivers/bios">Boot Firmware</a></li><li><a href="/drivers/security">Security Drivers</a></li><li><a href="/drivers/monitor">Monitor Driver</a></li></ul></div>
-      <a href="/how-it-works" data-nav-link="/how-it-works">How It Works</a>
-      <a href="/about" data-nav-link="/about">About Guide</a>
-      <a href="/contact" class="drawer__cta">⚡ Get In Touch</a>
-    </div>
-  </aside>
-  <main>
-  
-  <div class="detail-bg cat-essential">
-    <div class="container u-max-980">
-      <a href="/drivers" class="legal__back"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-14" aria-hidden="true"><path d="m12 19-7-7 7-7" />
-  <path d="M19 12H5" /></svg> Back to all drivers</a>
+ <div class="drawer-backdrop"></div>
+ <aside class="drawer" aria-hidden="true">
+ <button class="drawer__close" aria-label="Close menu"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-20" aria-hidden="true"><path d="M18 6 6 18" />
+ <path d="m6 6 12 12" /></svg></button>
+ <div class="drawer__list">
+ <a href="/" data-nav-link="/">Home</a>
+ <button type="button" data-mobile-explore>Explore Drivers <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-16" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg></button>
+ <div class="drawer__sub">
+ <h5>Essential Drivers</h5>
+ <ul><li><a href="/drivers/chipset">Chipset Driver</a></li><li><a href="/drivers/graphics">Graphics Driver</a></li><li><a href="/drivers/audio">Audio Driver</a></li><li><a href="/drivers/network">Network Driver</a></li></ul>
+ <h5>Hardware-Specific</h5>
+ <ul><li><a href="/drivers/storage">Storage Controller</a></li><li><a href="/drivers/usb">USB Support</a></li><li><a href="/drivers/bluetooth">Bluetooth Driver</a></li><li><a href="/drivers/input">Input Drivers</a></li></ul>
+ <h5>Peripheral Drivers</h5>
+ <ul><li><a href="/drivers/device">Device Driver</a></li><li><a href="/drivers/webcam">Webcam Driver</a></li></ul>
+ <h5>Advanced Systems</h5>
+ <ul><li><a href="/drivers/bios">Boot Firmware</a></li><li><a href="/drivers/security">Security Drivers</a></li><li><a href="/drivers/monitor">Monitor Driver</a></li></ul></div>
+ <a href="/how-it-works" data-nav-link="/how-it-works">How It Works</a>
+ <a href="/about" data-nav-link="/about">About Guide</a>
+ <a href="/contact" class="drawer__cta">⚡ Get In Touch</a>
+ </div>
+ </aside>
+ <main>
+ 
+ <div class="detail-bg cat-essential">
+ <div class="container u-max-980">
+ <a href="/drivers" class="legal__back"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-14" aria-hidden="true"><path d="m12 19-7-7 7-7" />
+ <path d="M19 12H5" /></svg> Back to all drivers</a>
 
-      <header class="detail-head">
-        <div class="detail-head__icon cat-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-32" aria-hidden="true"><rect width="20" height="14" x="2" y="3" rx="2" />
-  <line x1="8" x2="16" y1="21" y2="21" />
-  <line x1="12" x2="12" y1="17" y2="21" /></svg></div>
-        <div>
-          <div class="eyebrow">Essential Driver</div>
-          <h1>Graphics Driver</h1>
-          <p>Handles visual rendering and GPU instructions.</p>
-        </div>
-      </header>
+ <header class="detail-head">
+ <div class="detail-head__icon cat-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-32" aria-hidden="true"><rect width="20" height="14" x="2" y="3" rx="2" />
+ <line x1="8" x2="16" y1="21" y2="21" />
+ <line x1="12" x2="12" y1="17" y2="21" /></svg></div>
+ <div>
+ <div class="eyebrow">Essential Driver</div>
+ <h1>Graphics Driver</h1>
+ <p>Handles visual rendering and GPU instructions.</p>
+ </div>
+ </header>
 
-      <section class="detail-card">
-        <h2>What Is It?</h2>
-        <p>Graphics drivers are responsible for managing the interaction between your operating system and the graphics processing unit (GPU). They play a crucial role in rendering images, videos, animations, and graphical user interfaces. Whether you are gaming, editing videos, designing graphics, or simply browsing the web, the graphics driver ensures that visual output is displayed smoothly and accurately.</p>
-        <p>A graphics driver translates software instructions into commands that the GPU can execute. It optimises how frames are rendered, manages memory usage, and ensures that graphical tasks are processed efficiently. Without an updated graphics driver, users may experience screen tearing, lag, low frame rates, or even application becomes unresponsive.</p>
-        <p>Modern graphics drivers come with advanced features such as <strong>hardware acceleration, ray tracing support, and AI-based upscaling technologies</strong>. These enhancements significantly improve visual quality and performance, especially in high-end applications and games. Additionally, graphics drivers are frequently updated by manufacturers to provide support for new software, fix bugs, and improve compatibility.</p>
-        <p>Another key function of graphics drivers is managing display settings. They control resolution, refresh rate, colour calibration, and multi-monitor configurations. This ensures that users get the best possible visual experience based on their hardware capabilities.</p>
-        <p>Graphics drivers also contribute to system efficiency by optimising GPU workload and reducing unnecessary power consumption. This is particularly important for laptops, where efficient GPU usage can extend battery life.</p>
-        <p>Keeping graphics drivers updated is essential for maintaining optimal performance, unlocking new features, and ensuring compatibility with modern applications. For users who rely on high-quality visuals and performance, graphics drivers are a critical component of the system.</p>
-      </section>
+ <section class="detail-card">
+ <h2>What Is It?</h2>
+ <p>Graphics drivers are responsible for managing the interaction between your operating system and the graphics processing unit (GPU). They play a crucial role in rendering images, videos, animations, and graphical user interfaces. Whether you are gaming, editing videos, designing graphics, or simply browsing the web, the graphics driver ensures that visual output is displayed smoothly and accurately.</p>
+ <p>A graphics driver translates software instructions into commands that the GPU can execute. It optimises how frames are rendered, manages memory usage, and ensures that graphical tasks are processed efficiently. Without an updated graphics driver, users may experience screen tearing, lag, low frame rates, or even application becomes unresponsive.</p>
+ <p>Modern graphics drivers come with advanced features such as <strong>hardware acceleration, ray tracing support, and AI-based upscaling technologies</strong>. These enhancements significantly improve visual quality and performance, especially in high-end applications and games. Additionally, graphics drivers are frequently updated by manufacturers to provide support for new software, fix bugs, and improve compatibility.</p>
+ <p>Another key function of graphics drivers is managing display settings. They control resolution, refresh rate, colour calibration, and multi-monitor configurations. This ensures that users get the best possible visual experience based on their hardware capabilities.</p>
+ <p>Graphics drivers also contribute to system efficiency by optimising GPU workload and reducing unnecessary power consumption. This is particularly important for laptops, where efficient GPU usage can extend battery life.</p>
+ <p>Keeping graphics drivers updated is essential for maintaining optimal performance, unlocking new features, and ensuring compatibility with modern applications. For users who rely on high-quality visuals and performance, graphics drivers are a critical component of the system.</p>
+ </section>
 
-      <section class="detail-card">
-        <h2>How It Works</h2>
-        <p>An application asks the OS to draw something through an API such as DirectX, Vulkan, or OpenGL. The OS forwards that request to the graphics driver, which compiles it into commands the GPU can execute. The GPU renders frames and the driver pushes them to the display.</p>
-        <div class="detail-flow">
-          <div class="detail-flow__step"><div class="detail-flow__icon c-blue"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-18" aria-hidden="true"><rect width="20" height="14" x="2" y="3" rx="2" />
-  <line x1="8" x2="16" y1="21" y2="21" />
-  <line x1="12" x2="12" y1="17" y2="21" /></svg></div><div class="detail-flow__label">Application</div></div>
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-16 detail-flow__arrow" aria-hidden="true"><path d="M5 12h14" />
-  <path d="m12 5 7 7-7 7" /></svg>
-          <div class="detail-flow__step"><div class="detail-flow__icon c-purple"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-18" aria-hidden="true"><rect width="20" height="8" x="2" y="2" rx="2" ry="2" />
-  <rect width="20" height="8" x="2" y="14" rx="2" ry="2" />
-  <line x1="6" x2="6.01" y1="6" y2="6" />
-  <line x1="6" x2="6.01" y1="18" y2="18" /></svg></div><div class="detail-flow__label">Operating System</div></div>
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-16 detail-flow__arrow" aria-hidden="true"><path d="M5 12h14" />
-  <path d="m12 5 7 7-7 7" /></svg>
-          <div class="detail-flow__step is-highlight"><div class="detail-flow__icon c-blue"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-18" aria-hidden="true"><rect width="20" height="14" x="2" y="3" rx="2" />
-  <line x1="8" x2="16" y1="21" y2="21" />
-  <line x1="12" x2="12" y1="17" y2="21" /></svg></div><div class="detail-flow__label">Graphics Driver</div></div>
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-16 detail-flow__arrow" aria-hidden="true"><path d="M5 12h14" />
-  <path d="m12 5 7 7-7 7" /></svg>
-          <div class="detail-flow__step"><div class="detail-flow__icon c-teal"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-18" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2" />
-  <rect x="9" y="9" width="6" height="6" />
-  <path d="M15 2v2" />
-  <path d="M15 20v2" />
-  <path d="M2 15h2" />
-  <path d="M2 9h2" />
-  <path d="M20 15h2" />
-  <path d="M20 9h2" />
-  <path d="M9 2v2" />
-  <path d="M9 20v2" /></svg></div><div class="detail-flow__label">Hardware</div></div>
-        </div>
-      </section>
+ <section class="detail-card">
+ <h2>How It Works</h2>
+ <p>The GPU renders frames and the driver pushes them to the display.</p>
+ <div class="detail-flow">
+ <div class="detail-flow__step"><div class="detail-flow__icon c-blue"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-18" aria-hidden="true"><rect width="20" height="14" x="2" y="3" rx="2" />
+ <line x1="8" x2="16" y1="21" y2="21" />
+ <line x1="12" x2="12" y1="17" y2="21" /></svg></div><div class="detail-flow__label">Application</div></div>
+ <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-16 detail-flow__arrow" aria-hidden="true"><path d="M5 12h14" />
+ <path d="m12 5 7 7-7 7" /></svg>
+ <div class="detail-flow__step"><div class="detail-flow__icon c-purple"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-18" aria-hidden="true"><rect width="20" height="8" x="2" y="2" rx="2" ry="2" />
+ <rect width="20" height="8" x="2" y="14" rx="2" ry="2" />
+ <line x1="6" x2="6.01" y1="6" y2="6" />
+ <line x1="6" x2="6.01" y1="18" y2="18" /></svg></div><div class="detail-flow__label">Operating System</div></div>
+ <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-16 detail-flow__arrow" aria-hidden="true"><path d="M5 12h14" />
+ <path d="m12 5 7 7-7 7" /></svg>
+ <div class="detail-flow__step is-highlight"><div class="detail-flow__icon c-blue"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-18" aria-hidden="true"><rect width="20" height="14" x="2" y="3" rx="2" />
+ <line x1="8" x2="16" y1="21" y2="21" />
+ <line x1="12" x2="12" y1="17" y2="21" /></svg></div><div class="detail-flow__label">Graphics Driver</div></div>
+ <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-16 detail-flow__arrow" aria-hidden="true"><path d="M5 12h14" />
+ <path d="m12 5 7 7-7 7" /></svg>
+ <div class="detail-flow__step"><div class="detail-flow__icon c-teal"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-18" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2" />
+ <rect x="9" y="9" width="6" height="6" />
+ <path d="M15 2v2" />
+ <path d="M15 20v2" />
+ <path d="M2 15h2" />
+ <path d="M2 9h2" />
+ <path d="M20 15h2" />
+ <path d="M20 9h2" />
+ <path d="M9 2v2" />
+ <path d="M9 20v2" /></svg></div><div class="detail-flow__label">Hardware</div></div>
+ </div>
+ </section>
 
-      <section class="detail-card">
-        <h2>Key Functions</h2>
-        <ul class="detail-list">
-          <li><span class="detail-list__bullet"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-12" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg></span><span>Translates rendering API calls into GPU machine instructions.</span></li><li><span class="detail-list__bullet"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-12" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg></span><span>Manages video memory allocation for textures and frame buffers.</span></li><li><span class="detail-list__bullet"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-12" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg></span><span>Schedules workloads across GPU cores and shader units.</span></li><li><span class="detail-list__bullet"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-12" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg></span><span>Controls display output, resolution, refresh rate, and colour depth.</span></li>
-        </ul>
-      </section>
+ <section class="detail-card">
+ <h2>Key Functions</h2>
+ <ul class="detail-list">
+ <li><span class="detail-list__bullet"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-12" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg></span><span>Translates rendering API calls into GPU machine instructions.</span></li><li><span class="detail-list__bullet"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-12" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg></span><span>Manages video memory allocation for textures and frame buffers.</span></li><li><span class="detail-list__bullet"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-12" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg></span><span>Schedules workloads across GPU cores and shader units.</span></li><li><span class="detail-list__bullet"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-12" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg></span><span>Controls display output, resolution, refresh rate, and colour depth.</span></li>
+ </ul>
+ </section>
 
-      <section class="detail-card">
-        <h2>Components &amp; Examples</h2>
-        <div class="tbl-wrap"><div class="tbl-scroll"><table class="tbl">
-          <thead><tr><th>Component</th><th>Role</th><th class="hide-md">Example</th></tr></thead>
-          <tbody><tr><td class="strong">Graphics API</td><td>Standard interface for apps</td><td class="hide-md mono small">DirectX / Vulkan</td></tr><tr><td class="strong">Shader compiler</td><td>Builds GPU programs</td><td class="hide-md mono small">HLSL → ISA</td></tr><tr><td class="strong">Display controller</td><td>Sends pixels to monitor</td><td class="hide-md mono small">HDMI / DisplayPort</td></tr></tbody>
-        </table></div></div>
-      </section>
+ <section class="detail-card">
+ <h2>Components &amp; Examples</h2>
+ <div class="tbl-wrap"><div class="tbl-scroll"><table class="tbl">
+ <thead><tr><th>Component</th><th>Role</th><th class="hide-md">Example</th></tr></thead>
+ <tbody><tr><td class="strong">Graphics API</td><td>Standard interface for apps</td><td class="hide-md mono small">DirectX / Vulkan</td></tr><tr><td class="strong">Shader compiler</td><td>Builds GPU programs</td><td class="hide-md mono small">HLSL → ISA</td></tr><tr><td class="strong">Display controller</td><td>Sends pixels to monitor</td><td class="hide-md mono small">HDMI / DisplayPort</td></tr></tbody>
+ </table></div></div>
+ </section>
 
-      <section class="detail-card detail-card--accent">
-        <h2>Why It Matters</h2>
-        <p>Smooth visuals, accurate colours, and stable frame rates all depend on the graphics driver. A poor or older driver causes flickering, artefacts, and becomes unresponsive even when the GPU itself is healthy.</p>
-      </section>
+ <section class="detail-card detail-card--accent">
+ <h2>Why It Matters</h2>
+ <p>Smooth visuals, accurate colours, and stable frame rates all depend on the graphics driver. A poor or older driver causes flickering, artefacts, and becomes unresponsive even when the GPU itself is healthy.</p>
+ </section>
 
 
-      <section class="detail-card">
-        <h2>Common Issues &amp; Symptoms</h2>
-        <p class="u-mb-16">Recognising the symptom is the first step in narrowing down whether the problem really is the driver, the hardware or another part of the system.</p>
-        <div class="tbl-wrap"><div class="tbl-scroll"><table class="tbl">
-          <thead><tr><th>Symptom</th><th>Likely Cause</th><th class="hide-md">What It Affects</th></tr></thead>
-          <tbody><tr><td class="strong">Black screen or flicker after a PC update</td><td>A stale GPU driver was rolled back to a generic one.</td><td class="hide-md small">Display output</td></tr><tr><td class="strong">Games stutter or drop frame rate</td><td>Old shader cache or wrong power profile in driver.</td><td class="hide-md small">Gaming performance</td></tr><tr><td class="strong">Wrong resolution or single-monitor only</td><td>EDID not negotiated; driver fallback in use.</td><td class="hide-md small">Multi-display</td></tr><tr><td class="strong">Apps issue with “display driver became unresponsive”</td><td>GPU timeout (TDR) caused by a bug in the driver.</td><td class="hide-md small">Stability</td></tr><tr><td class="strong">Video playback tearing</td><td>Vertical sync or hardware acceleration disabled.</td><td class="hide-md small">Video quality</td></tr></tbody>
-        </table></div></div>
-      </section>
+ <section class="detail-card">
+ <h2>Common Issues &amp; Symptoms</h2>
+ <p class="u-mb-16">Recognising the symptom is the first step in narrowing down whether the problem really is the driver, the hardware or another part of the system.</p>
+ <div class="tbl-wrap"><div class="tbl-scroll"><table class="tbl">
+ <thead><tr><th>Symptom</th><th>Likely Cause</th><th class="hide-md">What It Affects</th></tr></thead>
+ <tbody><tr><td class="strong">Games stutter or drop frame rate</td><td>Old shader cache or wrong power profile in driver.</td><td class="hide-md small">Gaming performance</td></tr><tr><td class="strong">Wrong resolution or single-monitor only</td><td>EDID not negotiated; driver fallback in use.</td><td class="hide-md small">Multi-display</td></tr><tr><td class="strong">Apps issue with “display driver became unresponsive”</td><td>GPU timeout (TDR) caused by a bug in the driver.</td><td class="hide-md small">Stability</td></tr><tr><td class="strong">Video playback tearing</td><td>Vertical sync or hardware acceleration disabled.</td><td class="hide-md small">Video quality</td></tr></tbody>
+ </table></div></div>
+ </section>
 
-      <section class="detail-card">
-        <h2>Best Practices</h2>
-        <p class="u-mb-16">A short checklist to keep this driver healthy and reduce the chance of running into the issues above.</p>
-        <ul class="detail-list">
-          <li><span class="detail-list__bullet"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-12" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg></span><span>Use the driver version recommended for your specific GPU model — newer is not always better.</span></li><li><span class="detail-list__bullet"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-12" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg></span><span>Perform a clean set up when changing GPU vendor (e.g. NVIDIA → AMD).</span></li><li><span class="detail-list__bullet"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-12" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg></span><span>Keep both the GPU driver and the OS graphics stack (DirectX, Vulkan runtime) current.</span></li><li><span class="detail-list__bullet"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-12" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg></span><span>Roll back driver versions if a new release breaks a critical app or game.</span></li><li><span class="detail-list__bullet"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-12" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg></span><span>On laptops, set up the OEM-branded driver where available — it includes hybrid-graphics handling.</span></li>
-        </ul>
-      </section>
-
-      <section class="detail-card">
-        <h2>Frequently Asked Questions</h2>
-        <div class="faq__inner u-mt-8-0-0">
-          
-          <div class="faq__item">
-            <button type="button" class="faq__q">Should I use PC Update or the GPU vendor’s setup tool?<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-16" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg></button>
-            <div class="faq__a"><p class="u-pt-0">For best performance and the latest features (Game Ready, Studio, Adrenalin), use the vendor setup tool. PC Update is fine for general office use, but is usually several versions behind.</p></div>
-          </div>
-          <div class="faq__item">
-            <button type="button" class="faq__q">What does “clean set up” do?<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-16" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg></button>
-            <div class="faq__a"><p class="u-pt-0">It removes all previous driver files, registry entries and profiles before setting up the new version. This is the recommended path when common issues flicker, becomes unresponsive or after switching GPU brands.</p></div>
-          </div>
-          <div class="faq__item">
-            <button type="button" class="faq__q">Why does my game run slower after updating?<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-16" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg></button>
-            <div class="faq__a"><p class="u-pt-0">A small percentage of releases contain regressions for specific titles. Rolling back to the previous version usually fixes it; vendors often patch within a week.</p></div>
-          </div>
-          <div class="faq__item">
-            <button type="button" class="faq__q">Do I need a driver if I use only the integrated GPU?<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-16" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg></button>
-            <div class="faq__a"><p class="u-pt-0">Yes. Even the iGPU built into the CPU needs a driver to enable hardware acceleration, multi-monitor scaling and modern colour management.</p></div>
-          </div>
-        </div>
-      </section>
-    </div>
-  </div>
-  </main>
-  
-  <footer class="footer">
-    <div class="container">
-      <div class="footer__grid">
-        <div class="footer__col">
-          <a href="/" class="footer__brand">
-            <div class="footer__brand-icon"><img src="/assets/images/logo-crown.png" alt="PrintKingDriver crown logo" width="36" height="36" /></div>
-            <div class="footer__brand-name">PrintKingDriver</div>
-          </a>
-          <p>Your trusted source for device & system driver information.</p>
-          <div class="footer__contact">
-            <div class="footer__contact-row"><span class="footer__contact-label">Company</span><span class="footer__contact-val">PrintKingDriver</span></div>
-            <div class="footer__contact-row"><span class="footer__contact-label">Email</span><a class="footer__contact-val" href="mailto:support@printkingdriver.com">support@printkingdriver.com</a></div>
-            <div class="footer__contact-row footer__contact-row--phone"><span class="footer__contact-label">Phone</span><a class="footer__contact-val" href="tel:+18001234567">+1 (800) 123-4567</a></div>
-          </div>
-        </div>
-        
-        <div class="footer__col">
-          <h4>Core Drivers</h4>
-          <ul><li><a href="/drivers/chipset">Chipset Drivers</a></li><li><a href="/drivers/graphics">Graphics Driver</a></li><li><a href="/drivers/audio">Audio Driver</a></li><li><a href="/drivers/network">Network Driver</a></li></ul>
-        </div>
-        
-        <div class="footer__col">
-          <h4>Quick Links</h4>
-          <ul><li><a href="/">Home</a></li><li><a href="/drivers">Explore Drivers</a></li><li><a href="/how-it-works">How It Works</a></li><li><a href="/about">About Guide</a></li></ul>
-        </div>
-        <div class="footer__col">
-          <h4>System Support</h4>
-          <ul><li><a href="/contact">Contact Us</a></li><li><a href="/how-it-works">FAQ</a></li><li><a href="/contact">Technical Support</a></li><li><a href="/drivers">Documentation Library</a></li></ul>
-        </div>
-      </div>
-      <div class="footer__bot">
-        <p>© 2026 PrintKingDriver.com. All rights reserved.</p>
-        <ul>
-          <li><a href="/privacy">Privacy Policy</a></li>
-          <li><a href="/disclaimer">Disclaimer</a></li>
-          <li><a href="/terms">Terms of Service</a></li>
-          <li><a href="/sitemap">Sitemap</a></li>
-        </ul>
-      </div>
-    </div>
+ <section class="detail-card">
+ <h2>Best Practices</h2>
+ <p class="u-mb-16">A short checklist to keep this driver healthy and reduce the chance of running into the issues above.</p>
+ <ul class="detail-list">
+ <li><span class="detail-list__bullet"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-12" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg></span><span>Use the driver version recommended for your specific GPU model — newer is not always better.</span></li><li><span class="detail-list__bullet"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-12" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg></span><span>Perform a clean set up when changing GPU vendor (e.g.</p></div>
+ </div>
+ <div class="faq__item">
+ <button type="button" class="faq__q">What does “clean set up” do?<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-16" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg></button>
+ <div class="faq__a"><p class="u-pt-0">It removes all previous driver files, registry entries and profiles before setting up the new version. This is the recommended path when common issues flicker, becomes unresponsive or after switching GPU brands.</p></div>
+ </div>
+ <div class="faq__item">
+ <button type="button" class="faq__q">Why does my game run slower after updating?<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-16" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg></button>
+ <div class="faq__a"><p class="u-pt-0">A small percentage of releases contain regressions for specific titles. Rolling back to the previous version usually fixes it; vendors often patch within a week.</p></div>
+ </div>
+ <div class="faq__item">
+ <button type="button" class="faq__q">Do I need a driver if I use only the integrated GPU?<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-16" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg></button>
+ <div class="faq__a"><p class="u-pt-0">Yes. Even the iGPU built into the CPU needs a driver to enable hardware acceleration, multi-monitor scaling and modern colour management.</p></div>
+ </div>
+ </div>
+ </section>
+ </div>
+ </div>
+ </main>
+ 
+ <footer class="footer">
+ <div class="container">
+ <div class="footer__grid">
+ <div class="footer__col">
+ <a href="/" class="footer__brand">
+ <div class="footer__brand-icon"><img src="/assets/images/logo-crown.png" alt="PrintKingDriver crown logo" width="36" height="36" /></div>
+ <div class="footer__brand-name">PrintKingDriver</div>
+ </a>
+ <p>Your trusted source for device & system driver information.</p>
+ <div class="footer__contact">
+ <div class="footer__contact-row"><span class="footer__contact-label">Company</span><span class="footer__contact-val">PrintKingDriver</span></div>
+ <div class="footer__contact-row"><span class="footer__contact-label">Email</span><a class="footer__contact-val" href="mailto:support@printkingdriver.com">support@printkingdriver.com</a></div>
+ <div class="footer__contact-row footer__contact-row--phone"><span class="footer__contact-label">Phone</span><a class="footer__contact-val" href="tel:+18001234567">+1 (800) 123-4567</a></div>
+ </div>
+ </div>
+ 
+ <div class="footer__col">
+ <h4>Core Drivers</h4>
+ <ul><li><a href="/drivers/chipset">Chipset Drivers</a></li><li><a href="/drivers/graphics">Graphics Driver</a></li><li><a href="/drivers/audio">Audio Driver</a></li><li><a href="/drivers/network">Network Driver</a></li></ul>
+ </div>
+ 
+ <div class="footer__col">
+ <h4>Quick Links</h4>
+ <ul><li><a href="/">Home</a></li><li><a href="/drivers">Explore Drivers</a></li><li><a href="/how-it-works">How It Works</a></li><li><a href="/about">About Guide</a></li></ul>
+ </div>
+ <div class="footer__col">
+ <h4>System Support</h4>
+ <ul><li><a href="/contact">Contact Us</a></li><li><a href="/how-it-works">FAQ</a></li><li><a href="/contact">Technical Support</a></li><li><a href="/drivers">Documentation Library</a></li></ul>
+ </div>
+ </div>
+ <div class="footer__bot">
+ <p>© 2026 PrintKingDriver.com. All rights reserved.</p>
+ <ul>
+ <li><a href="/privacy">Privacy Policy</a></li>
+ <li><a href="/disclaimer">Disclaimer</a></li>
+ <li><a href="/terms">Terms of Service</a></li>
+ <li><a href="/sitemap">Sitemap</a></li>
+ </ul>
+ </div>
+ </div>
 </footer>
 <script src="/assets/scripts.min.js" defer></script>
-  <script src="/assets/cookie-banner.min.js" defer></script>
-  </body>
-  </html>
+ <script src="/assets/cookie-banner.min.js" defer></script>
+ </body>
+ </html>
