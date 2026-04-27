@@ -211,6 +211,7 @@ async function main() {
   // === Update indexes ===
   await updateAllPages(PAGES);
   await updateSitemapXml(PAGES);
+  await updateSitemapHtml(PAGES);
   await updateLlmsTxt(PAGES);
   await updateSearchIndex(PAGES);
 
@@ -278,6 +279,66 @@ async function updateSitemapXml(pages) {
   xml = xml.replace('</urlset>', `${entries}\n</urlset>`);
   await fs.writeFile(file, xml, 'utf8');
   console.log('sitemap.xml updated.');
+}
+
+async function updateSitemapHtml(pages) {
+  const file = path.join(PUB, 'sitemap.html');
+  let html = await fs.readFile(file, 'utf8');
+
+  // Idempotency: strip any previously-inserted Performance Fix Guides sm-block.
+  // We bracket the inserted block with sentinel comments so re-runs match cleanly.
+  html = html.replace(
+    /\s*<!-- BEGIN Performance Fix Guides -->[\s\S]*?<!-- END Performance Fix Guides -->\s*/g,
+    '\n      '
+  );
+  // Also strip any legacy block (without sentinels) from earlier runs of this generator.
+  html = html.replace(
+    /\s*<!-- Performance Fix Guides -->\s*<div class="sm-block" id="sec-perf-fixes"[\s\S]*?<\/ul>\s*<\/div>\s*/g,
+    '\n      '
+  );
+
+  const items = pages
+    .map((p) => `      <li><a href="/${p.slug}">${escapeHtml(p.title)}</a></li>`)
+    .join('\n');
+
+  const block = `
+      <!-- BEGIN Performance Fix Guides -->
+      <div class="sm-block" id="sec-perf-fixes" style="--accent: 95%; grid-column: 1 / -1;">
+        <div class="sm-block__heading">
+          <span class="sm-block__icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          </span>
+          <div class="sm-block__heading-text">
+            <span class="sm-block__num">Section 05</span>
+            <span class="sm-block__title">Performance Fix Guides</span>
+          </div>
+          <span class="sm-block__count">${String(pages.length).padStart(2, '0')} entries</span>
+        </div>
+        <ul class="sm-list sm-list--cols">
+${items}
+        </ul>
+      </div>
+      <!-- END Performance Fix Guides -->
+`;
+
+  // Insert after the Error Fix Guides sm-block (sec-fixes), before the next sibling.
+  const anchor = '<!-- Error Fix Guides -->';
+  const anchorIdx = html.indexOf(anchor);
+  if (anchorIdx === -1) throw new Error('Could not locate "<!-- Error Fix Guides -->" anchor in sitemap.html');
+  // Find the closing </div></div> that ends the Error Fix Guides sm-block.
+  // The sm-block is: <div class="sm-block" ...> <div ...heading...> ... </div> <ul> ... </ul> </div>
+  // We need to find the matching closing </div> for the outer sm-block.
+  // Simplest reliable approach: locate the next closing of </ul></div> after anchor — which marks end of Error Fix Guides block.
+  const ulCloseIdx = html.indexOf('</ul>', anchorIdx);
+  if (ulCloseIdx === -1) throw new Error('Could not locate </ul> after Error Fix Guides anchor');
+  const divCloseIdx = html.indexOf('</div>', ulCloseIdx);
+  if (divCloseIdx === -1) throw new Error('Could not locate closing </div> for Error Fix Guides sm-block');
+  const insertPos = divCloseIdx + '</div>'.length;
+
+  html = html.slice(0, insertPos) + block + html.slice(insertPos);
+
+  await fs.writeFile(file, html, 'utf8');
+  console.log('sitemap.html updated.');
 }
 
 async function updateLlmsTxt(pages) {
