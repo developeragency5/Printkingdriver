@@ -129,10 +129,6 @@
             <div class="mega__item-name">Device Driver</div>
             <div class="mega__item-desc">Document to print commands</div>
           </a></li>
-          <li><a href="/drivers/scanner">
-            <div class="mega__item-name">Scanner Support</div>
-            <div class="mega__item-desc">Image capture & OCR</div>
-          </a></li>
           <li><a href="/drivers/webcam">
             <div class="mega__item-name">Webcam Driver</div>
             <div class="mega__item-desc">Video stream capture</div>
@@ -178,7 +174,7 @@
       <h5>Hardware-Specific</h5>
       <ul><li><a href="/drivers/storage">Storage Controller</a></li><li><a href="/drivers/usb">USB Support</a></li><li><a href="/drivers/bluetooth">Bluetooth Driver</a></li><li><a href="/drivers/input">Input Drivers</a></li></ul>
       <h5>Peripheral Drivers</h5>
-      <ul><li><a href="/drivers/printer">Device Driver</a></li><li><a href="/drivers/scanner">Scanner Support</a></li><li><a href="/drivers/webcam">Webcam Driver</a></li></ul>
+      <ul><li><a href="/drivers/printer">Device Driver</a></li><li><a href="/drivers/webcam">Webcam Driver</a></li></ul>
       <h5>Advanced Systems</h5>
       <ul><li><a href="/drivers/bios">Boot Firmware</a></li><li><a href="/drivers/security">Security Drivers</a></li><li><a href="/drivers/monitor">Monitor Driver</a></li></ul></div>
       <a href="/how-it-works" data-nav-link="/how-it-works">How It Works</a>
@@ -681,7 +677,7 @@
           </div>
           <h3>Peripheral Drivers</h3>
           <p class="slide-card__desc">Drivers for external devices that connect to a computer. They define how peripherals exchange data with the host system.</p>
-          <div class="slide-card__count"><span>Includes</span><span class="line"></span><span>4 drivers</span></div>
+          <div class="slide-card__count"><span>Includes</span><span class="line"></span><span>3 drivers</span></div>
           <ul class="slide-card__items">
             
             <li class="slide-item">
@@ -691,16 +687,6 @@
               <div class="u-flex-min">
                 <div class="slide-item__name">Device Driver</div>
                 <div class="slide-item__note">Translates documents into device commands.</div>
-              </div>
-            </li>
-            <li class="slide-item">
-              <div class="slide-item__icon c-teal"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-14" aria-hidden="true"><path d="M3 7V5a2 2 0 0 1 2-2h2" />
-  <path d="M17 3h2a2 2 0 0 1 2 2v2" />
-  <path d="M21 17v2a2 2 0 0 1-2 2h-2" />
-  <path d="M7 21H5a2 2 0 0 1-2-2v-2" /></svg></div>
-              <div class="u-flex-min">
-                <div class="slide-item__name">Scanner Driver</div>
-                <div class="slide-item__note">Captures images and handles OCR exchange.</div>
               </div>
             </li>
             <li class="slide-item">
@@ -863,7 +849,7 @@
           <p>Drivers that translate digital commands into physical action — turning devices, scanners, and webcams into productive parts of your workflow.</p>
           <ul class="cat-block__items">
             <li><strong>Device Driver</strong><span>Converts digital documents into a format the device understands, controlling print quality, layout, paper size, and colour management.</span></li>
-            <li><strong>Scanner Support Driver</strong><span>Captures images and documents, and enables OCR to convert scanned text into editable digital content.</span></li>
+            
             <li><strong>Webcam Driver</strong><span>Manages video capture, controlling resolution, frame rate, and image clarity for video conferencing and recording apps.</span></li>
           </ul>
         </div>
@@ -1242,11 +1228,6 @@
 │   │   ├─ Print formatting
 │   │   └─ Output control
 │   │
-│   ├── <img class="tree__sub-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='28' viewBox='0 0 36 28'%3E%3Crect width='36' height='28' rx='6' fill='%23285a40'/%3E%3Crect x='9' y='8' width='18' height='14' rx='2' fill='none' stroke='%23a8e0c0' stroke-width='1.5'/%3E%3Ccircle cx='18' cy='15' r='4' fill='none' stroke='%23a8e0c0' stroke-width='1.2'/%3E%3Ccircle cx='18' cy='15' r='1.5' fill='%23a8e0c0'/%3E%3C/svg%3E" alt="" /> <strong>Scanner Driver</strong>
-│   │   ├─ Image capture
-│   │   ├─ OCR processing
-│   │   └─ File conversion
-│   │
 │   └── <img class="tree__sub-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='28' viewBox='0 0 36 28'%3E%3Crect width='36' height='28' rx='6' fill='%237a4028'/%3E%3Ccircle cx='18' cy='13' r='6' fill='none' stroke='%23e8c0a8' stroke-width='1.5'/%3E%3Ccircle cx='18' cy='13' r='2' fill='%23e8c0a8'/%3E%3Crect x='14' y='20' width='8' height='3' rx='1' fill='%23e8c0a8'/%3E%3C/svg%3E" alt="" /> <strong>Webcam Driver</strong>
 │       ├─ Video capture
 │       ├─ Streaming control
@@ -1283,7 +1264,7 @@
       <div class="tbl-wrap">
         <div class="tbl-scroll"><table class="tbl">
           <thead><tr><th>Driver Type</th><th>Function</th><th class="hide-md">Example Use Case</th></tr></thead>
-          <tbody><tr><td class="strong">Graphics Driver</td><td>Translates rendering commands into GPU instructions.</td><td class="hide-md">Display visuals, video playback, gaming.</td></tr><tr><td class="strong">Audio Driver</td><td>Manages sound signal processing between OS and audio chip.</td><td class="hide-md">Music playback, voice calls, system sound.</td></tr><tr><td class="strong">Network Driver</td><td>Handles data packet exchange over wired or wireless links.</td><td class="hide-md">Internet access, file sharing, streaming.</td></tr><tr><td class="strong">Storage Controller</td><td>Coordinates read and write operations to internal storage.</td><td class="hide-md">Booting the OS, saving files, data caching.</td></tr><tr><td class="strong">USB Driver</td><td>Detects and routes data for connected USB devices.</td><td class="hide-md">Flash drives, keyboards, mice, peripherals.</td></tr><tr><td class="strong">Device Driver</td><td>Converts digital documents into device-readable commands.</td><td class="hide-md">Office printing, design output, scanning.</td></tr><tr><td class="strong">Boot Firmware</td><td>Initialises hardware components before the OS loads.</td><td class="hide-md">System boot sequence and firmware updates.</td></tr></tbody>
+          <tbody><tr><td class="strong">Graphics Driver</td><td>Translates rendering commands into GPU instructions.</td><td class="hide-md">Display visuals, video playback, gaming.</td></tr><tr><td class="strong">Audio Driver</td><td>Manages sound signal processing between OS and audio chip.</td><td class="hide-md">Music playback, voice calls, system sound.</td></tr><tr><td class="strong">Network Driver</td><td>Handles data packet exchange over wired or wireless links.</td><td class="hide-md">Internet access, file sharing, streaming.</td></tr><tr><td class="strong">Storage Controller</td><td>Coordinates read and write operations to internal storage.</td><td class="hide-md">Booting the OS, saving files, data caching.</td></tr><tr><td class="strong">USB Driver</td><td>Detects and routes data for connected USB devices.</td><td class="hide-md">Flash drives, keyboards, mice, peripherals.</td></tr><tr><td class="strong">Boot Firmware</td><td>Initialises hardware components before the OS loads.</td><td class="hide-md">System boot sequence and firmware updates.</td></tr></tbody>
         </table></div>
       </div>
     </div>
@@ -1317,7 +1298,6 @@
       </div>
       <div class="faq__inner">
         <div class="faq__item"><button type="button" class="faq__q">What is a driver?<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-16" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button><div class="faq__a"><p class="u-pt-0">A driver is a small software package that sits between your operating system and a hardware device. It translates generic operating system commands into the exact instructions the device understands, allowing it to function correctly.</p></div></div>
-        <div class="faq__item"><button type="button" class="faq__q">Do I need to set up a driver for every device?<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-16" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button><div class="faq__a"><p class="u-pt-0">Not always. Modern devices that support AirPrint (Apple), Mopria (Android), or IPP Everywhere can be used without a manufacturer driver on PC 10/11, macOS, iOS, and Android. For older devices or features like scanning and stapling, you still need the vendor's full driver package.</p></div></div>
         <div class="faq__item"><button type="button" class="faq__q">Where do I get the correct driver for my device?<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-16" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button><div class="faq__a"><p class="u-pt-0">Always download from the manufacturer's official support website. Search by the exact model number printed on the label under the device, not the name on the packaging, to ensure you find the correct file.</p></div></div>
         <div class="faq__item"><button type="button" class="faq__q">What should I do if my driver is not working?<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-16" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button><div class="faq__a"><p class="u-pt-0">Start with the relevant driver reference article on this site — most driver problems fall into a handful of categories: wrong driver version, a stuck print spooler, a partial driver file, or a firewall blocking the device port. Each reference page walks through the layers a driver touches and the typical points of failure.</p></div></div>
         <div class="faq__item"><button type="button" class="faq__q">Is PrintKingDriver affiliated with any device manufacturer?<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-16" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button><div class="faq__a"><p class="u-pt-0">No. PrintKingDriver is an independent information site. It is not affiliated with, sponsored by, or endorsed by any hardware or software manufacturer. All content is published for general informational and educational purposes only.</p></div></div>

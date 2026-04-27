@@ -233,17 +233,17 @@
     },
     {
       "source": "/how-to/scan-to-computer",
-      "destination": "/drivers/scanner",
+      "destination": "/drivers",
       "permanent": true
     },
     {
       "source": "/how-to/scan-to-email",
-      "destination": "/drivers/scanner",
+      "destination": "/drivers",
       "permanent": true
     },
     {
       "source": "/how-to/scan-to-pdf",
-      "destination": "/drivers/scanner",
+      "destination": "/drivers",
       "permanent": true
     },
     {
@@ -313,7 +313,7 @@
     },
     {
       "source": "/tech/twain-explained",
-      "destination": "/drivers/scanner",
+      "destination": "/drivers",
       "permanent": true
     },
     {
@@ -373,7 +373,7 @@
     },
     {
       "source": "/troubleshooting/scanner-not-found",
-      "destination": "/drivers/scanner",
+      "destination": "/drivers",
       "permanent": true
     },
     {
@@ -389,6 +389,16 @@
     {
       "source": "/troubleshooting/wrong-colours",
       "destination": "/drivers/printer",
+      "permanent": true
+    },
+    {
+      "source": "/drivers/scanner",
+      "destination": "/drivers",
+      "permanent": true
+    },
+    {
+      "source": "/drivers/scanner/:path*",
+      "destination": "/drivers",
       "permanent": true
     }
   ],

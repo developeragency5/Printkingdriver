@@ -21,7 +21,6 @@
 - [USB Drivers](https://www.printkingdriver.com/drivers/usb): USB controller and port drivers
 - [Bluetooth Drivers](https://www.printkingdriver.com/drivers/bluetooth): Bluetooth adapter drivers
 - [Input Drivers](https://www.printkingdriver.com/drivers/input): Keyboard, mouse, and touchpad drivers
-- [Scanner Drivers](https://www.printkingdriver.com/drivers/scanner): Image scanner and document feeder drivers
 - [Webcam Drivers](https://www.printkingdriver.com/drivers/webcam): Webcam and video capture drivers
 - [BIOS & Firmware](https://www.printkingdriver.com/drivers/bios): BIOS and UEFI firmware update guides
 - [Security & TPM](https://www.printkingdriver.com/drivers/security): Security chip and TPM drivers
