@@ -1,0 +1,77 @@
+I have a website with 50 existing pages focused on generic/universal drivers 
+(no brand names mentioned). I need you to create 20 new pages to bring the 
+total to 70 pages.
+
+!!!! CRITICAL WARNING - READ FIRST !!!!
+- Do NOT touch, edit, modify, or disturb any existing pages
+- Do NOT change any existing URLs or links that are already working
+- Do NOT restructure or reorganize any current website files
+- Do NOT delete or rename any existing files or folders
+- Do NOT change any existing navigation menus or internal links
+- ONLY create brand new pages — nothing else
+- If unsure about anything, STOP and ask before making any changes
+
+IMPORTANT RULES:
+- Do NOT mention any brand names whatsoever
+- Do NOT use the word "troubleshooting" anywhere
+- Do NOT mention printers or any specific device types
+- Do NOT include any installation or uninstallation steps or topics
+- Do NOT include any download links or mention downloading
+- All pages must be fully generic and universal
+- Focus is only on HELPING USERS FIX DRIVER ERRORS
+- Each page must be unique with its own URL slug
+
+THE 20 NEW PAGES SHOULD COVER THESE ERROR FIX TOPICS:
+1. Driver not found error fix
+2. Corrupted or damaged driver error fix
+3. Device not recognized after driver update
+4. Driver keeps removing itself error fix
+5. Outdated driver causing device to stop working
+6. Driver conflict between two devices
+7. Driver not compatible with current system version
+8. Driver error causing system crash or freeze
+9. Driver error code fix guide
+10. Driver stopped working after system update
+11. Driver error causing slow device performance
+12. Driver not responding error fix
+13. Driver power state failure error fix
+14. Driver timeout error fix
+15. Driver access violation error fix
+16. Driver caused blue screen error fix
+17. Driver signature error fix
+18. Driver entry point not found error fix
+19. Driver failed to load error fix
+20. Driver keeps showing error on startup fix
+
+FOR EACH PAGE, CREATE:
+- A unique page title (no brand names or device names)
+- A URL slug (e.g., /fix-driver-not-found-error)
+- A meta description (150-160 characters)
+- Page content with:
+  - H1 heading
+  - Short intro paragraph explaining the error
+  - Step-by-step fix instructions (at least 5 to 7 steps)
+  - A "Why this happens" section
+  - A "Common Symptoms" section
+  - A "Quick Tips" section
+  - A closing/summary paragraph
+
+WORD COUNT REQUIREMENT:
+- Every single page MUST be between 600 to 700 words
+- Do not finish a page until the word count is met
+- Spread the content evenly across all sections
+- Do not repeat content just to fill word count —
+  keep everything meaningful and helpful
+
+STRICT CONTENT RULES:
+- Never use the word "troubleshooting"
+- Never mention any brand names
+- Never mention any specific device types
+- No installation or uninstallation content
+- No download links or download mentions
+- Keep all content beginner-friendly and simple to follow
+
+MATCH the tone, layout, and structure of the existing 50 pages on the site.
+Generate one page at a time and confirm word count before moving to the next.
+After finishing all 20 pages confirm that no existing pages or links 
+were touched or changed.
