@@ -81,7 +81,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.printkingdriver.com/drivers/printer</loc>
+    <loc>https://www.printkingdriver.com/drivers/device</loc>
     <lastmod>2026-04-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -203,13 +203,13 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.printkingdriver.com/brands/brand-b/windows-11</loc>
+    <loc>https://www.printkingdriver.com/brands/brand-b/pc-11</loc>
     <lastmod>2026-04-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.printkingdriver.com/brands/brand-b/windows-10</loc>
+    <loc>https://www.printkingdriver.com/brands/brand-b/pc-10</loc>
     <lastmod>2026-04-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -227,13 +227,13 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.printkingdriver.com/brands/brand-e/windows-11</loc>
+    <loc>https://www.printkingdriver.com/brands/brand-e/pc-11</loc>
     <lastmod>2026-04-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.printkingdriver.com/brands/brand-e/windows-10</loc>
+    <loc>https://www.printkingdriver.com/brands/brand-e/pc-10</loc>
     <lastmod>2026-04-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -251,13 +251,13 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.printkingdriver.com/brands/brand-a/windows-11</loc>
+    <loc>https://www.printkingdriver.com/brands/brand-a/pc-11</loc>
     <lastmod>2026-04-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.printkingdriver.com/brands/brand-a/windows-10</loc>
+    <loc>https://www.printkingdriver.com/brands/brand-a/pc-10</loc>
     <lastmod>2026-04-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -275,13 +275,13 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.printkingdriver.com/brands/brand-d/windows-11</loc>
+    <loc>https://www.printkingdriver.com/brands/brand-d/pc-11</loc>
     <lastmod>2026-04-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.printkingdriver.com/brands/brand-d/windows-10</loc>
+    <loc>https://www.printkingdriver.com/brands/brand-d/pc-10</loc>
     <lastmod>2026-04-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -299,13 +299,13 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.printkingdriver.com/brands/brand-c/windows-11</loc>
+    <loc>https://www.printkingdriver.com/brands/brand-c/pc-11</loc>
     <lastmod>2026-04-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.printkingdriver.com/brands/brand-c/windows-10</loc>
+    <loc>https://www.printkingdriver.com/brands/brand-c/pc-10</loc>
     <lastmod>2026-04-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -323,13 +323,13 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.printkingdriver.com/brands/brand-g/windows-11</loc>
+    <loc>https://www.printkingdriver.com/brands/brand-g/pc-11</loc>
     <lastmod>2026-04-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.printkingdriver.com/brands/brand-g/windows-10</loc>
+    <loc>https://www.printkingdriver.com/brands/brand-g/pc-10</loc>
     <lastmod>2026-04-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -347,13 +347,13 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.printkingdriver.com/brands/brand-i/windows-11</loc>
+    <loc>https://www.printkingdriver.com/brands/brand-i/pc-11</loc>
     <lastmod>2026-04-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.printkingdriver.com/brands/brand-i/windows-10</loc>
+    <loc>https://www.printkingdriver.com/brands/brand-i/pc-10</loc>
     <lastmod>2026-04-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -371,13 +371,13 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.printkingdriver.com/brands/brand-j/windows-11</loc>
+    <loc>https://www.printkingdriver.com/brands/brand-j/pc-11</loc>
     <lastmod>2026-04-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.printkingdriver.com/brands/brand-j/windows-10</loc>
+    <loc>https://www.printkingdriver.com/brands/brand-j/pc-10</loc>
     <lastmod>2026-04-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -395,13 +395,13 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.printkingdriver.com/brands/brand-h/windows-11</loc>
+    <loc>https://www.printkingdriver.com/brands/brand-h/pc-11</loc>
     <lastmod>2026-04-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.printkingdriver.com/brands/brand-h/windows-10</loc>
+    <loc>https://www.printkingdriver.com/brands/brand-h/pc-10</loc>
     <lastmod>2026-04-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -419,13 +419,13 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.printkingdriver.com/brands/brand-f/windows-11</loc>
+    <loc>https://www.printkingdriver.com/brands/brand-f/pc-11</loc>
     <lastmod>2026-04-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.printkingdriver.com/brands/brand-f/windows-10</loc>
+    <loc>https://www.printkingdriver.com/brands/brand-f/pc-10</loc>
     <lastmod>2026-04-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -455,12 +455,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.printkingdriver.com/brands/brand-b/scanner-setup</loc>
-    <lastmod>2026-04-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://www.printkingdriver.com/brands/brand-e/wireless-setup</loc>
     <lastmod>2026-04-27</lastmod>
     <changefreq>monthly</changefreq>
@@ -468,12 +462,6 @@
   </url>
   <url>
     <loc>https://www.printkingdriver.com/brands/brand-e/firmware-update</loc>
-    <lastmod>2026-04-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.printkingdriver.com/brands/brand-e/scanner-setup</loc>
     <lastmod>2026-04-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -491,12 +479,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.printkingdriver.com/brands/brand-a/scanner-setup</loc>
-    <lastmod>2026-04-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://www.printkingdriver.com/brands/brand-d/wireless-setup</loc>
     <lastmod>2026-04-27</lastmod>
     <changefreq>monthly</changefreq>
@@ -504,12 +486,6 @@
   </url>
   <url>
     <loc>https://www.printkingdriver.com/brands/brand-d/firmware-update</loc>
-    <lastmod>2026-04-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.printkingdriver.com/brands/brand-d/scanner-setup</loc>
     <lastmod>2026-04-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -527,12 +503,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.printkingdriver.com/brands/brand-c/scanner-setup</loc>
-    <lastmod>2026-04-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://www.printkingdriver.com/brands/brand-g/wireless-setup</loc>
     <lastmod>2026-04-27</lastmod>
     <changefreq>monthly</changefreq>
@@ -540,12 +510,6 @@
   </url>
   <url>
     <loc>https://www.printkingdriver.com/brands/brand-g/firmware-update</loc>
-    <lastmod>2026-04-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.printkingdriver.com/brands/brand-g/scanner-setup</loc>
     <lastmod>2026-04-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -563,12 +527,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.printkingdriver.com/brands/brand-i/scanner-setup</loc>
-    <lastmod>2026-04-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://www.printkingdriver.com/brands/brand-j/wireless-setup</loc>
     <lastmod>2026-04-27</lastmod>
     <changefreq>monthly</changefreq>
@@ -576,12 +534,6 @@
   </url>
   <url>
     <loc>https://www.printkingdriver.com/brands/brand-j/firmware-update</loc>
-    <lastmod>2026-04-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.printkingdriver.com/brands/brand-j/scanner-setup</loc>
     <lastmod>2026-04-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -599,12 +551,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.printkingdriver.com/brands/brand-h/scanner-setup</loc>
-    <lastmod>2026-04-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://www.printkingdriver.com/brands/brand-f/wireless-setup</loc>
     <lastmod>2026-04-27</lastmod>
     <changefreq>monthly</changefreq>
@@ -612,12 +558,6 @@
   </url>
   <url>
     <loc>https://www.printkingdriver.com/brands/brand-f/firmware-update</loc>
-    <lastmod>2026-04-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.printkingdriver.com/brands/brand-f/scanner-setup</loc>
     <lastmod>2026-04-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

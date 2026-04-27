@@ -173,12 +173,12 @@
     },
     {
       "source": "/how-to/clean-print-head",
-      "destination": "/drivers/printer",
+      "destination": "/drivers/device",
       "permanent": true
     },
     {
       "source": "/how-to/clear-print-queue",
-      "destination": "/drivers/printer",
+      "destination": "/drivers/device",
       "permanent": true
     },
     {
@@ -198,7 +198,7 @@
     },
     {
       "source": "/how-to/print-double-sided",
-      "destination": "/drivers/printer",
+      "destination": "/drivers/device",
       "permanent": true
     },
     {
@@ -223,12 +223,12 @@
     },
     {
       "source": "/how-to/replace-toner-cartridge",
-      "destination": "/drivers/printer",
+      "destination": "/drivers/device",
       "permanent": true
     },
     {
       "source": "/how-to/restart-print-spooler",
-      "destination": "/drivers/printer",
+      "destination": "/drivers/device",
       "permanent": true
     },
     {
@@ -283,7 +283,7 @@
     },
     {
       "source": "/tech/duplex-printing-explained",
-      "destination": "/drivers/printer",
+      "destination": "/drivers/device",
       "permanent": true
     },
     {
@@ -308,7 +308,7 @@
     },
     {
       "source": "/tech/print-spooler-explained",
-      "destination": "/drivers/printer",
+      "destination": "/drivers/device",
       "permanent": true
     },
     {
@@ -333,27 +333,27 @@
     },
     {
       "source": "/troubleshooting/duplex-not-working",
-      "destination": "/drivers/printer",
+      "destination": "/drivers/device",
       "permanent": true
     },
     {
       "source": "/troubleshooting/ghost-or-faded-prints",
-      "destination": "/drivers/printer",
+      "destination": "/drivers/device",
       "permanent": true
     },
     {
       "source": "/troubleshooting/paper-jam",
-      "destination": "/drivers/printer",
+      "destination": "/drivers/device",
       "permanent": true
     },
     {
       "source": "/troubleshooting/print-queue-stuck",
-      "destination": "/drivers/printer",
+      "destination": "/drivers/device",
       "permanent": true
     },
     {
       "source": "/troubleshooting/print-spooler-keeps-stopping",
-      "destination": "/drivers/printer",
+      "destination": "/drivers/device",
       "permanent": true
     },
     {
@@ -363,7 +363,7 @@
     },
     {
       "source": "/troubleshooting/printer-printing-blank-pages",
-      "destination": "/drivers/printer",
+      "destination": "/drivers/device",
       "permanent": true
     },
     {
@@ -378,17 +378,17 @@
     },
     {
       "source": "/troubleshooting/slow-printing",
-      "destination": "/drivers/printer",
+      "destination": "/drivers/device",
       "permanent": true
     },
     {
       "source": "/troubleshooting/streaks-or-lines-on-prints",
-      "destination": "/drivers/printer",
+      "destination": "/drivers/device",
       "permanent": true
     },
     {
       "source": "/troubleshooting/wrong-colours",
-      "destination": "/drivers/printer",
+      "destination": "/drivers/device",
       "permanent": true
     },
     {
@@ -399,6 +399,166 @@
     {
       "source": "/drivers/scanner/:path*",
       "destination": "/drivers",
+      "permanent": true
+    },
+    {
+      "source": "/drivers/printer",
+      "destination": "/drivers/device",
+      "permanent": true
+    },
+    {
+      "source": "/drivers/printer/:path*",
+      "destination": "/drivers/device",
+      "permanent": true
+    },
+    {
+      "source": "/brands/brand-a/windows-11",
+      "destination": "/brands/brand-a/pc-11",
+      "permanent": true
+    },
+    {
+      "source": "/brands/brand-a/windows-10",
+      "destination": "/brands/brand-a/pc-10",
+      "permanent": true
+    },
+    {
+      "source": "/brands/brand-a/scanner-setup",
+      "destination": "/brands/brand-a",
+      "permanent": true
+    },
+    {
+      "source": "/brands/brand-b/windows-11",
+      "destination": "/brands/brand-b/pc-11",
+      "permanent": true
+    },
+    {
+      "source": "/brands/brand-b/windows-10",
+      "destination": "/brands/brand-b/pc-10",
+      "permanent": true
+    },
+    {
+      "source": "/brands/brand-b/scanner-setup",
+      "destination": "/brands/brand-b",
+      "permanent": true
+    },
+    {
+      "source": "/brands/brand-c/windows-11",
+      "destination": "/brands/brand-c/pc-11",
+      "permanent": true
+    },
+    {
+      "source": "/brands/brand-c/windows-10",
+      "destination": "/brands/brand-c/pc-10",
+      "permanent": true
+    },
+    {
+      "source": "/brands/brand-c/scanner-setup",
+      "destination": "/brands/brand-c",
+      "permanent": true
+    },
+    {
+      "source": "/brands/brand-d/windows-11",
+      "destination": "/brands/brand-d/pc-11",
+      "permanent": true
+    },
+    {
+      "source": "/brands/brand-d/windows-10",
+      "destination": "/brands/brand-d/pc-10",
+      "permanent": true
+    },
+    {
+      "source": "/brands/brand-d/scanner-setup",
+      "destination": "/brands/brand-d",
+      "permanent": true
+    },
+    {
+      "source": "/brands/brand-e/windows-11",
+      "destination": "/brands/brand-e/pc-11",
+      "permanent": true
+    },
+    {
+      "source": "/brands/brand-e/windows-10",
+      "destination": "/brands/brand-e/pc-10",
+      "permanent": true
+    },
+    {
+      "source": "/brands/brand-e/scanner-setup",
+      "destination": "/brands/brand-e",
+      "permanent": true
+    },
+    {
+      "source": "/brands/brand-f/windows-11",
+      "destination": "/brands/brand-f/pc-11",
+      "permanent": true
+    },
+    {
+      "source": "/brands/brand-f/windows-10",
+      "destination": "/brands/brand-f/pc-10",
+      "permanent": true
+    },
+    {
+      "source": "/brands/brand-f/scanner-setup",
+      "destination": "/brands/brand-f",
+      "permanent": true
+    },
+    {
+      "source": "/brands/brand-g/windows-11",
+      "destination": "/brands/brand-g/pc-11",
+      "permanent": true
+    },
+    {
+      "source": "/brands/brand-g/windows-10",
+      "destination": "/brands/brand-g/pc-10",
+      "permanent": true
+    },
+    {
+      "source": "/brands/brand-g/scanner-setup",
+      "destination": "/brands/brand-g",
+      "permanent": true
+    },
+    {
+      "source": "/brands/brand-h/windows-11",
+      "destination": "/brands/brand-h/pc-11",
+      "permanent": true
+    },
+    {
+      "source": "/brands/brand-h/windows-10",
+      "destination": "/brands/brand-h/pc-10",
+      "permanent": true
+    },
+    {
+      "source": "/brands/brand-h/scanner-setup",
+      "destination": "/brands/brand-h",
+      "permanent": true
+    },
+    {
+      "source": "/brands/brand-i/windows-11",
+      "destination": "/brands/brand-i/pc-11",
+      "permanent": true
+    },
+    {
+      "source": "/brands/brand-i/windows-10",
+      "destination": "/brands/brand-i/pc-10",
+      "permanent": true
+    },
+    {
+      "source": "/brands/brand-i/scanner-setup",
+      "destination": "/brands/brand-i",
+      "permanent": true
+    },
+    {
+      "source": "/brands/brand-j/windows-11",
+      "destination": "/brands/brand-j/pc-11",
+      "permanent": true
+    },
+    {
+      "source": "/brands/brand-j/windows-10",
+      "destination": "/brands/brand-j/pc-10",
+      "permanent": true
+    },
+    {
+      "source": "/brands/brand-j/scanner-setup",
+      "destination": "/brands/brand-j",
       "permanent": true
     }
   ],

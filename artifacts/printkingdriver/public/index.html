@@ -125,7 +125,7 @@
           <div class="mega__head-text">Peripheral Drivers</div>
         </div>
         <ul class="mega__list">
-          <li><a href="/drivers/printer">
+          <li><a href="/drivers/device">
             <div class="mega__item-name">Device Driver</div>
             <div class="mega__item-desc">Document to print commands</div>
           </a></li>
@@ -174,7 +174,7 @@
       <h5>Hardware-Specific</h5>
       <ul><li><a href="/drivers/storage">Storage Controller</a></li><li><a href="/drivers/usb">USB Support</a></li><li><a href="/drivers/bluetooth">Bluetooth Driver</a></li><li><a href="/drivers/input">Input Drivers</a></li></ul>
       <h5>Peripheral Drivers</h5>
-      <ul><li><a href="/drivers/printer">Device Driver</a></li><li><a href="/drivers/webcam">Webcam Driver</a></li></ul>
+      <ul><li><a href="/drivers/device">Device Driver</a></li><li><a href="/drivers/webcam">Webcam Driver</a></li></ul>
       <h5>Advanced Systems</h5>
       <ul><li><a href="/drivers/bios">Boot Firmware</a></li><li><a href="/drivers/security">Security Drivers</a></li><li><a href="/drivers/monitor">Monitor Driver</a></li></ul></div>
       <a href="/how-it-works" data-nav-link="/how-it-works">How It Works</a>
@@ -473,7 +473,7 @@
   <path d="M8 16H3v5" /></svg></div>
             <span class="issue__code">REF-04</span>
           </div>
-          <h4>Print Queue Stuck</h4>
+          <h4>Job Queue Stuck</h4>
           <p>Jobs stuck and not clearing from queue.</p>
           <div class="issue__foot">
             <div class="issue__sev"><span class="dot c-purple"></span>Common</div>
@@ -833,7 +833,7 @@
         <div class="cat-block__body">
           <div class="cat-block__eyebrow">Peripheral drivers</div>
           <h3>Bridge the OS to the devices you use</h3>
-          <p>Drivers that translate digital commands into physical action — turning devices, scanners, and webcams into productive parts of your workflow.</p>
+          <p>Drivers that translate digital commands into physical action — turning devices, devices, and webcams into productive parts of your workflow.</p>
           <ul class="cat-block__items">
             <li><strong>Device Driver</strong><span>Converts digital documents into a format the device understands, controlling print quality, layout, paper size, and colour management.</span></li>
             
@@ -1154,7 +1154,7 @@
         </a>
         <a href="/drivers#peripheral" class="tree-cat tree-cat--peripheral">
           <div class="tree-cat__img"><img src="/assets/img/cat-peripheral.jpg" alt="Peripheral drivers" loading="lazy" /></div>
-          <div class="tree-cat__body"><div class="tree-cat__num">03</div><div class="tree-cat__name">Peripheral</div><div class="tree-cat__sub">Device · Scanner · Webcam</div></div>
+          <div class="tree-cat__body"><div class="tree-cat__num">03</div><div class="tree-cat__name">Peripheral</div><div class="tree-cat__sub">Device · Device · Webcam</div></div>
         </a>
         <a href="/drivers#advanced" class="tree-cat tree-cat--advanced">
           <div class="tree-cat__img"><img src="/assets/img/cat-advanced.jpg" alt="Advanced system drivers" loading="lazy" /></div>
@@ -1272,8 +1272,8 @@
       </div>
       <div style="max-width:720px;">
         <p style="font-size:1.05rem;line-height:1.75;margin-bottom:1rem;">PrintKingDriver is a free, independent reference guide to device drivers and system drivers. It explains in plain English what drivers are, how they translate operating system commands into hardware actions, and what to do when something stops working.</p>
-        <p style="font-size:1.05rem;line-height:1.75;margin-bottom:1rem;">The site covers four main areas: device setup guides for every operating system and connection type;  for common printing tasks;  for standards such as , , , and ; and <a href="/brands">brand-specific driver pages</a> for <a href="/brands/brand-e">The manufacturer</a>, <a href="/brands/brand-b">The manufacturer</a>, <a href="/brands/brand-d">The manufacturer</a>, <a href="/brands/brand-a">The manufacturer</a>, <a href="/brands/brand-i">The manufacturer</a>, and other major manufacturers.</p>
-        <p style="font-size:1.05rem;line-height:1.75;margin-bottom:1rem;">A driver is a small software package that sits between your operating system and a physical device. Without the correct driver, the operating system cannot communicate with the device — the device appears offline, the scanner is not detected, or the audio produces no output. Setting up, updating, and occasionally removing drivers is routine maintenance for any computer.</p>
+        <p style="font-size:1.05rem;line-height:1.75;margin-bottom:1rem;">The site covers four main areas: device setup guides for every operating system and connection type;  for common output tasks;  for standards such as , , , and ; and <a href="/brands">brand-specific driver pages</a> for <a href="/brands/brand-e">The manufacturer</a>, <a href="/brands/brand-b">The manufacturer</a>, <a href="/brands/brand-d">The manufacturer</a>, <a href="/brands/brand-a">The manufacturer</a>, <a href="/brands/brand-i">The manufacturer</a>, and other major manufacturers.</p>
+        <p style="font-size:1.05rem;line-height:1.75;margin-bottom:1rem;">A driver is a small software package that sits between your operating system and a physical device. Without the correct driver, the operating system cannot communicate with the device — the device appears offline, the device is not detected, or the audio produces no output. Setting up, updating, and occasionally removing drivers is routine maintenance for any computer.</p>
         <p style="font-size:1.05rem;line-height:1.75;margin-bottom:2rem;">PrintKingDriver does not distribute driver files and is not affiliated with any hardware manufacturer. Every driver download should come directly from the official support page of the device's manufacturer. This site tells you how to find the right file, how to set up it correctly, and how to diagnose when something has gone wrong.</p>
       </div>
       <div style="background:linear-gradient(135deg,#2d5c54 0%,#3d7a70 100%);border-radius:16px;padding:40px 44px;margin:48px 0 36px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:32px;">
@@ -1286,7 +1286,7 @@
       <div class="faq__inner">
         <div class="faq__item"><button type="button" class="faq__q">What is a driver?<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-16" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button><div class="faq__a"><p class="u-pt-0">A driver is a small software package that sits between your operating system and a hardware device. It translates generic operating system commands into the exact instructions the device understands, allowing it to function correctly.</p></div></div>
         <div class="faq__item"><button type="button" class="faq__q">Where do I get the correct driver for my device?<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-16" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button><div class="faq__a"><p class="u-pt-0">Always download from the manufacturer's official support website. Search by the exact model number printed on the label under the device, not the name on the packaging, to ensure you find the correct file.</p></div></div>
-        <div class="faq__item"><button type="button" class="faq__q">What should I do if my driver is not working?<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-16" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button><div class="faq__a"><p class="u-pt-0">Start with the relevant driver reference article on this site — most driver problems fall into a handful of categories: wrong driver version, a stuck print spooler, a partial driver file, or a firewall blocking the device port. Each reference page walks through the layers a driver touches and the typical points of failure.</p></div></div>
+        <div class="faq__item"><button type="button" class="faq__q">What should I do if my driver is not working?<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-16" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button><div class="faq__a"><p class="u-pt-0">Start with the relevant driver reference article on this site — most driver problems fall into a handful of categories: wrong driver version, a stuck job spooler, a partial driver file, or a firewall blocking the device port. Each reference page walks through the layers a driver touches and the typical points of failure.</p></div></div>
         <div class="faq__item"><button type="button" class="faq__q">Is PrintKingDriver affiliated with any device manufacturer?<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-16" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button><div class="faq__a"><p class="u-pt-0">No. PrintKingDriver is an independent information site. It is not affiliated with, sponsored by, or endorsed by any hardware or software manufacturer. All content is published for general informational and educational purposes only.</p></div></div>
       </div>
     </div>
