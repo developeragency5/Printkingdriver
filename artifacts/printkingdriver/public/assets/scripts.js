@@ -117,19 +117,18 @@
       matches = scored.slice(0, 6).map((s) => s.it);
       activeIdx = 0;
       if (matches.length === 0) {
-        results.innerHTML = `<div class="nav__search-empty"><div class="empty-msg">No direct matches.</div><button onclick="location.href='/drivers'">Browse all drivers →</button></div>`;
+        results.innerHTML = `<div class="nav__search-empty"><div class="empty-msg">No direct matches.</div><a href="/drivers" class="nav__search-empty-cta">Browse all drivers →</a></div>`;
       } else {
         results.innerHTML = `<ul>${matches.map((m, i) => `
-          <li><button data-i="${i}" data-href="${m.href}" class="${i === 0 ? 'is-active' : ''}">
+          <li><a href="${m.href}" data-i="${i}" class="${i === 0 ? 'is-active' : ''}">
             <span class="label"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg><span>${m.label}</span></span>
             <span class="type">${m.type}</span>
-          </button></li>`).join("")}</ul>`;
-        results.querySelectorAll("button").forEach((btn) => {
-          btn.addEventListener("mouseenter", () => {
-            activeIdx = parseInt(btn.dataset.i, 10);
-            results.querySelectorAll("button").forEach((b, i) => b.classList.toggle("is-active", i === activeIdx));
+          </a></li>`).join("")}</ul>`;
+        results.querySelectorAll("a").forEach((a) => {
+          a.addEventListener("mouseenter", () => {
+            activeIdx = parseInt(a.dataset.i, 10);
+            results.querySelectorAll("a").forEach((b, i) => b.classList.toggle("is-active", i === activeIdx));
           });
-          btn.addEventListener("click", () => { window.location.href = btn.dataset.href; });
         });
       }
       results.classList.add("is-open");
@@ -329,10 +328,6 @@
       links.forEach((a) => {
         a.setAttribute("href", anchor);
         setLabel(a, label);
-        a.addEventListener("click", function (e) {
-          e.preventDefault();
-          location.href = anchor;
-        });
       });
       return;
     }

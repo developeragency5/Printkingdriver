@@ -1,0 +1,81 @@
+You are an expert frontend developer and SEO specialist.
+
+Task: Fix website crawlability issues for a static website built using HTML, CSS, and vanilla JavaScript.
+
+IMPORTANT:
+
+* Do NOT change design, layout, styles, or UI
+* Do NOT change visible content
+* Only improve HTML structure for SEO and crawling
+
+OBJECTIVES:
+
+1. Convert All Clickable Elements to Anchor Tags
+
+* Find all elements using:
+
+  * onclick
+  * addEventListener("click")
+  * JS navigation (window.location, router logic)
+* Replace them with proper HTML anchor tags:
+
+BAD:
+
+<div onclick="goToPage('/drivers/chipset')">Chipset Driver</div>
+
+GOOD: <a href="/drivers/chipset" class="same-existing-classes">Chipset Driver</a>
+
+* Preserve all classes and styles exactly
+
+2. Ensure Each Page Has a Real URL
+
+* Create separate HTML files if needed:
+  /drivers/chipset.html
+  /drivers/graphics.html
+  /drivers/audio.html
+
+* Each link must open a real page (not dynamic content or JS rendering)
+
+3. Fix "All Pages" Section
+
+* Convert it into a static HTML crawl hub
+* Add all internal links using plain anchor tags:
+
+Example: <a href="/drivers/chipset.html">Chipset Driver</a> <a href="/drivers/audio.html">Audio Driver</a>
+
+* Ensure links are visible in page source (not injected by JS)
+
+4. Remove Dependency on JavaScript for Navigation
+
+* Navigation must work even if JavaScript is disabled
+* JS can enhance UX but should not control page routing
+
+5. Add Basic SEO Enhancements (without changing content)
+
+* Ensure every page has:
+
+  <title>
+  <meta name="description">
+* Add canonical tags:
+
+  <link rel="canonical" href="https://yourdomain.com/page-url">
+
+6. Internal Linking Improvement
+
+* Ensure every important page is linked from at least one other page
+* Ideally from homepage or footer
+
+7. Keep Everything Else Same
+
+* Do NOT change CSS
+* Do NOT redesign layout
+* Do NOT modify text/content
+
+OUTPUT:
+
+* Updated HTML structure with proper <a href=""> links
+* Example of one fixed section (before vs after)
+* Ensure site is fully crawlable by bots without JS
+
+GOAL:
+Increase crawlable pages significantly by making all links accessible via raw HTML.
