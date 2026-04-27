@@ -275,6 +275,52 @@
     if (a && isInternal(a)) prefetch(a.href);
   }, { passive: true });
 
+  // Smart back-link: if the user came from another page on this site, the
+  // "Back to home" link acts as a true browser-back, returning them to where
+  // they were (e.g. the sitemap). The visible label is also updated to reflect
+  // the actual destination.
+  (function () {
+    const links = document.querySelectorAll("a.legal__back, a.sm-back");
+    if (!links.length) return;
+    let ref = null;
+    try { ref = document.referrer ? new URL(document.referrer) : null; } catch (e) { ref = null; }
+    const sameOrigin = !!(ref && ref.origin === location.origin);
+    const cur = location.pathname.replace(/\/+$/, "") || "/";
+    const refPath = sameOrigin ? (ref.pathname.replace(/\/+$/, "") || "/") : null;
+    if (!sameOrigin || refPath === cur || history.length <= 1) return;
+    const labelMap = {
+      "/": "Back to home",
+      "/sitemap": "Back to sitemap",
+      "/all-pages": "Back to all pages",
+      "/drivers": "Back to drivers",
+      "/brands": "Back to brands",
+      "/about": "Back to about",
+      "/how-it-works": "Back to how it works",
+      "/contact": "Back to contact",
+    };
+    let label = labelMap[refPath];
+    if (!label) {
+      if (refPath.startsWith("/drivers/")) label = "Back to drivers";
+      else if (refPath.startsWith("/brands/")) label = "Back to brands";
+      else label = "Back";
+    }
+    links.forEach((a) => {
+      const span = a.querySelector("span");
+      if (span) {
+        span.textContent = label;
+      } else {
+        Array.from(a.childNodes).forEach((n) => {
+          if (n.nodeType === 3) n.parentNode.removeChild(n);
+        });
+        a.appendChild(document.createTextNode(" " + label));
+      }
+      a.addEventListener("click", function (e) {
+        e.preventDefault();
+        history.back();
+      });
+    });
+  })();
+
   // Speculation Rules API: prefetch on hover (Chrome/Edge) — prefetch only to avoid bfcache conflicts
   if (HTMLScriptElement.supports && HTMLScriptElement.supports("speculationrules")) {
     const rules = document.createElement("script");
