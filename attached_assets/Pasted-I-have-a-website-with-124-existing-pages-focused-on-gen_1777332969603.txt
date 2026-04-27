@@ -1,0 +1,214 @@
+I have a website with 124 existing pages focused on generic/universal drivers 
+(no brand names mentioned). I need you to create 40 new pages to bring the 
+total to 164 pages.
+
+!!!! CRITICAL WARNING - READ FIRST !!!!
+- Do NOT touch, edit, modify, or disturb any existing pages
+- Do NOT change any existing URLs or links that are already working
+- Do NOT restructure or reorganize any current website files
+- Do NOT delete or rename any existing files or folders
+- Do NOT change any existing navigation menus or internal links
+- ONLY create brand new pages — nothing else
+- If unsure about anything, STOP and ask before making any changes
+
+STRICT NO DUPLICATE RULE:
+- Do NOT create any page that is similar to or repeats any 
+  of these already existing topics:
+  * Driver not found error fix
+  * Corrupted or damaged driver error fix
+  * Device not recognized after driver update
+  * Driver keeps removing itself error fix
+  * Outdated driver causing device to stop working
+  * Driver conflict between two devices
+  * Driver not compatible with current system version
+  * Driver error causing system crash or freeze
+  * Driver error code fix guide
+  * Driver stopped working after system update
+  * Driver error causing slow device performance
+  * Driver not responding error fix
+  * Driver power state failure error fix
+  * Driver timeout error fix
+  * Driver access violation error fix
+  * Driver caused blue screen error fix
+  * Driver signature error fix
+  * Driver entry point not found error fix
+  * Driver failed to load error fix
+  * Driver keeps showing error on startup fix
+  * Driver causing slow system startup fix
+  * Driver using too much CPU fix
+  * Driver using too much memory fix
+  * Driver causing device to overheat fix
+  * Driver causing slow internet speed fix
+  * Driver causing screen lag or delay fix
+  * Driver causing audio delay or stuttering fix
+  * Driver causing slow file transfer fix
+  * Driver causing device to freeze randomly fix
+  * Driver causing poor video performance fix
+  * Driver causing high disk usage fix
+  * Driver causing battery to drain fast fix
+  * Driver causing mouse or cursor lag fix
+  * Driver causing keyboard input delay fix
+  * Driver causing slow response time fix
+  * Driver causing device to run slow fix
+  * Driver causing display flickering fix
+  * Driver causing choppy performance fix
+  * Driver causing device to disconnect randomly fix
+  * Driver causing system to slow down after update fix
+  * Driver causing background process overload fix
+  * Driver causing device to perform below normal fix
+  * Driver causing fan to run loudly fix
+  * Driver causing graphics to render slowly fix
+  * Driver causing network drops and slow speeds fix
+  * Driver conflict causing reduced performance fix
+  * Driver causing USB device to perform slowly fix
+  * Driver causing audio quality to drop fix
+  * Driver causing high latency fix
+  * Driver causing screen resolution to drop fix
+  * Driver causing device to stutter under load fix
+  * Driver causing intermittent performance drops fix
+  * Driver causing system resources to spike fix
+  * Driver causing slow wake from sleep fix
+  * Driver causing device to lag during use fix
+  * Driver causing poor performance after restart fix
+  * Driver causing reduced speed on heavy tasks fix
+  * Driver causing unstable performance fix
+  * Driver causing device to become unresponsive fix
+  * Driver causing overall system slowdown fix
+  * Driver causing random performance spikes fix
+  * Driver causing device to skip or jump fix
+  * Driver causing delayed screen response fix
+  * Driver causing connection instability fix
+  * Driver causing repeated disconnection fix
+  * Driver causing device to work harder than normal fix
+  * Driver causing poor quality output fix
+  * Driver causing processing delays fix
+  * Driver causing device to work intermittently fix
+  * Driver causing reduced device lifespan fix
+  * Driver causing device to stop responding fix
+  * Driver causing error on every startup fix
+  * Driver causing device to restart randomly fix
+  * Driver causing black screen on startup fix
+  * Driver causing device to run in low power mode fix
+  * Driver causing system to hang on shutdown fix
+  * Driver causing repeated error alerts fix
+  * Driver error appearing after every reboot fix
+  * Driver causing device to work only sometimes fix
+  * Driver causing no signal to display fix
+  * Driver causing device to skip tasks fix
+  * Driver causing system to boot slowly fix
+  * Driver causing device speed to drop suddenly fix
+  * Driver error blocking normal device use fix
+  * Driver causing device to not wake up fix
+  * Driver error locking device settings fix
+  * Driver causing device to run at low capacity fix
+  * Driver causing sudden device failure fix
+  * Driver causing error logs to fill up fix
+  * Driver causing system to ignore device fix
+  * Driver causing device to malfunction silently fix
+  * Driver error showing on every login fix
+  * Driver causing device to lose settings fix
+  * Driver causing poor response under pressure fix
+  * Driver causing device to miss commands fix
+  * Driver error causing device to go offline fix
+  * Driver causing device to reset on its own fix
+  * Driver causing device to not hold configuration fix
+  * Driver error preventing normal operation fix
+  * Driver causing device to show wrong status fix
+  * Driver causing device activity to drop fix
+  * Driver causing system to report device errors fix
+  * Driver error making device unreliable fix
+  * Driver causing device to behave unexpectedly fix
+  * Driver causing device to stop mid task fix
+  * Driver causing device to lose connection fix
+  * Driver causing device to operate incorrectly fix
+  * Driver causing device to switch off randomly fix
+  * Driver error causing repeated system warnings fix
+  * Driver causing device to not function properly fix
+
+- Every new page topic MUST be completely different from all above
+- Every new URL slug MUST be completely different from all existing ones
+- Before creating each page check against this list first
+
+IMPORTANT RULES:
+- Do NOT mention any brand names whatsoever
+- Do NOT use the word "troubleshooting" anywhere
+- Do NOT mention printers or any specific device types
+- Do NOT include any installation or uninstallation steps or topics
+- Do NOT include any download links or mention downloading
+- All pages must be fully generic and universal
+- Each page must be unique with its own URL slug
+
+THE 40 NEW PAGES SHOULD COVER THESE FRESH TOPICS:
+1. Driver causing device to drain power abnormally fix
+2. Driver causing device input to be ignored fix
+3. Driver causing system to run multiple errors fix
+4. Driver causing device to lose saved data fix
+5. Driver causing device to run on minimum settings fix
+6. Driver causing device to produce wrong output fix
+7. Driver causing system alert to keep repeating fix
+8. Driver causing device to not hold its state fix
+9. Driver causing device to send wrong signals fix
+10. Driver causing device to underperform fix
+11. Driver causing device to fail under normal use fix
+12. Driver causing device to lose its configuration fix
+13. Driver causing system to generate constant errors fix
+14. Driver causing device to reject valid commands fix
+15. Driver causing device to run inconsistently fix
+16. Driver causing device to drop its current task fix
+17. Driver causing system to produce false errors fix
+18. Driver causing device to respond incorrectly fix
+19. Driver causing device to run below expected speed fix
+20. Driver causing device to fail at random times fix
+21. Driver causing device output to be inconsistent fix
+22. Driver causing device to not complete tasks fix
+23. Driver causing device to ignore system commands fix
+24. Driver causing device to generate heat abnormally fix
+25. Driver causing device to lose sync with system fix
+26. Driver causing device to not save its state fix
+27. Driver causing device to run with wrong settings fix
+28. Driver causing device to conflict with system fix
+29. Driver causing device to produce error on command fix
+30. Driver causing device to fail after light use fix
+31. Driver causing device to not accept new commands fix
+32. Driver causing device to generate repeated faults fix
+33. Driver causing device to run at wrong speed fix
+34. Driver causing device to not complete its cycle fix
+35. Driver causing device to produce abnormal output fix
+36. Driver causing device to fail on first use fix
+37. Driver causing device to not respond to input fix
+38. Driver causing device to run without proper control fix
+39. Driver causing device to lose power unexpectedly fix
+40. Driver causing device to not operate at full ability fix
+
+FOR EACH PAGE, CREATE:
+- A unique page title (no brand names or device names)
+- A URL slug (e.g., /fix-driver-device-drain-power)
+- A meta description (150-160 characters)
+- Page content with:
+  - H1 heading
+  - Short intro paragraph explaining the issue
+  - Step-by-step fix instructions (at least 5 to 7 steps)
+  - A "Why this happens" section
+  - A "Common Symptoms" section
+  - A "Quick Tips" section
+  - A closing/summary paragraph
+
+WORD COUNT REQUIREMENT:
+- Every single page MUST be between 600 to 700 words
+- Do not finish a page until the word count is met
+- Spread the content evenly across all sections
+- Do not repeat content just to fill word count —
+  keep everything meaningful and helpful
+
+STRICT CONTENT RULES:
+- Never use the word "troubleshooting"
+- Never mention any brand names
+- Never mention any specific device types
+- No installation or uninstallation content
+- No download links or download mentions
+- Keep all content beginner-friendly and simple to follow
+
+MATCH the tone, layout, and structure of the existing 124 pages on the site.
+Generate one page at a time and confirm word count before moving to the next.
+After finishing all 40 pages confirm that no existing pages or links 
+were touched or changed and no duplicate pages were created.
