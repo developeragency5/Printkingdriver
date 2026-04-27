@@ -6,127 +6,7 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "redirects": [
-    { "source": "/brands/brand-a/firmware-update", "destination": "/brands/brand-a", "permanent": true },
-    { "source": "/brands/brand-a/wireless-setup", "destination": "/brands/brand-a", "permanent": true },
-    { "source": "/brands/brand-b/firmware-update", "destination": "/brands/brand-b", "permanent": true },
-    { "source": "/brands/brand-b/wireless-setup", "destination": "/brands/brand-b", "permanent": true },
-    { "source": "/brands/brand-c/firmware-update", "destination": "/brands/brand-c", "permanent": true },
-    { "source": "/brands/brand-c/wireless-setup", "destination": "/brands/brand-c", "permanent": true },
-    { "source": "/brands/brand-d/firmware-update", "destination": "/brands/brand-d", "permanent": true },
-    { "source": "/brands/brand-d/wireless-setup", "destination": "/brands/brand-d", "permanent": true },
-    { "source": "/brands/brand-e/firmware-update", "destination": "/brands/brand-e", "permanent": true },
-    { "source": "/brands/brand-e/wireless-setup", "destination": "/brands/brand-e", "permanent": true },
-    { "source": "/brands/brand-f/firmware-update", "destination": "/brands/brand-f", "permanent": true },
-    { "source": "/brands/brand-f/wireless-setup", "destination": "/brands/brand-f", "permanent": true },
-    { "source": "/brands/brand-g/firmware-update", "destination": "/brands/brand-g", "permanent": true },
-    { "source": "/brands/brand-g/wireless-setup", "destination": "/brands/brand-g", "permanent": true },
-    { "source": "/brands/brand-h/firmware-update", "destination": "/brands/brand-h", "permanent": true },
-    { "source": "/brands/brand-h/wireless-setup", "destination": "/brands/brand-h", "permanent": true },
-    { "source": "/brands/brand-i/firmware-update", "destination": "/brands/brand-i", "permanent": true },
-    { "source": "/brands/brand-i/wireless-setup", "destination": "/brands/brand-i", "permanent": true },
-    { "source": "/brands/brand-j/firmware-update", "destination": "/brands/brand-j", "permanent": true },
-    { "source": "/brands/brand-j/wireless-setup", "destination": "/brands/brand-j", "permanent": true },
     { "source": "/drivers/device", "destination": "/drivers", "permanent": true },
-    {
-      "source": "/brands/brother",
-      "destination": "/brands/brand-a",
-      "permanent": true
-    },
-    {
-      "source": "/brands/brother/:path*",
-      "destination": "/brands/brand-a/:path*",
-      "permanent": true
-    },
-    {
-      "source": "/brands/canon",
-      "destination": "/brands/brand-b",
-      "permanent": true
-    },
-    {
-      "source": "/brands/canon/:path*",
-      "destination": "/brands/brand-b/:path*",
-      "permanent": true
-    },
-    {
-      "source": "/brands/dell",
-      "destination": "/brands/brand-c",
-      "permanent": true
-    },
-    {
-      "source": "/brands/dell/:path*",
-      "destination": "/brands/brand-c/:path*",
-      "permanent": true
-    },
-    {
-      "source": "/brands/epson",
-      "destination": "/brands/brand-d",
-      "permanent": true
-    },
-    {
-      "source": "/brands/epson/:path*",
-      "destination": "/brands/brand-d/:path*",
-      "permanent": true
-    },
-    {
-      "source": "/brands/hp",
-      "destination": "/brands/brand-e",
-      "permanent": true
-    },
-    {
-      "source": "/brands/hp/:path*",
-      "destination": "/brands/brand-e/:path*",
-      "permanent": true
-    },
-    {
-      "source": "/brands/kyocera",
-      "destination": "/brands/brand-f",
-      "permanent": true
-    },
-    {
-      "source": "/brands/kyocera/:path*",
-      "destination": "/brands/brand-f/:path*",
-      "permanent": true
-    },
-    {
-      "source": "/brands/lexmark",
-      "destination": "/brands/brand-g",
-      "permanent": true
-    },
-    {
-      "source": "/brands/lexmark/:path*",
-      "destination": "/brands/brand-g/:path*",
-      "permanent": true
-    },
-    {
-      "source": "/brands/ricoh",
-      "destination": "/brands/brand-h",
-      "permanent": true
-    },
-    {
-      "source": "/brands/ricoh/:path*",
-      "destination": "/brands/brand-h/:path*",
-      "permanent": true
-    },
-    {
-      "source": "/brands/samsung",
-      "destination": "/brands/brand-i",
-      "permanent": true
-    },
-    {
-      "source": "/brands/samsung/:path*",
-      "destination": "/brands/brand-i/:path*",
-      "permanent": true
-    },
-    {
-      "source": "/brands/xerox",
-      "destination": "/brands/brand-j",
-      "permanent": true
-    },
-    {
-      "source": "/brands/xerox/:path*",
-      "destination": "/brands/brand-j/:path*",
-      "permanent": true
-    },
     {
       "source": "/guides",
       "destination": "/drivers",
@@ -443,11 +323,6 @@
       "permanent": true
     },
     {
-      "source": "/brands/brand-a/scanner-setup",
-      "destination": "/brands/brand-a",
-      "permanent": true
-    },
-    {
       "source": "/brands/brand-b/windows-11",
       "destination": "/brands/brand-b/pc-11",
       "permanent": true
@@ -455,11 +330,6 @@
     {
       "source": "/brands/brand-b/windows-10",
       "destination": "/brands/brand-b/pc-10",
-      "permanent": true
-    },
-    {
-      "source": "/brands/brand-b/scanner-setup",
-      "destination": "/brands/brand-b",
       "permanent": true
     },
     {
@@ -473,11 +343,6 @@
       "permanent": true
     },
     {
-      "source": "/brands/brand-c/scanner-setup",
-      "destination": "/brands/brand-c",
-      "permanent": true
-    },
-    {
       "source": "/brands/brand-d/windows-11",
       "destination": "/brands/brand-d/pc-11",
       "permanent": true
@@ -485,11 +350,6 @@
     {
       "source": "/brands/brand-d/windows-10",
       "destination": "/brands/brand-d/pc-10",
-      "permanent": true
-    },
-    {
-      "source": "/brands/brand-d/scanner-setup",
-      "destination": "/brands/brand-d",
       "permanent": true
     },
     {
@@ -503,11 +363,6 @@
       "permanent": true
     },
     {
-      "source": "/brands/brand-e/scanner-setup",
-      "destination": "/brands/brand-e",
-      "permanent": true
-    },
-    {
       "source": "/brands/brand-f/windows-11",
       "destination": "/brands/brand-f/pc-11",
       "permanent": true
@@ -515,11 +370,6 @@
     {
       "source": "/brands/brand-f/windows-10",
       "destination": "/brands/brand-f/pc-10",
-      "permanent": true
-    },
-    {
-      "source": "/brands/brand-f/scanner-setup",
-      "destination": "/brands/brand-f",
       "permanent": true
     },
     {
@@ -533,11 +383,6 @@
       "permanent": true
     },
     {
-      "source": "/brands/brand-g/scanner-setup",
-      "destination": "/brands/brand-g",
-      "permanent": true
-    },
-    {
       "source": "/brands/brand-h/windows-11",
       "destination": "/brands/brand-h/pc-11",
       "permanent": true
@@ -545,11 +390,6 @@
     {
       "source": "/brands/brand-h/windows-10",
       "destination": "/brands/brand-h/pc-10",
-      "permanent": true
-    },
-    {
-      "source": "/brands/brand-h/scanner-setup",
-      "destination": "/brands/brand-h",
       "permanent": true
     },
     {
@@ -563,11 +403,6 @@
       "permanent": true
     },
     {
-      "source": "/brands/brand-i/scanner-setup",
-      "destination": "/brands/brand-i",
-      "permanent": true
-    },
-    {
       "source": "/brands/brand-j/windows-11",
       "destination": "/brands/brand-j/pc-11",
       "permanent": true
@@ -575,11 +410,6 @@
     {
       "source": "/brands/brand-j/windows-10",
       "destination": "/brands/brand-j/pc-10",
-      "permanent": true
-    },
-    {
-      "source": "/brands/brand-j/scanner-setup",
-      "destination": "/brands/brand-j",
       "permanent": true
     }
   ],
