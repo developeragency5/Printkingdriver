@@ -15,7 +15,7 @@
  <link rel="preconnect" href="https://fonts.googleapis.com" />
  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
- <link rel="stylesheet" href="/assets/styles.min.css" />
+ <link rel="stylesheet" href="/assets/styles.min.css?v=c11a5e4a" />
  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.printkingdriver.com/#organization","name":"PrintKingDriver","url":"https://www.printkingdriver.com/","email":"support@printkingdriver.com","logo":{"@type":"ImageObject","url":"https://www.printkingdriver.com/assets/images/logo-crown.png"}},{"@type":"WebSite","@id":"https://www.printkingdriver.com/#website","url":"https://www.printkingdriver.com/","name":"PrintKingDriver","publisher":{"@id":"https://www.printkingdriver.com/#organization"},"inLanguage":"en-GB"},{"@type":"WebPage","@id":"https://www.printkingdriver.com/fix-driver-using-too-much-memory#webpage","url":"https://www.printkingdriver.com/fix-driver-using-too-much-memory","name":"Driver Using Too Much Memory: Fix Guide | PrintKingDriver","description":"A driver that holds excessive memory starves other apps and slows the system. Use this fix guide to release the memory and keep the driver in check.","isPartOf":{"@id":"https://www.printkingdriver.com/#website"},"about":{"@id":"https://www.printkingdriver.com/#organization"},"inLanguage":"en-GB"},{"@type":"HowTo","name":"Driver Using Too Much Memory: Fix Guide","description":"A driver that holds excessive memory starves other apps and slows the system. Use this fix guide to release the memory and keep the driver in check.","step":[{"@type":"HowToStep","position":1,"name":"Open the memory map","text":"Use the operating system's built-in resource view and switch to the kernel-memory tab. The largest entries here are the driver pools, sorted by how much memory each one holds."},{"@type":"HowToStep","position":2,"name":"Identify the heaviest pool","text":"Take note of the tag or name of the largest pool. The tag points back to the driver that allocated the memory and confirms which device is holding it."},{"@type":"HowToStep","position":3,"name":"Disable the bound device","text":"Disable the matching device for a few seconds, then re-enable it. Many driver memory holds release immediately when the device is reset rather than after a full restart."},{"@type":"HowToStep","position":4,"name":"Roll back recent updates","text":"If the heavy pool grew right after a driver update, roll the driver back to its previous version. Memory leaks introduced by an update almost always disappear with the rollback."},{"@type":"HowToStep","position":5,"name":"Reduce buffer sizes","text":"In the driver's settings panel, lower any optional buffer or queue sizes that are larger than the default. Big buffers help throughput but also reserve memory continuously."},{"@type":"HowToStep","position":6,"name":"Restart and verify","text":"Reboot the system and recheck the kernel-memory tab a few minutes later. Confirm the heavy pool now sits within the same range as the other entries."}]}]}</script>
  <script>
  window.dataLayer = window.dataLayer || [];
@@ -287,7 +287,7 @@
  </div>
  </div>
 </footer>
-<script src="/assets/scripts.min.js" defer></script>
- <script src="/assets/cookie-banner.min.js" defer></script>
+<script src="/assets/scripts.min.js?v=a119adcf" defer></script>
+ <script src="/assets/cookie-banner.min.js?v=849610e7" defer></script>
  </body>
  </html>
