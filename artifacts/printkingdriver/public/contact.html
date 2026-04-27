@@ -418,6 +418,178 @@
       line-height: 1.6;
     }
     .cx-response-note strong { color: #333; }
+
+    /* ── Extended content sections ── */
+    .cx-extended {
+      background: #f7f3ea;
+      border-top: 1px solid #ede5d3;
+      padding: 80px 24px 96px;
+    }
+    .cx-extended__inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px 56px;
+    }
+    @media (max-width: 900px) {
+      .cx-extended__inner { grid-template-columns: 1fr; gap: 48px; }
+      .cx-extended { padding: 64px 20px 72px; }
+    }
+    .cx-block__eyebrow {
+      display: inline-block;
+      font-size: .7rem;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: #5a8a82;
+      margin-bottom: 12px;
+    }
+    .cx-block h2 {
+      font-size: 1.55rem;
+      font-weight: 800;
+      color: #1a1a1a;
+      margin: 0 0 18px;
+      line-height: 1.2;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .cx-block p {
+      font-size: .98rem;
+      line-height: 1.75;
+      color: #4a463e;
+      margin: 0 0 16px;
+    }
+    .cx-block p:last-child { margin-bottom: 0; }
+    .cx-topics {
+      list-style: none;
+      padding: 0;
+      margin: 18px 0 0;
+      display: grid;
+      gap: 18px;
+    }
+    .cx-topics li {
+      padding: 18px 20px;
+      background: #fff;
+      border: 1px solid #ebe2cf;
+      border-left: 3px solid #2d5c54;
+      border-radius: 8px;
+    }
+    .cx-topics h3 {
+      margin: 0 0 6px;
+      font-size: 1rem;
+      font-weight: 700;
+      color: #1a1a1a;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .cx-topics p {
+      margin: 0;
+      font-size: .92rem;
+      line-height: 1.6;
+      color: #5a534a;
+    }
+    .cx-faq {
+      grid-column: 1 / -1;
+      margin-top: 24px;
+      padding-top: 56px;
+      border-top: 1px solid #ede5d3;
+    }
+    .cx-faq__head {
+      text-align: center;
+      max-width: 620px;
+      margin: 0 auto 40px;
+    }
+    .cx-faq__head h2 {
+      font-size: 1.75rem;
+      font-weight: 800;
+      color: #1a1a1a;
+      margin: 12px 0 14px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .cx-faq__head p {
+      font-size: 1rem;
+      color: #5a534a;
+      line-height: 1.7;
+      margin: 0;
+    }
+    .cx-faq__list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+    @media (max-width: 800px) {
+      .cx-faq__list { grid-template-columns: 1fr; }
+    }
+    .cx-faq__item {
+      background: #fff;
+      border: 1px solid #ebe2cf;
+      border-radius: 12px;
+      padding: 24px 26px;
+    }
+    .cx-faq__item h3 {
+      margin: 0 0 10px;
+      font-size: 1rem;
+      font-weight: 700;
+      color: #1a1a1a;
+      line-height: 1.35;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .cx-faq__item p {
+      margin: 0;
+      font-size: .92rem;
+      line-height: 1.65;
+      color: #4a463e;
+    }
+    .cx-checklist {
+      grid-column: 1 / -1;
+      background: #fff;
+      border: 1px solid #ebe2cf;
+      border-radius: 14px;
+      padding: 36px 40px;
+      margin-top: 24px;
+    }
+    .cx-checklist h2 {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: #1a1a1a;
+      margin: 0 0 12px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .cx-checklist > p {
+      font-size: .98rem;
+      color: #4a463e;
+      line-height: 1.7;
+      margin: 0 0 22px;
+    }
+    .cx-checklist ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px 32px;
+    }
+    @media (max-width: 700px) {
+      .cx-checklist ul { grid-template-columns: 1fr; }
+      .cx-checklist { padding: 28px 24px; }
+    }
+    .cx-checklist li {
+      position: relative;
+      padding-left: 26px;
+      font-size: .94rem;
+      line-height: 1.6;
+      color: #4a463e;
+    }
+    .cx-checklist li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 8px;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: #2d5c54;
+      box-shadow: 0 0 0 3px #e5edec;
+    }
   </style>
 
   <main>
@@ -455,7 +627,7 @@
           </div>
           <div class="cx-field">
             <label for="cf-device">Device Model</label>
-            <input id="cf-device" name="deviceModel" type="text" placeholder="e.g. LaserJet Pro M404n" required />
+            <input id="cf-device" name="deviceModel" type="text" placeholder="e.g. brand and model number" required />
             <div class="field__error" data-error-for="deviceModel"></div>
           </div>
         </div>
@@ -512,6 +684,90 @@
     </div>
 
   </div>
+
+  <section class="cx-extended" aria-labelledby="cx-help-heading">
+    <div class="cx-extended__inner">
+
+      <div class="cx-block">
+        <span class="cx-block__eyebrow">What we help with</span>
+        <h2 id="cx-help-heading">Driver questions, answered in plain language.</h2>
+        <p>PrintKingDriver is a free, independent reference for everyday driver topics. Whether you are trying to understand which driver category controls a particular piece of hardware, working out why a recently connected device is not behaving as expected, or simply learning the difference between a chipset driver and a graphics driver for the first time, our written guides walk you through it without jargon.</p>
+        <p>If our published material does not cover what you need, the form on this page is the right place to reach us. A real member of the editorial team reads every message, so you will receive a considered written reply rather than a generic auto-response. We answer in clear British English, link to the most relevant pages on the site, and stay away from anything that requires us to download files or remote into your machine.</p>
+      </div>
+
+      <div class="cx-block">
+        <span class="cx-block__eyebrow">Common enquiries</span>
+        <h2>The four areas we hear about most.</h2>
+        <ul class="cx-topics">
+          <li>
+            <h3>Identifying the right driver category</h3>
+            <p>You know something is not working but are not sure whether it falls under chipset, graphics, audio, network or peripheral. We can point you to the relevant section of the guide.</p>
+          </li>
+          <li>
+            <h3>Understanding driver versions</h3>
+            <p>Why versions, build numbers and release dates matter, how driver releases relate to operating-system updates, and how to read a version string sensibly.</p>
+          </li>
+          <li>
+            <h3>Brand-page clarifications</h3>
+            <p>Questions about specific brand reference pages — what each section means, which driver families a brand publishes, and how their naming conventions are organised.</p>
+          </li>
+          <li>
+            <h3>Site corrections and feedback</h3>
+            <p>Spotted a typo, a broken link, a confusing sentence or an out-of-date detail? Editorial corrections are very welcome and are usually merged within a day or two.</p>
+          </li>
+        </ul>
+      </div>
+
+      <div class="cx-faq">
+        <div class="cx-faq__head">
+          <span class="cx-block__eyebrow">Frequently asked</span>
+          <h2>Before you write to us</h2>
+          <p>A short list of the questions we are asked most often. If your question is on this list, you will get a faster answer here than by sending a message.</p>
+        </div>
+        <div class="cx-faq__list">
+          <div class="cx-faq__item">
+            <h3>How quickly will I hear back?</h3>
+            <p>Most enquiries receive a written reply within one business day. Messages sent on weekends or public holidays are answered the next working morning, usually before lunchtime Eastern time.</p>
+          </div>
+          <div class="cx-faq__item">
+            <h3>Is the service genuinely free?</h3>
+            <p>Yes. PrintKingDriver is funded entirely as a public reference. We do not charge for guidance, do not request payment details, and do not gate any page behind a sign-up.</p>
+          </div>
+          <div class="cx-faq__item">
+            <h3>Do you ever ask for remote access?</h3>
+            <p>No. We will never ask you to share your screen, allow remote control of your machine, or run a tool we have sent you. Any message claiming otherwise is not from us — please report it.</p>
+          </div>
+          <div class="cx-faq__item">
+            <h3>Will you store my contact details?</h3>
+            <p>Your message and email address are kept only for the purpose of replying to you. We do not add senders to a marketing list, and we never share enquiry information with third parties. Read our privacy policy for the full picture.</p>
+          </div>
+          <div class="cx-faq__item">
+            <h3>Can you recommend specific software?</h3>
+            <p>We stay product-neutral. The site explains what each driver category does and links to manufacturer reference pages, but we do not endorse particular utilities, optimisers or paid services.</p>
+          </div>
+          <div class="cx-faq__item">
+            <h3>I represent a brand — how do I update a page?</h3>
+            <p>If you work for a hardware brand and would like a correction or update applied to one of our reference pages, please write from a verifiable corporate email address and quote the exact URL of the page concerned.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="cx-checklist">
+        <h2>What to include in your message</h2>
+        <p>A few extra details make it much easier for us to give you a useful answer first time, rather than writing back to ask follow-up questions.</p>
+        <ul>
+          <li>The page on PrintKingDriver you are reading, if your question relates to a specific guide.</li>
+          <li>The brand and model of the hardware you are asking about, where this is relevant.</li>
+          <li>The driver category you believe is involved, even if you are not certain.</li>
+          <li>A short description of what you expected to happen, and what is happening instead.</li>
+          <li>Whether the issue began after a recent change, such as a new piece of hardware being connected.</li>
+          <li>Any error messages or notification text, copied as text rather than as a screenshot if possible.</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
   </main>
   
   <footer class="footer">
