@@ -275,19 +275,30 @@
     if (a && isInternal(a)) prefetch(a.href);
   }, { passive: true });
 
-  // Smart back-link: if the user came from another page on this site, the
-  // "Back to home" link acts as a true browser-back, returning them to where
-  // they were (e.g. the sitemap). The visible label is also updated to reflect
-  // the actual destination.
+  // Smart back-link: keeps the user on a logical "trail" through the site.
+  // When the user visits an index/hub page (sitemap, all-pages), it is
+  // remembered as their anchor for the rest of the session. Every back-link on
+  // every sub-page they visit afterwards then takes them back to that anchor
+  // page (e.g. always back to /sitemap), no matter how many hops in between.
+  // Visiting the home page clears the anchor and the back-links resume their
+  // original behaviour. If no anchor is set, falls back to a referrer-aware
+  // label and history.back() click.
   (function () {
+    const cur = location.pathname.replace(/\/+$/, "") || "/";
+    const ANCHOR_KEY = "pkdBackAnchor";
+    const ANCHORS = ["/sitemap", "/all-pages"];
+    let store = null;
+    try { store = window.sessionStorage; } catch (e) { store = null; }
+    if (store) {
+      if (ANCHORS.indexOf(cur) !== -1) {
+        try { store.setItem(ANCHOR_KEY, cur); } catch (e) {}
+      } else if (cur === "/") {
+        try { store.removeItem(ANCHOR_KEY); } catch (e) {}
+      }
+    }
     const links = document.querySelectorAll("a.legal__back, a.sm-back");
     if (!links.length) return;
-    let ref = null;
-    try { ref = document.referrer ? new URL(document.referrer) : null; } catch (e) { ref = null; }
-    const sameOrigin = !!(ref && ref.origin === location.origin);
-    const cur = location.pathname.replace(/\/+$/, "") || "/";
-    const refPath = sameOrigin ? (ref.pathname.replace(/\/+$/, "") || "/") : null;
-    if (!sameOrigin || refPath === cur || history.length <= 1) return;
+
     const labelMap = {
       "/": "Back to home",
       "/sitemap": "Back to sitemap",
@@ -298,22 +309,48 @@
       "/how-it-works": "Back to how it works",
       "/contact": "Back to contact",
     };
-    let label = labelMap[refPath];
-    if (!label) {
-      if (refPath.startsWith("/drivers/")) label = "Back to drivers";
-      else if (refPath.startsWith("/brands/")) label = "Back to brands";
-      else label = "Back";
-    }
-    links.forEach((a) => {
+
+    function setLabel(a, text) {
       const span = a.querySelector("span");
       if (span) {
-        span.textContent = label;
+        span.textContent = text;
       } else {
         Array.from(a.childNodes).forEach((n) => {
           if (n.nodeType === 3) n.parentNode.removeChild(n);
         });
-        a.appendChild(document.createTextNode(" " + label));
+        a.appendChild(document.createTextNode(" " + text));
       }
+    }
+
+    let anchor = null;
+    try { anchor = store ? store.getItem(ANCHOR_KEY) : null; } catch (e) { anchor = null; }
+    if (anchor && anchor !== cur && ANCHORS.indexOf(anchor) !== -1) {
+      const label = labelMap[anchor] || "Back";
+      links.forEach((a) => {
+        a.setAttribute("href", anchor);
+        setLabel(a, label);
+        a.addEventListener("click", function (e) {
+          e.preventDefault();
+          location.href = anchor;
+        });
+      });
+      return;
+    }
+
+    // No anchor set — use referrer-based label + history.back()
+    let ref = null;
+    try { ref = document.referrer ? new URL(document.referrer) : null; } catch (e) { ref = null; }
+    const sameOrigin = !!(ref && ref.origin === location.origin);
+    const refPath = sameOrigin ? (ref.pathname.replace(/\/+$/, "") || "/") : null;
+    if (!sameOrigin || refPath === cur || history.length <= 1) return;
+    let label = labelMap[refPath];
+    if (!label) {
+      if (refPath.indexOf("/drivers/") === 0) label = "Back to drivers";
+      else if (refPath.indexOf("/brands/") === 0) label = "Back to brands";
+      else label = "Back";
+    }
+    links.forEach((a) => {
+      setLabel(a, label);
       a.addEventListener("click", function (e) {
         e.preventDefault();
         history.back();
