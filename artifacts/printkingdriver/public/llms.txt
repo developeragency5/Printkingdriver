@@ -32,30 +32,22 @@
 - [Brand A on PC 10](https://www.printkingdriver.com/brands/brand-a/pc-10): Setting up Brand A devices on PC 10
 - [Brand A on macOS](https://www.printkingdriver.com/brands/brand-a/macos): Brand A device setup on macOS
 - [Brand A on Linux](https://www.printkingdriver.com/brands/brand-a/linux): Brand A device drivers and packages for Linux
-- [Brand A Wireless Setup](https://www.printkingdriver.com/brands/brand-a/wireless-setup): Brand A wireless device setup guide
-- [Brand A Firmware Update](https://www.printkingdriver.com/brands/brand-a/firmware-update): How to update Brand A device firmware
 - [Brand B](https://www.printkingdriver.com/brands/brand-b): Brand B device driver guides for all operating systems
 - [Brand B on PC 11](https://www.printkingdriver.com/brands/brand-b/pc-11): Setting up Brand B devices on PC 11
 - [Brand B on PC 10](https://www.printkingdriver.com/brands/brand-b/pc-10): Setting up Brand B devices on PC 10
 - [Brand B on macOS](https://www.printkingdriver.com/brands/brand-b/macos): Brand B device setup on macOS
 - [Brand B on Linux](https://www.printkingdriver.com/brands/brand-b/linux): Brand B drivers and CUPS setup on Linux
-- [Brand B Wireless Setup](https://www.printkingdriver.com/brands/brand-b/wireless-setup): Brand B wireless device setup guide
-- [Brand B Firmware Update](https://www.printkingdriver.com/brands/brand-b/firmware-update): How to update Brand B device firmware
 - [Brand C](https://www.printkingdriver.com/brands/brand-c): Brand C device driver guides
 - [Brand D](https://www.printkingdriver.com/brands/brand-d): Brand D device driver guides for all operating systems
 - [Brand D on PC 11](https://www.printkingdriver.com/brands/brand-d/pc-11): Setting up Brand D devices on PC 11
 - [Brand D on PC 10](https://www.printkingdriver.com/brands/brand-d/pc-10): Setting up Brand D devices on PC 10
 - [Brand D on macOS](https://www.printkingdriver.com/brands/brand-d/macos): Brand D device setup on macOS
 - [Brand D on Linux](https://www.printkingdriver.com/brands/brand-d/linux): Brand D drivers and Gutenprint setup on Linux
-- [Brand D Wireless Setup](https://www.printkingdriver.com/brands/brand-d/wireless-setup): Brand D Wi-Fi device setup
-- [Brand D Firmware Update](https://www.printkingdriver.com/brands/brand-d/firmware-update): How to update Brand D device firmware
 - [Brand E](https://www.printkingdriver.com/brands/brand-e): Brand E device driver guides for PC, macOS, Linux, wireless setup, and firmware
 - [Brand E on PC 11](https://www.printkingdriver.com/brands/brand-e/pc-11): Setting up Brand E devices on PC 11
 - [Brand E on PC 10](https://www.printkingdriver.com/brands/brand-e/pc-10): Setting up Brand E devices on PC 10
 - [Brand E on macOS](https://www.printkingdriver.com/brands/brand-e/macos): Brand E device setup on macOS
 - [Brand E on Linux](https://www.printkingdriver.com/brands/brand-e/linux): Brand E device drivers for Linux
-- [Brand E Wireless Setup](https://www.printkingdriver.com/brands/brand-e/wireless-setup): Brand E wireless device setup
-- [Brand E Firmware Update](https://www.printkingdriver.com/brands/brand-e/firmware-update): How to update Brand E device firmware
 - [Brand F](https://www.printkingdriver.com/brands/brand-f): Brand F device driver guides
 - [Brand G](https://www.printkingdriver.com/brands/brand-g): Brand G device driver guides
 - [Brand H](https://www.printkingdriver.com/brands/brand-h): Brand H device driver guides
@@ -64,8 +56,6 @@
 - [Brand I on PC 10](https://www.printkingdriver.com/brands/brand-i/pc-10): Setting up Brand I devices on PC 10
 - [Brand I on macOS](https://www.printkingdriver.com/brands/brand-i/macos): Brand I device setup on macOS
 - [Brand I on Linux](https://www.printkingdriver.com/brands/brand-i/linux): Brand I drivers and setup on Linux
-- [Brand I Wireless Setup](https://www.printkingdriver.com/brands/brand-i/wireless-setup): Brand I wireless device setup
-- [Brand I Firmware Update](https://www.printkingdriver.com/brands/brand-i/firmware-update): How to update Brand I device firmware
 - [Brand J](https://www.printkingdriver.com/brands/brand-j): Brand J device driver guides
 
 ## Error Fix Guides

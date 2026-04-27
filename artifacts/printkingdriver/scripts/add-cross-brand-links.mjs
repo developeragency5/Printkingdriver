@@ -1,6 +1,17 @@
-// Add a "More setup guides" cross-link section to every brand sub-page so each
-// page receives ~10 additional incoming internal links from peer pages.
-// Resolves SEMrush "Few incoming internal links" warning for the 20 sub-pages.
+// DEPRECATED (Apr 2026) — DO NOT RUN.
+// The 20 brand firmware-update + wireless-setup pages this script targets were
+// removed from the site. Running this script will exit with ENOENT errors.
+// Kept only for historical reference. See `remove-brand-setup-pages.mjs`.
+//
+// Original purpose: Add a "More setup guides" cross-link section to every brand
+// sub-page so each page receives ~10 additional incoming internal links from
+// peer pages.
+
+console.error('add-cross-brand-links.mjs is deprecated — the brand firmware-update and wireless-setup pages have been removed. Aborting.');
+process.exit(0);
+
+// --- Original code preserved below for reference ---
+//
 import fs from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
