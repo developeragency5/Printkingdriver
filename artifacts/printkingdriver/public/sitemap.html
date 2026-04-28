@@ -47,15 +47,8 @@
  .sm-hero__eyebrow::before { content: ""; width: 28px; height: 1px; background: rgba(184,153,104,.6); display: inline-block; }
  .sm-hero__title { font-size: clamp(2rem, 4.4vw, 3.2rem); font-weight: 700; font-family: 'Plus Jakarta Sans', sans-serif; color: #fff; line-height: 1.12; letter-spacing: -.02em; margin: 0 0 18px; }
  .sm-hero__sub { font-size: 1.02rem; line-height: 1.65; color: rgba(255,255,255,.78); max-width: 620px; margin: 0; font-weight: 400; }
- .sm-hero__stats { display: flex; gap: 0; margin-top: 40px; padding-top: 28px; border-top: 1px solid rgba(255,255,255,.14); }
- .sm-hero__stat { color: rgba(255,255,255,.92); padding-right: 44px; margin-right: 44px; border-right: 1px solid rgba(255,255,255,.10); }
- .sm-hero__stat:last-child { border-right: none; padding-right: 0; margin-right: 0; }
- .sm-hero__stat-num { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.7rem; font-weight: 700; line-height: 1; color: #fff; letter-spacing: -.02em; }
- .sm-hero__stat-lbl { display: block; margin-top: 8px; font-size: .62rem; letter-spacing: .22em; text-transform: uppercase; color: rgba(255,255,255,.55); font-weight: 600; }
  @media (max-width: 600px) {
  .sm-hero { padding: 60px 0 52px; }
- .sm-hero__stats { flex-wrap: wrap; gap: 20px 0; }
- .sm-hero__stat { padding-right: 24px; margin-right: 24px; }
  }
 
  /* ===== Jump Nav ===== */
@@ -106,16 +99,13 @@
  @media (max-width: 600px) { .sm-list--cols { columns: 1; } }
  .sm-list--cols li { break-inside: avoid; }
 
- /* ===== Footer ornament / total ===== */
+ /* ===== Footer ornament ===== */
  .sm-total { text-align: center; padding: 64px 0 8px; font-size: .94rem; color: #7a6e5e; line-height: 1.7; max-width: 560px; margin: 0 auto; }
  .sm-total__rule { display: flex; align-items: center; justify-content: center; gap: 18px; margin-bottom: 22px; }
  .sm-total__rule::before, .sm-total__rule::after { content: ""; width: 80px; height: 1px; background: linear-gradient(to right, transparent, #ddd2b8, transparent); }
  .sm-total__rule::after { background: linear-gradient(to left, transparent, #ddd2b8, transparent); }
  .sm-total__diamond { width: 8px; height: 8px; background: #b89968; transform: rotate(45deg); }
- .sm-total__line { display: flex; align-items: center; justify-content: center; gap: 14px; margin-bottom: 12px; }
- .sm-total__big { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 2.4rem; font-weight: 800; color: #2d5c54; line-height: 1; letter-spacing: -.02em; }
- .sm-total__lbl { font-size: .68rem; letter-spacing: .22em; text-transform: uppercase; color: #9a8e7e; font-weight: 700; text-align: left; line-height: 1.35; }
- .sm-total__note { color: #8a7e6e; font-style: italic; font-size: .88rem; }
+ .sm-total__note { color: #8a7e6e; font-style: italic; font-size: .9rem; }
  .sm-total strong { color: #2d5c54; font-weight: 700; font-style: normal; }
  </style>
  </head>
@@ -192,12 +182,7 @@
  <a href="/" class="sm-back"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 19-7-7 7-7" /><path d="M19 12H5" /></svg><span>Back to home</span></a>
  <div class="sm-hero__eyebrow">Site Map</div>
  <h1 class="sm-hero__title">Every page on PrintKingDriver, in one place.</h1>
- <p class="sm-hero__sub">A directory of every guide, reference article and policy page on the site, grouped by section so you can navigate directly to what you need.</p>
- <div class="sm-hero__stats">
- <div class="sm-hero__stat"><div class="sm-hero__stat-num">82</div><div class="sm-hero__stat-lbl">Pages</div></div>
- <div class="sm-hero__stat"><div class="sm-hero__stat-num">5</div><div class="sm-hero__stat-lbl">Sections</div></div>
- <div class="sm-hero__stat"><div class="sm-hero__stat-num">Apr 2026</div><div class="sm-hero__stat-lbl">Last updated</div></div>
- </div>
+ <p class="sm-hero__sub">A complete directory of every guide, reference article and policy page on the site, grouped by section so you can navigate directly to what you need.</p>
  </div>
  </div>
  </div>
@@ -210,6 +195,7 @@
  <a href="#sec-drivers">Driver reference</a>
  <a href="#sec-fixes">Error fixes</a>
  <a href="#sec-perf-fixes">Performance fixes</a>
+ <a href="#sec-issue-fixes">Issue fixes</a>
  <a href="#sec-legal">Legal</a>
  </div>
  </div>
@@ -370,6 +356,63 @@
       </div>
       <!-- END Performance Fix Guides -->
 
+      <!-- Device & System Issue Fixes -->
+      <div class="sm-block" id="sec-issue-fixes" style="--accent: 95%; grid-column: 1 / -1;">
+        <div class="sm-block__heading">
+          <span class="sm-block__icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          </span>
+          <div class="sm-block__heading-text">
+            <span class="sm-block__num">Section 05</span>
+            <span class="sm-block__title">Device &amp; System Issue Fixes</span>
+          </div>
+          <span class="sm-block__count">40<span>pages</span></span>
+        </div>
+        <ul class="sm-list sm-list--cols">
+      <li><a href="/fix-driver-device-input-ignored">Driver Causing Device Input to Be Ignored: Fix Guide</a></li>
+      <li><a href="/fix-driver-device-output-inconsistent">Driver Causing Device Output to Be Inconsistent: Fix Guide</a></li>
+      <li><a href="/fix-driver-device-conflict-with-system">Driver Causing Device to Conflict with System: Fix Guide</a></li>
+      <li><a href="/fix-driver-device-abnormal-power-drain">Driver Causing Device to Drain Power Abnormally: Fix Guide</a></li>
+      <li><a href="/fix-driver-device-dropping-current-task">Driver Causing Device to Drop Its Current Task: Fix Guide</a></li>
+      <li><a href="/fix-driver-device-failing-after-light-use">Driver Causing Device to Fail After Light Use: Fix Guide</a></li>
+      <li><a href="/fix-driver-device-failing-at-random-times">Driver Causing Device to Fail at Random Times: Fix Guide</a></li>
+      <li><a href="/fix-driver-device-failing-on-first-use">Driver Causing Device to Fail on First Use: Fix Guide</a></li>
+      <li><a href="/fix-driver-device-failing-under-normal-use">Driver Causing Device to Fail Under Normal Use: Fix Guide</a></li>
+      <li><a href="/fix-driver-device-abnormal-heat-generation">Driver Causing Device to Generate Heat Abnormally: Fix Guide</a></li>
+      <li><a href="/fix-driver-device-repeated-faults">Driver Causing Device to Generate Repeated Faults: Fix Guide</a></li>
+      <li><a href="/fix-driver-device-ignoring-system-commands">Driver Causing Device to Ignore System Commands: Fix Guide</a></li>
+      <li><a href="/fix-driver-device-losing-configuration">Driver Causing Device to Lose Its Configuration: Fix Guide</a></li>
+      <li><a href="/fix-driver-device-losing-power-unexpectedly">Driver Causing Device to Lose Power Unexpectedly: Fix Guide</a></li>
+      <li><a href="/fix-driver-device-losing-saved-data">Driver Causing Device to Lose Saved Data: Fix Guide</a></li>
+      <li><a href="/fix-driver-device-losing-sync-with-system">Driver Causing Device to Lose Sync with System: Fix Guide</a></li>
+      <li><a href="/fix-driver-device-not-accepting-new-commands">Driver Causing Device to Not Accept New Commands: Fix Guide</a></li>
+      <li><a href="/fix-driver-device-not-completing-cycle">Driver Causing Device to Not Complete Its Cycle: Fix Guide</a></li>
+      <li><a href="/fix-driver-device-not-completing-tasks">Driver Causing Device to Not Complete Tasks: Fix Guide</a></li>
+      <li><a href="/fix-driver-device-not-holding-state">Driver Causing Device to Not Hold Its State: Fix Guide</a></li>
+      <li><a href="/fix-driver-device-not-at-full-ability">Driver Causing Device to Not Operate at Full Ability: Fix Guide</a></li>
+      <li><a href="/fix-driver-device-not-responding-to-input">Driver Causing Device to Not Respond to Input: Fix Guide</a></li>
+      <li><a href="/fix-driver-device-not-saving-state">Driver Causing Device to Not Save Its State: Fix Guide</a></li>
+      <li><a href="/fix-driver-device-abnormal-output">Driver Causing Device to Produce Abnormal Output: Fix Guide</a></li>
+      <li><a href="/fix-driver-device-error-on-command">Driver Causing Device to Produce Error on Command: Fix Guide</a></li>
+      <li><a href="/fix-driver-device-wrong-output">Driver Causing Device to Produce Wrong Output: Fix Guide</a></li>
+      <li><a href="/fix-driver-device-rejecting-valid-commands">Driver Causing Device to Reject Valid Commands: Fix Guide</a></li>
+      <li><a href="/fix-driver-device-responding-incorrectly">Driver Causing Device to Respond Incorrectly: Fix Guide</a></li>
+      <li><a href="/fix-driver-device-running-at-wrong-speed">Driver Causing Device to Run at Wrong Speed: Fix Guide</a></li>
+      <li><a href="/fix-driver-device-below-expected-speed">Driver Causing Device to Run Below Expected Speed: Fix Guide</a></li>
+      <li><a href="/fix-driver-device-running-inconsistently">Driver Causing Device to Run Inconsistently: Fix Guide</a></li>
+      <li><a href="/fix-driver-device-running-on-minimum-settings">Driver Causing Device to Run on Minimum Settings: Fix Guide</a></li>
+      <li><a href="/fix-driver-device-running-without-proper-control">Driver Causing Device to Run Without Proper Control: Fix Guide</a></li>
+      <li><a href="/fix-driver-device-wrong-settings">Driver Causing Device to Run with Wrong Settings: Fix Guide</a></li>
+      <li><a href="/fix-driver-device-sending-wrong-signals">Driver Causing Device to Send Wrong Signals: Fix Guide</a></li>
+      <li><a href="/fix-driver-device-underperforming">Driver Causing Device to Underperform: Fix Guide</a></li>
+      <li><a href="/fix-driver-system-alert-keeps-repeating">Driver Causing System Alert to Keep Repeating: Fix Guide</a></li>
+      <li><a href="/fix-driver-system-generating-constant-errors">Driver Causing System to Generate Constant Errors: Fix Guide</a></li>
+      <li><a href="/fix-driver-system-producing-false-errors">Driver Causing System to Produce False Errors: Fix Guide</a></li>
+      <li><a href="/fix-driver-system-running-multiple-errors">Driver Causing System to Run Multiple Errors: Fix Guide</a></li>
+        </ul>
+      </div>
+      <!-- END Device & System Issue Fixes -->
+
       <!-- Legal & Info -->
  <div class="sm-block" id="sec-legal" style="grid-column: 1 / -1;">
  <div class="sm-block__heading">
@@ -377,7 +420,7 @@
  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="13" y2="17"/></svg>
  </span>
  <div class="sm-block__heading-text">
- <span class="sm-block__num">Section 05</span>
+ <span class="sm-block__num">Section 06</span>
  <span class="sm-block__title">Legal &amp; Info</span>
  </div>
  <span class="sm-block__count">4<span>pages</span></span>
@@ -393,8 +436,7 @@
 
  <div class="sm-total">
  <div class="sm-total__rule"><span class="sm-total__diamond"></span></div>
- <div class="sm-total__line"><span class="sm-total__big">82</span><span class="sm-total__lbl">Pages indexed<br/>across 5 sections</span></div>
- <p class="sm-total__note">All URLs above are also listed in the machine-readable <strong><a href="/sitemap.xml" style="color:inherit;text-decoration:underline;">sitemap.xml</a></strong> used by search engines.</p>
+ <p class="sm-total__note">A machine-readable index of every URL on this site is also available as <strong><a href="/sitemap.xml" style="color:inherit;text-decoration:underline;">sitemap.xml</a></strong> for search engines and crawlers.</p>
  </div>
 
  </div>
