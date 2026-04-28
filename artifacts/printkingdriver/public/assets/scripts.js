@@ -146,7 +146,53 @@
     { label: "Driver Causing Reduced Speed on Heavy Tasks: Fix Guide", href: "/fix-driver-causing-reduced-speed-on-heavy-tasks", type: "Fix", keywords: "error fix troubleshoot resolve solve repair driver issue problem" },
     { label: "Driver Causing Unstable Performance: Fix Guide", href: "/fix-driver-causing-unstable-performance", type: "Fix", keywords: "error fix troubleshoot resolve solve repair driver issue problem" },
     { label: "Driver Causing Device to Become Unresponsive: Fix Guide", href: "/fix-driver-causing-device-unresponsive", type: "Fix", keywords: "error fix troubleshoot resolve solve repair driver issue problem" },
-    { label: "Driver Causing Overall System Slowdown: Fix Guide", href: "/fix-driver-causing-overall-system-slowdown", type: "Fix", keywords: "error fix troubleshoot resolve solve repair driver issue problem" }
+    { label: "Driver Causing Overall System Slowdown: Fix Guide", href: "/fix-driver-causing-overall-system-slowdown", type: "Fix", keywords: "error fix troubleshoot resolve solve repair driver issue problem" },
+    { label: "Driver Causing Device to Generate Heat Abnormally: Fix Guide", href: "/fix-driver-device-abnormal-heat-generation", type: "Fix", keywords: "device system issue heat hot warm temperature thermal abnormal generation" },
+    { label: "Driver Causing Device to Produce Abnormal Output: Fix Guide", href: "/fix-driver-device-abnormal-output", type: "Fix", keywords: "device system issue abnormal output strange unusual signal" },
+    { label: "Driver Causing Device to Drain Power Abnormally: Fix Guide", href: "/fix-driver-device-abnormal-power-drain", type: "Fix", keywords: "device system issue power drain battery abnormal energy consumption" },
+    { label: "Driver Causing Device to Run Below Expected Speed: Fix Guide", href: "/fix-driver-device-below-expected-speed", type: "Fix", keywords: "device system issue speed slow performance below expected" },
+    { label: "Driver Causing Device to Conflict with System: Fix Guide", href: "/fix-driver-device-conflict-with-system", type: "Fix", keywords: "device system issue conflict clash incompatible" },
+    { label: "Driver Causing Device to Drop Its Current Task: Fix Guide", href: "/fix-driver-device-dropping-current-task", type: "Fix", keywords: "device system issue drop task interrupted job" },
+    { label: "Driver Causing Device to Produce Error on Command: Fix Guide", href: "/fix-driver-device-error-on-command", type: "Fix", keywords: "device system issue error command instruction request" },
+    { label: "Driver Causing Device to Fail After Light Use: Fix Guide", href: "/fix-driver-device-failing-after-light-use", type: "Fix", keywords: "device system issue fail failure light use idle" },
+    { label: "Driver Causing Device to Fail at Random Times: Fix Guide", href: "/fix-driver-device-failing-at-random-times", type: "Fix", keywords: "device system issue fail random intermittent unpredictable" },
+    { label: "Driver Causing Device to Fail on First Use: Fix Guide", href: "/fix-driver-device-failing-on-first-use", type: "Fix", keywords: "device system issue fail first use initial startup" },
+    { label: "Driver Causing Device to Fail Under Normal Use: Fix Guide", href: "/fix-driver-device-failing-under-normal-use", type: "Fix", keywords: "device system issue fail normal use everyday" },
+    { label: "Driver Causing Device to Ignore System Commands: Fix Guide", href: "/fix-driver-device-ignoring-system-commands", type: "Fix", keywords: "device system issue ignore command unresponsive" },
+    { label: "Driver Causing Device Input to Be Ignored: Fix Guide", href: "/fix-driver-device-input-ignored", type: "Fix", keywords: "device system issue input ignored keystroke click" },
+    { label: "Driver Causing Device to Lose Its Configuration: Fix Guide", href: "/fix-driver-device-losing-configuration", type: "Fix", keywords: "device system issue configuration lose settings reset" },
+    { label: "Driver Causing Device to Lose Power Unexpectedly: Fix Guide", href: "/fix-driver-device-losing-power-unexpectedly", type: "Fix", keywords: "device system issue power lose shut off unexpected" },
+    { label: "Driver Causing Device to Lose Saved Data: Fix Guide", href: "/fix-driver-device-losing-saved-data", type: "Fix", keywords: "device system issue data lose saved storage" },
+    { label: "Driver Causing Device to Lose Sync with System: Fix Guide", href: "/fix-driver-device-losing-sync-with-system", type: "Fix", keywords: "device system issue sync synchronisation desync" },
+    { label: "Driver Causing Device to Not Accept New Commands: Fix Guide", href: "/fix-driver-device-not-accepting-new-commands", type: "Fix", keywords: "device system issue command reject not accepting" },
+    { label: "Driver Causing Device to Not Operate at Full Ability: Fix Guide", href: "/fix-driver-device-not-at-full-ability", type: "Fix", keywords: "device system issue capability ability full performance" },
+    { label: "Driver Causing Device to Not Complete Its Cycle: Fix Guide", href: "/fix-driver-device-not-completing-cycle", type: "Fix", keywords: "device system issue cycle incomplete unfinished" },
+    { label: "Driver Causing Device to Not Complete Tasks: Fix Guide", href: "/fix-driver-device-not-completing-tasks", type: "Fix", keywords: "device system issue task incomplete unfinished" },
+    { label: "Driver Causing Device to Not Hold Its State: Fix Guide", href: "/fix-driver-device-not-holding-state", type: "Fix", keywords: "device system issue state hold persistence" },
+    { label: "Driver Causing Device to Not Respond to Input: Fix Guide", href: "/fix-driver-device-not-responding-to-input", type: "Fix", keywords: "device system issue input unresponsive frozen" },
+    { label: "Driver Causing Device to Not Save Its State: Fix Guide", href: "/fix-driver-device-not-saving-state", type: "Fix", keywords: "device system issue state save persistence memory" },
+    { label: "Driver Causing Device Output to Be Inconsistent: Fix Guide", href: "/fix-driver-device-output-inconsistent", type: "Fix", keywords: "device system issue output inconsistent variable" },
+    { label: "Driver Causing Device to Reject Valid Commands: Fix Guide", href: "/fix-driver-device-rejecting-valid-commands", type: "Fix", keywords: "device system issue command reject valid" },
+    { label: "Driver Causing Device to Generate Repeated Faults: Fix Guide", href: "/fix-driver-device-repeated-faults", type: "Fix", keywords: "device system issue fault repeated recurring" },
+    { label: "Driver Causing Device to Respond Incorrectly: Fix Guide", href: "/fix-driver-device-responding-incorrectly", type: "Fix", keywords: "device system issue respond wrong incorrect" },
+    { label: "Driver Causing Device to Run at Wrong Speed: Fix Guide", href: "/fix-driver-device-running-at-wrong-speed", type: "Fix", keywords: "device system issue speed wrong incorrect rpm clock" },
+    { label: "Driver Causing Device to Run Inconsistently: Fix Guide", href: "/fix-driver-device-running-inconsistently", type: "Fix", keywords: "device system issue inconsistent unstable variable" },
+    { label: "Driver Causing Device to Run on Minimum Settings: Fix Guide", href: "/fix-driver-device-running-on-minimum-settings", type: "Fix", keywords: "device system issue minimum settings reduced performance" },
+    { label: "Driver Causing Device to Run Without Proper Control: Fix Guide", href: "/fix-driver-device-running-without-proper-control", type: "Fix", keywords: "device system issue control uncontrolled unmanaged" },
+    { label: "Driver Causing Device to Send Wrong Signals: Fix Guide", href: "/fix-driver-device-sending-wrong-signals", type: "Fix", keywords: "device system issue signal wrong incorrect transmission" },
+    { label: "Driver Causing Device to Underperform: Fix Guide", href: "/fix-driver-device-underperforming", type: "Fix", keywords: "device system issue underperform slow weak" },
+    { label: "Driver Causing Device to Produce Wrong Output: Fix Guide", href: "/fix-driver-device-wrong-output", type: "Fix", keywords: "device system issue output wrong incorrect unexpected" },
+    { label: "Driver Causing Device to Run with Wrong Settings: Fix Guide", href: "/fix-driver-device-wrong-settings", type: "Fix", keywords: "device system issue settings wrong incorrect configuration" },
+    { label: "Driver Causing System Alert to Keep Repeating: Fix Guide", href: "/fix-driver-system-alert-keeps-repeating", type: "Fix", keywords: "device system issue alert notification repeat recurring" },
+    { label: "Driver Causing System to Generate Constant Errors: Fix Guide", href: "/fix-driver-system-generating-constant-errors", type: "Fix", keywords: "device system issue error constant continuous" },
+    { label: "Driver Causing System to Produce False Errors: Fix Guide", href: "/fix-driver-system-producing-false-errors", type: "Fix", keywords: "device system issue error false phantom spurious" },
+    { label: "Driver Causing System to Run Multiple Errors: Fix Guide", href: "/fix-driver-system-running-multiple-errors", type: "Fix", keywords: "device system issue error multiple cascading" },
+    { label: "Glossary",            href: "/glossary",   type: "Page", keywords: "terms terminology dictionary definitions vocabulary jargon meaning" },
+    { label: "All Pages",           href: "/all-pages",  type: "Page", keywords: "site map list directory all pages browse index" },
+    { label: "Sitemap",             href: "/sitemap",    type: "Page", keywords: "site map navigation overview structure" },
+    { label: "Privacy Policy",      href: "/privacy",    type: "Page", keywords: "privacy data cookies gdpr personal information policy" },
+    { label: "Terms of Service",    href: "/terms",      type: "Page", keywords: "terms conditions agreement legal use service" },
+    { label: "Disclaimer",          href: "/disclaimer", type: "Page", keywords: "disclaimer editorial policy fair use brand names" }
   ];
 
   const searchInputs = document.querySelectorAll(".nav__search input");
@@ -161,15 +207,28 @@
       const q = input.value.trim().toLowerCase();
       clear?.classList.toggle("is-visible", !!q);
       if (!q) { results.classList.remove("is-open"); results.innerHTML = ""; return; }
+      const tokens = q.split(/\s+/).filter(Boolean);
       const scored = [];
       for (const it of SEARCH_INDEX) {
         const label = it.label.toLowerCase();
         const kw = (it.keywords || "").toLowerCase();
+        const hay = label + " " + kw;
         let score = 0;
         if (label.startsWith(q)) score = 100;
         else if (label.includes(q)) score = 80;
         else if ((" " + kw + " ").includes(" " + q)) score = 60;
         else if (kw.includes(q)) score = 40;
+        if (score === 0 && tokens.length > 1) {
+          let allMatch = true, partial = 0;
+          for (const t of tokens) {
+            if (label.startsWith(t)) partial += 30;
+            else if (label.includes(t)) partial += 20;
+            else if ((" " + kw + " ").includes(" " + t)) partial += 15;
+            else if (hay.includes(t)) partial += 10;
+            else { allMatch = false; break; }
+          }
+          if (allMatch) score = partial;
+        }
         if (score > 0) scored.push({ it, score });
       }
       scored.sort((a, b) => b.score - a.score);
@@ -204,7 +263,7 @@
       else if (e.key === "ArrowUp") { e.preventDefault(); activeIdx = Math.max(0, activeIdx - 1); }
       else if (e.key === "Enter") { e.preventDefault(); window.location.href = matches[activeIdx].href; return; }
       else if (e.key === "Escape") { results.classList.remove("is-open"); return; }
-      results.querySelectorAll("button").forEach((b, i) => b.classList.toggle("is-active", i === activeIdx));
+      results.querySelectorAll("a").forEach((b, i) => b.classList.toggle("is-active", i === activeIdx));
     });
     clear?.addEventListener("click", () => { input.value = ""; render(); input.focus(); });
     document.addEventListener("mousedown", (e) => { if (!root.contains(e.target)) results.classList.remove("is-open"); });
