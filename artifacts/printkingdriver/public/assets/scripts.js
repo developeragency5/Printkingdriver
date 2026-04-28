@@ -86,7 +86,7 @@
     { label: "Explore Drivers",       href: "/drivers",           type: "Page",   keywords: "all drivers list browse catalogue catalog directory" },
     { label: "How It Works",          href: "/how-it-works",      type: "Page",   keywords: "guide tutorial set up update updating download how to fix diagnose" },
     { label: "About Guide",           href: "/about",             type: "Page",   keywords: "about us info information mission company" },
-    { label: "Contact / Get In Touch", href: "/contact",          type: "Page",   keywords: "support help email phone live chat contact get in touch" },
+    { label: "Contact / Get In Touch", href: "/contact",          type: "Page",   keywords: "support help contact get in touch" },
     { label: "How to Fix the Driver Not Found Error", href: "/fix-driver-not-found-error", type: "Fix", keywords: "error fix troubleshoot resolve solve repair driver issue problem" },
     { label: "How to Fix a Corrupted Driver Error", href: "/fix-corrupted-driver-error", type: "Fix", keywords: "error fix troubleshoot resolve solve repair driver issue problem" },
     { label: "How to Fix Device Not Recognised After Driver Update", href: "/fix-device-not-recognised-after-driver-update", type: "Fix", keywords: "error fix troubleshoot resolve solve repair driver issue problem" },
